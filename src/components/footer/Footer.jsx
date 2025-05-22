@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 're
 import logo from "../../assets/logo.jpg"
 
 const Footer = () => {
-    
+
     return (
         <footer className="footer">
             <div className="footer-container">

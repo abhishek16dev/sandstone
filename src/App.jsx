@@ -8,11 +8,11 @@ import Header from './components/header/Header'
 
 const App = () => {
   return (
-  <>
-  <Header />
-<Home />
-<Footer />
-  </>
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
   )
 }
 

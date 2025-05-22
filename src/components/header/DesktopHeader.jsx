@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
+import logo from "../../assets/logo.jpg"
 const menuItems = [
   {
     title: "Solutions",
@@ -29,7 +30,7 @@ export default function DesktopHeader() {
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const dropdownRefs = useRef([]);
 
-  // Close dropdown on outside click
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
@@ -49,28 +50,22 @@ export default function DesktopHeader() {
   };
 
   return (
-    <header className="w-full border-b bg-white">
-      <div className="flex items-center justify-between px-4 md:px-8 py-3">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-green-600">Web</span>
-          <span className="text-2xl font-semibold text-green-600">Nest</span>
-        </div>
-
-        {/* Navigation */}
+    <header className="w-full border-b bg-white  bg-[#9ac496] ">
+      <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
+        <img src={logo} alt="WebNest Media Logo" className="w-[60px] h-[60px] rounded-full" />
         <nav className="flex items-center gap-5 text-sm">
           {menuItems.map((item, index) => (
             <div
               key={item.title}
               ref={(el) => (dropdownRefs.current[index] = el)}
-              className="relative"
+              className="relative z-[9998]"
               
             >
               <button
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen === index}
                 onClick={() => handleDropdownToggle(index)}
-                className="flex items-center p-[10px] gap-1 text-[17px] cursor-pointer font-normal leading-[21px] text-gray-800 hover:text-indigo-700 bg-transparent border-0 outline-none focus:outline-none"
+                className="flex items-center p-[10px] gap-1 text-[17px] cursor-pointer font-normal leading-[21px] text-gray-800 text-[#374151] bg-transparent border-0 outline-none focus:outline-none"
             
             >
                 {item.title}
@@ -78,8 +73,8 @@ export default function DesktopHeader() {
               </button>
 
               {dropdownOpen === index && (
-                // <div className="absolute left-0 top-full mt-3 w-48 bg-white rounded-md shadow-lg z-50">
-                 <div className="absolute  w-[180px] left-0 top-full mt-[20px] bg-white rounded-md shadow-[0_4px_10px_-2px_rgba(0,0,0,.1)] z-50 ">
+               
+                 <div className="absolute z-[9999]  w-[180px] left-0 top-full mt-[20px] bg-white rounded-md shadow-[0_4px_10px_-2px_rgba(0,0,0,.1)] ">
                  
                   <ul>
                     {item.subItems.map((sub, idx) => (
@@ -103,7 +98,7 @@ export default function DesktopHeader() {
           </a>
         </nav>
 
-        {/* Buttons */}
+{/*     
         <div className="flex gap-[10px]">
           <button className="px-[10px] py-[6px] text-[#43b649] rounded-md border border-[#43b649] hover:bg-[#f0fdf4] transition">
             Log in
@@ -111,7 +106,7 @@ export default function DesktopHeader() {
           <button className="px-[10px] py-[6px] text-[#43b649] rounded-md border border-[#43b649] hover:bg-[#f0fdf4] transition">
             Book a Demo
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   );

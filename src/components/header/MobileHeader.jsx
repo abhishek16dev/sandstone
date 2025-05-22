@@ -34,7 +34,7 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className="w-full border-b bg-white px-4 py-3 md:hidden">
+    <header className="w-full fixed border-b bg-white px-4 py-3 md:hidden z-[999] bg-[#9ac496] ">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-1">
           <span className="text-2xl font-bold text-green-600">Web</span>
@@ -51,8 +51,8 @@ export default function MobileHeader() {
             <div key={index}>
               <button
                 onClick={() => toggleDropdown(index)}
-                // className="w-full flex justify-between items-center text-left text-gray-800 font-medium py-2"
-                  className="flex items-center p-[10px] gap-1 text-[17px] cursor-pointer font-normal leading-[21px] text-gray-800 hover:text-indigo-700 bg-transparent border-0 outline-none focus:outline-none"
+         
+                  className="flex items-center p-[10px] gap-1 text-[17px] cursor-pointer font-normal leading-[21px] text-gray-800  text-[#374151] bg-transparent border-0 outline-none focus:outline-none"
             
              
              >
@@ -79,6 +79,7 @@ export default function MobileHeader() {
           ))}
 
           <div className="flex gap-[10px] hidden">
+            
           <button className="px-[10px] py-[6px] text-[#43b649] rounded-md border border-[#43b649] hover:bg-[#f0fdf4] transition">
             Log in
           </button>
