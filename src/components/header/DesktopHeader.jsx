@@ -6,15 +6,17 @@ const menuItems = [
   {
     title: "Solutions",
     subItems: [
-      "B2B Ecommerce",
-      "Field Sales Management",
-      "Simplified Order Management",
-      "Exhibition Lead Management Tool",
+      "Brand Strategy",
+      "Lead Generation",
+      "Customer Retention",
+      "Digital Transformation",
+      "Market Research & Insights",
+      "Omnichannel Marketing"
     ],
   },
   {
-    title: "Industries",
-    subItems: ["Retail", "FMCG", "Distribution", "Healthcare"],
+    title: "Digital Marketing",
+    subItems: ["Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing (SMM)", "Web Development","Content Marketing" ,"Affiliate Marketing"],
   },
   {
     title: "Resources",
@@ -50,7 +52,7 @@ export default function DesktopHeader() {
   };
 
   return (
-    <header className="w-full border-b bg-white  bg-[#9ac496] ">
+    <header className="w-full border-b bg-white  bg-[#9ac496] w-[100%] ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
         <img src={logo} alt="WebNest Media Logo" className="w-[60px] h-[60px] rounded-full" />
         <nav className="flex items-center gap-5 text-sm">
@@ -59,6 +61,8 @@ export default function DesktopHeader() {
               key={item.title}
               ref={(el) => (dropdownRefs.current[index] = el)}
               className="relative z-[9998]"
+              
+              
               
             >
               <button
@@ -83,6 +87,9 @@ export default function DesktopHeader() {
                    
                        className={`pb-[10px] pl-[10px] pt-[5px]  cursor-pointer  text-[#727176] text-sm hover:bg-gray-100 ${idx === 0 ? "rounded-tl-md rounded-tr-md" : ""
                           } ${idx !== item.subItems.length - 1 ? "border-b border-gray-100" : " border-b border-gray-100"}`}
+
+                            onMouseLeave={() => setDropdownOpen(null)}
+                            onMouseEnter={() => setDropdownOpen(index)}
                        >
                         {sub}
                       </li>
