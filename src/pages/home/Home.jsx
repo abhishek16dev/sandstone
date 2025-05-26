@@ -19,6 +19,18 @@ import marketingbanner from "../../pages/home/resources/marketingbanner.svg";
 
 
 
+import PPC  from "../../pages/home/resources/PPC.svg";
+import MobileAppDevelopment from "../../pages/home/resources/mobileappdevelopment.svg";
+import ConversionRateOptimization from "../../pages/home/resources/ConversionRateOptimization.svg";
+import AffiliateMarketing from "../../pages/home/resources/AffiliateMarketing.svg";
+import SocialMediaMarketing from "../../pages/home/resources/Socialmediamarketing.svg";
+import WebDevelopment from "../../pages/home/resources/WebDevelopment.svg";
+import EmailMarketing from "../../pages/home/resources/EmailMarketing.svg";
+import SEM from "../../pages/home/resources/SEM.svg";
+import ContentMarketing from "../../pages/home/resources/ContentMarketing.svg";
+import SEO from "../../pages/home/resources/SEO.svg";
+
+
 
 // import "./FlipCard.css";
 import * as FaIcons from "react-icons/fa";
@@ -30,16 +42,18 @@ const Home = () => {
   const [flippedIds, setFlippedIds] = useState([]);
 
   const cardsData = [
-    { id: 1, icon: "FaUser", content: "Search Engine Marketing (SEM)" },
-    { id: 2, icon: "FaCoffee", content: "Web Development" },
-    { id: 3, icon: "FaAppleAlt", content: "Content Marketing" },
-    { id: 4, icon: "FaCar", content: "Search Engine Optimization" },
-    { id: 5, icon: "FaBook", content: "Social media marketing" },
-    { id: 6, icon: "FaCamera", content: "Affiliate Marketing" },
-    { id: 7, icon: "FaCloud", content: "Email Marketing" },
-    { id: 8, icon: "FaMusic", content: "Conversion Rate Optimization" },
-    { id: 9, icon: "FaHeart", content: "mobile app development" },
-    { id: 10, icon: "FaStar", content: "PPC" },
+
+    { id: 1, icon: PPC, content: " PPC " },
+    { id: 2, icon: MobileAppDevelopment, content: "  mobile app development " },
+    { id: 3, icon: ConversionRateOptimization, content: " Conversion Rate Optimization " },
+    { id: 4, icon: AffiliateMarketing, content: " Affiliate Marketing " },
+    { id: 5, icon: SocialMediaMarketing, content: "Social media marketing" },
+    { id: 6, icon: WebDevelopment, content: " Web Development " },
+    { id: 7, icon: EmailMarketing, content: "Email Marketing" },
+    { id: 8, icon: SEM, content: "Search Engine Marketing (SEM)" },
+    { id: 9, icon:  ContentMarketing, content: " Content Marketing " },
+    { id: 10, icon: SEO, content: "Search Engine Optimization" },
+
   ];
 
   const toggleFlip = (id) => {
@@ -62,7 +76,7 @@ const Home = () => {
               <span>Best </span>
               <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
-              <span>  Agency with  <span className="text-[#409338] floating-text">Smart Strategies  </span></span>
+              <span>  Agency with  <span className="text-[#409338] floating-text-two">Smart Strategies  </span></span>
 
               <img src={rocket} className='absolute  top-[90px] left-[90px] animate-floatUp ' />
 
@@ -92,68 +106,6 @@ const Home = () => {
 
 
           </div>
-
-
-
-          {/* <div className="relative  mx-auto image-part slide-in-right">
-
-            <img
-              src={Star1}
-              className="absolute top-[50px] left-[100px] w-10 h-10"
-              alt="Star Top Left"
-            />
-
-            <img
-              src={Star3}
-              className="absolute top-[100px] left-[300px] w-10 h-10"
-              alt="Star Bottom Left"
-            />
-            <img
-              src={Star3}
-              className="absolute bottom-[50px] left-[100px] w-10 h-10"
-              alt="Star Bottom Left"
-            />
-
-
-
-        <img
-  src={Bannerlady}
-  className=" bannerlady h-auto"
-  alt="Main Lady"
-/>
-
-          </div> */}
-
-          {/* <div className="relative w-full max-w-[500px] aspect-[10/9] mx-auto image-part slide-in-right">
-  
-  <img
-    src={Star1}
-    className="absolute top-[10%] left-[20%] w-6 h-6 sm:w-8 sm:h-8"
-    alt="Star Top Left"
-  />
-
-
-  <img
-    src={Star3}
-    className="absolute top-[22%] right-[40%] w-6 h-6 sm:w-8 sm:h-8"
-    alt="Star Top Right"
-  />
-
- 
-  <img
-    src={Star3}
-    className="absolute bottom-[10%] left-[20%] w-6 h-6 sm:w-8 sm:h-8"
-    alt="Star Bottom Left"
-  />
-
- 
-  <img
-    src={Bannerlady}
-    className="w-full h-full object-contain"
-    alt="Main Lady"
-  />
-</div> */}
-
 
 
         </div>
@@ -192,23 +144,23 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="slider-container">
-          <div class="slider-track">
+        <div className="slider-container">
+          <div className="slider-track">
 
-            <div class="box"> <img src={slideone} /></div>
-            <div class="box"><img src={slidetwo} /> </div>
-            <div class="box"><img src={slidethree} /></div>
-            <div class="box"><img src={slidefour} /></div>
+            <div className="box"> <img src={slideone} /></div>
+            <div className="box"><img src={slidetwo} /> </div>
+            <div className="box"><img src={slidethree} /></div>
+            <div className="box"><img src={slidefour} /></div>
 
-            <div class="box"> <img src={slideone} /></div>
-            <div class="box"><img src={slidetwo} /> </div>
-            <div class="box"><img src={slidethree} /></div>
-            <div class="box"><img src={slidefour} /></div>
+            <div className="box"> <img src={slideone} /></div>
+            <div className="box"><img src={slidetwo} /> </div>
+            <div className="box"><img src={slidethree} /></div>
+            <div className="box"><img src={slidefour} /></div>
           </div>
         </div>
 
 
-       
+
 
 
         <div className="bg-white p-[40px] text-start flex flex-col justify-center md:flex-row md:items-center md:gap-[60px] gap-6">
@@ -232,7 +184,7 @@ const Home = () => {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>
             {cardsData.map(({ id, icon, content }) => {
-              const IconComponent = FaIcons[icon];
+              // const IconComponent = FaIcons[icon];
               return (
                 <div
                   key={id}
@@ -242,8 +194,12 @@ const Home = () => {
                 >
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
-                      <IconComponent size={50} />
-                       <p>{content}</p>
+                     
+                   <div className="image_wrap">
+                       <img src={icon} className="  iconimage " />
+                  </div>
+
+                      <p className="text-[14px] text-[black] font-bold">{content}</p>
                     </div>
                     <div className="flip-card-back">
                       <p>{content}</p>

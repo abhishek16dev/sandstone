@@ -267,8 +267,8 @@ body {
 
 /* Flip card container */
 .flip-card {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 250px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -310,6 +310,10 @@ body {
 .flip-card-front {
   background-color: #f0f0f0;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
 
 /* Back side style */
@@ -323,6 +327,9 @@ body {
   box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
 }
 
+.iconimage{
+
+}
 
 
 
@@ -358,11 +365,36 @@ body {
 
 
 
+/* .floating-text {
+  display: inline-block;
+  color: #409338;
+  animation: floatUpDown 2s ease-in-out infinite;
+} */
+
 .floating-text {
   display: inline-block;
   color: #409338;
   animation: floatUpDown 2s ease-in-out infinite;
 }
+.floating-text-two{
+display: inline-block;
+  color: #409338;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* or whatever float distance you want */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 @keyframes floatUpDown {
 
