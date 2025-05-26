@@ -1,42 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-
-
-
-
-
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
     font-family: 'Exo', sans-serif;
 }
 
 
-.context {
+
+
+.area {
+    background: white;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
-    position: absolute;
-     top:130px;
-    display: flex;
-    z-index: 99;
-    
+    height: 100vh;
+
+
 }
 
-
-
-
-.area{
-    background: white;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:100vh;
-    
-   
-}
-
-.circles{
+.circles {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,19 +30,19 @@ body{
     overflow: hidden;
 }
 
-.circles li{
+.circles li {
     position: absolute;
     display: block;
     list-style: none;
     width: 20px;
     height: 20px;
-    background:  #9ac496;
+    background: #9ac496;
     animation: animate 25s linear infinite;
     bottom: -150px;
-    
+
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
@@ -65,22 +50,22 @@ body{
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
-    width: 20px;
-    height: 20px;
+    width: 90px;
+    height: 90px;
     animation-delay: 2s;
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -88,28 +73,28 @@ body{
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -117,15 +102,15 @@ body{
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 20%;
-    width: 15px;
-    height: 15px;
+    width: 49px;
+    height: 49px;
     animation-delay: 2s;
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
@@ -133,54 +118,125 @@ body{
     animation-duration: 11s;
 }
 
-.text-part{
- width: 45%;
+.context {
+    width: 100%;
+    position: absolute;
+    top: 190px;
+    display: flex;
+    z-index: 99;
+
 }
 
-.image-part{
- width: 55%;
- display: flex;
- justify-content: center;
- align-items: center;
+.text-part {
+  /* width: calc(100% - 750px); */ 
+  width: 100%;
+  text-align: center;
 }
 
-.h1tag{
+.image-part {
+    width: 100%;
+    /* max-width: 500px; */
+    text-align: center;
+    aspect-ratio: 4 / 3; /* Keeps the same 600x450 aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center it */
+    overflow: hidden;
+}
+
+.image-part .bannerlady {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or cover, depending on your need */
+    overflow: hidden;
+}
+
+
+
+
+
+.h1tag {
     font-size: 46px !important;
-      font-weight: 500;
+    font-weight: 500;
     margin: 10px 0;
-        line-height: 1.3em;
-
-
-
+    line-height: 1.3em;
+    -webkit-text-stroke: 2px;
 }
 
-.h2tag{
-   
+.h2tag {
+
     font-size: 18px;
     font-weight: 400;
     margin: 20px 0;
     color: grey;
- line-height: 1.6em;
-  
+    line-height: 1.6em;
+
+
 
 }
-.line{
-    width: 90%;
-    /* color: #9ac496; */
-    border-bottom: 1px solid #9ac496; 
+
+.trust{
+      margin-top: 20px;
+    display: inline-block;
+}
+
+.line {
+  all: unset; /* resets all default styles */
+  display: block;
+  width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+  border-bottom: 1px solid #9ac496;
+
+  height: 0;
+  margin: 0 auto;
+}
+
+.subbanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subbanner div{
+    width: 50%;
+    
+}
+.subbanner   h4{
+    color: #409338;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: left;
+
+  -webkit-text-stroke: 1px  #409338;
+  -webkit-text-fill-color: #409338; 
+}
+.subbanner p{
+    font-size: 16px;
+    color: #000000;
     margin: 20px 0;
+
 }
 
+.getstarted-btn{
+    padding: 14px 40px;
+    color: white;
+    background: #20B15A;
+    border-radius: 5px;
+}
 
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
@@ -188,20 +244,68 @@ body{
 
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+
+
+.floating-text {
+  display: inline-block;
+  color: #409338;
+  animation: floatUpDown 2s ease-in-out infinite;
 }
 
-@keyframes zoomIn {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+  }
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+
+.slide-in-right {
+  animation: slideFromRight 1s ease-out forwards;
+  opacity: 0;
 }
 
-.zoom-in {
-  animation: zoomIn 0.5s ease-in-out forwards;
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* media query */
+
+
+@media (max-width: 1040px) {
+
+    .text-part {
+  width: calc(100% - 400px);
+}
+    .image-part , .bannerlady {
+        max-width: 370px; /* Shrinks container */
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .context{
+        flex-direction: column;
+    }
+    .text-part{
+        width: 100%;
+    }
+    .image-part{
+        max-width: 450px;
+    }
 }

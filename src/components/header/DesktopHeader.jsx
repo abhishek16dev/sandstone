@@ -80,7 +80,7 @@ export default function DesktopHeader() {
   };
 
   return (
-    <header className=" fixed top-0  left-0  z-[9999]  w-full bg-[white] w-[100%] ">
+    <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
         <img src={logo} alt="WebNest Media Logo" className="w-[60px] h-[60px] rounded-full cursor-pointer" />
         <nav className="flex items-center gap-5 text-sm">
@@ -112,7 +112,7 @@ export default function DesktopHeader() {
 
               {dropdownOpen === index && (
 
-                <div className="absolute z-[9999]  w-[180px] left-0 top-[40px] bg-[white] borderradius shadow-[0_4px_10px_-2px_rgba(0,0,0,1)]
+                <div className="absolute z-[9999]  w-[180px] left-0 top-[40px] bg-[white] borderradius shadow-[0_4px_10px_-2px_rgba(0,0,0,0.1)]
                 transition-all duration-300 ease-out opacity-200 translate-z-0
                 "
 
@@ -142,14 +142,8 @@ export default function DesktopHeader() {
             </div>
           ))}
 
-
-
-
         </nav>
-
-
         <div className="flex gap-[10px]">
-
           <button className=" bookdemo px-[15px] py-[10px] text-[#43b649] rounded-md border   hover:bg-[#f0fdf3]  transition-colors duration-300    cursor-pointer">
             Book a Demo
           </button>
