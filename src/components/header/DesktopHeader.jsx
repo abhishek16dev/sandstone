@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import "./headerStyle.css"
 
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/logo.png"
 const menuItems = [
   {
     title: "Home",
@@ -82,7 +82,18 @@ export default function DesktopHeader() {
   return (
     <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
-        <img src={logo} alt="WebNest Media Logo" className="w-[60px] h-[60px] rounded-full cursor-pointer" />
+<div className="flex items-center gap-[10px]">
+  <div>
+            <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
+  </div>
+
+<div className=" items-center flex-d">
+ <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>
+    <p className="text-[black] text-[9px]"> ( Nest your brand in the web of success )
+    </p>
+    </div>
+  
+</div>
         <nav className="flex items-center gap-5 text-sm">
           {menuItems.map((item, index) => (
             <div
@@ -144,7 +155,7 @@ export default function DesktopHeader() {
 
         </nav>
         <div className="flex gap-[10px]">
-          <button className=" bookdemo px-[15px] py-[10px] text-[#43b649] rounded-md border   hover:bg-[#f0fdf3]  transition-colors duration-300    cursor-pointer">
+          <button className=" bookdemo px-[15px] py-[10px] text-[white] bg-[#9bc394] rounded-md border   hover:bg-[#9bc394]  transition-colors duration-300    cursor-pointer">
             Book a Demo
           </button>
         </div>

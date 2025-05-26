@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/logo.png"
 
 const menuItems = [
 
@@ -52,8 +52,18 @@ export default function MobileHeader() {
     <header className="w-full fixed bg-[white]   bg-white px-4 py-3 md:hidden z-[999]  ">
       <div className="flex justify-between items-center pl-[40px] pr-[40px] p-[10px]">
 
-        <img src={logo} alt="WebNest Media Logo" className="w-[45px] h-[45px] rounded-full" />
-
+    <div className="flex items-center gap-[10px]">
+      <div>
+                <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
+      </div>
+    <div>
+ <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>
+    <p className="text-[grey]"> (Nest your brand in the web of success )
+    </p>
+    </div>
+   
+      
+    </div>
         <button onClick={() => setOpen(!open)} className="text-[#9ac496] border-[#9ac496]">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
