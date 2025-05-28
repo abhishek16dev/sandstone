@@ -1,0 +1,65 @@
+/* ResponsiveCarousel.css */
+.carousel-slide {
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carousel-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.carousel-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carousel-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.carousel-text button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carousel-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.carousel-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 0.8s infinite;
+}

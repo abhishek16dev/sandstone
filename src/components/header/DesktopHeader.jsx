@@ -3,43 +3,94 @@ import { ChevronDown } from "lucide-react";
 import "./headerStyle.css"
 
 import logo from "../../assets/logo.png"
+import { Link } from "react-router-dom";
+
+// const menuItems = [
+//   {
+//     title: "Home",
+
+//   },
+
+//   {
+//     title: "About Us",
+
+
+//   },
+//   {
+//     title: "Solutions",
+//     subItems: [
+//       "Brand Strategy",
+//       "Lead Generation",
+//       "Customer Retention",
+//       "Digital Transformation",
+//       "Market Research & Insights",
+//       "Omnichannel Marketing"
+//     ],
+//   },
+//   {
+//     title: "Digital Marketing",
+//     subItems: ["Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing (SMM)", "Web Development", "Content Marketing", "Affiliate Marketing"],
+//   },
+//   {
+//     title: "Promotions",
+//     subItems: ["Mobile Marketing", "Influencer Marketing", "SMS Marketing", "Email Marketing"],
+//   },
+//   {
+//     title: "Contact",
+//     subItems: ["Careers", "Contact", "Insight", "Blogs"],
+//   },
+
+
+
+// ];
+
 const menuItems = [
-  {
-    title: "Home",
+  { title: "Home", path: "/" },
+  { title: "About Us", path: "/about" },
 
-  },
-
-  {
-    title: "About Us",
-
-
-  },
   {
     title: "Solutions",
     subItems: [
-      "Brand Strategy",
-      "Lead Generation",
-      "Customer Retention",
-      "Digital Transformation",
-      "Market Research & Insights",
-      "Omnichannel Marketing"
-    ],
+      { title: "Brand Strategy", path: "/solutions/brand-strategy" },
+      { title: "Lead Generation", path: "/solutions/lead-generation" },
+      { title: "Customer Retention", path: "/solutions/customer-retention" },
+      { title: "Digital Transformation", path: "/solutions/digital-transformation" },
+      { title: "Market Research & Insights", path: "/solutions/market-research" },
+      { title: "Omnichannel Marketing", path: "/solutions/omnichannel-marketing" }
+    ]
   },
+
   {
     title: "Digital Marketing",
-    subItems: ["Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing (SMM)", "Web Development", "Content Marketing", "Affiliate Marketing"],
+    subItems: [
+      { title: "Search Engine Marketing (SEM)", path: "/digital-marketing/sem" },
+      { title: "Search Engine Optimization (SEO)", path: "/digital-marketing/seo" },
+      { title: "Social Media Marketing (SMM)", path: "/digital-marketing/smm" },
+      { title: "Web Development", path: "/digital-marketing/web-development" },
+      { title: "Content Marketing", path: "/digital-marketing/content-marketing" },
+      { title: "Affiliate Marketing", path: "/digital-marketing/affiliate-marketing" }
+    ]
   },
+
   {
     title: "Promotions",
-    subItems: ["Mobile Marketing", "Influencer Marketing", "SMS Marketing", "Email Marketing"],
+    subItems: [
+      { title: "Mobile Marketing", path: "/promotions/mobile" },
+      { title: "Influencer Marketing", path: "/promotions/influencer" },
+      { title: "SMS Marketing", path: "/promotions/sms" },
+      { title: "Email Marketing", path: "/promotions/email" }
+    ]
   },
+
   {
     title: "Contact",
-    subItems: ["Careers", "Contact", "Insight", "Blogs"],
-  },
-
-
-
+    subItems: [
+      { title: "Careers", path: "/contact/careers" },
+      { title: "Contact", path: "/contact" },
+      { title: "Insight", path: "/contact/insight" },
+      { title: "Blogs", path: "/contact/blogs" }
+    ]
+  }
 ];
 
 export default function DesktopHeader() {
@@ -80,7 +131,7 @@ export default function DesktopHeader() {
   };
 
   return (
-    <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  ">
+    <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
 <div className="flex items-center gap-[10px]">
   <div>
@@ -102,6 +153,7 @@ export default function DesktopHeader() {
               className="relative z-[9999]"
 
             >
+
               <button
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen === index}
@@ -111,7 +163,9 @@ export default function DesktopHeader() {
                 onMouseLeave={handleMouseLeaveParent}
 
               >
+                 <Link to={item.path} className="block w-full">
                 {item.title}
+               </Link>
 
                 {/* <ChevronDown size={16} className="pl-[10px]" /> */}
 
@@ -140,7 +194,10 @@ export default function DesktopHeader() {
                           className={`pb-[10px] pl-[10px] pt-[5px] cursor-pointer hover:text-[#43b649] text-[13px] hover:bg-gray-100 ${idx === 0 ? "rounded-tl-md rounded-tr-md" : ""
                             } ${idx !== item.subItems.length - 1 ? "border-b border-gray" : ""}`}
                         >
-                          {sub}
+                          {/* {sub} */}
+                           <Link to={sub.path} className="block w-full">
+        {sub.title}
+      </Link>
                         </li>
                       ))}
                     </ul>

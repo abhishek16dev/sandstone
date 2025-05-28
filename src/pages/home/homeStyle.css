@@ -195,6 +195,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* flex-direction: row-reverse; */
 }
 
 .subbanner div {
@@ -202,10 +203,10 @@ body {
 
 }
 
-.subbanner h4 {
+.subbanner h2 {
   color: #5c945c;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 40px;
   text-align: left;
 
@@ -213,8 +214,14 @@ body {
   -webkit-text-fill-color: #5c945c;
 }
 
+
+.comprensive{
+  border-radius: 40px;
+}
+
+
 .subbanner p {
-  font-size: 16px;
+  font-size: 15px;
   color: #000000;
   margin: 20px 0;
 
@@ -229,6 +236,31 @@ body {
 
 /* slider start */
 
+
+/* .slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scrollLeft 20s linear infinite;
+  width: fit-content;
+} */
+
+
+
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .slider-container {
   width: 100%;
   overflow: hidden;
@@ -237,10 +269,10 @@ body {
 
 .slider-track {
   display: flex;
-  width: max-content;
   animation: scrollLeft 20s linear infinite;
-  /* Slower speed */
+  width: fit-content;
 }
+
 
 .box {
   min-width: 200px;
@@ -271,9 +303,41 @@ body {
   height: 250px;
   perspective: 1000px;
   cursor: pointer;
+  
+ 
 }
 
-/* Inner wrapper with animation */
+
+
+.flipcard  h2,  .industriweserve h2{
+   color: #409338;;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-text-stroke: 1px #409338;;
+    -webkit-text-fill-color: #409338;
+    margin-top: 30px;
+    margin-bottom: 60px;
+      -webkit-text-stroke: 2px #5c945c;
+  -webkit-text-fill-color: #5c945c;
+}
+
+ .image_wrap {
+  width: 190px;
+  height: 200px;
+  overflow: hidden; /* Prevents image from spilling out */
+}
+
+.image_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  display: block;
+}
+
+
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -282,12 +346,29 @@ body {
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   border-radius: 12px;
+   border: 1px solid #9ac496;
+  
 }
 
-/* Flip on hover */
+/* .flip-card-inner:hover{
+  border: 1px solid #0a0e0a;
+  transform: translateY(-10px); 
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+
+} 
+
+
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) scale(1.05);
+ 
+} */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg)  translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #0a0e0a;
 }
+
 
 /* Front and back sides */
 .flip-card-front,
@@ -304,6 +385,7 @@ body {
   padding: 15px;
   box-sizing: border-box;
   user-select: none;
+  text-align: center;
 }
 
 /* Front side style */
@@ -318,7 +400,7 @@ body {
 
 /* Back side style */
 .flip-card-back {
-  background-color: #4caf50;
+  background-color: #409338;
   color: white;
   transform: rotateY(180deg);
   text-align: center;
@@ -327,10 +409,32 @@ body {
   box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
 }
 
+
+
 .iconimage{
+
 
 }
 
+.Slidercrausol{
+  margin-top: 90px;
+}
+
+.Slidercrausol .heading
+  {
+    color: #409338;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-text-stroke: 1px #409338;
+    -webkit-text-fill-color: #409338;
+    margin:30px 0;
+   
+    -webkit-text-stroke: 2px #5c945c;
+    -webkit-text-fill-color: #5c945c;
+
+}
 
 
 /* Keyframes to move entire track */
@@ -344,6 +448,17 @@ body {
   }
 }
 
+
+.slider-container{
+ border-bottom:  1px solid #9ac496;
+ border-top: 1px solid #9ac496;
+
+ -ms-transform: skew(0deg,-10deg);
+-webkit-transform: skew(0deg,-10deg); 
+  transform: skew(0deg, -6deg);
+margin-top: 80px;
+ 
+}
 
 
 
@@ -429,6 +544,111 @@ display: inline-block;
 
 
 
+
+
+
+/* 
+.ball-container {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  overflow: visible; 
+  padding-left: 100px; 
+  padding-right: 100px; 
+  
+}
+
+
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 40px; 
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px; 
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  offset-path: path("M -100 150 C 50 150, 100 100, 150 150 S 250 180, 300 150 S 350 100, 400 150 S 450 180, 500 150 S 600 100, 700 150 S 800 200, 900 100 S 1000 150, 1200 150");
+
+ 
+  offset-distance: 0%;
+  opacity: 1;
+  animation: spiralMove 15s linear infinite;
+
+  backface-visibility: hidden;   
+  will-change: offset-distance, opacity; 
+}
+
+
+@keyframes spiralMove {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 120%; 
+    opacity: 0;
+  }
+} */
+
+
+/* AnimatedCardList.css */
+.card-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  align-items: center;
+}
+
+.animated-card {
+  width: 300px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+
+  background: linear-gradient(135deg, #9BC394, #EEC370);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  transform: translateX(0);
+  animation: fadeInCard 0.8s ease-out forwards;
+}
+
+/* Alternate direction for each card */
+.from-left {
+  transform: translateX(-100px);
+}
+
+.from-right {
+  transform: translateX(100px);
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* ball css end */
 
 
 /* media query */
