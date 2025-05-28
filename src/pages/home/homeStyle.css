@@ -234,6 +234,13 @@ body {
   border-radius: 5px;
 }
 
+.getstarted-btnn{
+    padding: 10px 25px;
+  color: white;
+  background:#409338;
+  border-radius: 5px;
+
+}
 /* slider start */
 
 
@@ -436,6 +443,27 @@ body {
 
 }
 
+.countertextheading{
+  color: #409338;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: start;
+    -webkit-text-stroke: 1px #409338;
+    -webkit-text-fill-color: #409338;
+  
+   
+    -webkit-text-stroke: 2px #5c945c;
+    -webkit-text-fill-color: #5c945c;
+
+}
+
+ .countertextpart p {
+  font-size: 15px;
+  color: #000000;
+  margin: 20px 0;
+
+}
 
 /* Keyframes to move entire track */
 @keyframes scrollLeft {
@@ -544,114 +572,6 @@ display: inline-block;
 
 
 
-
-
-
-/* 
-.ball-container {
-  position: relative;
-  width: 100vw;
-  height: 300px;
-  overflow: visible; 
-  padding-left: 100px; 
-  padding-right: 100px; 
-  
-}
-
-
-.ball {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 40px; 
-  background-color: #4caf50;
-  color: white;
-  font-size: 24px; 
-  font-weight: bold;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  offset-path: path("M -100 150 C 50 150, 100 100, 150 150 S 250 180, 300 150 S 350 100, 400 150 S 450 180, 500 150 S 600 100, 700 150 S 800 200, 900 100 S 1000 150, 1200 150");
-
- 
-  offset-distance: 0%;
-  opacity: 1;
-  animation: spiralMove 15s linear infinite;
-
-  backface-visibility: hidden;   
-  will-change: offset-distance, opacity; 
-}
-
-
-@keyframes spiralMove {
-  0% {
-    offset-distance: 0%;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  90% {
-    offset-distance: 100%;
-    opacity: 1;
-  }
-  100% {
-    offset-distance: 120%; 
-    opacity: 0;
-  }
-} */
-
-
-/* AnimatedCardList.css */
-.card-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 40px;
-  align-items: center;
-}
-
-.animated-card {
-  width: 300px;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-
-  background: linear-gradient(135deg, #9BC394, #EEC370);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-
-  opacity: 0;
-  transform: translateX(0);
-  animation: fadeInCard 0.8s ease-out forwards;
-}
-
-/* Alternate direction for each card */
-.from-left {
-  transform: translateX(-100px);
-}
-
-.from-right {
-  transform: translateX(100px);
-}
-
-@keyframes fadeInCard {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-
-
-/* ball css end */
-
-
-/* media query */
 
 
 @media (max-width: 1040px) {

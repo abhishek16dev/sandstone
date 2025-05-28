@@ -1,0 +1,62 @@
+
+
+/* Card container with 2x2 grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Individual card */
+.counter-card {
+  width: 180px;
+  height: 100px;
+  /* background-color: #ffffff; */
+  border-radius: 16px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.counter-card:hover {
+  transform: scale(1.03);
+}
+
+/* Gradient number */
+.counter-text {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #5C945C, #EEC370);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Label (static text) */
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 10px;
+}
+
+/* Subtitle (gradient stroke text) */
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 6px;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ff6f00, #d500f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

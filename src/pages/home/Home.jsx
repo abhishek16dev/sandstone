@@ -36,22 +36,12 @@ import Youtubeads from "../../pages/home/resources/Youtubeads.svg";
 import * as FaIcons from "react-icons/fa";
 
 import Slider from "./ResponsiveCarousel";
+import AnimatedCardList from "./AnimatedCardList";
 
+import Countarcard from "./counterCard"
 
-const ballsData = [
-  { id: 1, content: "Abhishek" },
-  { id: 2, content: "Bbbbbbbbbb" },
-  { id: 3, content: "ccccccccc" },
-  { id: 4, content: "ddddddddd" },
-  { id: 5, content: "eeeeeeeeeeeeee" },
-  { id: 6, content: "fffffffff" },
-  { id: 7, content: "gggggggggggg" },
-  { id: 8, content: "hhhhhhhhhh" },
-  { id: 9, content: "iiiiiiiiiiii" },
-  { id: 10, content: "jjjjjjjjjjjjj" },
-];
-
-
+import ImageSlider from "./TestomonilaSlider";
+import Accordion from "./Accordian";
 
 const autoSlide = [
   {
@@ -97,9 +87,15 @@ const autoSlide = [
 ];
 
 
+
+
 const Home = () => {
 
   const [flippedIds, setFlippedIds] = useState([]);
+
+  // const directions = ['from-left', 'from-right', 'from-top', 'from-bottom'];
+
+  // const directions = ['from-left', 'from-right', 'from-top', 'from-bottom'];
 
   const cardsData = [
 
@@ -132,6 +128,38 @@ const Home = () => {
     }
   };
 
+
+  // const images = [SEO, PPC, WebDevelopment];
+
+  const testimonialsData = [
+    {
+      text: "Webnest Media transformed our online presence. After working with them on our SEO strategy, we saw a 40% increase in organic traffic within just three months. Their team truly understands digital marketing, and their custom approach has helped us reach the right audience. Highly recommended!",
+      person: "John D., CEO of GreenTech Solutions",
+      img: SEO
+    },
+    {
+      text: "I can't say enough great things about Webnest Media. Their social media management services have taken our brand visibility to new heights. Their creative campaigns and attention to detail have made a real difference in engaging our target customers. We’ve noticed a significant increase in sales since partnering with them!",
+      person: "Sarah L., Marketing Director at Luxe Apparel",
+      img: PPC
+    },
+    {
+      text: "The team at Webnest Media has been instrumental in building our online store. Their web design and development services were top-notch, and they created a site that’s easy to navigate and optimized for conversions. We’ve seen a remarkable growth in online sales and customer engagement.",
+      person: "Michael R., Founder of Fresh Foods Inc.",
+      img: WebDevelopment
+    },
+    {
+      text: "Webnest Media’s PPC campaigns were a game-changer for our business. They managed our Google Ads and social media ads efficiently, driving targeted traffic to our website. In just a few weeks, we saw a 25% increase in membership sign-ups. Their results speak for themselves!",
+      person: "Emily T., Owner of CityFitness",
+      img: SEO
+    },
+    {
+      text: "Working with Webnest Media has been an absolute pleasure. Their content marketing strategy was exactly what we needed to engage our audience and drive traffic to our site. They provided actionable insights and crafted content that resonated with our potential clients. Our lead generation has skyrocketed since partnering with them.",
+      person: " Alex P., Director of Digital Strategy at Creative Solutions",
+      img: PPC
+    },
+
+  ];
+
   return (
     <>
       <div className=''>
@@ -144,6 +172,8 @@ const Home = () => {
               <span>  Agency with  <span className="text-[#409338] floating-text-two">Smart Strategies  </span></span>
 
               <img src={rocket} className='absolute  top-[90px] left-[90px] animate-floatUp ' />
+
+
 
 
               <div className="absolute top-[90px] right-[90px] animate-float_Up">
@@ -192,19 +222,13 @@ const Home = () => {
           <div className='pl-[40px] pr-[40px] pt-[40px] pb-[40px]'>
             <h2> Building Brands with  <br /> Integrity and Innovation <br /> Across India</h2>
             <p>WebNest Media isn’t just another digital marketing company in India — we’re your growth partner. Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
-
             </p>
-
             <button className='getstarted-btn'> Get Started</button>
-
           </div>
           <div>
-
             <img src={marketingbanner} className="w-[100%] h-[100%] sub-bannerimage" />
           </div>
         </div>
-
-
         <div className="slider-container">
           <div className="slider-track">
 
@@ -299,38 +323,74 @@ const Home = () => {
         <div className="industriweserve">
 
           <h2 className="heading mb-[20px]">Industries We serve </h2>
-{/* 
-          <div className="ball-container">
-            {ballsData.map((ball, i) => (
-              <div
-                className="ball"
-                key={ball.id}
-                style={{ animationDelay: `${i * 3}s` }}
-              >
-                {ball.content}
-              </div>
-            ))}
-          </div> */}
 
 
-          <div className="card-list-container">
-      {ballsData.map((ball, i) => (
-        <div
-          key={ball.id}
-          className={`animated-card ${i % 2 === 0 ? 'from-left' : 'from-right'}`}
-          style={{ animationDelay: `${i * 0.3}s` }}
-        >
-          {ball.content}
+
+          <div className="animatedcard ">
+            <AnimatedCardList />
+          </div>
+
+          {/* <div className="counter flex items-center justify-center">
+<div className="w-[40%]">
+
+ <Countarcard  />
+</div>
+<div className="w-[50%] countertextpart">
+
+  <h4 className=" countertextheading">
+    Why Choose WebNest Media ?
+  </h4>
+
+  <p className="">Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth. </p>
+
+   <button className='getstarted-btnn'>Know More</button>
+
+
+
+
+</div>
+
+ 
+
+</div> */}
+
+          <div className="counter flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
+            {/* Counter Cards Section */}
+            <div className="w-full md:w-1/2 lg:w-[40%]">
+              <Countarcard />
+            </div>
+
+            {/* Text Content Section */}
+            <div className="w-full md:w-1/2 lg:w-[50%] text-center md:text-left space-y-6">
+              <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+                Why Choose WebNest Media?
+              </h4>
+
+              <p className="text-[black] text-[17px]">
+                Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth.
+              </p>
+
+              <button className="getstarted-btnn px-6 py-2 rounded bg-green-600 text-white hover:bg-green-700 transition duration-300">
+                Know More
+              </button>
+            </div>
+          </div>
         </div>
-      ))}
-    </div>
-
-    
-
-
+        <div className="tetonomial mt-[30px] mb-[40px]">
+              <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
+                    Every Insight Matters. Every Voice Fuels Us
+              </h4>
+          <ImageSlider data={testimonialsData} />
         </div>
 
+        <div className="accordian">
+      
 
+           <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
+                  Information Hub
+              </h4>
+        <Accordion />
+        </div>
       </div>
     </>
   )

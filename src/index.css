@@ -32,3 +32,7 @@ h6 {
   padding: 0;
   margin: 0;
 }
+
+.slick-dots li button:before {
+font-size: 20px; 
+}
