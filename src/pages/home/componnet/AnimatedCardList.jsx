@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './animationcard.css';
 
-import Ecomm from "./resources/industries/Ecomm.svg"
-import Education from "./resources/industries/Education.svg"
-import FinanceBanking from "./resources/industries/Finance-Banking.svg"
-import Health from "./resources/industries/health.svg"
-import Realstate from "./resources/industries/Real-Estate.svg"
-import Restaurants from "./resources/industries/Restaurants.svg"
-import Retailers from "./resources/industries/Retailers.svg"
-import Startups from "./resources/industries/Startups.svg"
-import Technology from "./resources/industries/Technology.svg"
-import Travel from "./resources/industries/Travel.svg"
+import Ecomm from "../resources/industries/Ecomm.svg"
+import Education from "../resources/industries/Education.svg"
+import FinanceBanking from "../resources/industries/Finance-Banking.svg"
+import Health from "../resources/industries/health.svg"
+import Realstate from "../resources/industries/Real-Estate.svg"
+import Restaurants from "../resources/industries/Restaurants.svg"
+import Retailers from "../resources/industries/Retailers.svg"
+import Startups from "../resources/industries/Startups.svg"
+import Technology from "../resources/industries/Technology.svg"
+import Travel from "../resources/industries/Travel.svg"
 
 const AnimatedCardList = () => {
   const wrapperRef = useRef(null);

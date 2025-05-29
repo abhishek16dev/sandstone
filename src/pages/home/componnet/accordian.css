@@ -1,32 +1,40 @@
-
-
-
-
+/* Hide radio buttons */
 input {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-.accordion-wrapper {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+/* Flex wrapper for two-column layout */
+.accordion-wrapper-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10%;
   width: 90%;
   margin: 2rem auto;
+  border-radius: 10px;
 }
 
+/* Each column takes up 45% */
+.accordion-column {
+  width: 45%;
+}
+
+/* Individual accordion styles */
 .accordion {
   width: 100%;
   color: white;
   overflow: hidden;
   margin-bottom: 16px;
+  border-radius: 10px;
 }
 
 .accordion:last-child {
   margin-bottom: 0;
 }
 
+/* Accordion label (the clickable part) */
 .accordion-label {
   display: flex;
   justify-content: space-between;
@@ -38,17 +46,18 @@ input {
 }
 
 .accordion-label:hover {
-  background: #5c945c
+  background: #4f834f;
 }
 
 .accordion-label::after {
-  content: "\276F";
+  content: "\276F"; /* Arrow icon */
   width: 16px;
   height: 16px;
   text-align: center;
   transition: all 0.3s;
 }
 
+/* Hidden by default */
 .accordion-content {
   max-height: 0;
   padding: 0 16px;
@@ -60,11 +69,13 @@ input {
 .accordion-content p {
   margin: 0;
   color: black;
-  font-size: 17px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
+/* Active/open styles */
 input:checked + .accordion-label {
-  background:#5c945c;
+  background: #5c945c;
 }
 
 input:checked + .accordion-label::after {
@@ -74,4 +85,16 @@ input:checked + .accordion-label::after {
 input:checked ~ .accordion-content {
   max-height: 100vh;
   padding: 16px;
+}
+
+/* Responsive: stack into one column on small screens */
+@media (max-width: 768px) {
+  .accordion-wrapper-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .accordion-column {
+    width: 100%;
+  }
 }

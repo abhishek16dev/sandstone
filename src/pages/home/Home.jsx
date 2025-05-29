@@ -35,13 +35,13 @@ import Youtubeads from "../../pages/home/resources/Youtubeads.svg";
 // import "./FlipCard.css";
 import * as FaIcons from "react-icons/fa";
 
-import Slider from "./ResponsiveCarousel";
-import AnimatedCardList from "./AnimatedCardList";
+import Slider from "./componnet/ResponsiveCarousel";
+import AnimatedCardList from "./componnet/AnimatedCardList";
 
-import Countarcard from "./counterCard"
+import Countarcard from "./componnet/counterCard"
 
-import ImageSlider from "./TestomonilaSlider";
-import Accordion from "./Accordian";
+import ImageSlider from "./componnet/TestomonilaSlider";
+import Accordion from "./componnet/Accordian";
 
 const autoSlide = [
   {
@@ -93,9 +93,6 @@ const Home = () => {
 
   const [flippedIds, setFlippedIds] = useState([]);
 
-  // const directions = ['from-left', 'from-right', 'from-top', 'from-bottom'];
-
-  // const directions = ['from-left', 'from-right', 'from-top', 'from-bottom'];
 
   const cardsData = [
 
@@ -129,7 +126,6 @@ const Home = () => {
   };
 
 
-  // const images = [SEO, PPC, WebDevelopment];
 
   const testimonialsData = [
     {
@@ -171,12 +167,12 @@ const Home = () => {
 
               <span>  Agency with  <span className="text-[#409338] floating-text-two">Smart Strategies  </span></span>
 
-              <img src={rocket} className='absolute  top-[90px] left-[90px] animate-floatUp ' />
+              <img src={rocket} className='absolute max-md:top-[440px]  top-[90px] left-[90px] animate-floatUp ' />
 
 
 
 
-              <div className="absolute top-[90px] right-[90px] animate-float_Up">
+              <div className="absolute top-[90px] max-md:top-[440px] right-[90px] animate-float_Up">
                 <div className="rotate-[135deg]">
                   <img src={rocket} alt="Rocket" />
                 </div>
@@ -218,7 +214,7 @@ const Home = () => {
           </ul>
         </div >
 
-        <div className='subbanner relative z-10 w-[100%]'>
+        {/* <div className='subbanner relative z-10 w-[100%]'>
           <div className='pl-[40px] pr-[40px] pt-[40px] pb-[40px]'>
             <h2> Building Brands with  <br /> Integrity and Innovation <br /> Across India</h2>
             <p>WebNest Media isn’t just another digital marketing company in India — we’re your growth partner. Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
@@ -228,7 +224,62 @@ const Home = () => {
           <div>
             <img src={marketingbanner} className="w-[100%] h-[100%] sub-bannerimage" />
           </div>
-        </div>
+        </div> */}
+
+
+        {/* <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-10 lg:px-20 lg:py-20 gap-8">
+ 
+  <div className="w-full lg:w-1/2">
+    <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
+      Building Brands with <br className="hidden md:block" />
+      Integrity and Innovation <br className="hidden md:block" />
+      Across India
+    </h2>
+    <p className="text-sm md:text-base text-black mt-4 mb-6">
+      WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
+      Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
+    </p>
+    <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
+      Get Started
+    </button>
+  </div>
+
+
+  <div className="w-full lg:w-1/2">
+    <img
+      src={marketingbanner}
+      alt="Marketing Banner"
+      className="w-full h-auto object-cover"
+    />
+  </div>
+</div> */}
+
+
+<div
+  className=" max-xl:mt-[120px] max-lg:mt-[100px] max-md:mt-[150px]	 w-full flex flex-col items-start justify-center mt-[40px ]  mb-[40px] bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url(${marketingbanner})`,
+  }}
+>
+  {/* Overlay (optional for readability) */}
+  <div className="bg-white/80 p-[40px] rounded-md max-w-2xl w-full">
+    <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
+      Building Brands with <br className="hidden md:block" />
+      Integrity and Innovation <br className="hidden md:block" />
+      Across India
+    </h2>
+    <p className="text-sm md:text-base text-black mt-4 mb-6">
+      WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
+      Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
+    </p>
+    <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
+      Get Started
+    </button>
+  </div>
+</div>
+
+
+
         <div className="slider-container">
           <div className="slider-track">
 
@@ -283,7 +334,7 @@ const Home = () => {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>
             {cardsData.map(({ id, icon, content, paracontent }) => {
-              // const IconComponent = FaIcons[icon];
+
               return (
                 <div
                   key={id}
@@ -330,29 +381,6 @@ const Home = () => {
             <AnimatedCardList />
           </div>
 
-          {/* <div className="counter flex items-center justify-center">
-<div className="w-[40%]">
-
- <Countarcard  />
-</div>
-<div className="w-[50%] countertextpart">
-
-  <h4 className=" countertextheading">
-    Why Choose WebNest Media ?
-  </h4>
-
-  <p className="">Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth. </p>
-
-   <button className='getstarted-btnn'>Know More</button>
-
-
-
-
-</div>
-
- 
-
-</div> */}
 
           <div className="counter flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
             {/* Counter Cards Section */}
@@ -377,19 +405,19 @@ const Home = () => {
           </div>
         </div>
         <div className="tetonomial mt-[30px] mb-[40px]">
-              <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
-                    Every Insight Matters. Every Voice Fuels Us
-              </h4>
+          <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
+            Every Insight Matters. Every Voice Fuels Us
+          </h4>
           <ImageSlider data={testimonialsData} />
         </div>
 
         <div className="accordian">
-      
 
-           <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
-                  Information Hub
-              </h4>
-        <Accordion />
+
+          <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
+            Information Hub
+          </h4>
+          <Accordion />
         </div>
       </div>
     </>

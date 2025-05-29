@@ -4,7 +4,7 @@ import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sem from "./pages/home/sem/Sem" ;
+import Sem from "./pages/sem/Sem" ;
 
 const App = () => {
   return (
