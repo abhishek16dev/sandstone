@@ -17,11 +17,11 @@ const Sem = () => {
     setActiveTab(index);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted');
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Handle form submission logic here
+  //   console.log('Form submitted');
+  // };
 
   return (
     <div className='mt-[120px]'>
@@ -38,7 +38,9 @@ const Sem = () => {
           </div>
         </div>
         <div className="loginform">
-          <form onSubmit={handleSubmit}>
+          <form 
+          // onSubmit={handleSubmit}
+          >
             <p className='Form_heading'>Get a free consultation!</p>
 
             <label htmlFor="fullName">Full Name:</label>
