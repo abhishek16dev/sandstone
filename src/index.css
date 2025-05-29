@@ -12,9 +12,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  
+background-image: url('./pages/home/resources/Shadowbody.svg');
 
 }
+
 
 ul,
 li {
@@ -36,3 +37,7 @@ h6 {
 .slick-dots li button:before {
 font-size: 20px; 
 }
+
+.transparenbody{
+  background: transparent !important;
+} 

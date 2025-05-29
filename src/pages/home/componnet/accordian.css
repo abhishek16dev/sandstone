@@ -24,7 +24,7 @@ input[type="checkbox"] {
 /* Individual accordion styles */
 .accordion {
   width: 100%;
-  color: white;
+  color: black;
   overflow: hidden;
   margin-bottom: 16px;
   border-radius: 10px;
@@ -39,14 +39,14 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  background: #5c945c;
-  font-weight: bold;
+  /* background: #5c945c; */
+  font-weight: normal;
   cursor: pointer;
   font-size: 20px;
 }
 
 .accordion-label:hover {
-  background: #4f834f;
+  background: #dcf5da;
 }
 
 .accordion-label::after {
@@ -75,7 +75,7 @@ input[type="checkbox"] {
 
 /* Active/open styles */
 input:checked + .accordion-label {
-  background: #5c945c;
+  background: #dcf5da;
 }
 
 input:checked + .accordion-label::after {

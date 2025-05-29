@@ -1,41 +1,48 @@
 .card-list-container {
   display: flex;
   flex-wrap: wrap;
-  gap:35px 35px;
-  padding: 30px;
+   gap: 20px 20px; 
+  padding: 20px;
   justify-content: center;
   align-items: center;
 }
 
+
+
 .animated-card {
-  width: 220px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
   background-color: #f0f0f0;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+
   border-radius: 20px;
-    border: 1px solid #9ac496;
-  opacity: 0;
-  transform: translate(0, 0); /* default if no --initial-transform set */
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-  transform: var(--initial-transform);
+  border: 1px solid black;
+  opacity: 1;
+ 
 }
 
 .image_wrapcard {
   width: 120px;
   height: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: #f0f0f0;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 10px; /* optional, for rounded image background */
+  overflow: hidden;    /* prevents overflow of image outside bounds */
 }
 
 .image_wrapcard img {
@@ -45,32 +52,86 @@
   display: block;
 }
 
-/* Apply animation when visible */
-.animatedcard.visible .animated-card {
+
+/* Animate only when parent wrapper has .visible */
+
+
+.animatedcard {
   opacity: 1;
-  transform: translate(0, 0);
-  transition-delay: var(--animation-delay);
 }
 
-/* Directional transforms */
-.from-left {
-  --initial-transform: translateX(-60px);
+.animated-card {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: none;
 }
 
-.from-right {
-  --initial-transform: translateX(60px);
-}
-
-.from-top {
-  --initial-transform: translateY(-60px);
-}
-
+.from-left,
+.from-right,
+.from-top,
 .from-bottom {
-  --initial-transform: translateY(60px);
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-delay: var(--animation-delay);
 }
 
-/* Optional hover effect */
-.animated-card:hover {
-  transform: scale(1.05);
-  z-index: 2;
+.animatedcard.visible .from-left {
+  animation-name: slideFromLeft;
+}
+.animatedcard.visible .from-right {
+  animation-name: slideFromRight;
+}
+.animatedcard.visible .from-top {
+  animation-name: slideFromTop;
+}
+.animatedcard.visible .from-bottom {
+  animation-name: slideFromBottom;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reset when trigger is false */
+.reset {
+  opacity: 0;
+  transform: scale(0.95);
 }

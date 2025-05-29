@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+
 // import '../../../src/index.css'; // or './styles.css'
 
 import "./homeStyle.css"
@@ -42,6 +44,8 @@ import Countarcard from "./componnet/counterCard"
 
 import ImageSlider from "./componnet/TestomonilaSlider";
 import Accordion from "./componnet/Accordian";
+import curve from "./resources/curvepath.svg";
+import { FaPhoneVolume } from "react-icons/fa6";
 
 const autoSlide = [
   {
@@ -90,6 +94,9 @@ const autoSlide = [
 
 
 const Home = () => {
+
+
+
 
   const [flippedIds, setFlippedIds] = useState([]);
 
@@ -156,6 +163,83 @@ const Home = () => {
 
   ];
 
+
+
+  // const wrapperRef = useRef();
+  // const secondREf =useRef();
+  // const [trigger, setTrigger] = useState(false);
+  // const[cardtrigger ,setCardTrigger] = useState(false);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setTrigger(true);
+  //         setCardTrigger(true)
+  //       } else {
+  //         setTrigger(false);
+  //         setCardTrigger(false)
+  //       }
+  //     },
+  //     { threshold: 0.5 }
+  //   );
+
+  //   if (wrapperRef.current) {
+  //     observer.observe(wrapperRef.current);
+  //   }
+  //   if(secondREf.current){
+  //      observer.observe(secondREf.current);
+  //   }
+
+  //   return () => {
+  //     if (wrapperRef.current) {
+  //       observer.unobserve(wrapperRef.current);
+  //     }
+  //     if(secondREf.current){
+  //       observer.unobserve(secondREf.current); 
+  //     }
+  //   };
+  // }, []);
+
+  const wrapperRef = useRef();
+  const secondREf = useRef();
+  const [trigger, setTrigger] = useState(false);
+  const [cardtrigger, setCardTrigger] = useState(false);
+
+  useEffect(() => {
+    const observer1 = new IntersectionObserver(
+      ([entry]) => {
+        setTrigger(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        setCardTrigger(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (wrapperRef.current) {
+      observer1.observe(wrapperRef.current);
+    }
+    if (secondREf.current) {
+      observer2.observe(secondREf.current);
+    }
+
+    return () => {
+      if (wrapperRef.current) {
+        observer1.unobserve(wrapperRef.current);
+      }
+      if (secondREf.current) {
+        observer2.unobserve(secondREf.current);
+      }
+    };
+  }, []);
+
+
+  console.log("Trigger received in home page:", trigger);
   return (
     <>
       <div className=''>
@@ -255,28 +339,28 @@ const Home = () => {
 </div> */}
 
 
-<div
-  className=" max-xl:mt-[120px] max-lg:mt-[100px] max-md:mt-[150px]	 w-full flex flex-col items-start justify-center mt-[40px ]  mb-[40px] bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: `url(${marketingbanner})`,
-  }}
->
-  {/* Overlay (optional for readability) */}
-  <div className="bg-white/80 p-[40px] rounded-md max-w-2xl w-full">
-    <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
-      Building Brands with <br className="hidden md:block" />
-      Integrity and Innovation <br className="hidden md:block" />
-      Across India
-    </h2>
-    <p className="text-sm md:text-base text-black mt-4 mb-6">
-      WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
-      Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
-    </p>
-    <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
-      Get Started
-    </button>
-  </div>
-</div>
+        <div
+          className=" max-xl:mt-[120px] max-lg:mt-[100px] max-md:mt-[150px]	 w-full flex flex-col items-start justify-center mt-[40px ]  mb-[40px] bg-cover bg-center bg-no-repeat"
+        // style={{
+        //   backgroundImage: `url(${marketingbanner})`,
+        // }}
+        >
+          {/* Overlay (optional for readability) */}
+          <div className="bg-white/80 p-[40px] rounded-md max-w-2xl w-full">
+            <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
+              Building Brands with <br className="hidden md:block" />
+              Integrity and Innovation <br className="hidden md:block" />
+              Across India
+            </h2>
+            <p className="text-sm md:text-base text-black mt-4 mb-6">
+              WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
+              Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
+            </p>
+            <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
+              Get Started
+            </button>
+          </div>
+        </div>
 
 
 
@@ -310,13 +394,13 @@ const Home = () => {
 
 
 
-        <div className="bg-white p-[40px] mt-[30px]  text-start flex flex-col justify-center md:flex-row md:items-center md:gap-[60px] gap-6">
+        <div className="bg-white p-[40px] mt-[30px] transparenbody  text-start flex flex-col justify-center md:flex-row md:items-center md:gap-[60px] gap-6">
 
           <div className="flex justify-center md:w-[35%]">
             <img src={pana} className="w-[200px] md:w-full max-w-xs" alt="Image" />
           </div>
 
-          <div className="md:w-[60%] bg-[#dcf5da] p-[40px] comprensive">
+          <div className="md:w-[60%]  p-[40px] comprensive">
             <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] text-[#4D4D4D] ">
               Comprehensive Digital Marketing Services  in India
             </h2>
@@ -327,7 +411,7 @@ const Home = () => {
 
         </div>
 
-        <div className='flipcard bg-[white] p-[40px]'>
+        <div className='flipcard bg-[white] p-[40px] transparenbody'>
 
 
           <h2 className=" "> Service's we Offered</h2>
@@ -364,61 +448,121 @@ const Home = () => {
 
 
 
-        <div className="Slidercrausol ">
+        <div className="Slidercrausol  ">
           <h2 className="heading">One Partner. Every Platform. Endless Growth </h2>
 
           <Slider slides={autoSlide} autoSlideInterval={4000} />
 
         </div>
 
-        <div className="industriweserve">
+        <div
+          ref={secondREf}
+          onMouseEnter={() => setCardTrigger(true)}
+          className="industriweserve mb-[30px]"
+
+        >
 
           <h2 className="heading mb-[20px]">Industries We serve </h2>
 
+          <AnimatedCardList cardtrigger={cardtrigger} className="animatedcard  "
+            ref={secondREf}
+            onMouseEnter={() => setCardTrigger(true)}
+
+          />
 
 
-          <div className="animatedcard ">
-            <AnimatedCardList />
+        </div>
+
+
+
+        <div className=" cursor-pointer phone p-[30px] bg-[#409338] flex items-center  gap-[40px] justify-around  w-[90%]  mx-auto  rounded-[20px] shadow-md " >
+
+          <div>
+            <FaPhoneVolume className="ringing text-[white] text-[70px] flex items-center justify-center " />
+         
+          </div>
+          <div className=" flex-d">
+
+            <p className="text-[white]  text-[20px] font-bold">  Get a Free Consultation</p>
+           
+
+ <div class="numberanimation">
+    <span>+91&nbsp;</span>
+    <span>-&nbsp;</span>
+    <span>96&nbsp;</span>
+    <span>96&nbsp;</span>
+    <span>96&nbsp;</span>
+    <span>46&nbsp;</span>
+    <span>06</span>
+  </div>
+          </div>
+          
+            <p className="text-[white]  text-[30px] font-bold pr-[30px]"> Talk to us and never worry <br /> about leads ever again! </p>
+
+        </div>
+
+        <div
+          ref={wrapperRef}
+          onMouseEnter={() => setTrigger(true)}
+          className="counter flex mt-[20px] flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
+          {/* Counter Cards Section */}
+          {/* <div className="w-full md:w-1/2 lg:w-[40%]">
+              <Countarcard />
+            </div> */}
+
+
+          <div
+
+            className="w-full md:w-1/2 lg:w-[40%]"
+
+          >
+            <Countarcard trigger={trigger} />
           </div>
 
+          {/* Text Content Section */}
+          <div className="w-full md:w-1/2 lg:w-[50%] text-center md:text-left space-y-6">
+            <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+              Why Choose WebNest Media?
+            </h4>
 
-          <div className="counter flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
-            {/* Counter Cards Section */}
-            <div className="w-full md:w-1/2 lg:w-[40%]">
-              <Countarcard />
-            </div>
+            <p className="text-[black] text-[17px]">
+              Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth.
+            </p>
 
-            {/* Text Content Section */}
-            <div className="w-full md:w-1/2 lg:w-[50%] text-center md:text-left space-y-6">
-              <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
-                Why Choose WebNest Media?
-              </h4>
-
-              <p className="text-[black] text-[17px]">
-                Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth.
-              </p>
-
-              <button className="getstarted-btnn px-6 py-2 rounded bg-green-600 text-white hover:bg-green-700 transition duration-300">
-                Know More
-              </button>
-            </div>
+            <button className="getstarted-btnn px-6 py-2 rounded bg-green-600 text-white hover:bg-green-700 transition duration-300">
+              Know More
+            </button>
           </div>
         </div>
+
+
         <div className="tetonomial mt-[30px] mb-[40px]">
-          <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
-            Every Insight Matters. Every Voice Fuels Us
-          </h4>
+
           <ImageSlider data={testimonialsData} />
         </div>
 
         <div className="accordian">
 
 
-          <h4 className="text-2xl md:text-3xl font-bold text-[#5c945c] text-center mt-[30px] mb-[40px]">
-            Information Hub
+          <h4 className="faq">
+            Frequently Asked Questions (FAQs)
           </h4>
           <Accordion />
         </div>
+
+
+
+
+        {/* <div className="relative w-full h-[300px] overflow-hidden">
+  <div
+    className="curvepath"
+    style={{ backgroundImage: `url(${curve})` }}
+  ></div>
+</div> */}
+
+
+
+
       </div>
     </>
   )

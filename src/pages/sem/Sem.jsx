@@ -125,6 +125,9 @@ const Sem = () => {
         {tabsData[activeTab].content}
       </div>
 
+
+   
+
     </div>
   );
 };

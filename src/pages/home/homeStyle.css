@@ -306,6 +306,9 @@ body {
 }
 
 
+.industriweserve{
+  width: 100%;
+}
 
 .flipcard  h2,  .industriweserve h2{
    color: #409338;;
@@ -432,6 +435,19 @@ body {
     -webkit-text-stroke: 2px #5c945c;
     -webkit-text-fill-color: #5c945c;
 
+}
+.faq{
+     color: #409338;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-text-stroke: 1px #409338;
+    -webkit-text-fill-color: #409338;
+    margin:90px 0;
+   
+    -webkit-text-stroke: 2px #5c945c;
+    -webkit-text-fill-color: #5c945c;
 }
 
 .countertextheading{
@@ -602,6 +618,10 @@ display: inline-block;
   animation: float_Up 3s ease-in-out infinite;
 }
 
+.animate-float_Up:hover {
+  animation: float_Up 3s ease-in-out infinite;
+}
+
 @keyframes float_Up {
   0% {
     transform: translateY(0);
@@ -632,3 +652,108 @@ display: inline-block;
     max-width: 450px;
   }
 }
+
+
+
+
+.curvepath {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Center element without animation */
+  transform: translate(-50%, -50%);
+  
+  /* Animation only rotates & scales */
+  animation: spiralEffect 3s linear infinite;
+  transform-origin: center center;
+  z-index: 0;
+  transform-style: preserve-3d;
+}
+
+
+
+
+@keyframes phone-shake {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-15deg); }
+  20% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(-5deg); }
+  60% { transform: rotate(5deg); }
+  70% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.ringing {
+  animation: phone-shake 2s ease-in-out infinite;
+  cursor:pointer
+}
+
+
+
+
+
+
+
+.numberanimation {
+ /* text-[white] text-[50px] font-bold */
+
+ color:white;
+ font-size:50px;
+ font-weight: 700;
+}
+
+.numberanimation span {
+  display: inline-block;
+  animation: pop 0.4s ease-in-out;
+}
+
+.numberanimation span:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.numberanimation span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.numberanimation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.numberanimation span:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.numberanimation span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.numberanimation span:nth-child(6) {
+  animation-delay: 0.9s;
+}
+.numberanimation span:nth-child(7) {
+  animation-delay: 1s;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    /* opacity: 0; */
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
