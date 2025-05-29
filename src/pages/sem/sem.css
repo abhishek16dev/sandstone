@@ -1,3 +1,9 @@
+/* body {
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+  font-family: Arial, sans-serif;
+  margin: 0;
+} */
+
 .container_1 {
   display: flex;
   justify-content: space-between;
@@ -6,37 +12,37 @@
 }
 
 .c1_text {
-  width: 85%; /* Reduced width to accommodate form */
+  width: 85%;
   padding-right: 20px;
   border-radius: 15px;
   padding: 15px;
   margin-left: 40px;
-  height: 200px; /* Ensures the text container takes full height */
+  height: 200px;
 }
 
 .c1_img {
-  margin-left: 0px;
-  width: 600px; /* Make the image fill the container */
-  height: 350px; /* Maintain aspect ratio */
-  max-width: 700px; /* added to control image size */
-  display: block; /* removes extra space below image */
-  margin: 0 auto; /* centers the image horizontally */
+  width: 600px;
+  height: 350px;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
 }
 
 .loginform {
-  width: 80%; /* Adjusted width */
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to bottom, #c2f9c2, #ffffff);
-  display: flex; /* Added to center the form content */
-  flex-direction: column; /* Added to center the form content */
-  justify-content: center; /* Added to center the form content */
-}
-
-.loginform form {
-  display: flex;
+  margin-top: 10px;
+  width: 80%;
+  padding: 20px; /* Reduced from 20px */
+  background-color: white; /* Light background color */
+  border-radius: 15px; /* Reduced from 20px */
+   box-shadow: 
+    0px 0px 10px rgba(0, 0, 0, 0.1), /* Soft shadow */
+    0px 5px 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  border: 1px solid #ddd; /* Subtle border */
   flex-direction: column;
+  transition: transform 0.2s ease-in-out; /* Smooth tra
+  justify-content: flex-start;
+  height: 500px; /* Set height to 560px */
+  /* min-height: 400px;  Removed min-height */
 }
 
 .loginform input[type="text"],
@@ -44,99 +50,79 @@
 .loginform input[type="tel"],
 .loginform textarea,
 .loginform select {
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 8px; /* Reduced from 15px */
+  padding: 10px; /* Reduced from 10px */
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 5px; /* Reduced from 7px */
+  font-size: 15px; /* Reduced from 16px */
   width: 100%;
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
-.loginform input[type="text"]::placeholder,
-.loginform input[type="email"]::placeholder,
-.loginform input[type="tel"]::placeholder,
-.loginform textarea::placeholder {
-  color: #555;
-}
-
 .loginform label {
   color: #555;
-  margin-bottom: 5px;
+  margin-bottom: 3px; /* Reduced from 5px */
   font-weight: bold;
-}
-
-.loginform select {
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px top 50%;
-  background-size: 16px;
-}
-
-.loginform textarea {
-  resize: vertical;
-  height: 100px;
+  font-size: 16px; /* Reduced font size */
+  padding: 2px;
 }
 
 .loginform button[type="submit"] {
   background-color: #4CAF50;
   color: white;
-  padding: 12px 20px;
+  padding: 8px 15px; /* Reduced from 12px 20px */
   border: none;
-  border-radius: 4px;
+  border-radius: 6px; /* Reduced from 8px */
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease; /* added transition */
-}
-
-.loginform button[type="submit"]:hover {
-  background-color: #3e8e41;
+  font-size: 16px; /* Reduced from 18px */
+  transition: background-color 0.3s ease;
+  padding-left: 150px;
+  padding-right: 170px;
 }
 
 .loginform p {
-  font-size: 20px;
+  font-size: 18px; /* Reduced from 20px */
   font-weight: bold;
   text-align: center;
   color: #555;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 3px; /* Reduced from 4px */
+  margin-bottom: 3px; /* Reduced from 4px */
 }
 
 .c1_introduction {
   font-size: 40px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px; /* added margin */
+  margin-bottom: 10px;
+  margin-left: 1px;
 }
 
 .c1_ans {
-  font-size: 18px; /* Reduced font size for better readability */
+  font-size: 18px;
   color: #555;
   margin-top: 20px;
-  line-height: 1.6; /* Increased line height for better readability */
+  line-height: 1.6;
 }
+
 .tabs {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between; /* Distribute tabs evenly */
+  justify-content: space-between;
   margin-top: 20px;
   overflow-x: auto;
   white-space: nowrap;
-  
 }
 
 .tabbuttons {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
   margin: 0 5px;
-  flex: 1; /* Make tabs take equal space */
-  text-align: center; /* Center the text in each tab */
+  flex: 1;
+  text-align: center;
   margin-left: 40px;
 }
 
@@ -145,59 +131,211 @@
 }
 
 .tabbuttons.active {
+  border-bottom: 2px solid #3e8e41;
   color: #3e8e41;
 }
 
 .tab-content {
+  display: flex;
+  flex-direction: row;
   margin-left: 42px;
   margin-top: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  padding-right: 22px;
 }
-.c2_text {
-  /* Your existing styles for c2_text */
 
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 40px;
-    text-align: left;
-    margin-bottom: 10px;
-    
+.c2_text {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .c2_para {
-  /* Add styles for the paragraph */
   font-size: 16px;
   line-height: 1.5;
   color: #666;
 }
 
 .c2_list {
-  /* Add styles for the list */
   margin-top: 10px;
-  list-style-type: disc; /* Use bullet points */
-  padding-left: 20px; /* Indent the list */
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 .container_2 {
-  margin-left: 50px; /* Add left margin */
-  margin-right: 50px; /* Add right margin */
-  padding: 20px; /* Add padding inside the container */
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
   color: #444;
 }
-.tick_mark{
-    width: 24px;
-    height: 24px;
-    background-color: #4CAF50; 
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
+
+.c2_list_items,
+.c2_list_item {
+  position: relative;
+  padding-left: 90px;
+  padding-bottom: 10px;
+  padding-top: 5px;
 }
-.tick{
-     font-size: 13px;
-    font-weight: normal;
-    color: white;
-    display: flex;
-    align-items: center;
+
+.tick_mark {
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 57px;
+  margin-top: 3px;
+
+}
+
+.tick {
+  font-size: 13px;
+  font-weight: normal;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.tab-content h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: left;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens (up to 768px) */
+@media screen and (max-width: 768px) {
+  .container_1 {
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .c1_text {
+    width: 90%; /* Take up more width */
+    margin-left: 0; /* Remove left margin */
+    padding-right: 0; /* Remove right padding */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .c1_img {
+    width: 100%; /* Image takes full width */
+    max-width: 100%; /* added to control image size */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .loginform {
+    width: 90%; /* Form takes more width */
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+    align-items: stretch; /* Make tabs full width */
+  }
+
+  .tabbuttons {
+    margin-left: 0; /* Remove left margin from tabs */
+    margin-bottom: 5px; /* Add some space between stacked tabs */
+  }
+
+  .c2_list_items,
+  .c2_list_item {
+    padding-left: 20px; /* Reduce padding for list items */
+  }
+
+  .tick_mark {
+    left: 0; /* Adjust tick mark position */
+  }
+}
+
+/* For even smaller screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  .c1_introduction {
+    font-size: 32px; /* Further reduce heading size */
+  }
+
+  .c1_ans {
+    font-size: 16px; /* Further reduce text size */
+  }
+
+  .loginform p {
+    font-size: 18px; /* Reduce form heading size */
+  }
+}
+.tab-content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  margin-left: 42px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 22px;
+}
+
+.tab-image-description {
+  display: flex; /* Image and description in a row */
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: -20px; /* Add spacing below the image/description section */
+  gap: 40px;
+}
+
+
+
+.tab-description {
+  padding-top: 50px;
+  /* flex: 1;  */
+  width: calc(100% - 450px);
+  
+}
+
+.tab-html-content {
+ /* Add padding above the content */
+   /* Add margin above the content */
+}
+.tab-content h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: left;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.img_wrap{
+  height: 350px;
+  width: 400px;
+  overflow: hidden;
+
+}
+
+.img_wrap img{
+
+  width: 100%;
+height:100%;
+object-fit: cover;
+display: block;
+
+
+}
+
+.tab_image {
+
 }
