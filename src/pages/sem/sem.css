@@ -267,53 +267,6 @@
   color: #333;
 }
 
-.accordion-wrapper-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.accordion {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.accordion input[type="checkbox"] {
-  display: none;
-}
-
-.accordion-label {
-  display: block;
-  padding: 15px;
-  background-color: #f8f9fa;
-  cursor: pointer;
-  font-weight: bold;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-label:hover {
-  background-color: #e9ecef;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: white;
-}
-
-.accordion-content p {
-  padding: 15px;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.accordion input[type="checkbox"]:checked + .accordion-label + .accordion-content {
-  max-height: 500px;
-}
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 1024px) {
@@ -407,6 +360,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    margin-left: 0;
+    margin-right: 0;
+  }
   .c1_introduction {
     font-size: 32px;
     text-align: center;
@@ -441,27 +398,9 @@
     margin: 0 0 5px 0;
     padding: 12px;
   }
-
-  .accordion-wrapper-columns {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .FAQS {
-    margin: 20px 10px;
-    padding: 15px;
-  }
-
-  .faq {
-    font-size: 24px;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .container_1 {
-    padding: 10px;
-  }
-
   .c1_introduction {
     font-size: 28px;
   }
@@ -490,7 +429,6 @@
   .tab-content {
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px;
   }
 
   .tab-content h2 {
@@ -522,4 +460,5 @@
   .tick {
     font-size: 10px;
   }
+  .
 }
