@@ -6,6 +6,7 @@ import PPC from './resources/PPC.svg';
 import bid from './resources/bid.svg';
 import analytics from "./resources/analytics.svg";
 import ads from './resources/ads.svg';
+
 const Sem = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -432,11 +433,133 @@ const Sem = () => {
         </div>
         <div className="tab-html-content"> {tabsData[activeTab].content}</div>
       </div>
+        <div className="FAQS">
+  <h4 className="faq">Frequently Asked Questions (FAQs)</h4>
+  <div className="accordion-wrapper-columns">
+    {/* Left Column */}
+    <div className="accordion-column">
+      <div className="accordion">
+        <input type="checkbox" id="left-1" />
+        <label className="accordion-label" htmlFor="left-1">
+          What is Search Engine Marketing (SEM)?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Search Engine Marketing (SEM) is a form of online marketing that aims to increase a
+            website’s visibility on search engine results pages (SERPs). It involves paid
+            strategies, like pay-per-click (PPC) advertising, to ensure a website appears at the top
+            of search results for relevant keywords.
+          </p>
+        </div>
+      </div>
 
+      <div className="accordion">
+        <input type="checkbox" id="left-2" />
+        <label className="accordion-label" htmlFor="left-2">
+          What are the benefits of Search Engine Marketing?
+        </label>
+        <div className="accordion-content">
+          <p><b>Increased Visibility:</b> Your site appears at the top of search results.</p>
+          <p><b>Targeted Traffic:</b> Ads reach users actively searching for the offerings.</p>
+          <p><b>Measurable Results:</b> Track and adjust campaigns in real-time.</p>
+          <p><b>Cost-Effective:</b> Only pay when someone clicks on the advertisement.</p>
+        </div>
+      </div>
 
-   
+      <div className="accordion">
+        <input type="checkbox" id="left-3" />
+        <label className="accordion-label" htmlFor="left-3">
+          How does SEM differ from SEO?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Both SEM and SEO (Search Engine Optimization) aim to raise a website's visibility on
+            search engines. SEM involves paid methods, like PPC ads, whereas SEO focuses on organic
+            strategies to improve rankings. SEO is a long-term approach, whereas SEM delivers
+            benefits instantly.
+          </p>
+        </div>
+      </div>
 
+      <div className="accordion">
+        <input type="checkbox" id="left-4" />
+        <label className="accordion-label" htmlFor="left-4">
+          What is PPC (Pay-Per-Click) marketing in Search Engine Marketing?
+        </label>
+        <div className="accordion-content">
+          <p>
+            With the pay-per-click (PPC) model, marketers are charged a fee each time a user clicks
+            on their ad. It’s a key component of SEM, allowing advertisers to bid on keywords and
+            have their ads appear in the sponsored section of search results. Google Ads is one of
+            the most popular platforms for running PPC campaigns.
+          </p>
+        </div>
+      </div>
+
+      <div className="accordion">
+        <input type="checkbox" id="left-5" />
+        <label className="accordion-label" htmlFor="left-5">
+          Why is keyword research important in SEM?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Keyword research is crucial because it helps identify the search terms your target
+            audience uses. By selecting the right keywords, you ensure your ads are seen by people
+            actively interested in your offerings. This can improve campaign performance and boost
+            click-through rates (CTR).
+          </p>
+        </div>
+      </div>
     </div>
+
+    {/* Right Column */}
+    <div className="accordion-column">
+      <div className="accordion">
+        <input type="checkbox" id="right-6" />
+        <label className="accordion-label" htmlFor="right-6">
+          How does Google Ads work in SEM?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Google Ads is a PPC platform that allows advertisers to bid on keywords targeting users
+            who search for terms related to their business. Ads appear in search results or across
+            Google’s network and are ranked based on bid amount, ad quality, and keyword relevance.
+          </p>
+        </div>
+      </div>
+
+      <div className="accordion">
+        <input type="checkbox" id="right-7" />
+        <label className="accordion-label" htmlFor="right-7">
+          What is an Ad Rank in SEM?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Ad Rank is a metric used by Google Ads to determine the position of your ad on the
+            results page. It’s based on your bid, Quality Score, ad relevance, and the expected
+            impact of ad extensions and formats. Higher Ad Rank gives better ad placements.
+          </p>
+        </div>
+      </div>
+
+      <div className="accordion">
+        <input type="checkbox" id="right-8" />
+        <label className="accordion-label" htmlFor="right-8">
+          Can search engine marketing work for small businesses?
+        </label>
+        <div className="accordion-content">
+          <p>
+            Yes, SEM is effective for small businesses. It enables targeting specific audiences and
+            controlling ad spend, making it a cost-effective way to gain visibility. With keyword
+            optimization and budget control, small businesses can compete with larger competitors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
   );
 };
 

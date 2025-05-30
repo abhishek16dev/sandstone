@@ -2,7 +2,7 @@ import React from 'react';
 import "./FooterStyle.css"
 import FooterSection from "./FooterSection"
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
 
