@@ -37,10 +37,6 @@ const Sem = () => {
             <li style={{ paddingTop: '10px' }}><b>Video Ads (YouTube):</b> Use engaging video content to drive brand awareness, increase website visits, and generate leads through YouTube Ads.</li>
             <li style={{ paddingTop: '10px' }}><b>Display Advertisements:</b> Our team targets users with banner advertisements across the Google Display Network, increasing brand visibility and driving conversions.</li>
           </ul>
-          <h2>Start Your PPC Campaign Today</h2>
-          <p>
-            Ready to drive more traffic and boost conversions? Our team of PPC experts is here to design and manage custom campaigns that align with your business goals. Contact us today to start seeing real results with PPC advertising.
-          </p>
         </div>
       )
       },
@@ -434,7 +430,12 @@ const Sem = () => {
         </div>
         <div className="tab-html-content"> {tabsData[activeTab].content}</div>
       </div>
+      <div className="banner">
+        <h2>Start Your Campaign Today</h2>
+        <p>Ready to drive more traffic and boost conversions? Our team of PPC experts is here to design and manage custom campaigns that align with your business goals. Contact us today to start seeing real results with PPC advertising.</p>
+      </div>
         <div className="FAQS">
+  
   <h4 className="faq">Frequently Asked Questions (FAQs)</h4>
   <div className="accordion-wrapper-columns">
     {/* Left Column */}
