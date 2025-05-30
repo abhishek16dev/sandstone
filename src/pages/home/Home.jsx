@@ -46,6 +46,7 @@ import ImageSlider from "./componnet/TestomonilaSlider";
 import Accordion from "./componnet/Accordian";
 import curve from "./resources/curvepath.svg";
 import { FaPhoneVolume } from "react-icons/fa6";
+import Conatctfrom from "./componnet/contactform"; 
 
 const autoSlide = [
   {
@@ -491,7 +492,7 @@ const Home = () => {
 
 
 
-        <div
+        {/* <div
          ref={thirdREf}
           onMouseEnter={() => setThirdtrigger(true)}
         className=" cursor-pointer phone p-[30px] bg-[#409338] flex items-center  gap-[40px] justify-around  w-[90%]  mx-auto  rounded-[20px] shadow-md " >
@@ -505,7 +506,7 @@ const Home = () => {
             <p className="text-[white]  text-[20px] font-bold">  Get a Free Consultation</p>
            
 
- {/* <div class="numberanimation">  */}
+
 
 <div className={`text-[white] text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""}`}>
 <span>+91&nbsp;</span>
@@ -520,7 +521,46 @@ const Home = () => {
           
             <p className="text-[white]  text-[30px] font-bold pr-[30px]"> Talk to us and never worry <br /> about leads ever again! </p>
 
-        </div>
+        </div> */}
+
+        <div
+  ref={thirdREf}
+  onMouseEnter={() => setThirdtrigger(true)}
+  className="cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
+>
+  {/* Phone Icon */}
+  <div className="mb-4 md:mb-0">
+    <FaPhoneVolume className="ringing text-white text-[50px] md:text-[70px] flex items-center justify-center" />
+  </div>
+
+  {/* Text & Number */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <p className="text-white text-[18px] md:text-[20px] font-bold">
+      Get a Free Consultation
+    </p>
+
+    <div
+      className={`text-white text-[32px] md:text-[50px] font-bold ${
+        thirdtrigger ? "numberanimation" : ""
+      }`}
+    >
+      <span>+91&nbsp;</span>
+      <span>-&nbsp;</span>
+      <span>96&nbsp;</span>
+      <span>96&nbsp;</span>
+      <span>96&nbsp;</span>
+      <span>46&nbsp;</span>
+      <span>06</span>
+    </div>
+  </div>
+
+  {/* CTA Message */}
+  <p className="text-white text-[20px] md:text-[30px] font-bold pr-0 md:pr-[30px] text-center md:text-left">
+    Talk to us and never worry <br />
+    about leads ever again!
+  </p>
+</div>
+
 
         <div
           ref={wrapperRef}
@@ -561,6 +601,44 @@ const Home = () => {
 
           <ImageSlider data={testimonialsData} />
         </div>
+
+
+        
+      <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+                    Get a free consultation!
+                </p>
+
+  <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
+
+  {/* Left Side: Text + Numbers */}
+  <div className="w-[45%] max-lg:w-full">
+    <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+      Work With Us and Take <br />Your Business to the Next Level
+    </h3>
+    <p className="text-[17px] text-black mt-5 mb-5">
+      We provide the tools, expertise, and support you need to grow faster,
+      <br /> reach more customers, and stay ahead of the competition.
+      <br /> Let’s take your business to the next level—together.
+    </p>
+
+    <p>
+      <a href="tel:+919696964606" className="text-black font-bold hover:underline">
+        +91 9696964606
+      </a>
+    </p>
+    <p>
+      <a href="tel:+919211676307" className="text-black font-bold hover:underline">
+        +91 9211676307
+      </a>
+    </p>
+  </div>
+
+  {/* Right Side: Contact Form */}
+  <div className="w-[45%] max-lg:w-full">
+    <Conatctfrom className="w-full" />
+  </div>
+
+</div>
 
         <div className="accordian">
 

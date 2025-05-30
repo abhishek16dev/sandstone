@@ -63,9 +63,9 @@ const menuItems = [
   {
     title: "Digital Marketing",
     subItems: [
-      { title: "Search Engine Marketing (SEM)", path: "/digital-marketing/sem" },
+      { title: "Search Engine Marketing (SEM)", path: "/search-engine-marketing" },
       { title: "Search Engine Optimization (SEO)", path: "/digital-marketing/seo" },
-      { title: "Social Media Marketing (SMM)", path: "/digital-marketing/smm" },
+      { title: "Social Media Marketing (SMM)", path: "/social-media-marketing" },
       { title: "Web Development", path: "/digital-marketing/web-development" },
       { title: "Content Marketing", path: "/digital-marketing/content-marketing" },
       { title: "Affiliate Marketing", path: "/digital-marketing/affiliate-marketing" }

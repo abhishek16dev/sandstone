@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sem from "./pages/sem/Sem" ;
+import Smm from './pages/smm/smm';
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-           <Route path="/digital-marketing/sem" element={<Sem />} />
+           <Route path="/search-engine-marketing" element={<Sem />} />
+           <Route path="//social-media-marketing"element={<Smm />} />
       
       </Routes>
        <Footer />
