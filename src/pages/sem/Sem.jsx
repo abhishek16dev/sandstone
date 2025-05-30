@@ -6,6 +6,7 @@ import PPC from './resources/PPC.svg';
 import bid from './resources/bid.svg';
 import analytics from "./resources/analytics.svg";
 import ads from './resources/ads.svg';
+import accordian from '../home/componnet/accordian.css'
 
 const Sem = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -330,7 +331,7 @@ const Sem = () => {
   };
 
   return (
-    <div className='mt-[120px]'>
+    <div className='mt-[120px] pl-[40px] pr-[40px]' >
       <div className="container_1">
         <div>
           <img src={SEM1} alt="Search Engine Marketing" className="c1_img" />
