@@ -203,8 +203,10 @@ const Home = () => {
 
   const wrapperRef = useRef();
   const secondREf = useRef();
+  const thirdREf = useRef();
   const [trigger, setTrigger] = useState(false);
   const [cardtrigger, setCardTrigger] = useState(false);
+  const [thirdtrigger ,setThirdtrigger] = useState(false);
 
   useEffect(() => {
     const observer1 = new IntersectionObserver(
@@ -221,11 +223,22 @@ const Home = () => {
       { threshold: 0.5 }
     );
 
+      const observer3 = new IntersectionObserver(
+      ([entry]) => {
+        setThirdtrigger(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
     if (wrapperRef.current) {
       observer1.observe(wrapperRef.current);
     }
     if (secondREf.current) {
       observer2.observe(secondREf.current);
+    }
+
+     if (thirdREf.current) {
+      observer3.observe(thirdREf.current);
     }
 
     return () => {
@@ -234,6 +247,9 @@ const Home = () => {
       }
       if (secondREf.current) {
         observer2.unobserve(secondREf.current);
+      }
+       if (thirdREf.current) {
+        observer3.unobserve(thirdREf.current);
       }
     };
   }, []);
@@ -475,7 +491,10 @@ const Home = () => {
 
 
 
-        <div className=" cursor-pointer phone p-[30px] bg-[#409338] flex items-center  gap-[40px] justify-around  w-[90%]  mx-auto  rounded-[20px] shadow-md " >
+        <div
+         ref={thirdREf}
+          onMouseEnter={() => setThirdtrigger(true)}
+        className=" cursor-pointer phone p-[30px] bg-[#409338] flex items-center  gap-[40px] justify-around  w-[90%]  mx-auto  rounded-[20px] shadow-md " >
 
           <div>
             <FaPhoneVolume className="ringing text-[white] text-[70px] flex items-center justify-center " />
@@ -486,8 +505,10 @@ const Home = () => {
             <p className="text-[white]  text-[20px] font-bold">  Get a Free Consultation</p>
            
 
- <div class="numberanimation">
-    <span>+91&nbsp;</span>
+ {/* <div class="numberanimation">  */}
+
+<div className={`text-[white] text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""}`}>
+<span>+91&nbsp;</span>
     <span>-&nbsp;</span>
     <span>96&nbsp;</span>
     <span>96&nbsp;</span>
