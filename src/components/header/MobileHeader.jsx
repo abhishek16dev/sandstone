@@ -58,7 +58,7 @@ export default function MobileHeader() {
       </div>
     <div>
  <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>
-    <p className="text-[grey]"> (Nest your brand in the web of success )
+    <p className="text-[grey] text-[10px]"> (Nest your brand in the web of success )
     </p>
     </div>
    

@@ -12,7 +12,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-background-image: url('./pages/home/resources/Shadowbody.svg');
+  background-image: url('./pages/home/resources/Shadowbody.svg');
 
 }
 

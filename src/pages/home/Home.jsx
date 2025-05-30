@@ -266,7 +266,7 @@ const Home = () => {
               <span>Best </span>
               <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
-              <span>  Agency with  <span className="text-[#409338] floating-text-two">Smart Strategies  </span></span>
+              <span>  Agency with  <span className="text-[#409338] floating-text-two ">Smart Strategies  </span></span>
 
               <img src={rocket} className='absolute max-md:top-[440px]  top-[90px] left-[90px] animate-floatUp ' />
 
@@ -328,7 +328,7 @@ const Home = () => {
         </div> */}
 
 
-        {/* <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-10 lg:px-20 lg:py-20 gap-8">
+        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-2  gap-8">
  
   <div className="w-full lg:w-1/2">
     <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
@@ -346,23 +346,21 @@ const Home = () => {
   </div>
 
 
-  <div className="w-full lg:w-1/2">
+  <div className="w-1/2 lg:w-1/2 flex items-center justify-end max-lg:w-[100%] max-lg:justify-start">
     <img
       src={marketingbanner}
       alt="Marketing Banner"
-      className="w-full h-auto object-cover"
+      className="w-[400px] h-[400px] object-cover"
     />
   </div>
-</div> */}
+</div>
 
-
-        <div
+{/*  */}
+        {/* <div
           className=" max-xl:mt-[120px] max-lg:mt-[100px] max-md:mt-[150px]	 w-full flex flex-col items-start justify-center mt-[40px ]  mb-[40px] bg-cover bg-center bg-no-repeat"
-        // style={{
-        //   backgroundImage: `url(${marketingbanner})`,
-        // }}
+       
         >
-          {/* Overlay (optional for readability) */}
+        
           <div className="bg-white/80 p-[40px] rounded-md max-w-2xl w-full">
             <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
               Building Brands with <br className="hidden md:block" />
@@ -377,7 +375,7 @@ const Home = () => {
               Get Started
             </button>
           </div>
-        </div>
+        </div> */}
 
 
 
@@ -586,7 +584,7 @@ const Home = () => {
               Why Choose WebNest Media?
             </h4>
 
-            <p className="text-[black] text-[17px]">
+            <p className="text-[black] text-[15px]">
               Webnest Media, based in Gurgaon, brings over 20 years of expertise in web design, development, and digital marketing. With a focus on delivering innovative and results-driven solutions, they help businesses enhance their online presence and achieve sustainable growth.
             </p>
 
@@ -643,9 +641,7 @@ const Home = () => {
         <div className="accordian">
 
 
-          <h4 className="faq">
-            Frequently Asked Questions (FAQs)
-          </h4>
+          <p class="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
           <Accordion />
         </div>
 
