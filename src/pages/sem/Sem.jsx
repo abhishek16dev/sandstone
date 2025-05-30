@@ -6,7 +6,7 @@ import PPC from './resources/PPC.svg';
 import bid from './resources/bid.svg';
 import analytics from "./resources/analytics.svg";
 import ads from './resources/ads.svg';
-import accordian from '../home/componnet/accordian.css'
+// import accordian from '../home/componnet/accordian.css'
 
 const Sem = () => {
   const [activeTab, setActiveTab] = useState(0);

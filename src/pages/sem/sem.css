@@ -42,7 +42,7 @@
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
   justify-content: flex-start;
-  height: 500px;
+  height: 530px;
 }
 
 .loginform input[type="text"],
