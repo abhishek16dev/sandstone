@@ -1,0 +1,26 @@
+.c1{
+    width: 1280px;
+    height: 537px;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.c1-left{
+    width: 50%;
+    p
+}
+.c1-left h1{
+  font-size: 46px !important;
+  font-weight: 500;
+  margin: 10px 0;
+  line-height: 1.3em;
+  -webkit-text-stroke: 4px;
+   color: #5C945C;
+}
+.c2{
+    width: 1280px;
+    height: 537px
+}
