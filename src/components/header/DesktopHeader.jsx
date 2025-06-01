@@ -134,9 +134,9 @@ export default function DesktopHeader() {
     <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
 <div className="flex items-center gap-[10px]">
-  <div>
+    <Link to={"/"}>  
             <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
-  </div>
+  </Link>
 
 <div className=" items-center flex-d">
  <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>

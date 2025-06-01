@@ -1,18 +1,24 @@
 import React from 'react';
 
-const WhatsAppStickyIcon = ({ phoneNumber, logoSrc, size = '50px' }) => {
-  const whatsappLink = `https://wa.me/${phoneNumber || '9007154238'}`;
+const WhatsAppIcon = ({ phoneNumber = '9696964606', logoSrc, size = '50px', fixed = false }) => {
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
+
+  const containerStyle = fixed
+    ? {
+        position: 'fixed',
+        bottom: '30px',
+        right: '20px',
+        zIndex: 1000,
+      }
+    : {};
 
   const buttonStyles = {
-    position: 'fixed',
-    bottom: '30px',
-    right: '20px',
-    zIndex: 1000,
+    ...containerStyle,
     width: size,
     height: size,
     cursor: 'pointer',
     borderRadius: '50%',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+    boxShadow: fixed ? '0 2px 10px rgba(0,0,0,0.2)' : 'none',
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
@@ -33,8 +39,8 @@ const WhatsAppStickyIcon = ({ phoneNumber, logoSrc, size = '50px' }) => {
   const iconStyles = {
     zIndex: 1,
     position: 'relative',
-    width: '60%',
-    height: '60%',
+    width: '80%',
+    height: '80%',
     transition: 'transform 0.3s ease',
   };
 
@@ -52,7 +58,7 @@ const WhatsAppStickyIcon = ({ phoneNumber, logoSrc, size = '50px' }) => {
       {logoSrc ? (
         <img src={logoSrc} alt="WhatsApp Background" style={backgroundStyles} />
       ) : (
-        <div style={{ ...backgroundStyles, backgroundColor: '#25D366' }} />
+        <div style={{ ...backgroundStyles, backgroundColor: '' }} />
       )}
 
       <img
@@ -67,4 +73,4 @@ const WhatsAppStickyIcon = ({ phoneNumber, logoSrc, size = '50px' }) => {
   );
 };
 
-export default WhatsAppStickyIcon;
+export default WhatsAppIcon;

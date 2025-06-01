@@ -42,11 +42,11 @@ input[type="checkbox"] {
   /* background: #5c945c; */
   font-weight: normal;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .accordion-label:hover {
-  background: #dcf5da;
+  /* background: #dcf5da; */
 }
 
 .accordion-label::after {
@@ -69,13 +69,13 @@ input[type="checkbox"] {
 .accordion-content p {
   margin: 0;
   color: black;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
 /* Active/open styles */
 input:checked + .accordion-label {
-  background: #dcf5da;
+  /* background: #dcf5da; */
 }
 
 input:checked + .accordion-label::after {

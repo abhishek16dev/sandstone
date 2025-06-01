@@ -10,15 +10,24 @@ import { SlSocialFacebook } from "react-icons/sl";
 import { RiWhatsappFill } from "react-icons/ri";
 import { SiTelegram } from "react-icons/si";
 import Seo from "./resources/fb.svg"
-import socialgif from "./resources/social.gif"; 
+import socialgif from "./resources/social.gif";
 
 import cimage from "./resources/cimage.svg";
 
 
-import Cards from "./componenet/AnimatedCardList"
+import SmartIcon from "./resources/cimage.svg";
+import AnalyticsIcon from "./resources/cimage.svg";
 
+import Cards from "./componenet/AnimatedCardList";
+import Accordian from "./componenet/Accordian";
+import Contactform from "../../components/contact/contactform";
+
+import smartright from "./resources/smartright.svg"
 
 const Smm = () => {
+
+
+
 
   const icons = [
     <TiSocialTwitter />,
@@ -42,9 +51,42 @@ const Smm = () => {
   ];
 
 
+
+  const cardData = [
+    {
+      id: 1,
+      title: "Content Creation",
+      description:
+        "It’s all about crafting valuable, engaging, and relevant content—whether it’s posts, videos, blogs, or graphics—that connects with your audience. Great content builds trust, sparks conversations, and drives results.",
+      icon: "icon1.svg",
+    },
+    {
+      id: 2,
+      title: "Influencer Marketing",
+      description:
+        "Powerful strategy where brands collaborate with influencers—people with loyal, engaged followings—to promote their products or services. It’s about trust and authenticity.",
+      icon: "icon2.svg",
+    },
+    {
+      id: 3,
+      title: "Crisis Management",
+      description:
+        "Fast action, transparency, and empathy are key to turning a crisis into a chance to rebuild trust.",
+      icon: "icon3.svg",
+    },
+    {
+      id: 4,
+      title: "Analytics Reporting",
+      description:
+        "Process of tracking, measuring, and analyzing your social media performance. It shows what’s working, what’s not, and where to improve.",
+      icon: "icon4.svg",
+    },
+  ];
+
+
   return (
     <div className='mt-[200px]  mb-[120px] pr-[40px] pl-[40px]'>
-      <p class=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
+      <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto
 '>
@@ -52,20 +94,10 @@ const Smm = () => {
         Enhance your brand’s digital footprint with our comprehensive social media management solution, crafted to simplify content creation, scheduling, and analytics — unlock your brand’s true potential today.
 
       </p>
-      {/* 
-    <div className="mt-[40px] mb-[100px] flex items-center justify-center">
-  {images.map((src, index) => (
-    <div
-      key={index}
-      className="seoiamgewrap w-[60px] h-[60px] rounded-full bg-gray-400 overflow-hidden border-2 border-white -ml-3 first:ml-0 z-10"
-      style={{ zIndex: images.length - index }} // Ensure left images appear on top
-    >
-     {src}
-    </div>
-  ))}
-</div> */}
 
-      <div className="mt-[40px] mb-[100px] flex items-center justify-center">
+
+
+      <div className="mt-[40px] mb-[100px] flex items-center justify-center max-md:w-[100%]">
         {icons.map((Icon, index) => (
           <div
             key={index}
@@ -80,59 +112,211 @@ const Smm = () => {
         ))}
       </div>
 
-  <div className="join flex flex-col md:flex-row">
-  {/* Box 1 */}
-  <div className="w-full md:basis-1/3  flex justify-center">
-    <div className="w-[300px] h-[450px] rounded-md bg-gray-300 overflow-hidden bocshadowgif "  >
-      <img src={socialgif} alt="SEO Visual" className="w-full h-full object-contain" />
+      <div className="
+       flex flex-col md:flex-row">
+        {/* Box 1 */}
+        <div className="w-full md:basis-1/3  flex justify-center">
+          <div className="w-[300px] h-[450px] rounded-md bg-gray-300 overflow-hidden bocshadowgif "  >
+            <img src={socialgif} alt="SEO Visual" className="w-full h-full object-contain" />
+          </div>
+        </div>
+
+
+        <div className="w-full md:basis-1/3   gap-4">
+
+          <div className="w-full max-w-[300px] h-[400px]   flex flex-col justify-end">
+            <div className=' flex flex-col gap-[30px]' >
+
+
+              <div className="flex flex-col gap-2 rounded-md bg-white p-6 relative right-[-130px]       max-md:right-[0px]  bocshadowgif border-b ">
+                <h6 className="text-black text-[15px] font-bold">
+                  Social Media Strategy
+                </h6>
+                <p className="text-black text-[13px] leading-5 font-normal">
+                  Create tactics specifically suited to your company's objectives to guarantee optimal influence on all social media platforms.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-2 rounded-md bg-white p-6  border-b  bocshadowgif">
+                <h6 className="text-black text-[15px] font-bold">
+                  Another Strategy
+                </h6>
+                <p className="text-black text-[13px] leading-5 font-normal">
+                  Build strategies that are tailored for your business objectives.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div className="w-full md:basis-1/3  flex justify-center items-center max-md:hidden">
+          <div className="text-center text-black font-semibold text-xl">
+            <img src={cimage} className=' ' />
+
+          </div>
+        </div>
+      </div>
+
+
+      <div className='mt-[200px]'>
+
+        <p className="text-[#409338] font-bold text-[40px] max-md:text-[20px] max-md:leading-[20px] leading-[40px]  mt-[100px] text-center stroke-custom fill-custom">Streamline Your Social Media Account </p>
+
+        <Cards className="" />
+      </div>
+
+
+      <div className='flex justify-center max-md:flex-col  gap-[40px] mt-[100px]'>
+
+
+
+        <div className='w-[48%]  max-md:w-[100%]  flex flex-col  items-end justify-between'>
+
+          <div>
+
+            <img src={smartright} className='w-[60%]  ' />
+          </div>
+
+
+         <div className=" max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-start gap-4">
+                <img src="/assets/smart-icon.svg" alt="Smart Social Media Management" className="w-6 h-6 object-contain" />
+                <div>
+                  <h3 className="text-lg font-semibold text-[#1a1a1a]">Smart Social Media Management</h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Schedule, publish, and monitor content across all platforms in one easy-to-use tool.
+                    Automate and boost reach, improve engagement, track performance, and stay consistent
+                    with your brand’s voice.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+
+        <div className="w-[50%] max-md:w-[100%]   text-center lg:text-left">
+          <div className="max-w-6xl mx-auto flex flex-col  items-start justify-between gap-10">
+            <p class="text-[#409338] font-bold text-[40px] max-md:text-[20px] max-md:leading-[20px] leading-[40px]  text-left stroke-custom fill-custom">  Accelerate Your Digital Presence with Social Hub
+            </p>
+            <p className="text-[black] text-[15px]   max-w-xl">
+              Unlock the full potential of your brand online with Social Hub. From social media
+              management to content optimization, Social Hub helps you grow faster, engage smarter,
+              and stand out in the digital crowd.
+            </p>
+
+            <button type="submit " class=" mb-[50px] text-[white] mb-[20px] px-[20px] py-[10px]   bg-[#5c945c] rounded-md ">Contact Now
+
+            </button>
+
+
+         
+         <div className=" max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-start gap-4">
+                <img src="/assets/smart-icon.svg" alt="Smart Social Media Management" className="w-6 h-6 object-contain" />
+                <div>
+                  <h3 className="text-lg font-semibold text-[#1a1a1a]">Smart Social Media Management</h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Schedule, publish, and monitor content across all platforms in one easy-to-use tool.
+                    Automate and boost reach, improve engagement, track performance, and stay consistent
+                    with your brand’s voice.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div className="smarter flex flex-col-reverse lg:flex-row  mt-[100px] gap-10 px-4">
+
+        <div className="w-full lg:w-[65%]">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+            Smarter, Not Harder <br /> Win Big on Social Media
+          </h3>
+
+          <p className="text-[15px] md:text-base mb-10 text-black mt-10 leading-relaxed">
+            Using smart strategies, not extra effort, to grow online. Focus on what works, stay <br className="hidden md:block" /> consistent, and let tools and data guide your success—no burnout needed.
+          </p>
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {cardData.map((card) => (
+              <div key={card.id} className="bg-white rounded-2xl shadow p-6">
+                <div className="flex items-start gap-4">
+                  <img
+                    src={card.icon}
+                    alt={card.title}
+                    className="w-6 h-6 object-contain"
+                  />
+                  <div>
+                    <h4 className="text-lg font-semibold text-[#1a1a1a]">{card.title}</h4>
+                    <p className="mt-2 text-gray-600 text-sm">{card.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="w-full lg:w-[35%]  ">
+          <img src={smartright} alt="Smarter visual" className="w-full max-w-sm" />
+        </div>
+
+
+      </div>
+
+      <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
+
+
+        <div className="w-[45%] max-lg:w-full">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+            Work With Us and Take <br />Your Business to the Next Level
+          </h3>
+          <p className="text-[17px] text-black mt-5 mb-5">
+            We provide the tools, expertise, and support you need to grow faster,
+            <br /> reach more customers, and stay ahead of the competition.
+            <br /> Let’s take your business to the next level—together.
+          </p>
+
+          <p>
+            <a href="tel:+919696964606" className="text-black font-bold hover:underline">
+              +91 9696964606
+            </a>
+          </p>
+          <p>
+            <a href="tel:+919211676307" className="text-black font-bold hover:underline">
+              +91 9211676307
+            </a>
+          </p>
+        </div>
+
+
+        <div className="w-[45%] max-lg:w-full">
+          <Contactform className="w-full" />
+        </div>
+
+
+      </div>
+
+
+      <div className='mt-[100px] '>
+        <p className="text-[#409338] mb-[50px] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">FAQs About Social Media Marketing     </p>
+
+        <Accordian />
+
+      </div>
+
     </div>
-  </div>
 
-  
-  <div className="w-full md:basis-1/3   gap-4">
-
- <div className="w-full max-w-[300px] h-[400px]   flex flex-col justify-end">
-  <div className=' flex flex-col gap-[30px]' >
-
- 
-  <div className="flex flex-col gap-2 rounded-md bg-white p-6 relative right-[-130px]   bocshadowgif border-b ">
-    <h6 className="text-black text-[15px] font-bold">
-      Social Media Strategy
-    </h6>
-    <p className="text-black text-[13px] leading-5 font-normal">
-     Create tactics specifically suited to your company's objectives to guarantee optimal influence on all social media platforms.
-    </p>
-  </div>
-
-  <div className="flex flex-col gap-2 rounded-md bg-white p-6  border-b  bocshadowgif">
-    <h6 className="text-black text-[15px] font-bold">
-      Another Strategy
-    </h6>
-    <p className="text-black text-[13px] leading-5 font-normal">
-    Build strategies that are tailored for your business objectives.
-    </p>
-  </div>
-   </div>
-</div>
-
-
-  </div>
-
-  
-  <div className="w-full md:basis-1/3  flex justify-center items-center">
-    <div className="text-center text-black font-semibold text-xl">
-   <img src={cimage} className=' ' />
-
-    </div>
-  </div>
-</div>
-
-
-<p className="text-[#409338] font-bold text-[40px] leading-[40px]  mt-[100px] text-center stroke-custom fill-custom">Streamline Your Social Media Account </p>
-
-    <Cards  className="mt-[200px]"/>
-
-    </div>
   )
 }
 

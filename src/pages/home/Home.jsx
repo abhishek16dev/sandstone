@@ -46,7 +46,7 @@ import ImageSlider from "./componnet/TestomonilaSlider";
 import Accordion from "./componnet/Accordian";
 import curve from "./resources/curvepath.svg";
 import { FaPhoneVolume } from "react-icons/fa6";
-import Conatctfrom from "./componnet/contactform"; 
+import Conatctfrom from "../../components/contact/contactform"; 
 
 const autoSlide = [
   {
@@ -524,7 +524,7 @@ const Home = () => {
         <div
   ref={thirdREf}
   onMouseEnter={() => setThirdtrigger(true)}
-  className="cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
+  className="Max-md:w-[100%]   cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
 >
   {/* Phone Icon */}
   <div className="mb-4 md:mb-0">
@@ -641,7 +641,9 @@ const Home = () => {
         <div className="accordian">
 
 
-          <p class="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
+          <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
+        
+        
           <Accordion />
         </div>
 
