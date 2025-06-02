@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WhatsAppIcon = ({ phoneNumber = '9696964606', logoSrc, size = '50px', fixed = false }) => {
+const WhatsAppIcon = ({ phoneNumber = '+919696964606', logoSrc, size = '50px', fixed = false }) => {
   const whatsappLink = `https://wa.me/${phoneNumber}`;
 
   const containerStyle = fixed

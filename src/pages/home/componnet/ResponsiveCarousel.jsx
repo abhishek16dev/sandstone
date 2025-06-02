@@ -38,7 +38,7 @@ const ImageSlider = ({ slides, autoSlideInterval = 4000 }) => {
             }`}
             style={{
               transform: `translateX(${(index - currentIndex) * 100}%)`,
-              backgroundColor: 'white',
+              // backgroundColor: 'white',
               borderRadius: '0.5rem',
             }}
           >

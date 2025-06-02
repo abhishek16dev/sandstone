@@ -22,8 +22,18 @@ import Cards from "./componenet/AnimatedCardList";
 import Accordian from "./componenet/Accordian";
 import Contactform from "../../components/contact/contactform";
 
-import smartright from "./resources/smartright.svg"
+import smartright from "./resources/smartright.svg";
+import accelerate from "./resources/accelerate.svg"
+import largesmart from "./resources/smart-large.svg";
 
+
+import { MdContentPasteGo } from "react-icons/md";
+import { SiGooglemarketingplatform } from "react-icons/si";
+import { MdCrisisAlert } from "react-icons/md";
+import { TbReportAnalytics } from "react-icons/tb";
+import { SiSmartthings } from "react-icons/si";
+import { GiLevelFourAdvanced } from "react-icons/gi";
+import { FiPhone } from "react-icons/fi";
 const Smm = () => {
 
 
@@ -58,34 +68,34 @@ const Smm = () => {
       title: "Content Creation",
       description:
         "It’s all about crafting valuable, engaging, and relevant content—whether it’s posts, videos, blogs, or graphics—that connects with your audience. Great content builds trust, sparks conversations, and drives results.",
-      icon: "icon1.svg",
+      icon: <MdContentPasteGo />
     },
     {
       id: 2,
       title: "Influencer Marketing",
       description:
         "Powerful strategy where brands collaborate with influencers—people with loyal, engaged followings—to promote their products or services. It’s about trust and authenticity.",
-      icon: "icon2.svg",
+      icon: <SiGooglemarketingplatform />
     },
     {
       id: 3,
       title: "Crisis Management",
       description:
         "Fast action, transparency, and empathy are key to turning a crisis into a chance to rebuild trust.",
-      icon: "icon3.svg",
+      icon:<MdCrisisAlert />
     },
     {
       id: 4,
       title: "Analytics Reporting",
       description:
         "Process of tracking, measuring, and analyzing your social media performance. It shows what’s working, what’s not, and where to improve.",
-      icon: "icon4.svg",
+      icon: <TbReportAnalytics /> 
     },
   ];
 
 
   return (
-    <div className='mt-[200px]  mb-[120px] pr-[40px] pl-[40px]'>
+    <div className='mt-[200px] max-w-7xl    mb-[120px] pr-[40px] pl-[40px]'>
       <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto
@@ -130,10 +140,10 @@ const Smm = () => {
 
               <div className="flex flex-col gap-2 rounded-md bg-white p-6 relative right-[-130px]       max-md:right-[0px]  bocshadowgif border-b ">
                 <h6 className="text-black text-[15px] font-bold">
-                  Social Media Strategy
+                Smart Social Media Management
                 </h6>
                 <p className="text-black text-[13px] leading-5 font-normal">
-                  Create tactics specifically suited to your company's objectives to guarantee optimal influence on all social media platforms.
+              Schedule, publish, and monitor content across all platforms in one place. Social Hub’s intuitive dashboard makes it easy to manage engagement, track performance, and stay consistent with your brand voice.
                 </p>
               </div>
 
@@ -172,13 +182,13 @@ const Smm = () => {
       <div className='flex justify-center max-md:flex-col  gap-[40px] mt-[100px]'>
 
 
-
+        {/* 
         <div className='w-[48%]  max-md:w-[100%]  flex flex-col  items-end justify-between'>
 
-          <div>
+        
 
-            <img src={smartright} className='w-[60%]  ' />
-          </div>
+            <img src={accelerate} className='  ' />
+          
 
 
          <div className=" max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
@@ -195,7 +205,30 @@ const Smm = () => {
               </div>
             </div>
 
+        </div> */}
+
+        <div
+          className="w-[48%] max-md:w-[100%] flex flex-col items-end justify-end  bg-no-repeat bg-contain bg-left-top"
+          style={{ backgroundImage: `url(${accelerate})` }}
+        >
+          <div className="max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
+            <div className="">
+                <div className='flex items-center  gap-2 '>
+              <span><GiLevelFourAdvanced /></span>
+                 <h3 className="text-lg font-semibold text-[#1a1a1a]">
+                Advanced Analytics & Insights
+                </h3>
+             </div>
+              <div>
+             
+                <p className="mt-2 text-sm text-gray-600">
+                Get real-time data that drives decisions. Social Hub offers deep insights into audience behavior, post performance, and growth trends—empowering you to optimize your strategy and accelerate results.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
 
 
         <div className="w-[50%] max-md:w-[100%]   text-center lg:text-left">
@@ -213,12 +246,17 @@ const Smm = () => {
             </button>
 
 
-         
-         <div className=" max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
-              <div className="flex items-start gap-4">
-                <img src="/assets/smart-icon.svg" alt="Smart Social Media Management" className="w-6 h-6 object-contain" />
+
+            <div className=" max-md:w-[100%] w-[75%] bg-white p-6 rounded-xl shadow-md">
+              <div className="">
+                {/* <img src="/assets/smart-icon.svg" alt="Smart Social Media Management" className="w-6 h-6 object-contain" /> */}
+           
+                <div className='flex items-center  gap-2 '>
+                       <span  className="w-[20px] h-[20px] object-contain"> <SiSmartthings />  </span>
+                    <h3 className="text-lg font-semibold text-[#1a1a1a]">Smart Social Media Management</h3>
+                </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#1a1a1a]">Smart Social Media Management</h3>
+                
                   <p className="mt-2 text-sm text-gray-600">
                     Schedule, publish, and monitor content across all platforms in one easy-to-use tool.
                     Automate and boost reach, improve engagement, track performance, and stay consistent
@@ -235,7 +273,9 @@ const Smm = () => {
       </div>
 
 
-      <div className="smarter flex flex-col-reverse lg:flex-row  mt-[100px] gap-10 px-4">
+      <div className="smarter flex flex-col-reverse lg:flex-row  mt-[100px] gap-10 px-4  bg-no-repeat bg-contain bg-right"
+         style={{ backgroundImage: `url(${largesmart})` }}
+      >
 
         <div className="w-full lg:w-[65%]">
           <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
@@ -250,16 +290,15 @@ const Smm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cardData.map((card) => (
               <div key={card.id} className="bg-white rounded-2xl shadow p-6">
-                <div className="flex items-start gap-4">
-                  <img
-                    src={card.icon}
-                    alt={card.title}
-                    className="w-6 h-6 object-contain"
-                  />
-                  <div>
-                    <h4 className="text-lg font-semibold text-[#1a1a1a]">{card.title}</h4>
+                <div className=" ">
+                 
+                  <div className='flex items-center gap-2'>
+                  <h6 className="w-[20px] h-[20px] object-contain "> {card.icon}</h6>
+                   <h4 className="text-lg font-semibold text-[#1a1a1a]">{card.title}</h4>
+                     
+                   </div>
                     <p className="mt-2 text-gray-600 text-sm">{card.description}</p>
-                  </div>
+                  
                 </div>
               </div>
             ))}
@@ -267,9 +306,9 @@ const Smm = () => {
         </div>
 
 
-        <div className="w-full lg:w-[35%]  ">
+        {/* <div className="w-full lg:w-[35%]  ">
           <img src={smartright} alt="Smarter visual" className="w-full max-w-sm" />
-        </div>
+        </div> */}
 
 
       </div>
@@ -287,16 +326,32 @@ const Smm = () => {
             <br /> Let’s take your business to the next level—together.
           </p>
 
-          <p>
+          {/* <p>
             <a href="tel:+919696964606" className="text-black font-bold hover:underline">
               +91 9696964606
             </a>
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             <a href="tel:+919211676307" className="text-black font-bold hover:underline">
               +91 9211676307
             </a>
-          </p>
+          </p> */}
+          <div className="space-y-2">
+            <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+              <FiPhone className="text-white" />
+              <a href="tel:+919696964606" className="text-white">
+                +91-9696964606
+              </a>
+            </button>
+          
+            <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+              <FiPhone className="text-white" />
+              <a href="tel:+919211676307" className="text-white">
+                +91-9211676307
+              </a>
+            </button>
+          </div>
+          
         </div>
 
 

@@ -7,20 +7,23 @@ import { BrowserRouter as Router, Routes, Route ,Navigate } from 'react-router-d
 import Sem from "./pages/sem/Sem" ;
 import Smm from './pages/smm/smm';
 import SEo from "./pages/seo/Seo";
+import Web from './pages/web3/web';
+import ScrollToTop from './components/scrollup';
+
 
 const App = () => {
   return (
     <>
-
- 
-
  <Router>
+    <ScrollToTop />
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
            <Route path="/search-engine-marketing" element={<Sem />} />
                 <Route path="/search-engine-optimization" element={<SEo />} />
            <Route path="/social-media-marketing" element={<Smm />} />
+           <Route path="/web-development" element ={ <Web />} />
       
 
             <Route path="*" element={<Navigate to="/" replace />} />
@@ -30,7 +33,7 @@ const App = () => {
 
     </Router>
 
-      
+   
     </>
   )
 }

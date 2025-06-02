@@ -192,54 +192,6 @@ body {
 }
 
 
-/* .subbanner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
-
-.subbanner div {
-  width: 50%;
-
-}
-
-.subbanner h2 {
-  color: #5c945c;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 40px;
-  text-align: left;
-
-  -webkit-text-stroke: 1px #5c945c;
-  -webkit-text-fill-color: #5c945c;
-} */
-
-
-
-
-
-/* .subbanner p {
-  font-size: 15px;
-  color: #000000;
-  margin: 20px 0;
-
-}
-
-.getstarted-btn {
-  padding: 14px 40px;
-  color: white;
-  background: #5c945c;
-  border-radius: 5px;
-}
-
-.getstarted-btnn{
-    padding: 10px 25px;
-  color: white;
-  background:#409338;
-  border-radius: 5px;
-
-} */
 
 .comprensive{
   border-radius: 40px;
@@ -286,14 +238,14 @@ body {
 
 
 /* Grid styling */
-.flip-grid {
+/* .flip-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
   padding: 20px;
   max-width: 900px;
   margin: auto;
-}
+} */
 
 /* Flip card container */
 .flip-card {
@@ -351,18 +303,7 @@ body {
   
 }
 
-/* .flip-card-inner:hover{
-  border: 1px solid #0a0e0a;
-  transform: translateY(-10px); 
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 
-} 
-
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg) scale(1.05);
- 
-} */
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg)  translateY(-10px);
@@ -515,11 +456,7 @@ margin-top: 80px;
 
 
 
-/* .floating-text {
-  display: inline-block;
-  color: #409338;
-  animation: floatUpDown 2s ease-in-out infinite;
-} */
+
 
 .floating-text {
   display: inline-block;
@@ -557,19 +494,6 @@ display: inline-block;
 }
 
 
-
-/* @keyframes floatUpDown {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-    
-  }
-} */
 
 
 .slide-in-right {

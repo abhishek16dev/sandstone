@@ -46,8 +46,8 @@ import ImageSlider from "./componnet/TestomonilaSlider";
 import Accordion from "./componnet/Accordian";
 import curve from "./resources/curvepath.svg";
 import { FaPhoneVolume } from "react-icons/fa6";
-import Conatctfrom from "../../components/contact/contactform"; 
-
+import Conatctfrom from "../../components/contact/contactform";
+import { FiPhone } from "react-icons/fi";
 const autoSlide = [
   {
     image: googleadds,
@@ -166,48 +166,13 @@ const Home = () => {
 
 
 
-  // const wrapperRef = useRef();
-  // const secondREf =useRef();
-  // const [trigger, setTrigger] = useState(false);
-  // const[cardtrigger ,setCardTrigger] = useState(false);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setTrigger(true);
-  //         setCardTrigger(true)
-  //       } else {
-  //         setTrigger(false);
-  //         setCardTrigger(false)
-  //       }
-  //     },
-  //     { threshold: 0.5 }
-  //   );
-
-  //   if (wrapperRef.current) {
-  //     observer.observe(wrapperRef.current);
-  //   }
-  //   if(secondREf.current){
-  //      observer.observe(secondREf.current);
-  //   }
-
-  //   return () => {
-  //     if (wrapperRef.current) {
-  //       observer.unobserve(wrapperRef.current);
-  //     }
-  //     if(secondREf.current){
-  //       observer.unobserve(secondREf.current); 
-  //     }
-  //   };
-  // }, []);
 
   const wrapperRef = useRef();
   const secondREf = useRef();
   const thirdREf = useRef();
   const [trigger, setTrigger] = useState(false);
   const [cardtrigger, setCardTrigger] = useState(false);
-  const [thirdtrigger ,setThirdtrigger] = useState(false);
+  const [thirdtrigger, setThirdtrigger] = useState(false);
 
   useEffect(() => {
     const observer1 = new IntersectionObserver(
@@ -224,7 +189,7 @@ const Home = () => {
       { threshold: 0.5 }
     );
 
-      const observer3 = new IntersectionObserver(
+    const observer3 = new IntersectionObserver(
       ([entry]) => {
         setThirdtrigger(entry.isIntersecting);
       },
@@ -238,7 +203,7 @@ const Home = () => {
       observer2.observe(secondREf.current);
     }
 
-     if (thirdREf.current) {
+    if (thirdREf.current) {
       observer3.observe(thirdREf.current);
     }
 
@@ -249,7 +214,7 @@ const Home = () => {
       if (secondREf.current) {
         observer2.unobserve(secondREf.current);
       }
-       if (thirdREf.current) {
+      if (thirdREf.current) {
         observer3.unobserve(thirdREf.current);
       }
     };
@@ -259,8 +224,8 @@ const Home = () => {
   console.log("Trigger received in home page:", trigger);
   return (
     <>
-      <div className=''>
-        <div className="context  flex items-center gap-[60px]  ">
+      <div className='max-w-7xl  '>
+        <div className="context max-w-7xl   flex items-center gap-[60px]  ">
           <div className='text-part '>
             <h1 className="h1tag relative ">
               <span>Best </span>
@@ -315,53 +280,12 @@ const Home = () => {
           </ul>
         </div >
 
-        {/* <div className='subbanner relative z-10 w-[100%]'>
-          <div className='pl-[40px] pr-[40px] pt-[40px] pb-[40px]'>
-            <h2> Building Brands with  <br /> Integrity and Innovation <br /> Across India</h2>
-            <p>WebNest Media isn’t just another digital marketing company in India — we’re your growth partner. Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
-            </p>
-            <button className='getstarted-btn'> Get Started</button>
-          </div>
-          <div>
-            <img src={marketingbanner} className="w-[100%] h-[100%] sub-bannerimage" />
-          </div>
-        </div> */}
+
 
 
         <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-2  gap-8">
- 
-  <div className="w-full lg:w-1/2">
-    <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
-      Building Brands with <br className="hidden md:block" />
-      Integrity and Innovation <br className="hidden md:block" />
-      Across India
-    </h2>
-    <p className="text-sm md:text-base text-black mt-4 mb-6">
-      WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
-      Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
-    </p>
-    <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
-      Get Started
-    </button>
-  </div>
 
-
-  <div className="w-1/2 lg:w-1/2 flex items-center justify-end max-lg:w-[100%] max-lg:justify-start">
-    <img
-      src={marketingbanner}
-      alt="Marketing Banner"
-      className="w-[400px] h-[400px] object-cover"
-    />
-  </div>
-</div>
-
-{/*  */}
-        {/* <div
-          className=" max-xl:mt-[120px] max-lg:mt-[100px] max-md:mt-[150px]	 w-full flex flex-col items-start justify-center mt-[40px ]  mb-[40px] bg-cover bg-center bg-no-repeat"
-       
-        >
-        
-          <div className="bg-white/80 p-[40px] rounded-md max-w-2xl w-full">
+          <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
               Building Brands with <br className="hidden md:block" />
               Integrity and Innovation <br className="hidden md:block" />
@@ -375,8 +299,16 @@ const Home = () => {
               Get Started
             </button>
           </div>
-        </div> */}
 
+
+          <div className="w-1/2 lg:w-1/2 flex items-center justify-end  max-lg:hidden">
+            <img
+              src={marketingbanner}
+              alt="Marketing Banner"
+              className="w-[400px] h-[400px] object-cover"
+            />
+          </div>
+        </div>
 
 
         <div className="slider-container">
@@ -490,84 +422,50 @@ const Home = () => {
 
 
 
-        {/* <div
-         ref={thirdREf}
-          onMouseEnter={() => setThirdtrigger(true)}
-        className=" cursor-pointer phone p-[30px] bg-[#409338] flex items-center  gap-[40px] justify-around  w-[90%]  mx-auto  rounded-[20px] shadow-md " >
-
-          <div>
-            <FaPhoneVolume className="ringing text-[white] text-[70px] flex items-center justify-center " />
-         
-          </div>
-          <div className=" flex-d">
-
-            <p className="text-[white]  text-[20px] font-bold">  Get a Free Consultation</p>
-           
-
-
-
-<div className={`text-[white] text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""}`}>
-<span>+91&nbsp;</span>
-    <span>-&nbsp;</span>
-    <span>96&nbsp;</span>
-    <span>96&nbsp;</span>
-    <span>96&nbsp;</span>
-    <span>46&nbsp;</span>
-    <span>06</span>
-  </div>
-          </div>
-          
-            <p className="text-[white]  text-[30px] font-bold pr-[30px]"> Talk to us and never worry <br /> about leads ever again! </p>
-
-        </div> */}
 
         <div
-  ref={thirdREf}
-  onMouseEnter={() => setThirdtrigger(true)}
-  className="Max-md:w-[100%]   cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
->
-  {/* Phone Icon */}
-  <div className="mb-4 md:mb-0">
-    <FaPhoneVolume className="ringing text-white text-[50px] md:text-[70px] flex items-center justify-center" />
-  </div>
+          ref={thirdREf}
+          onMouseEnter={() => setThirdtrigger(true)}
+          className="Max-md:w-[100%] mt-[130px] mb-[120px]   cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
+        >
+          {/* Phone Icon */}
+          <div className="mb-4 md:mb-0">
+            <FaPhoneVolume className="ringing text-white text-[50px] md:text-[70px] flex items-center justify-center" />
+          </div>
 
-  {/* Text & Number */}
-  <div className="flex flex-col items-center md:items-start text-center md:text-left">
-    <p className="text-white text-[18px] md:text-[20px] font-bold">
-      Get a Free Consultation
-    </p>
+          {/* Text & Number */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <p className="text-white text-[18px] md:text-[20px] font-bold">
+              Get a Free Consultation
+            </p>
 
-    <div
-      className={`text-white text-[32px] md:text-[50px] font-bold ${
-        thirdtrigger ? "numberanimation" : ""
-      }`}
-    >
-      <span>+91&nbsp;</span>
-      <span>-&nbsp;</span>
-      <span>96&nbsp;</span>
-      <span>96&nbsp;</span>
-      <span>96&nbsp;</span>
-      <span>46&nbsp;</span>
-      <span>06</span>
-    </div>
-  </div>
+            <div
+              className={`text-white text-[32px] md:text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""
+                }`}
+            >
+              <span>+91&nbsp;</span>
+              <span>-&nbsp;</span>
+              <span>96&nbsp;</span>
+              <span>96&nbsp;</span>
+              <span>96&nbsp;</span>
+              <span>46&nbsp;</span>
+              <span>06</span>
+            </div>
+          </div>
 
-  {/* CTA Message */}
-  <p className="text-white text-[20px] md:text-[30px] font-bold pr-0 md:pr-[30px] text-center md:text-left">
-    Talk to us and never worry <br />
-    about leads ever again!
-  </p>
-</div>
+          {/* CTA Message */}
+          <p className="text-white text-[20px] md:text-[30px] font-bold pr-0 md:pr-[30px] text-center md:text-left">
+            Talk to us and never worry <br />
+            about leads ever again!
+          </p>
+        </div>
 
 
         <div
           ref={wrapperRef}
           onMouseEnter={() => setTrigger(true)}
           className="counter flex mt-[20px] flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
-          {/* Counter Cards Section */}
-          {/* <div className="w-full md:w-1/2 lg:w-[40%]">
-              <Countarcard />
-            </div> */}
+
 
 
           <div
@@ -601,61 +499,83 @@ const Home = () => {
         </div>
 
 
-        
-      <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
-                    Get a free consultation!
-                </p>
 
-  <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
+        <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+          Get a free consultation!
+        </p>
 
-  {/* Left Side: Text + Numbers */}
-  <div className="w-[45%] max-lg:w-full">
-    <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
-      Work With Us and Take <br />Your Business to the Next Level
-    </h3>
-    <p className="text-[17px] text-black mt-5 mb-5">
-      We provide the tools, expertise, and support you need to grow faster,
-      <br /> reach more customers, and stay ahead of the competition.
-      <br /> Let’s take your business to the next level—together.
-    </p>
+        <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 
-    <p>
-      <a href="tel:+919696964606" className="text-black font-bold hover:underline">
-        +91 9696964606
-      </a>
-    </p>
-    <p>
-      <a href="tel:+919211676307" className="text-black font-bold hover:underline">
-        +91 9211676307
-      </a>
-    </p>
-  </div>
+          {/* Left Side: Text + Numbers */}
+          <div className="w-[45%] max-lg:w-full">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c]">
+              Work With Us and Take <br />Your Business to the Next Level
+            </h3>
+            <p className="text-[17px] text-black mt-5 mb-5">
+              We provide the tools, expertise, and support you need to grow faster,
+              <br /> reach more customers, and stay ahead of the competition.
+              <br /> Let’s take your business to the next level—together.
+            </p>
 
-  {/* Right Side: Contact Form */}
-  <div className="w-[45%] max-lg:w-full">
-    <Conatctfrom className="w-full" />
-  </div>
+            {/* <p>
+              <a href="tel:+919696964606" className="text-black font-bold hover:underline">
+                +91 9696964606
+              </a>
+            </p>
+            <p>
+              <a href="tel:+919211676307" className="text-black font-bold hover:underline">
+                +91 9211676307
+              </a>
+            </p> */}
 
+            {/* <p className="flex items-center gap-2 p-[4px] text-[#5c945c] ">
+  <FiPhone className="text-[white]" />
+  <a href="tel:+919696964606" className="text-[#a066f8] font-bold hover:underline">
+    +91 9696964606
+  </a>
+</p>
+<p className="flex items-center gap-2 p-[4px]  text-[#5c945c]">
+  <FiPhone className="text-[white]" />
+  <a href="tel:+919211676307" className="text-[#a066f8] font-bold hover:underline">
+    +91 9211676307
+  </a>
+</p> */}
+
+<div className="space-y-2">
+  <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+    <FiPhone className="text-white" />
+    <a href="tel:+919696964606" className="text-white">
+      +91-9696964606
+    </a>
+  </button>
+
+  <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+    <FiPhone className="text-white" />
+    <a href="tel:+919211676307" className="text-white">
+      +91-9211676307
+    </a>
+  </button>
 </div>
+
+
+          </div>
+
+          {/* Right Side: Contact Form */}
+          <div className="w-[45%] max-lg:w-full">
+            <Conatctfrom className="w-full" />
+          </div>
+
+        </div>
 
         <div className="accordian">
 
 
           <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
-        
-        
+
+
           <Accordion />
         </div>
 
-
-
-
-        {/* <div className="relative w-full h-[300px] overflow-hidden">
-  <div
-    className="curvepath"
-    style={{ backgroundImage: `url(${curve})` }}
-  ></div>
-</div> */}
 
 
 

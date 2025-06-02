@@ -47,48 +47,50 @@ import { Link } from "react-router-dom";
 const menuItems = [
   { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
+  {
+    title: "Digital Marketing",
+    subItems: [
+         { title: "Search Engine Optimization", path: "/search-engine-optimization" },
+      { title: "Search Engine Marketing", path: "/search-engine-marketing" },
+   
+      { title: "Social Media Marketing", path: "/social-media-marketing" },
+      { title: "Web Development", path: "/web-development" },
+      { title: "Content Marketing", path: "/content-marketing" },
+      { title: "Affiliate Marketing", path: "/affiliate-marketing" }
+    ]
+  },
 
   {
     title: "Solutions",
     subItems: [
-      { title: "Brand Strategy", path: "/solutions/brand-strategy" },
-      { title: "Lead Generation", path: "/solutions/lead-generation" },
-      { title: "Customer Retention", path: "/solutions/customer-retention" },
-      { title: "Digital Transformation", path: "/solutions/digital-transformation" },
-      { title: "Market Research & Insights", path: "/solutions/market-research" },
-      { title: "Omnichannel Marketing", path: "/solutions/omnichannel-marketing" }
+      { title: "Brand Strategy", path: "/brand-strategy" },
+      { title: "Lead Generation", path: "/lead-generation" },
+      { title: "Customer Retention", path: "/customer-retention" },
+      { title: "Digital Transformation", path: "/digital-transformation" },
+      { title: "Market Research & Insights", path: "/market-research" },
+      { title: "Omnichannel Marketing", path: "/omnichannel-marketing" }
     ]
   },
 
-  {
-    title: "Digital Marketing",
-    subItems: [
-      { title: "Search Engine Marketing (SEM)", path: "/search-engine-marketing" },
-      { title: "Search Engine Optimization (SEO)", path: "/search-engine-optimization" },
-      { title: "Social Media Marketing (SMM)", path: "/social-media-marketing" },
-      { title: "Web Development", path: "/digital-marketing/web-development" },
-      { title: "Content Marketing", path: "/digital-marketing/content-marketing" },
-      { title: "Affiliate Marketing", path: "/digital-marketing/affiliate-marketing" }
-    ]
-  },
+
 
   {
     title: "Promotions",
     subItems: [
-      { title: "Mobile Marketing", path: "/promotions/mobile" },
-      { title: "Influencer Marketing", path: "/promotions/influencer" },
-      { title: "SMS Marketing", path: "/promotions/sms" },
-      { title: "Email Marketing", path: "/promotions/email" }
+      { title: "Mobile Marketing", path: "/mobile-marketing" },
+      { title: "Influencer Marketing", path: "influencer-marketing" },
+      { title: "SMS Marketing", path: "sms-marketing" },
+      { title: "Email Marketing", path: "email-marketing" }
     ]
   },
 
   {
     title: "Contact",
     subItems: [
-      { title: "Careers", path: "/contact/careers" },
+      { title: "Careers", path: "careers" },
       { title: "Contact", path: "/contact" },
-      { title: "Insight", path: "/contact/insight" },
-      { title: "Blogs", path: "/contact/blogs" }
+      { title: "Insight", path: "insight" },
+      { title: "Blogs", path: "blogs" }
     ]
   }
 ];
@@ -131,20 +133,20 @@ export default function DesktopHeader() {
   };
 
   return (
-    <header className=" fixed top-0  left-0  z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
+    <header className=" fixed top-0  left-0   z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
-<div className="flex items-center gap-[10px]">
-    <Link to={"/"}>  
+        <div className="flex items-center gap-[10px]">
+          <Link to={"/"}>
             <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
-  </Link>
+          </Link>
 
-<div className=" items-center flex-d">
- <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>
-    <p className="text-[black] text-[9px]"> ( Nest your brand in the web of success )
-    </p>
-    </div>
-  
-</div>
+          <div className=" items-center flex-d">
+            <h6 className="text-[#5c945c] font-bold  ">WebNest Media</h6>
+            <p className="text-[black] text-[9px]"> ( Nest your brand in the web of success )
+            </p>
+          </div>
+
+        </div>
         <nav className="flex items-center gap-5 text-sm">
           {menuItems.map((item, index) => (
             <div
@@ -163,9 +165,9 @@ export default function DesktopHeader() {
                 onMouseLeave={handleMouseLeaveParent}
 
               >
-                 <Link to={item.path} className="block w-full">
-                {item.title}
-               </Link>
+                <Link to={item.path} className="block w-full">
+                  {item.title}
+                </Link>
 
                 {/* <ChevronDown size={16} className="pl-[10px]" /> */}
 
@@ -195,9 +197,9 @@ export default function DesktopHeader() {
                             } ${idx !== item.subItems.length - 1 ? "border-b border-gray" : ""}`}
                         >
                           {/* {sub} */}
-                           <Link to={sub.path} className="block w-full">
-        {sub.title}
-      </Link>
+                          <Link to={sub.path} className="block w-full">
+                            {sub.title}
+                          </Link>
                         </li>
                       ))}
                     </ul>

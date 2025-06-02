@@ -74,9 +74,9 @@ const Footer = () => {
           <FooterSection
             title="Digital Marketing"
             items={[
-              'Search Engine Marketing (SEM)',
-              'Search Engine Optimization (SEO)',
-              'Social Media Marketing (SMM)',
+              'Search Engine Marketing',
+              'Search Engine Optimization',
+              'Social Media Marketing',
               'Web Development',
               'Content Marketing',
               'Affiliate Marketing',

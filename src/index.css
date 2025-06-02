@@ -1,9 +1,8 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-/* Optional global styles */
 
 
 body {
@@ -13,6 +12,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-image: url('./pages/home/resources/Shadowbody.svg');
+  max-width: 1440px;
+  width: 100%;
 
 }
 
@@ -40,4 +41,104 @@ font-size: 20px;
 
 .transparenbody{
   background: transparent !important;
-} 
+}  */
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional global styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-image: url('./pages/home/resources/Shadowbody.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Remove max-width constraint from body if you want full-width backgrounds */
+/* Or keep it if you specifically want 1440px max width */
+/* max-width: 1440px; */
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Slick slider dots customization */
+.slick-dots li button:before {
+  font-size: 12px; /* Reduced from 20px for better mobile appearance */
+  color: #409338; /* Match your brand color */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #409338; /* Active dot color */
+}
+
+.transparenbody {
+  background: transparent !important;
+}
+
+
+/* index.css or globals.css */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFF4EE; /* Light green-gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #9BC394, #5C945C); /* Gradient thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B946A; /* Darker on hover */
+}
+
+
+/* Additional responsive fixes */
+@media (max-width: 768px) {
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+  
+  /* Add any other mobile-specific overrides here */
+}
+
+/* Prevent horizontal overflow */
+html {
+  overflow-x: hidden;
+}
+
+/* Fix for flip cards on mobile */
+@media (max-width: 640px) {
+  .flip-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
