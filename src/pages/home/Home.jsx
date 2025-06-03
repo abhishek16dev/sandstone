@@ -48,6 +48,8 @@ import curve from "./resources/curvepath.svg";
 import { FaPhoneVolume } from "react-icons/fa6";
 import Conatctfrom from "../../components/contact/contactform";
 import { FiPhone } from "react-icons/fi";
+import { Helmet } from "react-helmet";
+
 const autoSlide = [
   {
     image: googleadds,
@@ -224,6 +226,19 @@ const Home = () => {
   console.log("Trigger received in home page:", trigger);
   return (
     <>
+
+    
+      <Helmet>
+<title>Best Digital Marketing Agency in Gurgaon | WebNest Media</title>
+<meta name="description" content="Grow your business online with with WebNest Media the Top Digital Marketing Agency in Gurgaon. Expert SEO, PPC, and social media solutions that deliver results." />
+<meta name="keywords" content="digital marketing company in India, digital marketing service, top digital marketing agencies in gurgaon, top digital marketing companies in gurgaon, top 10 digital marketing companies in gurgaon, creative digital marketing company in gurgaon, digital marketing consultant in gurgaon," />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="WebNest Media" />
+<link rel="canonical" href="https://webnestmedia.com/" />
+
+
+      </Helmet>
+
       <div className='max-w-7xl  '>
         <div className="context max-w-7xl   flex items-center gap-[60px]  ">
           <div className='text-part '>

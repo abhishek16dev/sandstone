@@ -9,7 +9,7 @@ const Seo = () => {
     
     <>
 
-   <Helmet>
+      <Helmet>
         <title>Best SEO Agency in Gurgaon | WebNest Media</title>
         <meta name="description" content="Top SEO services in Gurgaon to increase your traffic and rankings. WebNest Media offers result-driven SEO strategies for long-term online success." />
         <meta name="keywords" content="SEO Services India, Best SEO Company, Search Engine Optimization, WebNest Media, SEO Agency India, Google Rankings,Top 10 SEO Companies in Gurgaon,Best SEO Agencies in Gurgaon" />
@@ -19,7 +19,7 @@ const Seo = () => {
  
 
 
-   <div className='mt-[120px]'>
+   <div className='mt-[120px]  max-w-7xl  w-[100%]'>
       <div className="c1">
         <div className="c1-left">
           <h1>Raise Your Website to #1 on Result Page</h1>
