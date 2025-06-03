@@ -34,6 +34,8 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { SiSmartthings } from "react-icons/si";
 import { GiLevelFourAdvanced } from "react-icons/gi";
 import { FiPhone } from "react-icons/fi";
+import { Helmet } from 'react-helmet'
+
 const Smm = () => {
 
 
@@ -95,6 +97,13 @@ const Smm = () => {
 
 
   return (
+
+<> 
+<Helmet>
+
+
+</Helmet>
+
     <div className='mt-[200px] max-w-7xl w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
       <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
@@ -371,7 +380,7 @@ const Smm = () => {
       </div>
 
     </div>
-
+ </>
   )
 }
 

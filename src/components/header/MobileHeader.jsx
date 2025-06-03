@@ -71,7 +71,7 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className="w-full fixed top-0 left-0 bg-[white] bg-white px-4 py-3  z-[999]">
+    <header className="w-full fixed top-0 left-0 bg-[white] bg-white   z-[999]">
       <div className="flex justify-between items-center pl-[40px] pr-[40px] p-[10px]">
         <div className="flex items-center gap-[10px]">
           <Link to="/">

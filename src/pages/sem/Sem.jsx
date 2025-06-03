@@ -327,7 +327,20 @@ const Sem = () => {
   };
 
   return (
-    <div className='mt-[120px]  max-w-7xl  w-[100%] pl-[40px] pr-[40px]' >
+    <>
+    
+  <Helmet>
+
+    <title>Best Search Engine Marketing Agency in Gurgaon </title>
+  <meta name="description" content="WebNest Media is No.1 Search Engine Marketing Agency in Gurgaon that drive targeted traffic and increase conversions. Get measurable results through PPC, Google Ads & more." />
+  <meta name="keywords" content="search engine marketing, SEM services, PPC advertising, Google Ads, paid search, online marketing agency, search marketing company in Gurgaon,search engine marketing sem services,google search engine marketing, facebook ads, instagram ads " />
+  <link rel="canonical" href="https://webnestmedia.com/search-engine-marketing" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="WebNest Media" />
+  </Helmet>
+
+
+    <div className='mt-[120px]  max-w-7xl  w-[100%] ' >
       <div className="container_1">
         <div>
           <img src={SEM1} alt="Search Engine Marketing" className="c1_img" />
@@ -562,6 +575,7 @@ const Sem = () => {
 </div>
 
       </div>
+    </>
   );
 };
 
