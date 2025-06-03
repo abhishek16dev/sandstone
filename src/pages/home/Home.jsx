@@ -34,6 +34,14 @@ import facebookads from "../../pages/home/resources/Facebookads.svg";
 import instagramads from "../../pages/home/resources/instagramads.svg";
 import Youtubeads from "../../pages/home/resources/Youtubeads.svg";
 
+import slide5 from "../../pages/home/resources/lotus.svg";
+import slide6 from "../../pages/home/resources/sportsline.svg";
+import slide7 from "../../pages/home/resources/heritagebadminton.svg";
+import slide8 from "../../pages/home/resources/sandstone.svg";
+import slide9 from "../../pages/home/resources/readit360.svg";
+import slide10 from "../../pages/home/resources/Houseforever.svg";
+
+
 // import "./FlipCard.css";
 import * as FaIcons from "react-icons/fa";
 
@@ -93,12 +101,7 @@ const autoSlide = [
 
 ];
 
-
-
-
 const Home = () => {
-
-
 
 
   const [flippedIds, setFlippedIds] = useState([]);
@@ -227,40 +230,51 @@ const Home = () => {
   return (
     <>
 
-    
+
       <Helmet>
-<title>Best Digital Marketing Agency in Gurgaon | WebNest Media</title>
-<meta name="description" content="Grow your business online with with WebNest Media the Top Digital Marketing Agency in Gurgaon. Expert SEO, PPC, and social media solutions that deliver results." />
-<meta name="keywords" content="digital marketing company in India, digital marketing service, top digital marketing agencies in gurgaon, top digital marketing companies in gurgaon, top 10 digital marketing companies in gurgaon, creative digital marketing company in gurgaon, digital marketing consultant in gurgaon," />
-<meta name="robots" content="index, follow" />
-<meta name="author" content="WebNest Media" />
-<link rel="canonical" href="https://webnestmedia.com/" />
+        <title>Best Digital Marketing Agency in Gurgaon | WebNest Media</title>
+        <meta name="description" content="Grow your business online with with WebNest Media the Top Digital Marketing Agency in Gurgaon. Expert SEO, PPC, and social media solutions that deliver results." />
+        <meta name="keywords" content="digital marketing company in India, digital marketing service, top digital marketing agencies in gurgaon, top digital marketing companies in gurgaon, top 10 digital marketing companies in gurgaon, creative digital marketing company in gurgaon, digital marketing consultant in gurgaon," />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="WebNest Media" />
+        <link rel="canonical" href="https://webnestmedia.com/" />
 
 
       </Helmet>
 
-      <div className='max-w-7xl  '>
-        <div className="context max-w-7xl   flex items-center gap-[60px]  ">
+      <div className='pl-[40px] max-w-7xl mx-auto pr-[40px] '>
+        <div className="context  flex items-center gap-[60px]   ">
           <div className='text-part '>
-            <h1 className="h1tag relative ">
-              <span>Best </span>
-              <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
+            <div className="relative">
+              <h1 className="h1tag">
+                <span>Best </span>
+                <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
-              <span>  Agency with  <span className="text-[#409338] floating-text-two ">Smart Strategies  </span></span>
+                <span>
+                  Agency with
+                  <span className="text-[#409338] floating-text-two"> Smart Strategies </span>
+                </span>
 
-              <img src={rocket} className='absolute max-md:top-[440px]  top-[90px] left-[90px] animate-floatUp ' />
+                {/* Left rocket - always visible */}
+                <img
+                  src={rocket}
+                  className="absolute top-[90px] max-md:top-[440px] left-[90px] animate-floatUp leftrocket]"
+                />
 
-
-
-
-              <div className="absolute top-[90px] max-md:top-[440px] right-[90px] animate-float_Up">
-                <div className="rotate-[135deg]">
-                  <img src={rocket} alt="Rocket" />
+                {/* Right rocket - only visible on screen ≥ 640px */}
+                {/* Right rocket - only visible on screen ≥ 640px */}
+                <div className="hidden sm:block absolute top-[90px] sm:top-[90px] right-[90px] animate-float_Up rightrocket">
+                  <div className="rotate-[135deg] rightrocket">
+                    <img src={rocket} alt="Rocket" className="rightrocket" />
+                  </div>
                 </div>
-              </div>
+
+              </h1>
 
 
-            </h1>
+            </div>
+
+
 
 
 
@@ -298,7 +312,7 @@ const Home = () => {
 
 
 
-        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-2  gap-8">
+        <div className=" flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-2  gap-8">
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
@@ -326,43 +340,61 @@ const Home = () => {
         </div>
 
 
-        <div className="slider-container">
+        <div className="  slider-container">
           <div className="slider-track">
+            <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+            <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+          
+          
+          
+            <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
+           <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
+             <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+           
+            <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
+           
+             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+          
+           
+            <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
+           
+              <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+           
+           
+            <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
 
-            <div className="box"> <img src={slideone} /></div>
-            <div className="box"><img src={slidetwo} /> </div>
-            <div className="box"><img src={slidethree} /></div>
-            <div className="box"><img src={slidefour} /></div>
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
 
-            <div className="box"> <img src={slideone} /></div>
-            <div className="box"><img src={slidetwo} /> </div>
-            <div className="box"><img src={slidethree} /></div>
-            <div className="box"><img src={slidefour} /></div>
-            <div className="box"> <img src={slideone} /></div>
-            <div className="box"><img src={slidetwo} /> </div>
-            <div className="box"><img src={slidethree} /></div>
-            <div className="box"><img src={slidefour} /></div>
-            <div className="box"> <img src={slideone} /></div>
-            <div className="box"><img src={slidetwo} /> </div>
-            <div className="box"><img src={slidethree} /></div>
-            <div className="box"><img src={slidefour} /></div>
-            <div className="box"> <img src={slideone} /></div>
-            <div className="box"><img src={slidetwo} /> </div>
-            <div className="box"><img src={slidethree} /></div>
-            <div className="box"><img src={slidefour} /></div>
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+
+            <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+
           </div>
         </div>
 
 
 
 
-        <div className="bg-white p-[40px] mt-[30px] transparenbody  text-start flex flex-col justify-center md:flex-row md:items-center md:gap-[60px] gap-6">
+        <div className="  bg-white p-[40px] mt-[30px] transparenbody  text-start flex  max-lg:flex-col justify-center  items-center gap-6">
 
-          <div className="flex justify-center md:w-[35%]">
+
+          <div className="flex justify-center md:w-[35%] ">
             <img src={pana} className="w-[200px] md:w-full max-w-xs" alt="Image" />
           </div>
 
-          <div className="md:w-[60%]  p-[40px] comprensive">
+      <div className="md:w-[60%] p-[40px] max-sm:p-[0px] comprensive max-lg:w-[100%]">
+
             <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] text-[#4D4D4D] ">
               Comprehensive Digital Marketing Services  in India
             </h2>
@@ -373,7 +405,7 @@ const Home = () => {
 
         </div>
 
-        <div className='flipcard bg-[white] p-[40px] transparenbody'>
+        <div className='  flipcard bg-[white] p-[40px] transparenbody'>
 
 
           <h2 className=" "> Service's we Offered</h2>
@@ -410,7 +442,7 @@ const Home = () => {
 
 
 
-        <div className="Slidercrausol  ">
+        <div className=" Slidercrausol  ">
           <h2 className="heading">One Partner. Every Platform. Endless Growth </h2>
 
           <Slider slides={autoSlide} autoSlideInterval={4000} />
@@ -420,7 +452,7 @@ const Home = () => {
         <div
           ref={secondREf}
           onMouseEnter={() => setCardTrigger(true)}
-          className="industriweserve mb-[30px]"
+          className="industriweserve mb-[30px] "
 
         >
 
@@ -441,7 +473,7 @@ const Home = () => {
         <div
           ref={thirdREf}
           onMouseEnter={() => setThirdtrigger(true)}
-          className="Max-md:w-[100%] mt-[130px] mb-[120px]   cursor-pointer phone p-6 md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
+          className=" mt-[130px] mb-[120px]   cursor-pointer phone  md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
         >
           {/* Phone Icon */}
           <div className="mb-4 md:mb-0">
@@ -479,7 +511,7 @@ const Home = () => {
         <div
           ref={wrapperRef}
           onMouseEnter={() => setTrigger(true)}
-          className="counter flex mt-[20px] flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
+          className="  counter flex mt-[20px] flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
 
 
 
@@ -508,18 +540,18 @@ const Home = () => {
         </div>
 
 
-        <div className="tetonomial mt-[30px] mb-[40px]">
+        <div className=" tetonomial mt-[30px] mb-[40px]">
 
           <ImageSlider data={testimonialsData} />
         </div>
 
 
 
-        <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+        <p className=" text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
           Get a free consultation!
         </p>
 
-        <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
+        <div className=" conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 
           {/* Left Side: Text + Numbers */}
           <div className="w-[45%] max-lg:w-full">
@@ -556,21 +588,21 @@ const Home = () => {
   </a>
 </p> */}
 
-<div className="space-y-2">
-  <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
-    <FiPhone className="text-white" />
-    <a href="tel:+919696964606" className="text-white">
-      +91-9696964606
-    </a>
-  </button>
+            <div className="space-y-2">
+              <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+                <FiPhone className="text-white" />
+                <a href="tel:+919696964606" className="text-white">
+                  +91-9696964606
+                </a>
+              </button>
 
-  <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
-    <FiPhone className="text-white" />
-    <a href="tel:+919211676307" className="text-white">
-      +91-9211676307
-    </a>
-  </button>
-</div>
+              <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">
+                <FiPhone className="text-white" />
+                <a href="tel:+919211676307" className="text-white">
+                  +91-9211676307
+                </a>
+              </button>
+            </div>
 
 
           </div>
@@ -582,7 +614,7 @@ const Home = () => {
 
         </div>
 
-        <div className="accordian">
+        <div className=" accordian">
 
 
           <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>

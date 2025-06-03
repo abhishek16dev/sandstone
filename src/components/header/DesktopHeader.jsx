@@ -68,7 +68,8 @@ const menuItems = [
       { title: "Customer Retention", path: "/customer-retention" },
       { title: "Digital Transformation", path: "/digital-transformation" },
       { title: "Market Research & Insights", path: "/market-research" },
-      { title: "Omnichannel Marketing", path: "/omnichannel-marketing" }
+      { title: "Online Reputation Managment", path: "/online-reputation-managment" },
+        
     ]
   },
 

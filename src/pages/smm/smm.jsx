@@ -104,7 +104,7 @@ const Smm = () => {
 
 </Helmet>
 
-    <div className='mt-[200px] max-w-7xl w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
+    <div className='mt-[200px] w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
       <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto

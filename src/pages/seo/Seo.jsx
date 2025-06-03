@@ -15,11 +15,12 @@ const Seo = () => {
         <meta name="keywords" content="SEO Services India, Best SEO Company, Search Engine Optimization, WebNest Media, SEO Agency India, Google Rankings,Top 10 SEO Companies in Gurgaon,Best SEO Agencies in Gurgaon" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://webnestmedia.com/search-engine-optimization" />
+        
       </Helmet>
  
 
 
-   <div className='mt-[120px]  max-w-7xl  w-[100%]'>
+   <div className='mt-[120px]  w-[100%]'>
       <div className="c1">
         <div className="c1-left">
           <h1>Raise Your Website to #1 on Result Page</h1>

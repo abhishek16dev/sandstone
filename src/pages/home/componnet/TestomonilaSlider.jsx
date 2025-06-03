@@ -81,7 +81,7 @@ export default function App() {
   const cards = testimonials.slice(index * 3, index * 3 + 3);
 
   return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen text-white px-4 py-10 sm:px-6 md:px-10">
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900  text-white px-4 py-10 sm:px-6 md:px-10">
       <div className="max-w-6xl mx-auto">
         {/* Mobile Headings */}
         <div className="text-start xl:hidden mb-10">
