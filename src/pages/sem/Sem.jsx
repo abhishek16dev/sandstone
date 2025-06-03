@@ -327,7 +327,7 @@ const Sem = () => {
   };
 
   return (
-    <div className='mt-[120px] pl-[40px] pr-[40px]' >
+    <div className='mt-[120px]  max-w-7xl  w-[100%] pl-[40px] pr-[40px]' >
       <div className="container_1">
         <div>
           <img src={SEM1} alt="Search Engine Marketing" className="c1_img" />

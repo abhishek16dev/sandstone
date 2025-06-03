@@ -19,7 +19,7 @@ const Seo = () => {
  
 
 
-   <div className='mt-[120px]'>
+   <div className='mt-[120px]  max-w-7xl  w-[100%]'>
       <div className="c1">
         <div className="c1-left">
           <h1>Raise Your Website to #1 on Result Page</h1>
