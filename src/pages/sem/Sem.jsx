@@ -316,16 +316,48 @@ const Sem = () => {
 
     ) },
   ];
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted');
+      const [submitting, setSubmitting] = useState(false);
+      const [responseMsg, setResponseMsg] = useState("");
+  
+    const handleSubmitsem = async (e) => {
+      e.preventDefault();
+      setSubmitting(true);
+      setResponseMsg("");
+  
+      const formData = new FormData(e.target);
+      const data = {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+          service: formData.get("service"),
+      };
+      console.log("Form data:", data); // Log the form data for debugging
+      try {
+          const response = await fetch("https://webnestmedia.com/webnestmediacontac.php/contact", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+          });
+  
+          if (response.ok) {
+              const result = await response.json();
+              setResponseMsg(result.message || "Form submitted successfully.");
+              e.target.reset(); // ✅ Clear form fields
+          } else {
+              const errorText = await response.text();
+              setResponseMsg("Submission failed: " + errorText);
+          }
+      } catch (error) {
+          console.error("Submission error:", error);
+          setResponseMsg("Submission failed. Please try again.");
+      } finally {
+          setSubmitting(false);
+      }
   };
-
   return (
     <div className='mt-[120px] pl-[40px] pr-[40px]' >
       <div className="container_1">
@@ -339,21 +371,21 @@ const Sem = () => {
         </div>
         <div className="loginform">
           <form 
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmitsem}
           >
             <p className='Form_heading'>Get a free consultation!</p>
 
             <label htmlFor="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
 
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
             <label htmlFor="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required />
+            <input type="tel" id="phoneNumber" name="phone" placeholder="Enter your phone number" required />
 
             <label htmlFor="services">What services are you looking for?</label>
-            <select id="services" name="services" required>
+            <select id="service" name="service" required>
               <option value="">Select a service</option>
               <option value="sem">Search Engine Marketing(SEM)</option>
               <option value="seo">Search Engine Optimization(SEO)</option>
@@ -366,7 +398,8 @@ const Sem = () => {
             <label htmlFor="specifications">Mention your specifications:</label>
             <textarea id="specifications" name="specifications" placeholder="Mention your specific requirements"></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">{submitting ? "Submitting..." : "Submit"}</button>
+            {responseMsg && <p className="text-green-500 mt-2">{responseMsg}</p>}
           </form>
         </div>
       </div>
