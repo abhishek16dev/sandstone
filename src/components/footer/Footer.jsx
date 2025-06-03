@@ -18,9 +18,9 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             < Link to={"/"} >
-               <img src={logo} alt="WebNest Media Logo" className="w-[90px] h-[90px]" />
+              <img src={logo} alt="WebNest Media Logo" className="w-[90px] h-[90px]" />
             </Link>
-         
+
           </div>
 
           {/* Social Media */}
@@ -39,34 +39,38 @@ const Footer = () => {
 
           {/* Address & Email */}
           <div className="flex  flex-col text-center  max-sm:text-start lg:text-right">
-            <div> 
-            <h4 className="text-lg font-semibold mb-2">Our Address</h4>
-            <p className="text-sm mb-4">
-              1st Floor Orchid Business Park,<br />
-              Near Subhash Chowk, Sector 48,<br />
-              Gurugram, Haryana 122004
-            </p>
-             </div>
-           
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Our Address</h4>
+              <p className="text-sm mb-4">
+                1st Floor Orchid Business Park,<br />
+                Near Subhash Chowk, Sector 48,<br />
+                Gurugram, Haryana 122004
+              </p>
+            </div>
+
           </div>
 
-            <div>
-                
-           
+          <div>
+
+
 
             <h4 className="text-lg font-semibold mb-2">Email Us</h4>
-            <a
+           <p> <a
               className="text-sm text-blue-300 hover:underline"
               href="mailto:info@webnestmedia.com"
             >
               info@webnestmedia.com
-            </a>
-              </div>
+            </a></p>
+
+          < Link to={"/privacy-policy"}  >
+         <p className='text-sm text-[white] hover:underline'>Privacy Policy</p>
+             </Link>
+          </div>
         </div>
 
         <svg width="100%" height="2">
-  <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
-</svg>
+          <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
+        </svg>
 
 
         {/* Footer Links */}
@@ -121,9 +125,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Text */}
-             <svg width="100%" height="2">
-  <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
-</svg>
+        <svg width="100%" height="2">
+          <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
+        </svg>
         <div className="text-center pt-4 text-sm text-gray-400">
           <p>© 2025 WebNest Media. All rights reserved.</p>
           <p>Developed by WebNest Media</p>

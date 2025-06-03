@@ -9,6 +9,7 @@ import Smm from './pages/smm/smm';
 import SEo from "./pages/seo/Seo";
 import Web from './pages/web3/web';
 import ScrollToTop from './components/scrollup';
+import Privacy from './components/privacy';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/search-engine-optimization" element={<SEo />} />
            <Route path="/social-media-marketing" element={<Smm />} />
            <Route path="/web-development" element ={ <Web />} />
+           <Route path="/privacy-policy" element={<Privacy />} />
       
 
             <Route path="*" element={<Navigate to="/" replace />} />
