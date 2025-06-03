@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import "./contactform.css";
 
@@ -45,7 +43,6 @@ const ContactForm = () => {
         setSubmitting(false);
     }
 };
-
 
     return (
         <div className="conatctform">
