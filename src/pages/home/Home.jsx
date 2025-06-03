@@ -316,6 +316,7 @@ const Home = () => {
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
+            
               Building Brands with <br className="hidden md:block" />
               Integrity and Innovation <br className="hidden md:block" />
               Across India
@@ -393,12 +394,12 @@ const Home = () => {
             <img src={pana} className="w-[200px] md:w-full max-w-xs" alt="Image" />
           </div>
 
-      <div className="md:w-[60%] p-[40px] max-sm:p-[0px] comprensive max-lg:w-[100%]">
+         <div className="md:w-[60%] p-[40px] max-sm:p-[0px] comprensive w-[100%]">
 
             <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] text-[#4D4D4D] ">
               Comprehensive Digital Marketing Services  in India
             </h2>
-            <p className="text-black font-normal text-[15px]  rounded text-[#4D4D4D]">
+            <p className="text-black font-normal text-[15px]  rounded ">
               At WebNest, we take pride in being one of the top digital marketing agency in gurgaon. We create strategically designed campaigns that are easily adjustable to your needs and most importantly, centered on your success. We handle everything from developing powerful SEO strategies to optimizing your PPC campaigns, ensuring each aspect of your performance marketing is strategically managed. Additionally, our services extend to content marketing, web development, mobile app development, conversion rate optimization (CRO), email marketing, and in-depth analytics.
             </p>
           </div>
