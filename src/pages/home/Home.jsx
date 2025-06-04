@@ -492,7 +492,7 @@ const Home = () => {
             </p>
 
             <div
-              className={`text-white text-[32px] md:text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""
+              className={`text-white text-[32px] max-md:text-[28px] md:text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""
                 }`}
             >
               <span>+91&nbsp;</span>

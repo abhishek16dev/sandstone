@@ -26,6 +26,9 @@ mark.styled {
   padding-right: 0.5rem;
 }
 
+/* Removed the cursor style */
+
+
 .typer::after {
   content: '|';
   animation: blink 1s infinite;

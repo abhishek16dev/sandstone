@@ -45,10 +45,11 @@ const ContactForm = () => {
 };
 
     return (
-        <div className="conatctform">
+       <div className="conatctform p-[30px] rounded-[20px] shadow-[0_12px_20px_rgba(0,0,0,0.2)]">
+
             <form onSubmit={handleSubmit}>
 
-                <div className="form-group mt-[100px] max-lg:mt-[30px] mb-[20px] border-b border-b-[1px] border-b-[#5c945c] pb-[10px]">
+                <div className="form-group mt-[100px] max-lg:mt-[30px] mb-[20px]  border-b-[1px] border-b-[#5c945c] pb-[10px]">
                     <input
                         type="text"
                         name="name"
@@ -98,7 +99,7 @@ const ContactForm = () => {
                     <textarea
                         name="message"
                         placeholder="Mention your specific requirements"
-                        className="w-[100%] outline-none border-none"
+                        className="w-[100%] outline-none  bg-[unset]  border-none"
                     ></textarea>
                 </div>
 

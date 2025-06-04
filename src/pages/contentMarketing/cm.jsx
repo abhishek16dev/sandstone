@@ -1,40 +1,38 @@
-// import React from 'react'
-
-// const ContentMarketing = () => {
-//   return (
-//     <div className='mt-[120px]'>
-//       <p> hello its content marketing</p>
-//     </div>
-//   )
-// }
-
-// export default ContentMarketing
-
-
-// File: ContentMarketing.jsx
-
-import React, { useEffect, useState } from 'react';
-import './cm.css'; // CSS moved to external file
+import React, { useEffect, useState, useRef } from 'react';
+import './cm.css'; // Make sure this file has your styles
 
 const ContentMarketing = () => {
   const [text, setText] = useState('');
   const words = ['HelloWorld'];
-  let currentWord = 0;
-  let currentChar = 0;
   const delay = 150;
+  const pause = 1000;
+
+  // Use refs to persist values without triggering re-renders
+  const wordIndex = useRef(0);
+  const charIndex = useRef(0);
 
   useEffect(() => {
-    const typerElement = document.getElementById('typer');
+    let timeout;
 
     function type() {
-      if (currentChar <= words[currentWord].length) {
-        setText(words[currentWord].substring(0, currentChar));
-        currentChar++;
-        setTimeout(type, delay);
+      const currentWord = words[wordIndex.current];
+      if (charIndex.current <= currentWord.length) {
+        setText(currentWord.substring(0, charIndex.current));
+        charIndex.current++;
+        timeout = setTimeout(type, delay);
+      } else {
+        // Pause before moving to next word
+        timeout = setTimeout(() => {
+          charIndex.current = 0;
+          wordIndex.current = (wordIndex.current + 1) % words.length;
+          type();
+        }, pause);
       }
     }
 
     type();
+
+    return () => clearTimeout(timeout); // Cleanup on unmount
   }, []);
 
   return (
