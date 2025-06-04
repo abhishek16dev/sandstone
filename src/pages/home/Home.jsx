@@ -316,7 +316,7 @@ const Home = () => {
 
 
 
-        <div className=" max-md:z-[999] max-md:relative flex flex-col-reverse lg:flex-row items-center justify-between pl-[40px] pr-[40px]  gap-8">
+        <div className="z-[999] relative flex flex-col-reverse lg:flex-row items-center justify-between pl-[40px] pr-[40px]  gap-8">
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] max-md:text-[20px] max-md:leading-[28px] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">

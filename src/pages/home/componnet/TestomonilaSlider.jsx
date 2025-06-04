@@ -10,10 +10,6 @@ import SocialMediaMarketing from "../../home/resources/Socialmediamarketing.svg"
 import WebDevelopment from "../../home/resources/WebDevelopment.svg";
 import EmailMarketing from "../../home/resources/EmailMarketing.svg";
 import maninwhite from "../../home/resources/maninwhite.svg";
-// import { FaUserSecret } from "react-icons/fa";
-// import { FaUsers } from "react-icons/fa";
-// import { PiUserSwitchFill } from "react-icons/pi";
-// import { FaUsersGear } from "react-icons/fa6";
 
 const testimonials = [
   {
