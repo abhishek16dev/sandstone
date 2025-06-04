@@ -319,7 +319,7 @@ const Home = () => {
         <div className=" flex flex-col-reverse lg:flex-row items-center justify-between pl-[40px] pr-[40px]  gap-8">
 
           <div className="w-full lg:w-1/2">
-            <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
+            <h2 className="text-[#5c945c] max-md:text-[20px] max-md:leading-[28px] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
             
               Building Brands with <br className="hidden md:block" />
               Integrity and Innovation <br className="hidden md:block" />
@@ -329,7 +329,7 @@ const Home = () => {
               WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
               Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
             </p>
-            <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 max-md:py-2 max-md:px-3 hover:bg-[#4f834f] transition">
+            <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 max-md:py-1 max-md:px-2 hover:bg-[#4f834f] transition">
               Get Started
             </button>
           </div>
