@@ -594,6 +594,7 @@ display: inline-block;
   }
   .area{
     height: 350px;
+    z-index: -1;
   }
   .context{
    top: 80px;

@@ -73,7 +73,7 @@ const Seo = () => {
 <div className="container2">
   <div className="c2left">
     <p id="c2headingleft" className="c2heading">
-      Raise Your Website to #1 on Result Page with WebNest Media
+      Raise Your <span className='highlight'>Website</span> to #1 on Result Page with <span className='highlight'>WebNest Media</span>
     </p>
     <p id="c2paraleft">
       Let’s take your website from hidden to high-ranking with smart SEO, search-friendly content,
@@ -83,7 +83,7 @@ const Seo = () => {
     </p>
     <div className="c2buttons">
       <button className='greenbutton'>Learn More</button>
-      <button className='whitebutton'>Learn More</button>
+      <button className='whitebutton'>Contact Us</button>
     </div>
   </div>
   <div className="c2right">
@@ -91,7 +91,7 @@ const Seo = () => {
   </div>
 </div>
       <div className="container3">
-        <p style={{ color: '#EEC370', fontSize: 14 }}>The no.1 SEO Service</p>
+        <p style={{ color: 'black', fontSize: 18, fontWeight:'bold' }}>The no.1 SEO Service</p>
         <p style={{ color: '#4CAF50', fontSize: 32, fontWeight: 600 }}>Your success is our mission</p>
         <p style={{ fontSize: 16, fontWeight: 400 }}>
          We combine on page SEO, off page SEO and technical SEO to scale supply chain solutions and accelerate growth.
@@ -126,7 +126,7 @@ const Seo = () => {
         </div>
       </div>
      <div className="container5">
-  <p className="service-label">Our Services</p>
+  <p className="service-label" style={{fontSize:20, fontWeight:400}}>Our Services</p>
   <h2 className="process-heading">
     Proven <span className="highlight">SEO Process</span>
   </h2>
@@ -175,8 +175,8 @@ const Seo = () => {
     ))}
   </div>
 </div>
- <div className="container6">
-        <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+ <div className="container6 ml-40">
+        <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom mt-20">
           Get a free consultation!
         </p>
 
@@ -217,6 +217,7 @@ const Seo = () => {
         </div>
       </div>
       <div className="accordian">
+        <h2 className='text-center'>Let's address your <span className='text-black '>questions </span>today</h2>
         <div className="accordion-wrapper-columns">
   {/* Left Column */}
   <div className="accordion-column">

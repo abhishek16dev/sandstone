@@ -29,7 +29,7 @@ const ImageSlider = ({ slides, autoSlideInterval = 4000 }) => {
 
   return (
     <div className="relative w-full mx-auto overflow-hidden transparenbody">
-      <div className="relative h-[400px] sm:h-[470px] md:h-[520px]">
+      <div className="relative h-[400px] sm:h-[470px] md:h-[520px] max-md:h-[520px]">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -53,16 +53,20 @@ const ImageSlider = ({ slides, autoSlideInterval = 4000 }) => {
 
             {/* Right: Content */}
             <div className="w-full sm:w-1/2 p-4 sm:p-8">
-              <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-4 text-[#409338]">{slide.Heading}</h2>
-              <p className="mb-4 sm:mb-6 text-base sm:text-lg text-[#4D4D4D]">{slide.Subheading}</p>
-              <p className="text-sm sm:text-[15px] text-[black] pr-0 sm:pr-[40px]">{slide.para}</p>
+              <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-4 text-[#409338] max-md:text-center">{slide.Heading}</h2>
+              <p className="mb-4 sm:mb-6 text-base sm:text-lg text-[#4D4D4D]  max-md:text-center">{slide.Subheading}</p>
+              <p className="text-sm sm:text-[15px] text-[black] pr-0 sm:pr-[40px]  max-md:text-center">{slide.para}</p>
               {slide.buttonText && (
-                <button className="px-4 sm:px-5 py-2 sm:py-3 bg-[#409338] mt-5 mb-3 text-white rounded text-[12px] sm:text-[13px] transition flex gap-[5px] items-center">
+                <div className='max-md:flex max-md:items-center  max-md:justify-center'>
+                <button className="px-4 sm:px-5 py-2 sm:py-3 bg-[#409338] mt-5 mb-3 text-white rounded text-[12px] sm:text-[13px] transition flex gap-[5px] items-center max-md:justify-center">
                   <span className="animate-bounce-x">
                     <FaSquareArrowUpRight />
                   </span>
                   <span>{slide.buttonText}</span>
                 </button>
+
+                  </div>
+              
               )}
             </div>
           </div>

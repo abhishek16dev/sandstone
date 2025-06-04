@@ -7,15 +7,29 @@
 .container1 img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Add this line to maintain aspect ratio */
+  opacity: 0.7; /* Adjust opacity for the background image */
+}
+
+.container1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensure the overlay is above the image */
 }
 
 .container1 h1 {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 40px;
+  font-size: 52px;
+  z-index: 2; /* Ensure the text is above the overlay */
   /* font-weight: 400; */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -23,7 +37,8 @@
     display: flex;
     flex-direction: row;
     padding-left: 40px;
-    padding-top: 114px;
+    padding-top: 80px;
+    
 }
 .c2left{
     width: 60%;
@@ -68,8 +83,9 @@
   transition: all 0.2s ease-in-out; /* Smooth transition for the effect */
 }
 .greenbutton:hover {
-  background-color: #388E3C; /* Darker shade of green */
-  color: white;
+  color: #388E3C; /* Darker shade of green */
+  background-color: white;
+    border: 2px solid #388E3C; /* Darker green border */
   transform: scale(1.05); /* Slight zoom-in effect */
   transition: all 0.2s ease-in-out; /* Smooth transition for the effect */
 }
@@ -84,13 +100,6 @@
     flex-direction: column;
     padding-top: 72px;
     padding-left: 40px;
-}
-.c1-left{
-    width: 50%;
-    
-}
-.c1-left h1{
-  font-size: 46px !important;
 }
 .c2_cards {
   display: flex;
@@ -165,6 +174,7 @@
   gap: 20px;
   max-width: 1200px;
   margin-top: 45px;
+  margin-left: 40px;
 }
 
 .c4_card {
@@ -285,6 +295,13 @@
     text-align: center;
     margin-top: 40px;
 }
-.faq-heading .highlight { /* Corrected selector */
-  color: black;
+.highlight { /* Corrected selector */
+  color: #388E3C;
+}
+.accordian h2{
+    font-size: 32px;
+    color: #388E3C;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
 }
