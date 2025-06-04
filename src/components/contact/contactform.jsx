@@ -54,35 +54,35 @@ const ContactForm = () => {
                         name="name"
                         placeholder="Enter your full name"
                         required
-                        className="w-[100%] outline-none border-none"
+                        className="w-[100%]  bg-[unset] outline-none border-none"
                     />
                 </div>
 
-                <div className="form-group mb-[20px] border-b border-b-[1px] border-b-[#5c945c] pb-[10px]">
+                <div className="form-group mb-[20px] border-b  border-b-[#5c945c] pb-[10px]">
                     <input
                         type="email"
                         name="email"
                         placeholder="Enter your email"
                         required
-                        className="w-[100%] outline-none border-none"
+                        className="w-[100%]    outline-none  bg-[unset] border-none"
                     />
                 </div>
 
-                <div className="form-group mb-[20px] border-b border-b-[1px] border-b-[#5c945c] pb-[10px]">
+                <div className="form-group mb-[20px] border-b  border-b-[#5c945c] pb-[10px]">
                     <input
                         type="tel"
                         name="phone"
                         placeholder="Enter your phone number"
                         required
-                        className="w-[100%] outline-none border-none"
+                        className="w-[100%] bg-[unset]  outline-none border-none"
                     />
                 </div>
 
-                <div className="form-group mb-[20px] border-b border-b-[1px] border-b-[#5c945c] pb-[10px]">
+                <div className="form-group mb-[20px] border-b  border-b-[#5c945c] pb-[10px]">
                     <select
                         name="service"
                         required
-                        className="w-full bg-transparent text-[#5c945c] outline-none border-none appearance-none"
+                        className="w-full  bg-transparent text-[#5c945c] outline-none border-none appearance-none"
                     >
                         <option value="">Select a service</option>
                         <option>Search Engine Marketing (SEM)</option>
@@ -94,7 +94,7 @@ const ContactForm = () => {
                     </select>
                 </div>
 
-                <div className="form-group mb-[20px] border-b border-b-[1px] border-b-[#5c945c] pb-[10px] w-[100%]">
+                <div className="form-group mb-[20px] border-b bg-[unset]  border-b-[#5c945c] pb-[10px] w-[100%]">
                     <textarea
                         name="message"
                         placeholder="Mention your specific requirements"

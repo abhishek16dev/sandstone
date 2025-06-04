@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* 
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #6B946A; 
-} */
+}
 
 @media (max-width: 768px) {
   .slick-dots li button:before {
