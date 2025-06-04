@@ -8,6 +8,7 @@ import WhatsAppIcon from './WhatsappStickyIcon';
 import { Link } from 'react-router-dom';
 
 
+
 const Footer = () => {
   return (
     <footer className="bg-[#1A1D1C] text-white p-[40px] relative">

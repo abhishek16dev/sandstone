@@ -8,6 +8,7 @@
 
   width: 100%;
   height: 600px;
+  
 }
 
 .circles {
@@ -111,6 +112,7 @@
   width: 100%;
   position: absolute;
   top: 190px;
+  left: 0;
   display: flex;
   z-index: 9;
 
@@ -143,7 +145,7 @@
 }
 
 .h1tag {
-  font-size: 46px !important;
+  font-size: 46px ;
   font-weight: 500;
   margin: 10px 0;
   line-height: 1.3em;
@@ -241,6 +243,7 @@
 } */
 
 /* Flip card container */
+
 .flip-card {
   width: 220px;
   height: 250px;
@@ -583,6 +586,49 @@ display: inline-block;
   .image-part {
     max-width: 450px;
   }
+
+  .h1tag{
+    font-size: 20px;
+     -webkit-text-stroke: 2px !important;
+     align-items: start;
+  }
+  .area{
+    height: 450px;
+  }
+  .context{
+   top: 80px;
+  }
+
+
+
+  .flipcard  h2,  .industriweserve h2 ,.Slidercrausol .heading {
+   
+    font-size: 28px;
+    line-height: 28px;
+  
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 1px #5c945c;
+
+}
+.headingstroke ,.headingstrokesecond {
+ font-size: 28px !important;
+    line-height: 28px !important;
+  
+
+    
+    -webkit-text-stroke: 1px #5c945c !important
+}
+.flip-card, .animated-card {
+
+  width: 160px !important;
+  height: 170px  !important;
+}
+
+#industries{
+  margin-top: 60px !important;
+}
  
 }
 

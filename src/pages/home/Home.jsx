@@ -242,11 +242,11 @@ const Home = () => {
 
       </Helmet>
 
-      <div className='pl-[40px] max-w-7xl mx-auto pr-[40px] '>
-        <div className="context  flex items-center gap-[60px]   ">
-          <div className='text-part '>
+      <div className=' max-w-7xl mx-auto  '>
+        <div className="context  flex items-center justify-center gap-[60px]   ">
+          <div className='text-part max-md:p-[40px] '>
             <div className="relative">
-              <h1 className="h1tag">
+              <h1 className="h1tag ">
                 <span>Best </span>
                 <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
@@ -255,19 +255,21 @@ const Home = () => {
                   <span className="text-[#409338] floating-text-two"> Smart Strategies </span>
                 </span>
 
-                {/* Left rocket - always visible */}
+            
                 <img
                   src={rocket}
-                  className="absolute top-[90px] max-md:top-[440px] left-[90px] animate-floatUp leftrocket]"
+                  className="absolute  max-sm:hidden top-[90px] max-md:top-[440px] left-[90px] animate-floatUp leftrocket]"
                 />
 
-                {/* Right rocket - only visible on screen ≥ 640px */}
-                {/* Right rocket - only visible on screen ≥ 640px */}
-                <div className="hidden sm:block absolute top-[90px] sm:top-[90px] right-[90px] animate-float_Up rightrocket">
-                  <div className="rotate-[135deg] rightrocket">
-                    <img src={rocket} alt="Rocket" className="rightrocket" />
+           
+                <div className=" absolute top-[90px] sm:top-[90px] right-[90px] animate-float_Up  max-sm:hidden">
+                  <div className="rotate-[263deg] rightr max-sm:hidden">
+                    <img src={rocket} alt="Rocket" className="rightrocket max-sm:hidden" />
                   </div>
                 </div>
+
+
+
 
               </h1>
 
@@ -294,7 +296,9 @@ const Home = () => {
 
 
         </div>
-        <div className="area" >
+
+
+        <div className="area pl-[40px] pr-[40px]" >
           <ul className="circles">
             <li></li>
             <li></li>
@@ -312,7 +316,7 @@ const Home = () => {
 
 
 
-        <div className=" flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-2  gap-8">
+        <div className=" flex flex-col-reverse lg:flex-row items-center justify-between pl-[40px] pr-[40px]  gap-8">
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
@@ -325,7 +329,7 @@ const Home = () => {
               WebNest Media isn’t just another digital marketing company in India — we’re your growth partner.
               Our team combines strategic thinking, creativity, and technology to elevate your brand across digital channels.
             </p>
-            <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 hover:bg-[#4f834f] transition">
+            <button className="bg-[#5c945c] text-white rounded-md px-6 py-3 max-md:py-2 max-md:px-3 hover:bg-[#4f834f] transition">
               Get Started
             </button>
           </div>
@@ -341,7 +345,8 @@ const Home = () => {
         </div>
 
 
-        <div className="  slider-container">
+      
+  <div className="  slider-container">
           <div className="slider-track">
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
@@ -386,20 +391,19 @@ const Home = () => {
 
 
 
-
-        <div className="  bg-white p-[40px] mt-[30px] transparenbody  text-start flex  max-lg:flex-col justify-center  items-center gap-6">
+        <div className="  pl-[40px] pr-[40px]  bg-white p-[40px] mt-[30px] transparenbody  text-start flex  max-lg:flex-col justify-center  items-center gap-6">
 
 
           <div className="flex justify-center md:w-[35%] ">
             <img src={pana} className="w-[200px] md:w-full max-w-xs" alt="Image" />
           </div>
 
-         <div className="md:w-[60%] p-[40px] max-sm:p-[0px] comprensive w-[100%]">
+         <div className="md:w-[60%]  comprensive w-[100%]">
 
-            <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] text-[#4D4D4D] ">
+            <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] max-md:text-[20px] text-[#4D4D4D] ">
               Comprehensive Digital Marketing Services  in India
             </h2>
-            <p className="text-black font-normal text-[15px]  rounded ">
+            <p className="text-black font-normal text-[15px]  max-sm:text-sm rounded ">
               At WebNest, we take pride in being one of the top digital marketing agency in gurgaon. We create strategically designed campaigns that are easily adjustable to your needs and most importantly, centered on your success. We handle everything from developing powerful SEO strategies to optimizing your PPC campaigns, ensuring each aspect of your performance marketing is strategically managed. Additionally, our services extend to content marketing, web development, mobile app development, conversion rate optimization (CRO), email marketing, and in-depth analytics.
             </p>
           </div>
@@ -457,7 +461,7 @@ const Home = () => {
 
         >
 
-          <h2 className="heading mb-[20px]">Industries We serve </h2>
+          <h2 className="heading mb-[20px] " id="industries">Industries We serve </h2>
 
           <AnimatedCardList cardtrigger={cardtrigger} className="animatedcard  "
             ref={secondREf}
@@ -474,7 +478,7 @@ const Home = () => {
         <div
           ref={thirdREf}
           onMouseEnter={() => setThirdtrigger(true)}
-          className=" mt-[130px] mb-[120px]   cursor-pointer phone  md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%] mx-auto rounded-[20px] shadow-md"
+          className=" mt-[130px] mb-[120px] max-sm:mb-[60px]  max-md:mt-[80px] cursor-pointer phone  max-md:p-[40px] md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%]  max-md-w-[100%] mx-auto rounded-[20px] max-md:rounded-[0] shadow-md"
         >
           {/* Phone Icon */}
           <div className="mb-4 md:mb-0">
@@ -618,7 +622,7 @@ const Home = () => {
         <div className=" accordian">
 
 
-          <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
+          <p className="text-[#409338] font-bold text-[40px] leading-[40px]  max-md:text-[28px] max-md:leading-[28px] text-center stroke-custom fill-custom">Frequently Asked Questions (FAQs)</p>
 
 
           <Accordion />

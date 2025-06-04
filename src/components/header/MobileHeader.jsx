@@ -71,7 +71,7 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className="w-full fixed top-0 left-0 bg-[white] bg-white   z-[999]">
+    <header className="w-full sticky top-0 left-0 bg-[white]   z-[999999]">
       <div className="flex justify-between items-center pl-[40px] pr-[40px] p-[10px]">
         <div className="flex items-center gap-[10px]">
           <Link to="/">
@@ -82,7 +82,7 @@ export default function MobileHeader() {
             <p className="text-[grey] text-[10px]">(Nest your brand in the web of success)</p>
           </div>
         </div>
-        <button onClick={() => setOpen(!open)} className="text-[#9ac496] border-[#9ac496]">
+        <button onClick={() => setOpen(!open)} className="text-[#9ac496]  z-[10000] relativeborder-[#9ac496]">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

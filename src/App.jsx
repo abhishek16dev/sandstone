@@ -11,6 +11,7 @@ import Web from './pages/web3/web';
 import ScrollToTop from './components/scrollup';
 import Privacy from './components/privacy';
 
+import "./index.css";
 
 const App = () => {
   return (
