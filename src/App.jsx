@@ -12,6 +12,7 @@ import ScrollToTop from './components/scrollup';
 import Privacy from './components/privacy';
 
 import "./index.css";
+import ContentMarketing from './pages/contentMarketing/cm';
 
 const App = () => {
   return (
@@ -28,7 +29,7 @@ const App = () => {
            <Route path="/web-development" element ={ <Web />} />
            <Route path="/privacy-policy" element={<Privacy />} />
       
-
+        <Route path="/content-marketing" element={<ContentMarketing/>} />
             <Route path="*" element={<Navigate to="/" replace />} />
       
       </Routes>
