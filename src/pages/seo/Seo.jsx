@@ -5,6 +5,11 @@ import c2_image from './resources/hero_img.svg';
 import Conatctfrom from '../../components/contact/contactform';
 import Accordian from '../home/componnet/Accordian.jsx';
 import { FiPhone } from "react-icons/fi";
+import step1 from './resources/step1.svg';
+import step2 from './resources/step2.svg';
+import step3 from './resources/step3.svg';
+import step4 from './resources/step4.svg';
+import step5 from './resources/step5.svg';
 
 const Seo = () => {
 const [text, setText] = useState('');
@@ -146,10 +151,10 @@ useEffect(() => {
           <img src={c2_image} alt="" />
         </div>
       </div>
-      <div className="container3">
-        <p style={{ color: 'black', fontSize: 18, fontWeight: 'bold' }}>The no.1 SEO Service</p>
-        <p style={{ color: '#4CAF50', fontSize: 32, fontWeight: 600 }}>Your success is our mission</p>
-        <p style={{ fontSize: 16, fontWeight: 400 }}>
+      <div className="container3 bg-#EFF4EE">
+        <p style={{ color: '#EEC370', fontSize: 18 }}>The no.1 SEO Service</p>
+        <p style={{ color: 'black', fontSize: 32, fontWeight: 600, marginBottom:15}}>Your <span className='highlight'>Success</span> is our <span className='highlight'>Mission</span></p>
+        <p style={{ fontSize: 16}}>
           We combine on page SEO, off page SEO and technical SEO to scale supply chain solutions and accelerate growth.
 
         </p>
@@ -164,22 +169,23 @@ useEffect(() => {
       </div>
 
       <div className="container4">
-        <h2 className="trust-heading">
+        <h2 className="trust-heading ml-[40px] font-semibold">
           Why Businesses Trust <span className="highlight">Webnest Media</span> for SEO?
         </h2>
-        <p className="trust-subheading">
+        <p className="trust-subheading ml-[40px]">
           Your web presence can be made or broken by your choice of SEO partner. At <span className="highlight">Webnest Media</span>, we reject formula approaches and false promises. We believe in real results, honest work, and long-term success.
         </p>
-        <div className="c4_cards">
-          {trustData.map((item, index) => (
-            <div className="c4_card" key={index}>
-              <h3>
-                <span className="card-number">{index + 1}.</span> {item.title}
-              </h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
+      <div className="trust-card-container">
+        {trustData.map((item, index) => (
+          <div className="trust-card" key={index}>
+            <h3 className="trust-title">
+              <span className="trust-number">{index + 1}.</span> {item.title}
+            </h3>
+            <p className="trust-description">{item.text}</p>
+          </div>
+        ))}
+      </div>
+
       </div>
       <div className="container5">
         <p className="service-label" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
@@ -192,35 +198,35 @@ useEffect(() => {
               step: "01",
               title: "Local SEO",
               text: "As the best local SEO agency, we help connect your business with people searching nearby—boosting visibility, calls, visits, and trust where it matters most.",
-              icon: "📍",
+              icon: step1,
             },
             {
               step: "02",
               title: "Organic SEO",
               text: "Our organic SEO services improve your content, keywords, and site structure to help your website rank higher and achieve steady, long-term growth.",
-              icon: "🌱",
+              icon: step2,
             },
             {
               step: "03",
               title: "Social Media Marketing",
               text: "By interacting with consumers on channels they use on a daily basis, social media marketing increases sales, promotes your brand, and engages audiences.",
-              icon: "📢",
+              icon: step3,
             },
             {
               step: "04",
               title: "PPC Advertising",
               text: "Our PPC advertising service drives instant traffic and leads by placing your business at the top of search results with targeted paid campaigns.",
-              icon: "💰",
+              icon: step4,
             },
             {
               step: "05",
               title: "SEO Optimization",
               text: "SEO optimization improves your website’s visibility, boosts search rankings, and attracts organic traffic through content, keywords, and technical performance enhancements.",
-              icon: "⚙️",
+              icon: step5,
             },
           ].map((item, index) => (
             <div className="seo-step-card h-277" key={index}>
-              <div className="step-icon">{item.icon}</div>
+              <img src={item.icon} alt={item.title} className="step-icon" />
               <div className="step-meta">
                 <span className="step-tag">STEP</span>
                 <span className="step-number">{item.step}</span>
@@ -273,10 +279,10 @@ useEffect(() => {
         </div>
       </div>
       <div className="accordian">
-        <h2 className='text-center'>Let's address your <span className='text-black '>questions </span>today</h2>
+        <h2>Let's address your <span className='text-black '>questions </span>today</h2>
         <div className="accordion-wrapper-columns">
           {/* Left Column */}
-          <div className="accordion-column">
+          <div className="accordion-column ">
             <div className="accordion">
               <input type="checkbox" id="left-1" />
               <label className="accordion-label" htmlFor="left-1">
