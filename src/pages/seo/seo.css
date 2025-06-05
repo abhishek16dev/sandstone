@@ -1,43 +1,27 @@
-.container1 {
-  position: relative;
-  width: 100%; /* Make sure the container has a width */
-  height: 500px; /* Adjust the height as needed */
+.typing::after {
+  content: ' ';
+  animation: blink 1s infinite;
 }
 
-.container1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Add this line to maintain aspect ratio */
-  opacity: 0.7; /* Adjust opacity for the background image */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.container1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-  z-index: 1; /* Ensure the overlay is above the image */
+#c1{
+  height:unset;
 }
-
-.container1 h1 {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 52px;
-  z-index: 2; /* Ensure the text is above the overlay */
-  /* font-weight: 400; */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+#c1h1{
+    font-size: 52px;
+    font-weight: 600;
+    color: #388E3C;
+    transform: translate(-50%, -50%);
+    
 }
 .container2{
     display: flex;
     flex-direction: row;
     padding-left: 40px;
-    padding-top: 80px;
     
 }
 .c2left{
@@ -100,6 +84,7 @@
     flex-direction: column;
     padding-top: 72px;
     padding-left: 40px;
+    background-color: #EFF4EE;
 }
 .c2_cards {
   display: flex;
@@ -127,40 +112,80 @@
 
 .stat-number {
   color: #4CAF50;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 52px;
+  font-weight: 300;
 }
 
 .stat-label {
   font-size: 24px;
+  font-weight: 400;
   color: #333;
+  line-height: 160%;
   margin-top: 10px;
 }
 
 .container4 {
-  margin-left: 40px;
   background-color: #fff;
 }
 
-.trust-heading {
-  font-size: 52px;
+.trust-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 in a row */
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: 40px;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .trust-card-container {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
+
+.trust-card {
+  background-color: #EFF4EE; /* Light pastel green */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+}
+
+.trust-title {
+  font-size: 18px;
   font-weight: 600;
+  color: #388E3C; /* Dark green */
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.trust-number {
+  font-weight: bold;
+  font-size: 20px;
+  color: #f4a200; /* Yellow/orange */
+  margin-right: 6px;
+}
+
+.trust-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.trust-heading {
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .trust-heading .highlight {
   color: #4CAF50;
-}
-
-.trust-subheading {
-  text-align: center;
-  max-width: 800px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
-  margin-left: auto; /* Add this line */
-  margin-right: auto; /* Add this line */
 }
 
 .trust-subheading .highlight {
@@ -168,51 +193,9 @@
   font-weight: 500;
 }
 
-.c4_cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin-top: 45px;
-  margin-left: 40px;
-}
-
-.c4_card {
-  background-color: #f5f9f5;
-  border-radius: 8px;
-  padding: 24px;
-;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.c4_card:hover {
-  transform: translateY(-4px);
-}
-
-.c4_card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.c4_card .card-number {
-  font-weight: bold;
-  font-size: 20px;
-  color: #f4a200; /* orange/yellow shade like the image */
-  margin-right: 6px;
-}
-
-.c4_card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-}
 .container5 {
   padding: 40px 20px;
   background-color: white;
-  text-align: center;
   margin-left: 40px;
 }
 
@@ -237,7 +220,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  justify-content: center;
 }
 
 .seo-step-card {
@@ -245,8 +227,8 @@
   color: white;
   padding: 20px;
   border-radius: 12px;
-  width: 242px;
-  height: 270px;
+  width: 300px;
+  height: 280px !important; 
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -264,7 +246,7 @@
 .step-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -302,6 +284,6 @@
     font-size: 32px;
     color: #388E3C;
     font-weight: 600;
-    text-align: center;
+    margin-left: 42px;
     margin-top: 40px;
 }

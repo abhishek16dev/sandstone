@@ -1,41 +1,218 @@
-mark.styled {
-  white-space: nowrap;
-  padding: 0;
-  background: none;
-  background-size: auto 1em;
-  background-repeat: repeat-x;
-  background-position: center 50%;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='89.68'%3E%3Cpath fill='%23ffea00' d='M0 0h1000v89.68H0z'/%3E%3C/svg%3E");
+.container1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.f-250 {
-  font-size: 2.5rem;
-}
-
-.b-8 {
-  font-weight: 800;
-  font-family: 'Cabin', sans-serif;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* Removed the cursor style */
-
-
-.typer::after {
-  content: '|';
+.typing::after {
+  content: '...';
   animation: blink 1s infinite;
-  margin-left: 3px;
+}
+#c1h1 {
+    font-size: 52px;
+    font-weight: 600;
+    color: #388E3C;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 40px;
+}
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+.typing-text.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.container2 {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 20px;
+}
+.c2left {
+  width: 100%;
+  padding: 10px;
+}
+#c2headingleft {
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 32px;
+}
+.c2buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.greenbutton, .whitebutton {
+  padding: 10px;
+  font-size: 16px;
+}
+.c2right img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+/* Stats & Trust Section */
+.container3, .container4, .container5 {
+  padding: 40px 20px;
+}
+.c2_cards {
+  flex-direction: column;
+}
+.stat-card {
+  margin-bottom: 20px;
+}
+.trust-heading {
+  font-size: 28px;
+}
+.trust-subheading {
+  font-size: 14px;
+  padding: 0 10px;
+  text-align:center;
+  max-width: fit-content;
+  padding-bottom: 20px;
+}
+.c4_cards {
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+}
+.container5 .process-heading {
+  font-size: 22px;
+}
+.seo-steps {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.seo-step-card {
+  width: 100%;
+  max-width: 320px;
+  height: 250px;
+}
+.step-title{
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.container6 h2,
+.accordian h2 {
+  font-size: 24px;
+}
+/* ----------------------------- */
+/* Responsive Media Queries      */
+/* ----------------------------- */
+@media (min-width: 640px) {
+  /* sm: ≥640px */
+  /* .container1 {
+    height: 400px;
+  } */
+  .container1 h1 {
+    font-size: 36px;
+  }
+  #c2headingleft {
+    font-size: 36px;
+  }
+  .c2buttons {
+    flex-direction: row;
+  }
+  .seo-step-card {
+    width: 280px;
+  }
+}
+@media (min-width: 769px) {
+  /* md: ≥768px */
+  /* .container1 {
+    height: 450px;
+  } */
+  .container1 h1 {
+    font-size: 40px;
+  }
+  .container2 {
+    flex-direction: row;
+    padding: 40px;
+  }
+  .c2left {
+    width: 60%;
+    padding: 20px;
+  }
+  .c2right img {
+    width: 90%;
+    height: auto;
+  }
+  #c2headingleft {
+    font-size: 42px;
+  }
+  .c2_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .trust-heading {
+    font-size: 36px;
+  }
+  .c4_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container5 .process-heading {
+    font-size: 26px;
+  }
+  .seo-step-card {
+    width: 240px;
+  }
+  .container6 h2,
+  .accordian h2 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  /* lg: ≥1024px */
+  /* .container1 {
+    height: 500px;
+  } */
+  .container1 h1 {
+    font-size: 48px;
+  }
+  #c2headingleft {
+    font-size: 48px;
+  }
+  .c2right img {
+    width: 600px;
+  }
+  .c4_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .seo-step-card {
+    width: 260px;
+  }
+  .container6 h2,
+  .accordian h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  /* xl: ≥1280px */
+  .container1 h1 {
+    font-size: 52px;
+  }
+  #c2headingleft {
+    font-size: 52px;
+  }
+  .c2right img {
+    width: 649px;
+    height: 469px;
+  }
+  .trust-heading {
+    font-size: 52px;
+  }
+  .container5 .process-heading {
+    font-size: 28px;
+  }
 }

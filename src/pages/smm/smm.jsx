@@ -104,14 +104,14 @@ const Smm = () => {
 
 </Helmet>
 
-    <div className='mt-[200px] w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
+    <div className='mt-[150px] w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
+      <h1 className='className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-[50] text-center" ' id='head1'>Social Media Marketing Agency in Gurgaon</h1>
       <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto
 '>
 
-        Enhance your brand’s digital footprint with our comprehensive social media management solution, crafted to simplify content creation, scheduling, and analytics — unlock your brand’s true potential today.
-
+Enhance your brand’s digital footprint with our social media marketing company Gurgaon, crafted to simplify content creation, scheduling, and analytics unlock your brand’s true potential today.
       </p>
 
 
@@ -291,9 +291,12 @@ const Smm = () => {
             Smarter, Not Harder <br /> Win Big on Social Media
           </h3>
 
-          <p className="text-[15px] md:text-base mb-10 text-black mt-10 leading-relaxed">
-            Using smart strategies, not extra effort, to grow online. Focus on what works, stay <br className="hidden md:block" /> consistent, and let tools and data guide your success—no burnout needed.
+          <p className="text-[15px] md:text-base mb-5 text-black mt-10 leading-relaxed">
+
+Social media is where your audience is—and it’s growing every day. It gives your business a way to connect, and build lasting relationships with your target customers. But managing social platforms effectively takes more than just posting. It requires strategy, consistency, and a deep understanding of what works.
           </p>
+          <p>As a leading provider of social media marketing services in Gurgaon, we help businesses grow their brand presence, connect with the right audience, and drive real results. Whether it’s building awareness, increasing followers, or generating leads, our expert team crafts tailored strategies that get your message in front of the people who matter.
+</p>
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -321,7 +324,13 @@ const Smm = () => {
 
 
       </div>
+      <div className="newcontainer">
+         <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-10">
+            How Social Media Marketing Can Help Your Business Grow
+          </h3>
+          
 
+      </div>
       <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 
 
