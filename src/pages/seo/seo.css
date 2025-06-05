@@ -89,6 +89,8 @@
 .c2_cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 20px;
@@ -129,12 +131,13 @@
 }
 
 .trust-card-container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr); /* 2 in a row */
   gap: 30px;
   width: 90%;
   max-width: 1200px;
-  margin-left: 40px;
+  justify-content: center;
+  align-items: center;
   padding: 0 10px;
 }
 
@@ -150,6 +153,7 @@
   padding: 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  height:220px;
 }
 
 .trust-card:hover {
@@ -218,17 +222,18 @@
 
 .seo-steps {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
   gap: 15px;
 }
 
 .seo-step-card {
+  width: 50%;
   background-color: #4caf50;
   color: white;
   padding: 20px;
   border-radius: 12px;
-  width: 300px;
-  height: 280px !important; 
+  height: 272px !important; 
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }

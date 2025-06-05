@@ -8,7 +8,7 @@
 }
 .amc2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: 60px 80px;
   gap: 40px;
@@ -18,11 +18,12 @@
 
 .amc2-left {
   flex: 1;
-  max-width: 600px;
+  width: 50%;
+  max-width: 900px;
 }
 
 .amc2-heading {
-  font-size: 2.5rem;
+  font-size: 52px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -85,8 +86,10 @@
 
 .amc2-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
+  padding-left: 20px;
+  margin-left: 150px;
 }
 
 .amc2-tag {
