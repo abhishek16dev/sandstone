@@ -172,7 +172,7 @@ useEffect(() => {
         <h2 className="trust-heading ml-[40px] font-semibold">
           Why Businesses Trust <span className="highlight">Webnest Media</span> for SEO?
         </h2>
-        <p className="trust-subheading ml-[40px]">
+        <p className="trust-subheading ml-[40px] mb-[40px]">
           Your web presence can be made or broken by your choice of SEO partner. At <span className="highlight">Webnest Media</span>, we reject formula approaches and false promises. We believe in real results, honest work, and long-term success.
         </p>
       <div className="trust-card-container">

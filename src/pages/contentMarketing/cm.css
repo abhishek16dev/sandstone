@@ -70,16 +70,6 @@
 .stat-card {
   margin-bottom: 20px;
 }
-.trust-heading {
-  font-size: 28px;
-}
-.trust-subheading {
-  font-size: 14px;
-  padding: 0 10px;
-  text-align:center;
-  max-width: fit-content;
-  padding-bottom: 20px;
-}
 .c4_cards {
   grid-template-columns: 1fr;
   margin: 0 auto;
@@ -96,7 +86,7 @@
 .seo-step-card {
   width: 100%;
   max-width: 320px;
-  height: 250px;
+  height: 180px;
 }
 .step-title{
   font-size: 18px;
@@ -215,4 +205,72 @@
   .container5 .process-heading {
     font-size: 28px;
   }
+}
+.container4 {
+  background-color: #fff;
+}
+
+.trust-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 in a row */
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: 40px;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .trust-card-container {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
+
+.trust-card {
+  background-color: #EFF4EE; /* Light pastel green */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+}
+
+.trust-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #388E3C; /* Dark green */
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.trust-number {
+  font-weight: bold;
+  font-size: 20px;
+  color: #f4a200; /* Yellow/orange */
+  margin-right: 6px;
+}
+
+.trust-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.trust-heading {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.trust-heading .highlight {
+  color: #4CAF50;
+}
+
+.trust-subheading .highlight {
+  color: #4CAF50;
+  font-weight: 500;
 }

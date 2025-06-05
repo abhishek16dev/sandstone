@@ -154,11 +154,10 @@ const ContentMarketing = () => {
         </div>
       </div>
       <div className="container3">
-        <p style={{ color: 'black', fontSize: 18, fontWeight: 'bold' }}> The no.1 content marketing services
-        </p>
-        <p style={{ color: '#4CAF50', fontSize: 32, fontWeight: 600 }}>Your success is our mission</p>
-        <p style={{ fontSize: 16, fontWeight: 400 }}>
-          From strategy to execution, we align your content with what your audience truly values.
+        <p style={{ color: '#EEC370', fontSize: 18 }}>The no.1 SEO Service</p>
+         <p style={{ color: 'black', fontSize: 32, fontWeight: 600, marginBottom:15}}>Your <span className='highlight'>Success</span> is our <span className='highlight'>Mission</span></p>
+        <p style={{ fontSize: 16}}>
+         From strategy to execution, we align your content with what your audience truly values.
 
         </p>
         <div className="c2_cards">
@@ -172,26 +171,31 @@ const ContentMarketing = () => {
       </div>
 
       <div className="container4">
-        <h2 className="trust-heading">
-          Bringing Out the Best Content Writing Company <span className="highlight"> in Gurgaon</span>
+  <h2 className="trust-heading ml-[40px] font-semibold text-6xl">
+    Bringing Out the Best Content Writing <br />Company 
+    <span className="highlight"> in Gurgaon</span>
+  </h2>
 
-        </h2>
-        <p className="trust-subheading">
-          In today’s competitive digital landscape, content is more than just information—it’s your voice, your story, and your most powerful marketing tool. At WebNest Media, we provide the content marketing services in Gurgaon designed to build your brand’s authority, drive traffic, and convert prospects into loyal customers.
-          Whether you're a startup looking to create your first content campaign or an established business aiming to scale, our content marketing strategies are crafted with precision, creativity, and purpose.
-        </p>
-        <p></p>
-        <div className="c4_cards">
-          {trustData.map((item, index) => (
-            <div className="c4_card" key={index}>
-              <h3>
-                <span className="card-number">{index + 1}.</span> {item.title}
-              </h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
+  <p className="trust-subheading ml-[40px] mb-[40px] ">
+    In today’s competitive digital landscape, content is more than just information—it’s your voice,
+    your story, and your most powerful marketing tool. At WebNest Media, we provide the content marketing services
+    in Gurgaon designed to build your brand’s authority, drive traffic, and convert prospects into loyal customers.
+    Whether you're a startup looking to create your first content campaign or an established business aiming to scale,
+    our content marketing strategies are crafted with precision, creativity, and purpose.
+  </p>
+
+  <div className="trust-card-container">
+    {trustData.map((item, index) => (
+      <div className="trust-card" key={index}>
+        <h3 className="trust-title">
+          <span className="trust-number">{index + 1}.</span> {item.title}
+        </h3>
+        <p className="trust-description">{item.text}</p>
       </div>
+    ))}
+  </div>
+</div>
+
       <div className="container5">
         <p className="service-label" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
         <h2 className="process-heading">
@@ -269,7 +273,7 @@ const ContentMarketing = () => {
         </div>
       </div>
       <div className="accordian">
-        <h2 className='text-center'>Let's address your <span className='text-black '>questions </span>today</h2>
+        <h2 className=''>Let's address your <span className='text-black '>questions </span>today</h2>
         <div className="accordion-wrapper-columns">
           {/* Left Column */}
           <div className="accordion-column">
