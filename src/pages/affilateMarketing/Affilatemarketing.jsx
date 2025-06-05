@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Affilatemarketing.css'
-import amc2img from './amc2img.svg'
+import amc2img from './resources/amc2img.svg'
 
 const Affilatemarketing = () => {
   const [text, setText] = useState('');

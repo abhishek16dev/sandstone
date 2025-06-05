@@ -4,10 +4,10 @@ import React from 'react';
 import FooterSection from './FooterSection';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
-import WhatsAppIcon from './WhatsappStickyIcon';
+// import WhatsAppIcon from './WhatsappStickyIcon';
 import { Link } from 'react-router-dom';
 
-
+import {  FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -30,11 +30,35 @@ const Footer = () => {
               Connect on Social Media
             </h4>
             <div className="flex justify-center lg:justify-start space-x-4 text-xl">
-              <FaFacebookF className="hover:text-blue-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
-              <FaTwitter className="hover:text-blue-400 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
-              <FaLinkedinIn className="hover:text-blue-700 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
-              <FaYoutube className="hover:text-red-600 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
-              <FaInstagram className="hover:text-pink-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
+              <a
+                href="https://www.facebook.com/profile.php?id=61576616442478"
+                target="_blank"
+                rel="noopener noreferrer"
+              >   <FaFacebookF className="hover:text-blue-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
+              </a>
+              <a
+                href="https://x.com/webnestmediag?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter className="hover:text-blue-400 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
+              <a
+                href="https://www.linkedin.com/company/webnest-media-group/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >    <FaLinkedinIn className="hover:text-blue-700 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
+              {/* <a
+                href="https://www.instagram.com/webnestmediagroup/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >    <FaYoutube className="hover:text-red-600 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
+              */}
+             
+              <a
+                href="https://www.instagram.com/webnestmediagroup/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >   <FaInstagram className="hover:text-pink-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
             </div>
           </div>
 
@@ -56,16 +80,16 @@ const Footer = () => {
 
 
             <h4 className="text-lg font-semibold mb-2">Email Us</h4>
-           <p> <a
+            <p> <a
               className="text-sm text-blue-300 hover:underline"
               href="mailto:info@webnestmedia.com"
             >
               info@webnestmedia.com
             </a></p>
 
-          < Link to={"/privacy-policy"}  >
-         <p className='text-sm text-[white] hover:underline'>Privacy Policy</p>
-             </Link>
+            < Link to={"/privacy-policy"}  >
+              <p className='text-sm text-[white] hover:underline'>Privacy Policy</p>
+            </Link>
           </div>
         </div>
 
@@ -136,8 +160,27 @@ const Footer = () => {
       </div>
 
       {/* WhatsApp Sticky Icon */}
-      <div className="fixed bottom-4 right-4 z-50">
+      {/* <div className="fixed bottom-4 right-4 z-50">
         <WhatsAppIcon fixed={false} size="70px" />
+      </div> */}
+           <div className="fixed bottom-[20px] right-6 flex flex-col items-center gap-4 z-50">
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/919696964606" // Replace with your number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300"
+        >
+          <FaWhatsapp size={24} />
+        </a>
+
+        {/* Phone */}
+        <a
+          href="tel:+919696964606" // Replace with your phone number
+          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300 ring-animation"
+        >
+          <FaPhoneAlt size={20} />
+        </a>
       </div>
     </footer>
   );
