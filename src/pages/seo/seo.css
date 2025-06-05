@@ -1,6 +1,3 @@
-.container{
-  height: 100px;
-}
 .typing::after {
   content: ' ';
   animation: blink 1s infinite;
@@ -19,7 +16,7 @@
     font-weight: 600;
     color: #388E3C;
     transform: translate(-50%, -50%);
-    /* margin-bottom: 80px; */
+    
 }
 .container2{
     display: flex;
