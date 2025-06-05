@@ -129,7 +129,7 @@ const ContentMarketing = () => {
     <>
       <div className="container1">
         <h1 id="c1h1" className='relative text-center'>Content Marketing Agency <br />in Gurgaon </h1>
-        <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[230px]">
+        <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[320px]">
           {text}
         </h2>
       </div>
@@ -227,7 +227,7 @@ const ContentMarketing = () => {
           ))}
         </div>
       </div>
-      <div className="container6 ml-40">
+      <div className="container6 ">
         <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom mt-20">
           Get a free consultation!
         </p>

@@ -105,7 +105,7 @@ const Smm = () => {
 </Helmet>
 
     <div className='mt-[200px] w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
-      <h1 className='className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-10 ml-100"' id='head1'>Social Media Marketing Agency in Gurgaon</h1>
+      <h1 className='className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-10 "' id='head1'>Social Media Marketing Agency in Gurgaon</h1>
       <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto
