@@ -219,7 +219,7 @@ useEffect(() => {
               icon: "⚙️",
             },
           ].map((item, index) => (
-            <div className="seo-step-card" key={index}>
+            <div className="seo-step-card h-277" key={index}>
               <div className="step-icon">{item.icon}</div>
               <div className="step-meta">
                 <span className="step-tag">STEP</span>

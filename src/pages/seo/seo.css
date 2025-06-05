@@ -229,8 +229,8 @@
   color: white;
   padding: 20px;
   border-radius: 12px;
-  width: 242px;
-  height: 270px;
+  width: 230px;
+  height: 280px !important; 
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -248,7 +248,7 @@
 .step-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 8px;
