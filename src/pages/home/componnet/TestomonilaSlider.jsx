@@ -18,7 +18,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Webnest Media boosted our organic traffic by 40% in just three months. Their SEO expertise and tailored strategy were game-changers.",
-    img: SocialMediaMarketing,
+    // icon: <FaUserSecret />
   },
   {
     name: "Sarah L",
@@ -26,7 +26,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Their social media campaigns have greatly increased our brand visibility and sales. A highly creative and reliable team!",
-    img: WebDevelopment,
+    // icon: <FaUsers />
   },
   {
     name: "Michael R",
@@ -34,7 +34,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Webnest built an intuitive, high-converting site for us. We’ve seen major growth in online sales and engagement.",
-    img: EmailMarketing,
+    // icon: <PiUserSwitchFill/>
   },
   {
     name: "Emily T",
@@ -42,7 +42,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Their PPC campaigns increased our sign-ups by 25%. Webnest knows how to drive results fast and efficiently.",
-    img: EmailMarketing,
+    // icon: <FaUsersGear />
   },
   {
     name: "Alex P",
@@ -50,7 +50,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Their content marketing helped us connect better with clients and drive quality leads. Great strategy and execution.",
-    img: EmailMarketing,
+    // icon: <FaUserSecret />
   },
   {
     name: "Alex P",
@@ -58,7 +58,7 @@ const testimonials = [
     rating: "★★★★★",
     message:
       "Working with Webnest was a pleasure. Their approach to content truly resonated with our audience and boosted lead generation.",
-    img: EmailMarketing,
+  //  icon: <FaUserSecret />
   },
 ];
 
@@ -151,16 +151,17 @@ export default function App() {
   );
 }
 
-function TestimonialCard({ name, rating, message, img, sunheading }) {
+function TestimonialCard({ name, rating, message, sunheading }) {
   return (
     <div
       className="w-full max-w-sm bg-[#409338] p-6 rounded-xl shadow-md"
       style={{ boxShadow: "0 4px 8px rgba(128, 128, 128, 0.5)" }}
     >
       <div className="flex items-center gap-4 mb-4">
-        <div className="w-[70px] h-[70px]">
-          <img src={img} className="rounded-full w-full h-full object-cover" alt={name} />
-        </div>
+        {/* <div className="w-[70px] h-[70px] flex items-cenetr justify-center">
+        
+      <span className="w-[100%] h-[100%]">{icon}</span>
+        </div> */}
         <div>
           <p className="font-semibold text-[16px]">{name}</p>
           <p className="text-sm">{sunheading}</p>

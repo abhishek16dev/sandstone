@@ -171,7 +171,7 @@ const ContentMarketing = () => {
       </div>
 
       <div className="container4">
-  <h2 className="trust-heading ml-[40px] font-semibold text-6xl">
+  <h2 className="trust-heading ml-[40px] font-semibold text-6xl leading-[72px]">
     Bringing Out the Best Content Writing <br />Company 
     <span className="highlight"> in Gurgaon</span>
   </h2>

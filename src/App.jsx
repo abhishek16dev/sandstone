@@ -13,6 +13,7 @@ import Privacy from './components/privacy';
 
 import "./index.css";
 import ContentMarketing from './pages/contentMarketing/cm';
+import Affilatemarketing from './pages/affilateMarketing/Affilatemarketing';
 
 const App = () => {
   return (
@@ -30,7 +31,9 @@ const App = () => {
            <Route path="/privacy-policy" element={<Privacy />} />
       
         <Route path="/content-marketing" element={<ContentMarketing/>} />
+        <Route path="/affiliate-marketing" element ={<Affilatemarketing />} />
             <Route path="*" element={<Navigate to="/" replace />} />
+          
       
       </Routes>
        <Footer />

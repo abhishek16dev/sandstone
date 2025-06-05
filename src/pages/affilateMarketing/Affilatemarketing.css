@@ -1,0 +1,103 @@
+.amc1{
+   font-size: 52px;
+    font-weight: 600;
+    color: #388E3C;
+    top: 50%;
+    left: 50%;
+    margin-top: 150px;
+}
+.amc2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.amc2-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.amc2-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.amc2-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.amc2-subheading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.amc2-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.amc2-list li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.amc2-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.amc2-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.amc2-btn-learn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.amc2-btn-contact {
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+}
+
+.amc2-right {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.amc2-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.amc2-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  background: linear-gradient(to right, #4CAF50, #00BFFF);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
