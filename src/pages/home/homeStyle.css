@@ -737,3 +737,9 @@ display: inline-block;
 }
 
 
+
+
+.homeclass > div{
+
+overflow-x: hidden;
+}

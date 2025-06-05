@@ -72,7 +72,7 @@ export default function MobileHeader() {
 
   return (
     <header className="w-full sticky top-0 left-0 bg-[white]   z-[999999]">
-      <div className="flex justify-between items-center pl-[40px] pr-[40px] p-[10px]">
+      <div className="flex justify-between items-center pl-[20px] pr-[20px] ">
         <div className="flex items-center gap-[10px]">
           <Link to="/">
             <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
@@ -88,7 +88,7 @@ export default function MobileHeader() {
       </div>
 
       {open && (
-        <div className="mt-4 space-y-4 pl-[20px]">
+        <div className="mt-4  pl-[20px]">
           {menuItems.map((item, index) => (
             <div key={item.title}>
               <div className="flex items-center p-[10px] gap-1 text-[16px] cursor-pointer font-normal leading-[21px] text-[#374151] bg-transparent border-0 outline-none">
@@ -111,7 +111,7 @@ export default function MobileHeader() {
               </div>
 
               {dropdownOpen === index && item.subItems && (
-                <ul className="ml-4 mt-1 space-y-2">
+                <ul className="ml-2 mt-1 space-y-2">
                   {item.subItems.map((sub) => (
                     <li
                       key={sub.title}

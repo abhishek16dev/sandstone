@@ -11,7 +11,7 @@ import Web from './pages/web3/web';
 import ScrollToTop from './components/scrollup';
 import Privacy from './components/privacy';
 
-import "./index.css";
+// import "./index.css";
 import ContentMarketing from './pages/contentMarketing/cm';
 import Affilatemarketing from './pages/affilateMarketing/Affilatemarketing';
 
