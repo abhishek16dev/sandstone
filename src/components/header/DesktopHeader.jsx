@@ -5,45 +5,6 @@ import "./headerStyle.css"
 import logo from "../../assets/logo.png"
 import { Link } from "react-router-dom";
 
-// const menuItems = [
-//   {
-//     title: "Home",
-
-//   },
-
-//   {
-//     title: "About Us",
-
-
-//   },
-//   {
-//     title: "Solutions",
-//     subItems: [
-//       "Brand Strategy",
-//       "Lead Generation",
-//       "Customer Retention",
-//       "Digital Transformation",
-//       "Market Research & Insights",
-//       "Omnichannel Marketing"
-//     ],
-//   },
-//   {
-//     title: "Digital Marketing",
-//     subItems: ["Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing (SMM)", "Web Development", "Content Marketing", "Affiliate Marketing"],
-//   },
-//   {
-//     title: "Promotions",
-//     subItems: ["Mobile Marketing", "Influencer Marketing", "SMS Marketing", "Email Marketing"],
-//   },
-//   {
-//     title: "Contact",
-//     subItems: ["Careers", "Contact", "Insight", "Blogs"],
-//   },
-
-
-
-// ];
-
 const menuItems = [
   { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
