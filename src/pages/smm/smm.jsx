@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react';
 import "./smm.css"
 
 import iamgecircle from "../home/resources/industries/Education.svg";
@@ -37,7 +37,54 @@ import { FiPhone } from "react-icons/fi";
 import { Helmet } from 'react-helmet'
 
 const Smm = () => {
-
+  const [text, setText] = useState('');
+  const words = ['Engagement', 'Conversion', 'Branding'];
+  const delay = 150;
+  const pause = 1000;
+  
+  const wordIndex = useRef(0);
+  const charIndex = useRef(0);
+  const isDeleting = useRef(false);
+  
+  useEffect(() => {
+    let timeout;
+  
+    const type = () => {
+      const currentWord = words[wordIndex.current];
+      
+      if (!isDeleting.current) {
+        // Typing
+        setText(currentWord.substring(0, charIndex.current));
+        if (charIndex.current < currentWord.length) {
+          charIndex.current++;
+          timeout = setTimeout(type, delay);
+        } else {
+          // Pause after typing full word
+          timeout = setTimeout(() => {
+            isDeleting.current = true;
+            timeout = setTimeout(type, delay);
+          }, pause);
+        }
+      } else {
+        // Deleting
+        if (charIndex.current > 0) {
+          charIndex.current--;
+          setText(currentWord.substring(0, charIndex.current));
+          timeout = setTimeout(type, delay / 2); // Faster delete
+        } else {
+          // Pause before starting next word
+          isDeleting.current = false;
+          wordIndex.current = (wordIndex.current + 1) % words.length;
+          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
+        }
+      }
+    };
+  
+    type();
+  
+    return () => clearTimeout(timeout);
+  }, []);
+  
 
 
 
@@ -104,9 +151,15 @@ const Smm = () => {
 
 </Helmet>
 
-    <div className='mt-[150px] w-[100%]   mb-[120px] pr-[40px] pl-[40px]'>
-      <h1 className='className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-[50] text-center" ' id='head1'>Social Media Marketing Agency in Gurgaon</h1>
-      <p className=" mt-[133px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
+    <div className='mt-[150px] w-[100%] mb-[120px] pr-[40px] pl-[40px]'>
+      <div className="h-[200px] ">
+         <h1 className='className="text-3xl md:text-5xl font-bold text-[#5c945c] mt-[150px] text-center ml-[30px]" ' id='head1' style={{lineHeight:1.5}}>Social Media Marketing Agency <br />  <span className='text-black'>in Gurgaon</span></h1>
+            <h2 className="heading-styled relative h-[70px] text-[35px]  bg-yellow font-bold text-black px-4 py-1 mt-[13px] ml-[43%]">
+              {text}
+            </h2>
+
+      </div>
+      <p className=" mt-[60px] paraheading text-[#409338] font-bold text-[40px] leading-[60px]  text-center stroke-custom fill-custom">Boost Your Digital Impact with  <br /> Smart Social Media Planning  </p>
 
       <p className='text-[15px] mt-[100px] text-center text-[black] mt-[30px] mb-[10px] w-[50%] mx-auto
 '>

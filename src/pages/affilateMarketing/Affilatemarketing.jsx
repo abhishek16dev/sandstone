@@ -11,7 +11,7 @@ import image from './resources/Image.svg'
 
 const Affilatemarketing = () => {
  const [text, setText] = useState('');
- const words = ['Visibility', 'Rank', 'Traffic'];
+ const words = ['Conversion', 'Commission', 'Traffic'];
  const delay = 150;
  const pause = 1000;
  
@@ -56,7 +56,7 @@ const Affilatemarketing = () => {
    type();
  
    return () => clearTimeout(timeout);
- }, []); 
+ }, []);
   const statsData = [
     { number: '100%', label: 'Performance Based' },
     { number: '2200+', label: 'Trusted Affiliates' },
@@ -65,14 +65,19 @@ const Affilatemarketing = () => {
   ];
    
   return (
-    <div className='mt-[120px]'>
-      <div className="amc1">
+    <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto vcc'>
+      <div className="amc1 mb-[5px] h-[300px]">
         <h1 id="amc1h1" className='relative text-center'>
-          Affiliate Marketing Agency <br />in Gurgaon 
+          Affiliate Marketing Agency<span className='text-black'><br />in Gurgaon</span>  
         </h1>
-        <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing ml-[44%] mb-[40px]">
-          {text}
-        </h2>
+
+<h2 className="heading-styled relative h-[70px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[15px] ml-[44%]  ">
+  {text}
+</h2>
+
+
+
+
       </div>
       
       <div className="amc2">
