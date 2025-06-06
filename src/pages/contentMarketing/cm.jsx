@@ -128,7 +128,7 @@ const ContentMarketing = () => {
   return (
     <>
       <div className="container1">
-        <h1 id="c1h1" className='relative text-center'>Content Marketing Agency <br />in Gurgaon </h1>
+        <h1 id="c1h1" className='relative text-center'>Content Marketing <span className='text-black'>Agency <br />in Gurgaon </span></h1>
         <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[320px]">
           {text}
         </h2>
@@ -137,7 +137,7 @@ const ContentMarketing = () => {
       <div className="container2">
         <div className="c2left">
           <p id="c2headingleft" className="c2heading">
-            <span className='highlight'>Content</span> is the key to building <span className='highlight'>audiences</span>
+            <span className='highlight'>Content</span> is the key to building audiences
 
           </p>
           <p id="c2paraleft">
@@ -170,6 +170,10 @@ const ContentMarketing = () => {
         </div>
       </div>
 
+
+
+      
+
       <div className="container4">
   <h2 className="trust-heading ml-[40px] font-semibold text-6xl leading-[72px]">
     Bringing Out the Best Content Writing <br />Company 
@@ -197,8 +201,8 @@ const ContentMarketing = () => {
 </div>
 
       <div className="container5">
-        <p className="service-label" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
-        <h2 className="process-heading">
+        <p className="service-label text-center" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
+        <h2 className="process-heading text-center">
           Types of <span className="highlight">Content Marketing</span>
         </h2>
         <div className="seo-steps">
@@ -224,7 +228,7 @@ const ContentMarketing = () => {
               text: "Fast, attractive pictures that make difficult concepts simple to learn and enjoyable to share.",
             },
           ].map((item, index) => (
-            <div className="seo-step-card" key={index}>
+            <div className="seo-step-card h-[50px]" key={index}>
               <h3 className="step-title">{item.title}</h3>
               <p className="step-desc">{item.text}</p>
             </div>

@@ -11,7 +11,6 @@ import step3 from './resources/step3.svg';
 import step4 from './resources/step4.svg';
 import step5 from './resources/step5.svg';
 
-import paintstroke from "./resources/paintstroke.png";
 
 import cneterstroke from "./resources/centerpaint.svg"
 import leftpaint from "./resources/leftpaint.svg"
@@ -193,7 +192,7 @@ useEffect(() => {
         </p>
       <div className="trust-card-container">
         {trustData.map((item, index) => (
-          <div className="trust-card" key={index}>
+          <div className="trust-card " key={index}>
             <h3 className="trust-title">
               <span className="trust-number">{index + 1}.</span> {item.title}
             </h3>
@@ -204,8 +203,8 @@ useEffect(() => {
 
       </div>
       <div className="container5">
-        <p className="service-label" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
-        <h2 className="process-heading">
+        <p className="service-label text-center" style={{ fontSize: 20, fontWeight: 400 }}>Our Services</p>
+        <h2 className="process-heading text-center">
           Proven <span className="highlight">SEO Process</span>
         </h2>
         <div className="seo-steps">

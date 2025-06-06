@@ -66,6 +66,8 @@
 }
 .c2_cards {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .stat-card {
   margin-bottom: 20px;
@@ -82,6 +84,7 @@
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
+  justify-content: center;
 }
 .seo-step-card {
   width: 100%;
