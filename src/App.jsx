@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
@@ -14,8 +14,23 @@ import Privacy from './components/privacy';
 // import "./index.css";
 import ContentMarketing from './pages/contentMarketing/cm';
 import Affilatemarketing from './pages/affilateMarketing/Affilatemarketing';
+import Brandmarketing from './pages/brandMarketing/brandmarketing';
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const App = () => {
+
+
+useEffect(() => {
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+}, []);
+
+
   return (
     <>
  <Router>
@@ -32,6 +47,7 @@ const App = () => {
       
         <Route path="/content-marketing" element={<ContentMarketing/>} />
         <Route path="/affiliate-marketing" element ={<Affilatemarketing />} />
+        <Route path="/brand-strategy" element ={<Brandmarketing />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           
       
