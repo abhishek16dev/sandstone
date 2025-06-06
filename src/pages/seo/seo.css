@@ -291,18 +291,16 @@
 
 
 
-/* .heading-styled {
+.heading-styled {
 
   display: inline-block;
   background-image: url('./resources/centerpaint.svg');
   background-repeat: repeat-x;
   background-position: center center;
-  background-size: auto 100%;
-  padding: 1rem 3rem;
+ 
   z-index: 1;
-} */
+}
 
-/* Pseudo-elements for left & right paint strokes */
 .heading-styled::before,
 .heading-styled::after {
   content: '';
@@ -317,12 +315,12 @@
 }
 
 .heading-styled::before {
-  left: 0;
-  background-image: url('./resources/leftpaint.svg'); /* ✅ left stroke image */
+  left: -10px;
+  background-image: url('./resources/leftpaint.svg'); 
 }
 
 .heading-styled::after {
-  right: 0;
-  background-image: url('./resources/rightpaint.svg'); /* ✅ right stroke image */
+  right: -25px;
+  background-image: url('./resources/rightpaint.svg'); 
 }
 

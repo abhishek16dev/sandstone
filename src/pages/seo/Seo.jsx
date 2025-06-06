@@ -134,41 +134,7 @@ useEffect(() => {
 
 
 
-{/* <h2
-  className="text-[40px] font-bold text-blac px-4 py-1 inline-block rounded-md mt-[250px] typing"
-  style={{
-    backgroundImage: `url(${leftpaint}), url(${cneterstroke}), url(${rightpaint})`, // Apply left, center, and right stroke images
-    backgroundRepeat: "no-repeat, repeat-x, no-repeat", // No repeat for left/right, and repeat-x for center
-    backgroundPosition: "left center, center center, right center", // Positioning the left, center, and right images
-    backgroundSize: "auto 100%, auto 100%, auto 100%", // Adjusting the size of each stroke image
-    display: "inline-block",
-    padding: "1rem",
-    transition: "background-position 0.3s ease-in-out", // Optional for smooth transitions
-  }}
->
-  {text}
-</h2> */}
-
-
-{/* <h2
-  className="text-[40px] font-bold text-black px-4 py-1 inline-block rounded-md mt-[250px] typing"
-  style={{
-    backgroundImage: `url(${leftpaint}), url(${cneterstroke}), url(${rightpaint})`,
-    backgroundRepeat: "no-repeat, repeat-x, no-repeat",
-    backgroundPosition: "left center, center center, right center",
-    backgroundSize: "40px 100%, auto 100%, 40px 100%", // example width for left/right
-    padding: "1rem 3rem",
-    minHeight: "100px", // ensure visibility
-    display: "inline-block",
-    transition: "background-position 0.3s ease-in-out",
-  }}
->
-  {text}
-</h2> */}
-
-
-
-<h2 className="heading-styled relative text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[250px] typing">
+<h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[250px] ">
   {text}
 </h2>
 
