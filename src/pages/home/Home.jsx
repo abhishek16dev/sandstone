@@ -242,7 +242,7 @@ const Home = () => {
 
       </Helmet>
 
-      <div className=' max-w-7xl mx-auto  '>
+      <div className=' max-w-7xl mx-auto  homeclass '>
         <div className="context  flex items-center justify-center gap-[60px]   ">
           <div className='text-part max-md:p-[40px] '>
             <div className="relative">

@@ -11,6 +11,11 @@ import step3 from './resources/step3.svg';
 import step4 from './resources/step4.svg';
 import step5 from './resources/step5.svg';
 
+
+import cneterstroke from "./resources/centerpaint.svg"
+import leftpaint from "./resources/leftpaint.svg"
+import rightpaint from "./resources/rightpaint.svg"
+
 const Seo = () => {
 const [text, setText] = useState('');
 const words = ['Visibility', 'Rank', 'Traffic'];
@@ -121,10 +126,20 @@ useEffect(() => {
   return (
     <>
       <div className="container1 " id='c1'>
-        <h1 id='c1h1'>SEO <span className='text-black'>Agency in Gurgaon</span></h1>
-        <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[250px]">
+        <h1 id='c1h1'>SEO Agency in Gurgaon</h1>
+        {/* <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[250px]">
           {text}
-        </h2>
+        </h2> */}
+
+
+
+<h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[250px] ">
+  {text}
+</h2>
+
+
+
+
 
         
 

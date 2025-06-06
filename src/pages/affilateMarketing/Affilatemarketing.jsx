@@ -1,60 +1,62 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Affilatemarketing.css'
 import amc2img from './resources/amc2img.svg'
+ 
 import amc3img from './resources/amc3img.png'
 import  Icons1 from './resources/Icons1.svg'
 import Icons2 from './resources/Icons2.svg'
 import Icons3 from './resources/Icons3.svg'
 import Icons4 from './resources/Icon4.svg'
 import image from './resources/Image.svg'
+
 const Affilatemarketing = () => {
-  const [text, setText] = useState('');
-  const words = ['Visibility', 'Rank', 'Traffic'];
-  const delay = 150;
-  const pause = 1000;
-  
-  const wordIndex = useRef(0);
-  const charIndex = useRef(0);
-  const isDeleting = useRef(false);
-  
-  useEffect(() => {
-    let timeout;
-  
-    const type = () => {
-      const currentWord = words[wordIndex.current];
-      
-      if (!isDeleting.current) {
-        // Typing
-        setText(currentWord.substring(0, charIndex.current));
-        if (charIndex.current < currentWord.length) {
-          charIndex.current++;
-          timeout = setTimeout(type, delay);
-        } else {
-          // Pause after typing full word
-          timeout = setTimeout(() => {
-            isDeleting.current = true;
-            timeout = setTimeout(type, delay);
-          }, pause);
-        }
-      } else {
-        // Deleting
-        if (charIndex.current > 0) {
-          charIndex.current--;
-          setText(currentWord.substring(0, charIndex.current));
-          timeout = setTimeout(type, delay / 2); // Faster delete
-        } else {
-          // Pause before starting next word
-          isDeleting.current = false;
-          wordIndex.current = (wordIndex.current + 1) % words.length;
-          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
-        }
-      }
-    };
-  
-    type();
-  
-    return () => clearTimeout(timeout);
-  }, []);
+ const [text, setText] = useState('');
+ const words = ['Visibility', 'Rank', 'Traffic'];
+ const delay = 150;
+ const pause = 1000;
+ 
+ const wordIndex = useRef(0);
+ const charIndex = useRef(0);
+ const isDeleting = useRef(false);
+ 
+ useEffect(() => {
+   let timeout;
+ 
+   const type = () => {
+     const currentWord = words[wordIndex.current];
+     
+     if (!isDeleting.current) {
+       // Typing
+       setText(currentWord.substring(0, charIndex.current));
+       if (charIndex.current < currentWord.length) {
+         charIndex.current++;
+         timeout = setTimeout(type, delay);
+       } else {
+         // Pause after typing full word
+         timeout = setTimeout(() => {
+           isDeleting.current = true;
+           timeout = setTimeout(type, delay);
+         }, pause);
+       }
+     } else {
+       // Deleting
+       if (charIndex.current > 0) {
+         charIndex.current--;
+         setText(currentWord.substring(0, charIndex.current));
+         timeout = setTimeout(type, delay / 2); // Faster delete
+       } else {
+         // Pause before starting next word
+         isDeleting.current = false;
+         wordIndex.current = (wordIndex.current + 1) % words.length;
+         timeout = setTimeout(type, pause / 2); // Shorter pause after delete
+       }
+     }
+   };
+ 
+   type();
+ 
+   return () => clearTimeout(timeout);
+ }, []); 
   const statsData = [
     { number: '100%', label: 'Performance Based' },
     { number: '2200+', label: 'Trusted Affiliates' },

@@ -12,21 +12,20 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 
 /* Optional global styles */
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  padding: 0; 
   background-image: url('./pages/home/resources/Shadowbody.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-   font-family: 'Exo', sans-serif;
+  font-family: 'Exo', sans-serif;
  
 }
 
@@ -80,9 +79,6 @@ h1, h2, h3, h4, h5, h6 {
   .slick-dots li button:before {
     font-size: 10px;
   }
-
-
-
 }
 
 /* html {

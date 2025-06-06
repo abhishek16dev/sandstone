@@ -29,7 +29,7 @@ const ImageSlider = ({ slides, autoSlideInterval = 4000 }) => {
 
   return (
     <div className="relative w-full mx-auto overflow-hidden transparenbody">
-      <div className="relative h-[400px] sm:h-[470px] md:h-[520px] max-md:h-[520px]">
+      <div className="relative h-[400px] sm:h-[470px] md:h-[520px] max-md:h-[550px]">
         {slides.map((slide, index) => (
           <div
             key={index}
