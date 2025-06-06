@@ -194,7 +194,7 @@ const whycard = [
   return (
     <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto
   '>
-    <section className='text-center h-[200px]'>
+    <section className='text-center h-[120px] mt-[200px]'>
 
          {/* <h1 className=''>    <span>Brand</span> <span>Strategy</span></h1> */}
 
