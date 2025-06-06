@@ -24,13 +24,14 @@ const menuItems = [
   {
     title: "Solutions",
     subItems: [
+         { title: "Online Reputation Managment", path: "/online-reputation-managment" },
+       
       { title: "Brand Strategy", path: "/brand-strategy" },
       { title: "Lead Generation", path: "/lead-generation" },
       { title: "Customer Retention", path: "/customer-retention" },
       { title: "Digital Transformation", path: "/digital-transformation" },
       { title: "Market Research & Insights", path: "/market-research" },
-      { title: "Online Reputation Managment", path: "/online-reputation-managment" },
-        
+    
     ]
   },
 

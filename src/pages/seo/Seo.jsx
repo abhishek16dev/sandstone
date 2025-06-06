@@ -126,6 +126,7 @@ useEffect(() => {
   return (
     <>
       <div className="container1 " id='c1'>
+        
         <h1 id='c1h1'>SEO Agency in Gurgaon</h1>
         {/* <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[250px]">
           {text}

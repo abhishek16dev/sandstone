@@ -57,6 +57,8 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import Conatctfrom from "../../components/contact/contactform";
 import { FiPhone } from "react-icons/fi";
 import { Helmet } from "react-helmet";
+import slide11 from "./resources/forcorner.png"
+import slide12 from "./resources/ntechnologies.webp";
 
 const autoSlide = [
   {
@@ -255,13 +257,13 @@ const Home = () => {
                   <span className="text-[#409338] floating-text-two"> Smart Strategies </span>
                 </span>
 
-            
+
                 <img
                   src={rocket}
                   className="absolute  max-sm:hidden top-[90px] max-md:top-[440px] left-[90px] animate-floatUp leftrocket]"
                 />
 
-           
+
                 <div className=" absolute top-[90px] sm:top-[90px] right-[90px] animate-float_Up  max-sm:hidden">
                   <div className="rotate-[263deg] rightr max-sm:hidden">
                     <img src={rocket} alt="Rocket" className="rightrocket max-sm:hidden" />
@@ -320,7 +322,7 @@ const Home = () => {
 
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] max-md:text-[20px] max-md:leading-[28px] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
-            
+
               Building Brands with <br className="hidden md:block" />
               Integrity and Innovation <br className="hidden md:block" />
               Across India
@@ -345,9 +347,10 @@ const Home = () => {
         </div>
 
 
-      
+
         <div className="  slider-container">
           <div className="slider-track">
+            <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
@@ -356,25 +359,30 @@ const Home = () => {
             <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
-          
-          
-          
+
+            <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
-           <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
-             <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
-           
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+
+            <div className="box"><img src={slide12} className="w-[100%] h-[100%] object-contain" /></div>
+
+
+
+
             <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
-           
-             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
-          
-           
+
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+
+
             <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
-           
-              <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
-           
-           
+
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+
+
             <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide12} className="w-[100%] h-[100%] object-contain" /></div>
 
             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
@@ -398,7 +406,7 @@ const Home = () => {
             <img src={pana} className="w-[200px] md:w-full max-w-xs" alt="Image" />
           </div>
 
-         <div className="md:w-[60%]  comprensive w-[100%]">
+          <div className="md:w-[60%]  comprensive w-[100%]">
 
             <h2 className="mt-[20px] mb-[20px] font-bold text-[28px] max-md:text-[20px] text-[#4D4D4D] ">
               Comprehensive Digital Marketing Services  in India
@@ -552,7 +560,7 @@ const Home = () => {
 
 
 
-      
+
 
         <div className=" conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 

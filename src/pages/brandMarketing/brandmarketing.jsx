@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./brand.css"
 
 
@@ -32,6 +32,56 @@ import { FiPhone } from "react-icons/fi";
 import Accordian from "./component/Accordian";
 const Brandmarketing = () => {
 
+
+  const [text, setText] = useState('');
+  const words = ['Authenticity', 'Innovation', 'Consistency'];
+  const delay = 150;
+  const pause = 1000;
+  
+  const wordIndex = useRef(0);
+  const charIndex = useRef(0);
+  const isDeleting = useRef(false);
+  
+  useEffect(() => {
+    let timeout;
+  
+    const type = () => {
+      const currentWord = words[wordIndex.current];
+      
+      if (!isDeleting.current) {
+        // Typing
+        setText(currentWord.substring(0, charIndex.current));
+        if (charIndex.current < currentWord.length) {
+          charIndex.current++;
+          timeout = setTimeout(type, delay);
+        } else {
+          // Pause after typing full word
+          timeout = setTimeout(() => {
+            isDeleting.current = true;
+            timeout = setTimeout(type, delay);
+          }, pause);
+        }
+      } else {
+        // Deleting
+        if (charIndex.current > 0) {
+          charIndex.current--;
+          setText(currentWord.substring(0, charIndex.current));
+          timeout = setTimeout(type, delay / 2); // Faster delete
+        } else {
+          // Pause before starting next word
+          isDeleting.current = false;
+          wordIndex.current = (wordIndex.current + 1) % words.length;
+          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
+        }
+      }
+    };
+  
+    type();
+  
+    return () => clearTimeout(timeout);
+  }, []);
+  
+  
 
 
   const cards = [
@@ -144,6 +194,16 @@ const whycard = [
   return (
     <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto
   '>
+    <section className='text-center'>
+
+         {/* <h1 className=''>    <span>Brand</span> <span>Strategy</span></h1> */}
+
+      
+<h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1  ">
+  {text}
+</h2>
+
+    </section>
 
       <section className="text-center pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]" style={{ fontFamily: 'Segoe UI' }} >  
         <h6 className='text-[52px]  text-center'>
@@ -177,58 +237,64 @@ const whycard = [
 
       <section>
 
-        <div className="flex pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]  mt-[120px]   justify-center  gap-6 max-lg:flex-col ">
-
-          {/* Image on left (smaller) */}
-          <div className="w-full md:w-[440px]">
-            <img
-              src={leftiamge}
-              alt="Example"
-              className="w-full h-auto rounded-lg object-cover"
-            />
-          </div>
-
-          {/* Content on right (larger) */}
-          <div className="w-full max-lg:w-[100%]"  data-aos="fade-up"
-    >
-            <h6 className="font-light text-black text-[24px] ">REAL TALK:</h6>
-
-            <p className="text-[40px] leading-[150%] font-light  ">
-              <span className='font-semibold' >  Why </span>  <span className='font-thin  italic'> Brand Marketing </span> <br /> <  span className='font-semibold' > Strategy? </span>
-            </p>
-
-            <p className='text-[16px] text-[#000000] leading-relaxed mt-[52px] font-normal '>A powerful brand strategy does more than just make your business look good—it builds trust, loyalty, and long-term success. In today’s competitive digital world, customers don’t just buy products—they buy stories, values, and experiences.
-              <br />  <br />
-              Here’s why a strong brand strategy is essential:
-
-            </p>
-
-            <div className='mt-[32px] mb-[52px]  flex flex-wrap items-center justify-center gap-4 p-4'>
-
-              {cards.map((card, index) => (
-                <div
-                  key={index}
-                  className="w-[210px] flex flex-col justify-center items-center   p-2"
-                >
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-[64px] h-[64px] object-contain "
-                  />
-                  <h3 className=" text-[24px] font-normal mt-[24px] mb-[12px] text-center  ">{card.title}</h3>
-                  <p className=" text-[14px] font-light text-center ">{card.text}</p>
-                </div>
-              ))}
-            </div>
+ 
 
 
-            <p className='text-[16px] text-[#000000] font-normal '>At WebNest Media, we help shape your brand story so that every interaction feels authentic < br /> and purposeful—leading to stronger customer engagement and business growth.</p>
+<div className="flex max-lg:flex-col pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px] mt-[200px] gap-6 justify-center">
 
-          </div>
+  {/* Fixed Left Image on Large Screens */}
+  <div className="w-full md:w-[540px] lg:sticky lg:top-[200px] self-start">
+    <img
+      src={leftiamge}
+      alt="Example"
+      className="w-full h-auto rounded-lg object-cover"
+    />
+  </div>
 
+  {/* Scrolling Right Content */}
+  <div className="w-full max-lg:w-full" data-aos="fade-up">
+    <h6 className="font-light text-black text-[24px]">REAL TALK:</h6>
 
+    <p className="text-[40px] leading-[150%] font-light">
+      <span className="font-semibold">Why </span>
+      <span className="font-thin italic">Brand Marketing</span>
+      <br />
+      <span className="font-semibold">Strategy?</span>
+    </p>
 
+    <p className="text-[16px] text-[#000000] leading-relaxed mt-[52px] font-normal">
+      A powerful brand strategy does more than just make your business look good—it builds trust,
+      loyalty, and long-term success. In today’s competitive digital world, customers don’t just
+      buy products—they buy stories, values, and experiences.
+      <br /><br />
+      Here’s why a strong brand strategy is essential:
+    </p>
+
+    <div className="mt-[32px] mb-[52px] flex flex-wrap items-center justify-center gap-4 p-4">
+      {cards.map((card, index) => (
+        <div
+          key={index}
+          className="w-[210px] flex flex-col justify-center items-center p-2"
+        >
+          <img
+            src={card.image}
+            alt={card.title}
+            className="w-[64px] h-[64px] object-contain"
+          />
+          <h3 className="text-[24px] font-normal mt-[24px] mb-[12px] text-center">{card.title}</h3>
+          <p className="text-[14px] font-light text-center">{card.text}</p>
         </div>
+      ))}
+    </div>
+
+    <p className="text-[16px] text-[#000000] font-normal">
+      At WebNest Media, we help shape your brand story so that every interaction feels authentic
+      <br />and purposeful—leading to stronger customer engagement and business growth.
+    </p>
+  </div>
+</div>
+
+
 
       </section>
 
@@ -238,25 +304,7 @@ const whycard = [
 
 <p className='text-[16px] text-[#00000] font-normal text-center '>At WebNest Media, we combine creativity, research, and strategy to craft brand identities that leave a lasting impact. Our  <br/>services cover every stage of your brand-building journey: </p>
 
-{/* <section className='pr-[155px] pl-[155px]'>
 
-      {brandSteps.map((step, index) => (
-        <div key={index} className="grid grid-cols-12 gap-[230px] border-b last:border-none">
-    
-          <div className="col-span-12 md:col-span-2 mb-2 md:mb-0">
-            <p className="text-gray-400 font-semibold text-sm md:text-base">{step.number}</p>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-          </div>
-
-    
-          <div className="col-span-6 md:col-span-10">
-      
-            <p className="text-sm text-gray-600 leading-relaxed">{step.description}</p>
-          </div>
-        </div>
-      ))}
-   
-</section> */}
 
 <section className="px-[20px] md:px-[155px]  py-10">
   {brandSteps.map((step, index) => (
