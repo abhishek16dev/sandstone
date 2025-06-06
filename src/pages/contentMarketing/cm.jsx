@@ -236,9 +236,7 @@ const ContentMarketing = () => {
         </div>
       </div>
       <div className="container6 ">
-        <p className="text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom mt-20">
-          Get a free consultation!
-        </p>
+       
 
         <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 

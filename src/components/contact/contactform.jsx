@@ -47,9 +47,14 @@ const ContactForm = () => {
     return (
        <div className="conatctform p-[30px] rounded-[20px] shadow-[0_12px_20px_rgba(0,0,0,0.2)]">
 
+
+        <p className=" text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+          Get a free consultation!
+        </p>
+
             <form onSubmit={handleSubmit}>
 
-                <div className="form-group mt-[100px] max-lg:mt-[30px] mb-[20px]  border-b-[1px] border-b-[#5c945c] pb-[10px]">
+                <div className="form-group mt-[50px] max-lg:mt-[30px] mb-[20px]  border-b-[1px] border-b-[#5c945c] pb-[10px]">
                     <input
                         type="text"
                         name="name"

@@ -346,7 +346,7 @@ const Home = () => {
 
 
       
-  <div className="  slider-container">
+        <div className="  slider-container">
           <div className="slider-track">
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
@@ -552,9 +552,7 @@ const Home = () => {
 
 
 
-        <p className=" text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
-          Get a free consultation!
-        </p>
+      
 
         <div className=" conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 
@@ -569,29 +567,6 @@ const Home = () => {
               <br /> Let’s take your business to the next level—together.
             </p>
 
-            {/* <p>
-              <a href="tel:+919696964606" className="text-black font-bold hover:underline">
-                +91 9696964606
-              </a>
-            </p>
-            <p>
-              <a href="tel:+919211676307" className="text-black font-bold hover:underline">
-                +91 9211676307
-              </a>
-            </p> */}
-
-            {/* <p className="flex items-center gap-2 p-[4px] text-[#5c945c] ">
-  <FiPhone className="text-[white]" />
-  <a href="tel:+919696964606" className="text-[#a066f8] font-bold hover:underline">
-    +91 9696964606
-  </a>
-</p>
-<p className="flex items-center gap-2 p-[4px]  text-[#5c945c]">
-  <FiPhone className="text-[white]" />
-  <a href="tel:+919211676307" className="text-[#a066f8] font-bold hover:underline">
-    +91 9211676307
-  </a>
-</p> */}
 
             <div className="space-y-2">
               <button className="getstarted-btnn w-[200px] flex items-center gap-2 px-4 py-2 rounded bg-[#5c945c] text-white">

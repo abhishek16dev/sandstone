@@ -163,7 +163,7 @@ const Footer = () => {
       {/* <div className="fixed bottom-4 right-4 z-50">
         <WhatsAppIcon fixed={false} size="70px" />
       </div> */}
-           <div className="fixed bottom-[20px] right-6 flex flex-col items-center gap-4 z-50">
+           <div className="fixed bottom-[20px] right-6 flex flex-col items-center gap-4 z-[99999999999999]">
         {/* WhatsApp */}
         <a
           href="https://wa.me/919696964606" // Replace with your number

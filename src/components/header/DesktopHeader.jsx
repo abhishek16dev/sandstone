@@ -117,7 +117,7 @@ export default function DesktopHeader() {
               className="relative z-[9999]"
 
             >
-
+  <Link to={item.path} className="block w-full">
               <button
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen === index}
@@ -127,9 +127,9 @@ export default function DesktopHeader() {
                 onMouseLeave={handleMouseLeaveParent}
 
               >
-                <Link to={item.path} className="block w-full">
+              
                   {item.title}
-                </Link>
+                
 
                 {/* <ChevronDown size={16} className="pl-[10px]" /> */}
 
@@ -138,6 +138,8 @@ export default function DesktopHeader() {
                 )}
 
               </button>
+
+              </Link>
 
               {dropdownOpen === index && (
 
@@ -153,16 +155,18 @@ export default function DesktopHeader() {
                   {item.subItems && item.subItems.length > 0 && (
                     <ul>
                       {item.subItems.map((sub, idx) => (
+                           <Link to={sub.path} className="block w-full">
                         <li
                           key={idx}
                           className={`pb-[10px] pl-[10px] pt-[5px] cursor-pointer hover:text-[#43b649] text-[13px] hover:bg-gray-100 ${idx === 0 ? "rounded-tl-md rounded-tr-md" : ""
                             } ${idx !== item.subItems.length - 1 ? "border-b border-gray" : ""}`}
                         >
                           {/* {sub} */}
-                          <Link to={sub.path} className="block w-full">
+                       
                             {sub.title}
-                          </Link>
+                         
                         </li>
+                         </Link>
                       ))}
                     </ul>
                   )}
