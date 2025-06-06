@@ -10,7 +10,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 60px 80px;
+  padding: 0px 40px;
   gap: 40px;
   flex-wrap: wrap;
   background-color: #fff;
@@ -176,4 +176,40 @@
     align-items:flex-start;
     justify-content: space-between;
   }
+}
+.affiliate-benefits-section {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.affiliate-benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.affiliate-benefit-card {
+  padding: 20px;
+}
+
+.affiliate-icon {
+  height: 48px;
+  margin-bottom: 15px;
+  padding-left: 94px;
+}
+
+.affiliate-benefit-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.affiliate-benefit-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
 }
