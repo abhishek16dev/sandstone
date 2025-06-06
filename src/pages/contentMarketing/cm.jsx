@@ -8,58 +8,58 @@ import { FiPhone } from "react-icons/fi";
 
 const ContentMarketing = () => {
   const [text, setText] = useState('');
-  const words = ['Visibility', 'Rank', 'Traffic'];
-  const delay = 150;
-  const pause = 1000;
-  
-  const wordIndex = useRef(0);
-  const charIndex = useRef(0);
-  const isDeleting = useRef(false);
-  
-  useEffect(() => {
-    let timeout;
-  
-    const type = () => {
-      const currentWord = words[wordIndex.current];
-      
-      if (!isDeleting.current) {
-        // Typing
-        setText(currentWord.substring(0, charIndex.current));
-        if (charIndex.current < currentWord.length) {
-          charIndex.current++;
-          timeout = setTimeout(type, delay);
-        } else {
-          // Pause after typing full word
-          timeout = setTimeout(() => {
-            isDeleting.current = true;
-            timeout = setTimeout(type, delay);
-          }, pause);
-        }
-      } else {
-        // Deleting
-        if (charIndex.current > 0) {
-          charIndex.current--;
-          setText(currentWord.substring(0, charIndex.current));
-          timeout = setTimeout(type, delay / 2); // Faster delete
-        } else {
-          // Pause before starting next word
-          isDeleting.current = false;
-          wordIndex.current = (wordIndex.current + 1) % words.length;
-          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
-        }
-      }
-    };
-  
-    type();
-  
-    return () => clearTimeout(timeout);
-  }, []);
+   const words = ['Engage', 'Impact', 'Content'];
+   const delay = 150;
+   const pause = 1000;
+   
+   const wordIndex = useRef(0);
+   const charIndex = useRef(0);
+   const isDeleting = useRef(false);
+   
+   useEffect(() => {
+     let timeout;
+   
+     const type = () => {
+       const currentWord = words[wordIndex.current];
+       
+       if (!isDeleting.current) {
+         // Typing
+         setText(currentWord.substring(0, charIndex.current));
+         if (charIndex.current < currentWord.length) {
+           charIndex.current++;
+           timeout = setTimeout(type, delay);
+         } else {
+           // Pause after typing full word
+           timeout = setTimeout(() => {
+             isDeleting.current = true;
+             timeout = setTimeout(type, delay);
+           }, pause);
+         }
+       } else {
+         // Deleting
+         if (charIndex.current > 0) {
+           charIndex.current--;
+           setText(currentWord.substring(0, charIndex.current));
+           timeout = setTimeout(type, delay / 2); // Faster delete
+         } else {
+           // Pause before starting next word
+           isDeleting.current = false;
+           wordIndex.current = (wordIndex.current + 1) % words.length;
+           timeout = setTimeout(type, pause / 2); // Shorter pause after delete
+         }
+       }
+     };
+   
+     type();
+   
+     return () => clearTimeout(timeout);
+   }, []);
   
   const statsData = [
-    { number: '21,3456', label: 'Organic Traffic Growth' },
-    { number: '13,200+', label: 'Keyword Rankings' },
-    { number: '98/100', label: 'Speed & UX Score' },
-    { number: '231,580+', label: 'Leads Generated' },
+    { number: '1050+', label: 'Pro Video Edits' },
+    { number: '85%', label: 'Content Strategy' },
+    { number: '40%', label: 'Brand Stories' },
+    { number: '2500+', label: 'Bold Visuals' },
   ];
   const trustData = [
     {
@@ -129,9 +129,9 @@ const ContentMarketing = () => {
     <>
       <div className="container1">
         <h1 id="c1h1" className='relative text-center'>Content Marketing <span className='text-black'>Agency <br />in Gurgaon </span></h1>
-        <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[320px]">
-          {text}
-        </h2>
+        <h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[320px] ">
+  {text}
+</h2>
       </div>
 
       <div className="container2">
@@ -153,12 +153,30 @@ const ContentMarketing = () => {
           <img src={image} alt="" />
         </div>
       </div>
-      <div className="container3">
-        <p style={{ color: '#EEC370', fontSize: 18 }}>The no.1 SEO Service</p>
-         <p style={{ color: 'black', fontSize: 32, fontWeight: 600, marginBottom:15}}>Your <span className='highlight'>Success</span> is our <span className='highlight'>Mission</span></p>
+        {/* <div className="custom-stats-section">
+          <p style={{ color: '#EEC370', fontSize: 18 }}>The no.1 SEO Service</p>
+          <p style={{ color: 'black', fontSize: 32, fontWeight: 600, marginBottom: 15 }}>
+            Your <span className='highlight'>Success</span> is our <span className='highlight'>Mission</span>
+          </p>
+          <p style={{ fontSize: 16 }}>
+            From strategy to execution, we align your content with what your audience truly values.
+          </p>
+          <div className="custom-stats-cards">
+            {statsData.map((item, index) => (
+              <div className="custom-stat-card" key={index}>
+                <h2 className="stat-number">{item.number}</h2>
+                <p className="stat-label">{item.label}</p>
+              </div>
+            ))}
+          </div>
+       </div> */}
+            <div className="container3">
+        <p style={{ color: '#EEC370', fontSize: 18 }}>The no. 1 Content Marketing Service</p>
+        <p style={{ color: 'black', fontSize: 32, fontWeight: 600, marginBottom:15}}>
+          Build a Customer-Centric  <span className='highlight'>Marketing Strategy</span>
+        </p>
         <p style={{ fontSize: 16}}>
-         From strategy to execution, we align your content with what your audience truly values.
-
+          Drive results through performance-based partnerships – only pay when you earn.
         </p>
         <div className="c2_cards">
           {statsData.map((item, index) => (
@@ -169,6 +187,7 @@ const ContentMarketing = () => {
           ))}
         </div>
       </div>
+
 
 
 

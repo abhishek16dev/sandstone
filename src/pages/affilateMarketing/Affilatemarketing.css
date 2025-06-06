@@ -171,6 +171,9 @@
   margin-bottom: 100px;
 }
 @media (min-width: 768px) {
+  .amc1 h2{
+    font-size: 32px;
+  }
   .amc3-content {
     flex-direction: row;
     align-items:flex-start;
@@ -197,8 +200,8 @@
 
 .affiliate-icon {
   height: 48px;
-  margin-bottom: 15px;
-  padding-left: 94px;
+  margin-bottom: 20px;
+  padding-left: 70px;
 }
 
 .affiliate-benefit-card h3 {

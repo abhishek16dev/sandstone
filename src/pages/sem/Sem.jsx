@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 
 const Sem = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  
    const tabsData = [
     { id: 0, label: 'Pay-Per-Click (PPC)', image: PPC,
       description: (
