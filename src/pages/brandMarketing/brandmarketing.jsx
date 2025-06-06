@@ -194,7 +194,7 @@ const whycard = [
   return (
     <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto
   '>
-    <section className='text-center'>
+    <section className='text-center h-[200px]'>
 
          {/* <h1 className=''>    <span>Brand</span> <span>Strategy</span></h1> */}
 
@@ -210,6 +210,7 @@ const whycard = [
           <span className="font-bold">Brand</span>{' '}
           <span className="italic">Strategy?</span>
         </h6>
+
         <p className='font-semibold text-[18px] mt-[12px] text-center '>BRAND STRATEGY. MESSAGING. BRANDING. WEB DESIGN. PACKAGING.</p>
 
 
