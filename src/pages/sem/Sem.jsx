@@ -321,6 +321,9 @@ const Sem = () => {
 
       const [submitting, setSubmitting] = useState(false);
       const [responseMsg, setResponseMsg] = useState("");
+        const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
   
     const handleSubmitsem = async (e) => {
       e.preventDefault();
