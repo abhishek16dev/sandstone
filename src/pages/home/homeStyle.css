@@ -1,14 +1,9 @@
-
-
-
-
-
 .area {
-  background: white;
+  /* background: white; */
 
   width: 100%;
   height: 600px;
-  
+
 }
 
 .circles {
@@ -81,7 +76,7 @@
   left: 35%;
   width: 150px;
   height: 150px;
-  animation-delay: 7s;
+  animation-delay: 2s;
 }
 
 .circles li:nth-child(8) {
@@ -145,12 +140,12 @@
 }
 
 .h1tag {
-  font-size: 46px ;
+  font-size: 46px;
   font-weight: 500;
   margin: 10px 0;
   line-height: 1.3em;
   -webkit-text-stroke: 4px;
-    
+
 }
 
 .h2tag {
@@ -186,7 +181,7 @@
 
 
 
-.comprensive{
+.comprensive {
   border-radius: 40px;
 }
 
@@ -199,8 +194,9 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -212,9 +208,15 @@
 
 .slider-track {
   display: flex;
-  animation: scrollLeft 20s linear infinite;
+   animation: scrollLeft 50s linear infinite; 
   width: fit-content;
+
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
+
+
 
 
 .box {
@@ -249,39 +251,44 @@
   height: 250px;
   perspective: 1000px;
   cursor: pointer;
-  
- 
+
+
 }
 
 
-.industriweserve{
+.industriweserve {
   width: 100%;
 }
 
-.flipcard  h2,  .industriweserve h2{
-   color: #409338;;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    -webkit-text-stroke: 1px #409338;;
-    -webkit-text-fill-color: #409338;
-    margin-top: 30px;
-    margin-bottom: 60px;
-      -webkit-text-stroke: 2px #5c945c;
+.flipcard h2,
+.industriweserve h2 {
+  color: #409338;
+  ;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-text-stroke: 1px #409338;
+  ;
+  -webkit-text-fill-color: #409338;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  -webkit-text-stroke: 2px #5c945c;
   -webkit-text-fill-color: #5c945c;
 }
 
- .image_wrap {
+.image_wrap {
   width: 190px;
   height: 200px;
-  overflow: hidden; /* Prevents image from spilling out */
+  overflow: hidden;
+  /* Prevents image from spilling out */
 }
 
 .image_wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the container without distortion */
+  object-fit: cover;
+  /* Ensures the image covers the container without distortion */
   display: block;
 }
 
@@ -293,16 +300,16 @@
   height: 100%;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
-   border: 1px solid #9ac496;
-  
+  border: 1px solid #9ac496;
+
 }
 
 
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg)  translateY(-10px);
+  transform: rotateY(180deg) translateY(-10px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   border: 1px solid #0a0e0a;
 }
@@ -344,65 +351,62 @@
   text-align: center;
   font-weight: 600;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 
 
-.iconimage{
+.iconimage {}
 
-
-}
-
-.Slidercrausol{
+.Slidercrausol {
   margin-top: 90px;
 }
 
-.Slidercrausol .heading
-  {
-    color: #409338;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    -webkit-text-stroke: 1px #409338;
-    -webkit-text-fill-color: #409338;
-    margin:30px 0;
-   
-    -webkit-text-stroke: 2px #5c945c;
-    -webkit-text-fill-color: #5c945c;
-
-}
-.faq{
-     color: #409338;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    -webkit-text-stroke: 1px #409338;
-    -webkit-text-fill-color: #409338;
-    margin:90px 0;
-   
-    -webkit-text-stroke: 2px #5c945c;
-    -webkit-text-fill-color: #5c945c;
-}
-
-.countertextheading{
+.Slidercrausol .heading {
   color: #409338;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: start;
-    -webkit-text-stroke: 1px #409338;
-    -webkit-text-fill-color: #409338;
-  
-   
-    -webkit-text-stroke: 2px #5c945c;
-    -webkit-text-fill-color: #5c945c;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-text-stroke: 1px #409338;
+  -webkit-text-fill-color: #409338;
+  margin: 30px 0;
+
+  -webkit-text-stroke: 2px #5c945c;
+  -webkit-text-fill-color: #5c945c;
 
 }
 
- .countertextpart p {
+.faq {
+  color: #409338;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-text-stroke: 1px #409338;
+  -webkit-text-fill-color: #409338;
+  margin: 90px 0;
+
+  -webkit-text-stroke: 2px #5c945c;
+  -webkit-text-fill-color: #5c945c;
+}
+
+.countertextheading {
+  color: #409338;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: start;
+  -webkit-text-stroke: 1px #409338;
+  -webkit-text-fill-color: #409338;
+
+
+  -webkit-text-stroke: 2px #5c945c;
+  -webkit-text-fill-color: #5c945c;
+
+}
+
+.countertextpart p {
   font-size: 15px;
   color: #000000;
   margin: 20px 0;
@@ -410,7 +414,7 @@
 }
 
 /* Keyframes to move entire track */
-@keyframes scrollLeft {
+/* @keyframes scrollLeft {
   0% {
     transform: translateX(0);
   }
@@ -418,18 +422,17 @@
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 
-.slider-container{
- border-bottom:  1px solid #9ac496;
- border-top: 1px solid #9ac496;
-
- -ms-transform: skew(0deg,-10deg);
--webkit-transform: skew(0deg,-10deg); 
+.slider-container {
+  border-bottom: 1px solid #9ac496;
+  border-top: 1px solid #9ac496;
+  -ms-transform: skew(0deg, -10deg);
+  -webkit-transform: skew(0deg, -10deg);
   transform: skew(0deg, -6deg);
-margin-top: 80px;
- 
+  margin-top: 80px;
+
 }
 
 
@@ -459,19 +462,23 @@ margin-top: 80px;
   color: #409338;
   animation: floatUpDown 2s ease-in-out infinite;
 }
-.floating-text-two{
-display: inline-block;
+
+.floating-text-two {
+  display: inline-block;
   color: #409338;
-  animation: floatup 2s ease-in-out infinite;
+  animation: floatup 4s ease-in-out infinite;
 }
 
 @keyframes floatUpDown {
   0% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-15px); /* or whatever float distance you want */
+    transform: translateY(-15px);
+    /* or whatever float distance you want */
   }
+
   100% {
     transform: translateY(0);
   }
@@ -481,9 +488,12 @@ display: inline-block;
   0% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-15px); /* or whatever float distance you want */
+    transform: translateY(-15px);
+    /* or whatever float distance you want */
   }
+
   100% {
     transform: translateY(0);
   }
@@ -538,9 +548,11 @@ display: inline-block;
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -558,9 +570,11 @@ display: inline-block;
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -571,7 +585,7 @@ display: inline-block;
 
 
 @media (max-width: 768px) {
-  .rightrocket{
+  .rightrocket {
     display: none !important;
   }
 
@@ -587,50 +601,63 @@ display: inline-block;
     max-width: 450px;
   }
 
-  .h1tag{
+  .h1tag {
     font-size: 20px;
-     -webkit-text-stroke: 2px !important;
-     align-items: start;
+    -webkit-text-stroke: 2px !important;
+    align-items: start;
   }
-  .area{
+
+  .area {
     height: 350px;
     z-index: -1;
   }
-  .context{
-   top: 80px;
+
+  .context {
+    top: 80px;
   }
 
 
 
-  .flipcard  h2,  .industriweserve h2 ,.Slidercrausol .heading {
-   
+  .flipcard h2,
+  .industriweserve h2,
+  .Slidercrausol .heading {
+
     font-size: 28px;
     line-height: 28px;
-  
+
 
     margin-top: 15px;
     margin-bottom: 30px;
     -webkit-text-stroke: 1px #5c945c;
 
-}
-.headingstroke ,.headingstrokesecond {
- font-size: 28px !important;
+  }
+
+  .headingstroke,
+  .headingstrokesecond {
+    font-size: 28px !important;
     line-height: 28px !important;
-  
 
-    
+
+
     -webkit-text-stroke: 1px #5c945c !important
-}
-.flip-card, .animated-card {
+  }
 
-  width: 160px !important;
-  height: 170px  !important;
-}
+  .flip-card,
+  .animated-card {
 
-#industries{
-  margin-top: 60px !important;
-}
+    width: 160px !important;
+    height: 170px !important;
+  }
+
+  #industries {
+    margin-top: 60px !important;
+  }
+  .span-number{
+    font-size: 24px !important;
+   
+  }
  
+
 }
 
 
@@ -648,7 +675,7 @@ display: inline-block;
 
   /* Center element without animation */
   transform: translate(-50%, -50%);
-  
+
   /* Animation only rotates & scales */
   animation: spiralEffect 3s linear infinite;
   transform-origin: center center;
@@ -660,34 +687,56 @@ display: inline-block;
 
 
 @keyframes phone-shake {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(-15deg); }
-  20% { transform: rotate(15deg); }
-  30% { transform: rotate(-10deg); }
-  40% { transform: rotate(10deg); }
-  50% { transform: rotate(-5deg); }
-  60% { transform: rotate(5deg); }
-  70% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-15deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .ringing {
   animation: phone-shake 2s ease-in-out infinite;
-  cursor:pointer
+  cursor: pointer
 }
 
 
 
-
-
-
-
 .numberanimation {
- /* text-[white] text-[50px] font-bold */
+  /* text-[white] text-[50px] font-bold */
 
- color:white;
- font-size:50px;
- font-weight: 700;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .numberanimation span {
@@ -714,9 +763,11 @@ display: inline-block;
 .numberanimation span:nth-child(5) {
   animation-delay: 0.8s;
 }
+
 .numberanimation span:nth-child(6) {
   animation-delay: 0.9s;
 }
+
 .numberanimation span:nth-child(7) {
   animation-delay: 1s;
 }
@@ -726,10 +777,12 @@ display: inline-block;
     transform: scale(1);
     /* opacity: 0; */
   }
+
   50% {
     transform: scale(1.5);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -739,7 +792,7 @@ display: inline-block;
 
 
 
-.homeclass > div{
+.homeclass>div {
 
-overflow-x: hidden;
+  overflow-x: hidden;
 }

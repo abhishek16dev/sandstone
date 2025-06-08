@@ -300,7 +300,7 @@ const Home = () => {
         </div>
 
 
-        <div className="area pl-[40px] pr-[40px]" >
+        <div className="area pl-[40px] pr-[40px] bg-none" >
           <ul className="circles">
             <li></li>
             <li></li>
@@ -312,7 +312,7 @@ const Home = () => {
             <li></li>
             <li></li>
             <li></li>
-          </ul>
+          </ul> 
         </div >
 
 
@@ -486,7 +486,7 @@ const Home = () => {
         <div
           ref={thirdREf}
           onMouseEnter={() => setThirdtrigger(true)}
-          className=" mt-[130px] mb-[120px] max-sm:mb-[60px]  max-md:mt-[80px] cursor-pointer phone  max-md:p-[40px] md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%]  max-md-w-[100%] mx-auto rounded-[20px] max-md:rounded-[0] shadow-md"
+          className=" mt-[130px] mb-[120px] max-sm:mb-[60px]  max-md:mt-[80px] cursor-pointer phone  max-md:p-[40px] md:p-[30px] bg-[#409338] flex flex-col md:flex-row items-center gap-6 md:gap-[40px] justify-around w-[90%]  max-md-w-[100%] mx-auto rounded-[20px]  shadow-md"
         >
           {/* Phone Icon */}
           <div className="mb-4 md:mb-0">
@@ -500,7 +500,7 @@ const Home = () => {
             </p>
 
             <div
-              className={`text-white text-[32px] max-md:text-[28px] md:text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""
+              className={`text-white span-number text-[32px] max-md:text-[24px] md:text-[50px] font-bold ${thirdtrigger ? "numberanimation" : ""
                 }`}
             >
               <span>+91&nbsp;</span>

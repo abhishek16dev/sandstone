@@ -11,9 +11,9 @@ const menuItems = [
   {
     title: "Digital Marketing",
     subItems: [
-         { title: "Search Engine Optimization", path: "/search-engine-optimization" },
+      { title: "Search Engine Optimization", path: "/search-engine-optimization" },
       { title: "Search Engine Marketing", path: "/search-engine-marketing" },
-   
+
       { title: "Social Media Marketing", path: "/social-media-marketing" },
       { title: "Web Development", path: "/web-development" },
       { title: "Content Marketing", path: "/content-marketing" },
@@ -24,14 +24,14 @@ const menuItems = [
   {
     title: "Solutions",
     subItems: [
-         { title: "Online Reputation Managment", path: "/online-reputation-managment" },
-       
+      { title: "Online Reputation Managment", path: "/online-reputation-managment" },
+
       { title: "Brand Strategy", path: "/brand-strategy" },
       { title: "Lead Generation", path: "/lead-generation" },
       { title: "Customer Retention", path: "/customer-retention" },
       { title: "Digital Transformation", path: "/digital-transformation" },
       { title: "Market Research & Insights", path: "/market-research" },
-    
+
     ]
   },
 
@@ -95,6 +95,31 @@ export default function DesktopHeader() {
     }
   };
 
+
+  const handleDropdownItemClick = () => {
+  setDropdownOpen(null);
+};
+
+const navRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      navRef.current &&
+      !navRef.current.contains(event.target)
+    ) {
+      setDropdownOpen(null); // Close dropdown
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
+
   return (
     <header className=" fixed top-0  left-0   z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
@@ -110,7 +135,7 @@ export default function DesktopHeader() {
           </div>
 
         </div>
-        <nav className="flex items-center gap-5 text-sm">
+        <nav ref={navRef} className="flex items-center gap-5 text-sm">
           {menuItems.map((item, index) => (
             <div
               key={item.title}
@@ -118,27 +143,30 @@ export default function DesktopHeader() {
               className="relative z-[9999]"
 
             >
-  <Link to={item.path} className="block w-full">
-              <button
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen === index}
-                onClick={() => handleDropdownToggle(index)}
-                className="flex items-center p-[10px] gap-1 text-[14px] cursor-pointer font-normal leading-[21px]  hover:text-[#43b649]  bg-transparent border-0 outline-none focus:outline-none"
-                onMouseEnter={() => handleMouseEnterParent(index)}  // Handle hover on the parent
-                onMouseLeave={handleMouseLeaveParent}
-
+              <Link to={item.path} className="block w-full"
+                onClick={handleDropdownItemClick}
               >
-              
-                  {item.title}
+                <button
+                  aria-haspopup="true"
+                  aria-expanded={dropdownOpen === index}
+                  onClick={() => handleDropdownToggle(index)}
+                  className="flex items-center p-[10px] gap-1 text-[14px] cursor-pointer font-normal leading-[21px]  hover:text-[#43b649]  bg-transparent border-0 outline-none focus:outline-none"
+                  onMouseEnter={() => handleMouseEnterParent(index)}  // Handle hover on the parent
+                  onMouseLeave={handleMouseLeaveParent}
                 
 
-                {/* <ChevronDown size={16} className="pl-[10px]" /> */}
+                >
 
-                {item.subItems && item.subItems.length > 0 && (
-                  <ChevronDown size={25} className="pl-[10px]" />
-                )}
+                  {item.title}
 
-              </button>
+
+                  {/* <ChevronDown size={16} className="pl-[10px]" /> */}
+
+                  {item.subItems && item.subItems.length > 0 && (
+                    <ChevronDown size={25} className="pl-[10px]" />
+                  )}
+
+                </button>
 
               </Link>
 
@@ -156,18 +184,18 @@ export default function DesktopHeader() {
                   {item.subItems && item.subItems.length > 0 && (
                     <ul>
                       {item.subItems.map((sub, idx) => (
-                           <Link to={sub.path} className="block w-full">
-                        <li
-                          key={idx}
-                          className={`pb-[10px] pl-[10px] pt-[5px] cursor-pointer hover:text-[#43b649] text-[13px] hover:bg-gray-100 ${idx === 0 ? "rounded-tl-md rounded-tr-md" : ""
-                            } ${idx !== item.subItems.length - 1 ? "border-b border-gray" : ""}`}
-                        >
-                          {/* {sub} */}
-                       
+                        <Link to={sub.path} className="block w-full"   onClick={handleDropdownItemClick}>
+                          <li
+                            key={idx}
+                            className={`pb-[10px] pl-[10px] pt-[5px] cursor-pointer hover:text-[#43b649] text-[13px] hover:bg-gray-100 ${idx === 0 ? "rounded-tl-md rounded-tr-md" : ""
+                              } ${idx !== item.subItems.length - 1 ? "border-b border-gray" : ""}`}
+                          >
+                            {/* {sub} */}
+
                             {sub.title}
-                         
-                        </li>
-                         </Link>
+
+                          </li>
+                        </Link>
                       ))}
                     </ul>
                   )}

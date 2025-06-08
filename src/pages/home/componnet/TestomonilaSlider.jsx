@@ -151,17 +151,29 @@ export default function App() {
   );
 }
 
+// function TestimonialCard({ name, rating, message, sunheading }) {
+//   return (
+//     <div
+//       className="w-full max-w-sm bg-[#409338] p-6 rounded-xl shadow-md"
+//       style={{ boxShadow: "0 4px 8px rgba(128, 128, 128, 0.5)" }}
+//     >
+//       <div className="flex items-center gap-4 mb-4">
+       
+//         <div>
+//           <p className="font-semibold text-[16px]">{name}</p>
+//           <p className="text-sm">{sunheading}</p>
+//           <p className="text-xs">{rating}</p>
+//         </div>
+//       </div>
+//       <p className="text-sm leading-relaxed">{message}</p>
+//     </div>
+//   );
+// }
+
 function TestimonialCard({ name, rating, message, sunheading }) {
   return (
-    <div
-      className="w-full max-w-sm bg-[#409338] p-6 rounded-xl shadow-md"
-      style={{ boxShadow: "0 4px 8px rgba(128, 128, 128, 0.5)" }}
-    >
+    <div className="speech-bubble w-full max-w-sm shadow-md relative">
       <div className="flex items-center gap-4 mb-4">
-        {/* <div className="w-[70px] h-[70px] flex items-cenetr justify-center">
-        
-      <span className="w-[100%] h-[100%]">{icon}</span>
-        </div> */}
         <div>
           <p className="font-semibold text-[16px]">{name}</p>
           <p className="text-sm">{sunheading}</p>
@@ -169,6 +181,10 @@ function TestimonialCard({ name, rating, message, sunheading }) {
         </div>
       </div>
       <p className="text-sm leading-relaxed">{message}</p>
+
+
+
     </div>
   );
 }
+

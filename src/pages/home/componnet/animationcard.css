@@ -58,6 +58,7 @@
 
 .animatedcard {
   opacity: 1;
+  overflow: hidden;
 }
 
 .animated-card {

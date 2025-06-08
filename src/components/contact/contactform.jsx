@@ -48,7 +48,7 @@ const ContactForm = () => {
        <div className="conatctform p-[30px] rounded-[20px] shadow-[0_12px_20px_rgba(0,0,0,0.2)]">
 
 
-        <p className=" text-[#409338] font-bold text-[40px] leading-[40px]  text-center stroke-custom fill-custom">
+        <p className=" text-[#409338] font-bold text-[40px] max-sm:text-[28px] leading-[40px]  text-center stroke-custom fill-custom">
           Get a free consultation!
         </p>
 

@@ -60,3 +60,16 @@
   background-clip: text;
   color: transparent;
 }
+
+
+@media (max-width: 768px) {
+
+ .counter-card {
+   width: 145px;
+}
+
+ .counter-card  .label{
+  
+  text-align: center;}
+
+ }
