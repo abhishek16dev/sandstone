@@ -15,6 +15,7 @@ import step5 from './resources/step5.svg';
 import cneterstroke from "./resources/centerpaint.svg"
 import leftpaint from "./resources/leftpaint.svg"
 import rightpaint from "./resources/rightpaint.svg"
+import { Helmet } from 'react-helmet';
 
 const Seo = () => {
 const [text, setText] = useState('');
@@ -125,6 +126,24 @@ useEffect(() => {
 
   return (
     <>
+
+   <Helmet>
+    <title>Best SEO Agency in Gurgaon | Affordable SEO Solutions</title>
+    <meta
+      name="description"
+      content="WebNest Media offers affordable SEO services with guaranteed first page ranking. Our SEO experts handle on-page, off-page, and technical SEO for organic growth."
+    />
+    <meta
+      name="keywords"
+      content="SEO services, SEO agency, search engine optimization, on-page SEO, off-page SEO, technical SEO, SEO company, local SEO, SEO Gurgaon"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="WebNest Media" />
+    <link
+      rel="canonical"
+      href="https://webnestmedia.com/search-engine-optimization"
+    />
+  </Helmet>
       <div className="container1 " id='c1'>
         
         <h1 id='c1h1'>SEO Agency in Gurgaon</h1>
