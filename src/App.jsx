@@ -19,6 +19,8 @@ import Brandmarketing from './pages/brandMarketing/brandmarketing';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Lead from './pages/leadGeneartion/lead';
+import Orm from './pages/Orm/Orm';
 
 const App = () => {
 
@@ -48,9 +50,13 @@ useEffect(() => {
         <Route path="/content-marketing" element={<ContentMarketing/>} />
         <Route path="/affiliate-marketing" element ={<Affilatemarketing />} />
         <Route path="/brand-strategy" element ={<Brandmarketing />} />
+          <Route path="/lead-generation" element ={<Lead />} />
+            <Route path="/online-reputation-managment" element ={<Orm />} />
+
+
             <Route path="*" element={<Navigate to="/" replace />} />
           
-      
+  
       </Routes>
        <Footer />
 
