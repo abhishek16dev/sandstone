@@ -82,12 +82,12 @@ const Affilatemarketing = () => {
       
       <div className="amc2">
         <div className="amc2-left">
-          <h1 className="amc2-heading">Affiliate Marketing?</h1>
+          <h2 className="amc2-heading">Affiliate Marketing?</h2>
           <p className="amc2-desc">
             Affiliate marketing is a way for people or businesses to earn money by promoting someone else's products or services. 
             You recommend something you trust—like a product, a tool, or even a course—and when someone buys it through your special link, you earn a commission.
           </p>
-          <h2 className="amc2-subheading">It's a Win-Win:</h2>
+          <h3 className="amc2-subheading">It's a Win-Win:</h3>
           <ul className="amc2-list">
             <li>The company gets more sales.</li>
             <li>The customer gets what they're looking for.</li>
@@ -217,7 +217,7 @@ const Affilatemarketing = () => {
       <div className="amc5">
         <div className="amc2">
         <div className="amc2-left">
-          <h1 className="amc2-heading">Can you make money with <br /><span className='highlight'>Affiliate Marketing?</span> </h1>
+          <h2 className="amc2-heading">Can you make money with <br /><span className='highlight'>Affiliate Marketing?</span> </h2>
           <p className="amc2-desc">
             Yes, you can absolutely make money with affiliate marketing—and the numbers back it up. According to Statista, the global affiliate marketing market is projected to exceed $12 billion by 2027, with consistent year-over-year growth. Reports also show that around 15% to 30% of affiliate marketers earn between $1,000 and $5,000 per month, and the top 1% make over $100,000 annually.
             <br />

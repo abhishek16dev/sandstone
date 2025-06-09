@@ -378,10 +378,52 @@ Social media is where your audience is—and it’s growing every day. It gives 
 
       </div>
       <div className="newcontainer">
-         <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-10">
+         <h3 className="text-2xl md:text-3xl font-bold text-[#5c945c] mt-10 mb-5">
             How Social Media Marketing Can Help Your Business Grow
           </h3>
-          
+          <p className='mb-[10px]'>
+          The advantages of social media marketing are many. Here are some ways that social media marketing might benefit your company:
+          </p>
+          <ul className='ml-[25px] mt-[10px]'>
+            <li className="mb-[30px] lg:mb-[28px] ">
+              <h3 className="font-semibold text-xl ">• Get your brand seen by more people.</h3>
+              <p className="text-[16px]">
+               
+                 Regular posts and updates keep your business in front of the right audience every day.
+
+              </p>
+            </li>
+            <li className="mb-[20px] lg:mb-[28px]">
+              <h3 className="font-semibold text-xl ">• Bring the right visitors to your website.</h3>
+              <p className="text-[16px]">
+                Social media helps attract people who are actually interested in what you offer.
+
+              </p>
+            </li>
+            <li className="mb-[20px] lg:mb-[28px]">
+              <h3 className="font-semibold text-xl ">• Start real conversations with your audience.</h3>
+              <p className="text-[16px]">
+                  Reply to comments, answer questions, and build genuine relationships with your followers.              </p>
+            </li>
+            <li className="mb-[20px] lg:mb-[28px]">
+              <h3 className="font-semibold text-xl">• Give your search rankings a little boost.</h3>
+              <p className="text-[16px]">
+                While not a direct ranking factor, active social sharing can drive traffic and support your SEO efforts.
+              </p>
+            </li>
+            <li className="mb-[20px] lg:mb-[28px]">
+              <h3 className="font-semibold text-xl ">• Turn likes and clicks into real leads.</h3>
+              <p className="text-[16px]">
+                Engaging postings and targeted advertisements can turn followers into paying consumers.
+              </p>
+            </li>
+            <li className="mb-[20px] lg:mb-[28px]">
+              <h3 className="font-semibold text-xl ">• Grow your business without breaking the bank.</h3>
+              <p className="text-[16px]">
+                 Compared to traditional ads, social media is budget-friendly and highly effective.
+              </p>
+            </li>
+          </ul>
 
       </div>
       <div className="conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">

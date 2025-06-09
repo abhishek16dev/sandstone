@@ -52,7 +52,8 @@ useEffect(() => {
         <Route path="/brand-strategy" element ={<Brandmarketing />} />
           <Route path="/lead-generation" element ={<Lead />} />
             <Route path="/online-reputation-managment" element ={<Orm />} />
-
+{/*             
+            <Route path="/digital-transformation" element={<DigitalTransformation/>}></Route> */}
 
             <Route path="*" element={<Navigate to="/" replace />} />
           
