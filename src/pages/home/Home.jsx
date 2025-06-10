@@ -234,7 +234,20 @@ const Home = () => {
   }, []);
 
 
-  console.log("Trigger received in home page:", trigger);
+const images = [
+  slide11, slide5, slideone, slide6, slidetwo, slide7,
+  slidethree, slide8, slidefour, slide13, slide14,
+  slide15, slide16, slide17, slide9, slide12, slide10
+];
+
+const firstTrackImages = [...images, ...images]; // repeat once for loop effect
+
+// Simple shuffled version of the same array
+const shuffledImages = [...images,].sort(() => Math.random() - 0.5);
+
+
+
+
   return (
     <>
 
@@ -352,12 +365,17 @@ const Home = () => {
           </div>
         </div>
 
+<div className="text-center flex flex-col items-center justify-center overflow-hidden" >
+  <p className=" text-[black] text-[20px] font-semibold">Our CLient's</p>
+  <h5 className="text-2xl leading-[150%] md:text-3xl font-bold text-[#5c945c] mt-[20px]  w-[75%]  max-lg:w-[100%] ">Webnest Building credibility with major global brands <br className="max-lg:hidden" /> As more join the ranks</h5>
+</div>
+
 
 
         <div className="  slider-container"
 
  >
-          
+{/*           
           <div className="slider-track p-2">
             <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
@@ -413,11 +431,19 @@ const Home = () => {
             <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
 
-          </div>
+          </div> */}
+
+          <div className="slider-track p-2">
+  {firstTrackImages.map((img, index) => (
+    <div className="box" key={index}>
+      <img src={img} className="w-[100%] h-[100%] object-contain" />
+    </div>
+  ))}
+</div>
         </div>
 
         <div className="slider-container2">
-              <div className="slider-track2 p-2">
+              {/* <div className="slider-track2 p-2">
             <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
@@ -472,10 +498,16 @@ const Home = () => {
             <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
 
-          </div>
+          </div> */}
+          <div className="slider-track2 p-2">
+  {shuffledImages.map((img, index) => (
+    <div className="box" key={index}>
+      <img src={img} className="w-[100%] h-[100%] object-contain" />
+    </div>
+  ))}
         </div>
 
-
+</div>
 
         <div className="  pl-[40px] pr-[40px]  bg-white p-[40px] mt-[30px] transparenbody  text-start flex  max-lg:flex-col justify-center  items-center gap-6">
 

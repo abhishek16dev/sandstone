@@ -206,14 +206,14 @@ const Brandmarketing = () => {
 
       <section className="max-w-[1440px] w-[100%] mx-auto text-center pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]" style={{ fontFamily: 'Segoe UI' }} >
         <h6 className='text-[52px]  text-center'>
-          <span className="font-bold">Brand</span>{' '}
-          <span className="italic">Strategy?</span>
+          <span className="font-normal">Brand</span>{' '}
+          <span className="italic font-light">Strategy?</span>
         </h6>
 
         <p className='font-semibold text-[18px] mt-[12px] text-center '>BRAND STRATEGY. MESSAGING. BRANDING. WEB DESIGN. PACKAGING.</p>
 
 
-        <p className='text-[16px] font-light text-center mt-[52px] '> A brand strategy is the blueprint for how your business is seen and remembered. It defines your purpose, voice, values, and the <br className='max-lg:hidden' /> way you connect with your audience. More than just visuals, it builds trust, sets you apart from competitors, and ensures every <br className='max-lg:hidden' /> interaction reflects your brand’s identity. A clear brand strategy turns your business into a brand people recognize and trust.</p>
+        <p className='text-[16px] font-[350] text-center mt-[52px] text-[black] '> A brand strategy is the blueprint for how your business is seen and remembered. It defines your purpose, voice, values, and the <br className='max-lg:hidden' /> way you connect with your audience. More than just visuals, it builds trust, sets you apart from competitors, and ensures every <br className='max-lg:hidden' /> interaction reflects your brand’s identity. A clear brand strategy turns your business into a brand people recognize and trust.</p>
 
       </section>
 
@@ -271,9 +271,9 @@ const Brandmarketing = () => {
 
           {/* Scrolling Right Content */}
           <div className="w-full max-lg:w-full" data-aos="fade-up">
-            <h6 className="font-light text-black text-[24px]">REAL TALK:</h6>
+            <h6 className="font-[350] text-black text-[24px] leading-[150%]">REAL TALK:</h6>
 
-            <p className="text-[40px] leading-[150%] font-light">
+            <p className="text-[40px] leading-[150%] font-light mt-[16px]">
               <span className="font-semibold">Why </span>
               <span className="font-thin italic">Brand Marketing</span>
               <br />
@@ -299,8 +299,8 @@ const Brandmarketing = () => {
                     alt={card.title}
                     className="w-[64px] h-[64px] object-contain"
                   />
-                  <h3 className="text-[24px] font-normal mt-[24px] mb-[12px] text-center">{card.title}</h3>
-                  <p className="text-[14px] font-light text-center">{card.text}</p>
+                  <h3 className="text-[24px] font-normal mt-[24px] mb-[12px] text-center leading-[150%]">{card.title}</h3>
+                  <p className="text-[14px] font-light text-center leading-[150%]">{card.text}</p>
                 </div>
               ))}
             </div>
@@ -317,7 +317,7 @@ const Brandmarketing = () => {
       </section>
 
       <section className='max-w-[1440px] w-[100%] mx-auto'>
-        <h4 className='text-[52px] leading-[150%] text-center  mt-[96px] mb-[32px] '> <span className="font-bold">Brand Strategy Services by</span> <br className='max:max-md:hidden' /><span className="italic"> WebNest Media</span></h4>
+        <h4 className='text-[52px] leading-[150%] text-center  mt-[96px] mb-[32px] '> <span className="font-normal">Brand Strategy Services by</span> <br className='max:max-md:hidden' /><span className="italic font-[350]"> WebNest Media</span></h4>
       </section>
 
       <p className='text-[16px] text-[#00000] font-normal text-center p-[20px] '>At WebNest Media, we combine creativity, research, and strategy to craft brand identities that leave a lasting impact. Our  <br />services cover every stage of your brand-building journey: </p>
@@ -358,7 +358,7 @@ const Brandmarketing = () => {
 
             {/* Right: Description */}
             <div className="w-full md:w-[50%]">
-              <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">{step.description}</p>
+              <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed font-[400]">{step.description}</p>
             </div>
           </div>
         ))}
@@ -369,8 +369,8 @@ const Brandmarketing = () => {
 
       <section className='max-w-[1440px] w-[100%] mx-auto'>
         <p className="mt-[96px] mb-[66px] text-center text-[52px] leading-[150%] ">
-          <span className="font-bold">Why </span>
-          <span className="italic font-thin">WebNest Media?</span>
+          <span className="font-normal">Why </span>
+          <span className="italic font-[350]">WebNest  <br className='max-md:hidden'/>Media?</span>
         </p>
       </section>
 
@@ -389,8 +389,8 @@ const Brandmarketing = () => {
                 alt={card.title}
                 className="w-[64px] h-[64px] object-contain "
               />
-              <h3 className=" text-[24px] font-normal mt-[24px] mb-[12px] text-center  ">{card.title}</h3>
-              <p className=" text-[14px] font-light text-center ">{card.text}</p>
+              <h3 className=" text-[24px] font-semibold mt-[24px] mb-[12px] text-center  ">{card.title}</h3>
+              <p className=" text-[14px] font-normal text-center ">{card.text}</p>
             </div>
           ))}
         </div>
@@ -441,6 +441,13 @@ const Brandmarketing = () => {
       </section>
 
       <section className=' max-w-[1440px] w-[100%] mx-auto mt-[60px] mb-[50px]'>
+            <h2 className='mt-[40px] text-[black] font-normal leading-[160%]
+          text-[22px]           
+    sm:text-[23px]        
+    md:text-[36px]        
+    xl:text-[44px]    
+        '>Let's address your <span className='text-[#4CAF50] '>questions </span>today</h2>
+
         <Accordian />
       </section>
 
