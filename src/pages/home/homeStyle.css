@@ -187,9 +187,6 @@
 
 
 
-
-
-
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
@@ -200,17 +197,68 @@
   }
 }
 
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+
+@keyframes scrollRight {
+  100% {
+    transform: translateX(0);
+  }
+
+  0% {
+    transform: translateX(-50%);
+  }
 }
 
-.slider-track {
+
+
+
+.slider-container {
+ 
+  margin-top: 80px;
+   width: 100%;
+  overflow: hidden;
+  position: relative;
+    /* -ms-transform: skew(0deg, -10deg);
+  -webkit-transform: skew(0deg, -10deg);
+  transform: skew(0deg, -6deg);
+  margin-top: 80px;
+   width: 100%;
+  overflow: hidden;
+  position: relative; */
+
+}
+
+.slider-container2 {
+ 
+  margin-top: 20px;
+   width: 100%;
+  overflow: hidden;
+  position: relative;
+    /* -ms-transform: skew(0deg, -10deg);
+  -webkit-transform: skew(0deg, -10deg);
+  transform: skew(0deg, -6deg); */
+ 
+
+}
+.slider-track2{
+
+}
+
+
+.slider-track  {
   display: flex;
    animation: scrollLeft 50s linear infinite; 
   width: fit-content;
+   gap: 20px 20px;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
 
+.slider-track2  {
+  display: flex;
+   animation: scrollRight 50s linear infinite; 
+  width: fit-content;
+   gap: 20px 20px;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -218,18 +266,18 @@
 
 
 
-
 .box {
-  min-width: 100px;
-  height: 90px;
-  /* background: #ffffff; */
-  margin-right: 20px;
+  width: 120px;
+  height: 120px;
+   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px 40px;
   font-size: 24px;
   overflow: hidden;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
 }
 
 
@@ -425,15 +473,6 @@
 } */
 
 
-.slider-container {
-  border-bottom: 1px solid #9ac496;
-  border-top: 1px solid #9ac496;
-  -ms-transform: skew(0deg, -10deg);
-  -webkit-transform: skew(0deg, -10deg);
-  transform: skew(0deg, -6deg);
-  margin-top: 80px;
-
-}
 
 
 

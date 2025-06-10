@@ -57,8 +57,14 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import Conatctfrom from "../../components/contact/contactform";
 import { FiPhone } from "react-icons/fi";
 import { Helmet } from "react-helmet";
-import slide11 from "./resources/forcorner.png"
+import slide11 from "./resources/forcorner.svg"
 import slide12 from "./resources/ntechnologies.webp";
+import slide13 from "./resources/residency.svg"
+import slide14 from "./resources/shreehari.svg";
+import slide15 from "./resources/ank.svg";
+import slide16 from "./resources/carworld.svg";
+import slide17 from "./resources/dosa.jpg";
+
 
 const autoSlide = [
   {
@@ -253,8 +259,8 @@ const Home = () => {
                 <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
                 <span>
-                  Agency with &nbsp;
-                  <span className="text-[#409338] floating-text-two"> Smart Strategies </span>
+                  Agency with
+                  <span className="text-[#409338] floating-text-two pl-3 inline-block"> Smart Strategies </span>
                 </span>
 
 
@@ -312,7 +318,7 @@ const Home = () => {
             <li></li>
             <li></li>
             <li></li>
-          </ul> 
+          </ul>
         </div >
 
 
@@ -323,8 +329,8 @@ const Home = () => {
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#5c945c] max-md:text-[20px] max-md:leading-[28px] text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-[48px]">
 
-              Building Brands with <br className="hidden md:block" />
-              Integrity and Innovation <br className="hidden md:block" />
+              Building Brands with 
+              Integrity and Innovation 
               Across India
             </h2>
             <p className="text-sm md:text-base text-black mt-4 mb-6">
@@ -348,8 +354,11 @@ const Home = () => {
 
 
 
-        <div className="  slider-container">
-          <div className="slider-track">
+        <div className="  slider-container"
+
+ >
+          
+          <div className="slider-track p-2">
             <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
@@ -357,8 +366,13 @@ const Home = () => {
             <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
             <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
-            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-cover" /></div>
             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide13} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide14} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide15} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide16} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide17} className="w-[100%] h-[100%] object-contain " /></div>
 
             <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
@@ -380,16 +394,80 @@ const Home = () => {
 
             <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
 
+            <div className="box"><img src={slide13} className="w-[100%] h-[100%] object-contain" /></div>
 
             <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide12} className="w-[100%] h-[100%] object-contain" /></div>
 
             <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
-            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-cover" /></div>
 
             <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+            <div className="box"><img src={slide14} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide15} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide16} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide17} className="w-[100%] h-[100%] object-contain " /></div>
+
+            <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+
+          </div>
+        </div>
+
+        <div className="slider-container2">
+              <div className="slider-track2 p-2">
+            <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+            <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-cover" /></div>
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide13} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide14} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide15} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide16} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide17} className="w-[100%] h-[100%] object-contain " /></div>
+
+            <div className="box"><img src={slide11} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide5} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+
+            <div className="box"><img src={slide12} className="w-[100%] h-[100%] object-contain" /></div>
+
+
+
+
+            <div className="box"><img src={slide6} className="w-[100%] h-[100%] object-contain" /></div>
+
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+
+
+            <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
+
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+
+            <div className="box"><img src={slide13} className="w-[100%] h-[100%] object-contain" /></div>
+
+            <div className="box"><img src={slide7} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide12} className="w-[100%] h-[100%] object-contain" /></div>
+
+            <div className="box"><img src={slidefour} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide8} className="w-[100%] h-[100%] object-cover" /></div>
+
+            <div className="box"><img src={slidethree} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slide9} className="w-[100%] h-[100%] object-contain" /></div>
+            <div className="box"><img src={slidetwo} className="w-[100%] h-[100%] object-contain" /> </div>
+            <div className="box"><img src={slide14} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide15} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box"><img src={slide16} className="w-[100%] h-[100%] object-contain " /></div>
+            <div className="box "><img src={slide17} className="w-[100%] h-[100%] object-contain " /></div>
 
             <div className="box"><img src={slide10} className="w-[100%] h-[100%] object-contain" /></div>
             <div className="box"> <img src={slideone} className="w-[100%] h-[100%] object-contain" /></div>

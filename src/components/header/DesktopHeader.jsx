@@ -122,7 +122,7 @@ useEffect(() => {
 
   return (
     <header className=" fixed top-0  left-0   z-[9999]  bg-[white] w-[100%]  border-b-[1px] border-[#9ac496]  ">
-      <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px]">
+      <div className="flex items-center justify-between px-4 md:px-8 py-3 pl-[40px] pr-[40px] p-[10px] max-xl:p-[0px] max-xl:pl-[20px] max-xl:pr-[20px]">
         <div className="flex items-center gap-[10px]">
           <Link to={"/"}>
             <img src={logo} alt="WebNest Media Logo" className="w-[80px] h-[80px] rounded-full cursor-pointer" />
@@ -135,7 +135,7 @@ useEffect(() => {
           </div>
 
         </div>
-        <nav ref={navRef} className="flex items-center gap-5 text-sm">
+        <nav ref={navRef} className="flex items-center gap-5 text-sm max-xl:gap-1">
           {menuItems.map((item, index) => (
             <div
               key={item.title}
@@ -150,7 +150,7 @@ useEffect(() => {
                   aria-haspopup="true"
                   aria-expanded={dropdownOpen === index}
                   onClick={() => handleDropdownToggle(index)}
-                  className="flex items-center p-[10px] gap-1 text-[14px] cursor-pointer font-normal leading-[21px]  hover:text-[#43b649]  bg-transparent border-0 outline-none focus:outline-none"
+                  className="flex items-center p-[10px] max-xl:p-[3px] gap-1 text-[14px] cursor-pointer font-normal leading-[21px]  hover:text-[#43b649]  bg-transparent border-0 outline-none focus:outline-none"
                   onMouseEnter={() => handleMouseEnterParent(index)}  // Handle hover on the parent
                   onMouseLeave={handleMouseLeaveParent}
                 
