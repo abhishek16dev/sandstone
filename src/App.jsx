@@ -21,6 +21,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Lead from './pages/leadGeneartion/lead';
 import Orm from './pages/Orm/Orm';
+import DigitalTranformationservice from './pages/Digitalservice/DigitalTranformationservice';
 
 const App = () => {
 
@@ -52,7 +53,7 @@ const App = () => {
           <Route path="/brand-strategy" element={<Brandmarketing />} />
           <Route path="/lead-generation" element={<Lead />} />
           <Route path="/online-reputation-managment" element={<Orm />} />
-
+           <Route path="/digital-transformation" element={<DigitalTranformationservice />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
 

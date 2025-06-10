@@ -656,6 +656,10 @@
     font-size: 24px !important;
    
   }
+
+  .h1tag{
+    line-height: 1.75em !important;
+  }
  
 
 }
