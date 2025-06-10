@@ -166,17 +166,17 @@ const Orm = () => {
 
         <h5
           className="
-    text-[22px]           // Base (mobile first)
-    sm:text-[23px]        // ≥ 640px
-    md:text-[36px]        // ≥ 768px
-    xl:text-[44px]        // ≥ 1280px
+    text-[22px]          
+    sm:text-[23px]        
+    md:text-[36px]     
+    xl:text-[44px]       
     font-normal
     relative
     inline
-    w-full                // Base width
-    xl:w-[calc(100%-480px)]  // On extra-large, reduce width
-    top-[18px]            // Base top offset
-    xl:top-[120px]        // On xl and up, push it down
+    w-full              
+    xl:w-[calc(100%-480px)] 
+    top-[18px]           
+    xl:top-[120px]        
     left-0
   "
         >
@@ -211,9 +211,10 @@ const Orm = () => {
             <img
               src={timer}
               alt="Example"
-              className="w-full ] h-auto rounded-lg object-contain"
+              className="w-full  h-auto rounded-lg object-contain"
             />
           </div>
+
         </div>
 
 
