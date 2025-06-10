@@ -253,7 +253,7 @@ const Home = () => {
                 <span className="text-[#409338] floating-text">Digital Marketing</span> <br />
 
                 <span>
-                  Agency with
+                  Agency with &nbsp;
                   <span className="text-[#409338] floating-text-two"> Smart Strategies </span>
                 </span>
 
