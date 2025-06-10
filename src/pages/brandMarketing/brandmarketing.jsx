@@ -32,58 +32,6 @@ import { FiPhone } from "react-icons/fi";
 import Accordian from "./component/Accordian";
 const Brandmarketing = () => {
 
-
-  const [text, setText] = useState('');
-  const words = ['Authenticity', 'Innovation', 'Consistency'];
-  const delay = 150;
-  const pause = 1000;
-
-  const wordIndex = useRef(0);
-  const charIndex = useRef(0);
-  const isDeleting = useRef(false);
-
-  useEffect(() => {
-    let timeout;
-
-    const type = () => {
-      const currentWord = words[wordIndex.current];
-
-      if (!isDeleting.current) {
-        // Typing
-        setText(currentWord.substring(0, charIndex.current));
-        if (charIndex.current < currentWord.length) {
-          charIndex.current++;
-          timeout = setTimeout(type, delay);
-        } else {
-          // Pause after typing full word
-          timeout = setTimeout(() => {
-            isDeleting.current = true;
-            timeout = setTimeout(type, delay);
-          }, pause);
-        }
-      } else {
-        // Deleting
-        if (charIndex.current > 0) {
-          charIndex.current--;
-          setText(currentWord.substring(0, charIndex.current));
-          timeout = setTimeout(type, delay / 2); // Faster delete
-        } else {
-          // Pause before starting next word
-          isDeleting.current = false;
-          wordIndex.current = (wordIndex.current + 1) % words.length;
-          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
-        }
-      }
-    };
-
-    type();
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-
-
-
   const cards = [
     {
       image: build1,
@@ -193,17 +141,6 @@ const Brandmarketing = () => {
 
   return (
     <div className='mt-[120px] '>
-      <section className='text-center h-[120px] mt-[200px] max-w-[1440px] w-[100%] mx-auto'>
-
-        {/* <h1 className=''>    <span>Brand</span> <span>Strategy</span></h1> */}
-
-
-        <h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1  ">
-          {text}
-        </h2>
-
-      </section>
-
       <section className="max-w-[1440px] w-[100%] mx-auto text-center pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]" style={{ fontFamily: 'Segoe UI' }} >
         <h6 className='text-[52px]  text-center'>
           <span className="font-bold">Brand</span>{' '}

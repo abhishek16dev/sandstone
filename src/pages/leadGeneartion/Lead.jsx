@@ -11,64 +11,10 @@ import image6 from './resources/image6.svg'
 import c5image from './resources/c5image.svg'
 import Accordion from './Components/Accordian'
 const Lead = () => {
-   const [text, setText] = useState('');
-   const words = ['Exclusive', 'Instant', 'Proven'];
-   const delay = 150;
-   const pause = 1000;
-   
-   const wordIndex = useRef(0);
-   const charIndex = useRef(0);
-   const isDeleting = useRef(false);
-   
-   useEffect(() => {
-     let timeout;
-   
-     const type = () => {
-       const currentWord = words[wordIndex.current];
-       
-       if (!isDeleting.current) {
-         // Typing
-         setText(currentWord.substring(0, charIndex.current));
-         if (charIndex.current < currentWord.length) {
-           charIndex.current++;
-           timeout = setTimeout(type, delay);
-         } else {
-           // Pause after typing full word
-           timeout = setTimeout(() => {
-             isDeleting.current = true;
-             timeout = setTimeout(type, delay);
-           }, pause);
-         }
-       } else {
-         // Deleting
-         if (charIndex.current > 0) {
-           charIndex.current--;
-           setText(currentWord.substring(0, charIndex.current));
-           timeout = setTimeout(type, delay / 2); // Faster delete
-         } else {
-           // Pause before starting next word
-           isDeleting.current = false;
-           wordIndex.current = (wordIndex.current + 1) % words.length;
-           timeout = setTimeout(type, pause / 2); // Shorter pause after delete
-         }
-       }
-     };
-   
-     type();
-   
-     return () => clearTimeout(timeout);
-   }, []);
  
   return (
-   <div className='mt-[120px] '>
-        <div className="amc1 mb-[5px] h-[300px]">
-        <h1 id="amc1h1" className='relative text-center'>
-          Customer Retention Services<span className='text-black'><br />in Gurgaon</span>  
-        </h1>
-        <h2 className="heading-styled relative h-[70px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[15px] ml-[44%]  ">
-          {text}
-        </h2>
-      </div>
+   <div className='mt-[150px] '>
+        
       <div className="lmc2">
         <h2 className='text-[52px] text-center mb-[12px]'> Boost Customer Retention with Tried- <br /> and- <span className='text-[#388E3C]'>True Growth Techniques</span></h2>
         <p className='text-[16px] text-center mb-[40px]'>We are a leading customer retention agency in India, helping businesses in Gurgaon, Delhi, and beyond keep their customers happy and engaged.</p>
@@ -137,7 +83,7 @@ const Lead = () => {
         </div>
       </div>      
       <div className="lmc5 flex flex-row  ml-[20px] mr-[20px] ">
-        <div className="lmc5_left w-[] pr-0 mb-[20px] ">
+        <div className="lmc5_left w-[70%] pr-0 mb-[20px] ">
           <h2 className="text-[32px] lg:text-[48px] mb-[24px] lg:mb-[32px] leading-tight">
             How We Help You to <br />
             increase customer retention
@@ -182,7 +128,8 @@ const Lead = () => {
             </li>
           </ol>
         </div>
-        <div className="lmc5_right h-[50%] sticky top-[200px] h-fit self-start">
+
+        <div className="lmc5_right sticky top-[200px] h-fit self-start">
           <img src={c5image} alt="" className="w-full h-auto object-contain" />
         </div>
       </div>
