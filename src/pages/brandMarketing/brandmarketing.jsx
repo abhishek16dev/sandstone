@@ -192,9 +192,8 @@ const Brandmarketing = () => {
   ];
 
   return (
-    <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto
-  '>
-      <section className='text-center h-[120px] mt-[200px]'>
+    <div className='mt-[120px] '>
+      <section className='text-center h-[120px] mt-[200px] max-w-[1440px] w-[100%] mx-auto'>
 
         {/* <h1 className=''>    <span>Brand</span> <span>Strategy</span></h1> */}
 
@@ -205,7 +204,7 @@ const Brandmarketing = () => {
 
       </section>
 
-      <section className="text-center pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]" style={{ fontFamily: 'Segoe UI' }} >
+      <section className="max-w-[1440px] w-[100%] mx-auto text-center pl-[155px] pr-[155px] max-lg:pl-[20px] max-lg:pr-[20px]" style={{ fontFamily: 'Segoe UI' }} >
         <h6 className='text-[52px]  text-center'>
           <span className="font-bold">Brand</span>{' '}
           <span className="italic">Strategy?</span>
@@ -218,7 +217,7 @@ const Brandmarketing = () => {
 
       </section>
 
-      <section className='mt-[112px]'>
+      {/* <section className='mt-[112px]'>
 
         <div className="flex w-full">
           {images.map((src, index) => (
@@ -233,10 +232,28 @@ const Brandmarketing = () => {
         </div>
 
 
-      </section>
+      </section> */}
+
+<section className="mt-[112px] overflow-hidden ">
+  <div className="flex w-max animate-scroll-x">
+    {/* Duplicate the images to make it seamless */}
+    {[...images, ...images].map((src, index) => (
+      <div key={index} className="flex-shrink-0 w-[16.666%] h-[250px]">
+        <img
+          src={src}
+          alt={`Image ${index + 1}`}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</section>
 
 
-      <section>
+
+
+
+      <section className='max-w-[1440px] w-[100%] mx-auto'>
 
 
 
@@ -299,7 +316,7 @@ const Brandmarketing = () => {
 
       </section>
 
-      <section>
+      <section className='max-w-[1440px] w-[100%] mx-auto'>
         <h4 className='text-[52px] leading-[150%] text-center  mt-[96px] mb-[32px] '> <span className="font-bold">Brand Strategy Services by</span> <br className='max:max-md:hidden' /><span className="italic"> WebNest Media</span></h4>
       </section>
 
@@ -327,7 +344,7 @@ const Brandmarketing = () => {
         ))}
       </section> */}
 
-      <section className="px-[20px] xl:px-[155px]   py-10">
+      <section className="px-[20px] xl:px-[155px]   py-10  max-w-[1440px] w-[100%] mx-auto">
        {brandSteps.map((step, index) => (
     <div
       key={index}
@@ -350,7 +367,7 @@ const Brandmarketing = () => {
 
 
 
-      <section>
+      <section className='max-w-[1440px] w-[100%] mx-auto'>
         <p className="mt-[96px] mb-[66px] text-center text-[52px] leading-[150%] ">
           <span className="font-bold">Why </span>
           <span className="italic font-thin">WebNest Media?</span>
@@ -358,7 +375,7 @@ const Brandmarketing = () => {
       </section>
 
 
-      <section>
+      <section className='max-w-[1440px] w-[100%] mx-auto'>
 
         <div className='mt-[32px] mb-[52px] flex flex-wrap items-center justify-center gap-4 p-4'>
 
@@ -380,7 +397,7 @@ const Brandmarketing = () => {
       </section>
 
 
-      <div className=" conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
+      <section className="  max-w-[1440px] w-[100%] mx-auto conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">
 
         {/* Left Side: Text + Numbers */}
         <div className="w-[45%] max-lg:w-full">
@@ -419,11 +436,13 @@ const Brandmarketing = () => {
         </div>
 
 
-        <section className='mt-[60px] mb-[50px]'>
+       
+
+      </section>
+
+       <section className=' max-w-[1440px] w-[100%] mx-auto mt-[60px] mb-[50px]'>
           <Accordian />
         </section>
-
-      </div>
 
 
     </div>
