@@ -234,20 +234,20 @@ const Brandmarketing = () => {
 
       </section> */}
 
-<section className="mt-[112px] overflow-hidden ">
-  <div className="flex w-max animate-scroll-x">
-    {/* Duplicate the images to make it seamless */}
-    {[...images, ...images].map((src, index) => (
-      <div key={index} className="flex-shrink-0 w-[16.666%] h-[250px]">
-        <img
-          src={src}
-          alt={`Image ${index + 1}`}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="mt-[112px] overflow-hidden ">
+        <div className="flex w-max animate-scroll-x">
+          {/* Duplicate the images to make it seamless */}
+          {[...images, ...images].map((src, index) => (
+            <div key={index} className="flex-shrink-0 w-[16.666%] h-[250px]">
+              <img
+                src={src}
+                alt={`Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
 
 
@@ -345,24 +345,24 @@ const Brandmarketing = () => {
       </section> */}
 
       <section className="px-[20px] xl:px-[155px]   py-10  max-w-[1440px] w-[100%] mx-auto">
-       {brandSteps.map((step, index) => (
-    <div
-      key={index}
-      className="flex flex-col md:flex-row justify-between gap-[40px] md:gap-[100px] lg:gap-[240px] border-b border-gray-200 py-6 last:border-none"
-    >
-      {/* Left: Number + Title */}
-      <div className="w-full md:w-[40%] mb-4 md:mb-0 flex gap-[12px]">
-        <p className="text-gray-400 font-medium text-[20px] md:text-[24px]">{step.number}</p>
-        <h3 className="text-[24px] md:text-[32px] font-semibold text-black">{step.title}</h3>
-      </div>
+        {brandSteps.map((step, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row justify-between gap-[40px] md:gap-[100px] lg:gap-[240px] border-b border-gray-200 py-6 last:border-none"
+          >
+            {/* Left: Number + Title */}
+            <div className="w-full md:w-[40%] mb-4 md:mb-0 flex gap-[12px]">
+              <p className="text-gray-400 font-medium text-[20px] md:text-[24px]">{step.number}</p>
+              <h3 className="text-[24px] md:text-[32px] font-semibold text-black">{step.title}</h3>
+            </div>
 
-      {/* Right: Description */}
-      <div className="w-full md:w-[50%]">
-        <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">{step.description}</p>
-      </div>
-    </div>
-  ))}
-</section>
+            {/* Right: Description */}
+            <div className="w-full md:w-[50%]">
+              <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
 
 
@@ -436,13 +436,13 @@ const Brandmarketing = () => {
         </div>
 
 
-       
+
 
       </section>
 
-       <section className=' max-w-[1440px] w-[100%] mx-auto mt-[60px] mb-[50px]'>
-          <Accordian />
-        </section>
+      <section className=' max-w-[1440px] w-[100%] mx-auto mt-[60px] mb-[50px]'>
+        <Accordian />
+      </section>
 
 
     </div>
