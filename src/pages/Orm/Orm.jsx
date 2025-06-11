@@ -11,73 +11,12 @@ import brand5 from "./resourse/brand5.svg";
 import brand6 from "./resourse/brand6.svg";
 import brand7 from "./resourse/brand7.svg";
 import brand8 from "./resourse/brand8.svg";
-
+import { FiPhone } from "react-icons/fi";
 import iot from "./resourse/iot.svg"
 import Accordian from "./component/Accordian"
 import bannerimage from "./resourse/bannerimage.svg"
-
-import Conatctfrom from "../../components/contact/contactform";
-import { FiPhone } from "react-icons/fi";
-
-
-
+import topimage from "./resourse/topimage.svg";
 const Orm = () => {
-
-
-  const [text, setText] = useState('');
-  const words = ['Authenticity', 'Innovation', 'Consistency'];
-  const delay = 150;
-  const pause = 1000;
-
-  const wordIndex = useRef(0);
-  const charIndex = useRef(0);
-  const isDeleting = useRef(false);
-
-  useEffect(() => {
-    let timeout;
-
-    const type = () => {
-      const currentWord = words[wordIndex.current];
-
-      if (!isDeleting.current) {
-        // Typing
-        setText(currentWord.substring(0, charIndex.current));
-        if (charIndex.current < currentWord.length) {
-          charIndex.current++;
-          timeout = setTimeout(type, delay);
-        } else {
-          // Pause after typing full word
-          timeout = setTimeout(() => {
-            isDeleting.current = true;
-            timeout = setTimeout(type, delay);
-          }, pause);
-        }
-      } else {
-        // Deleting
-        if (charIndex.current > 0) {
-          charIndex.current--;
-          setText(currentWord.substring(0, charIndex.current));
-          timeout = setTimeout(type, delay / 2); // Faster delete
-        } else {
-          // Pause before starting next word
-          isDeleting.current = false;
-          wordIndex.current = (wordIndex.current + 1) % words.length;
-          timeout = setTimeout(type, pause / 2); // Shorter pause after delete
-        }
-      }
-    };
-
-    type();
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-
-
-
-
-
-
   const services = [
     {
       "title": "Brand Monitoring",
@@ -130,18 +69,23 @@ const Orm = () => {
   return (
     <div className='mt-[120px] max-lg:mt-[20px] max-w-[1440px] w-[100%] mx-auto  pl-[40px] pr-[40px] 
   '>
+    <div className="topsection">
+            <img src={topimage} alt="" />
+             <h2><span className='text-[#4CAF50]'>Online Reputation </span> Management</h2>
+          </div>
+
 
       {/* 
       <section>
         <img src={bannerimage} />
       </section> */}
 
-      <section className='text-center h-[80px] '>
+      {/* <section className='text-center h-[80px] '>
 
         <h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1  ">
           {text}
         </h2>
-      </section>
+      </section> */}
 
 
 

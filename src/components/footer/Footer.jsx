@@ -103,50 +103,55 @@ const Footer = () => {
           <FooterSection
             title="Digital Marketing"
             items={[
-              'Search Engine Marketing',
-              'Search Engine Optimization',
-              'Social Media Marketing',
-              'Web Development',
-              'Content Marketing',
-              'Affiliate Marketing',
+              { label: 'Search Engine Marketing', path: '/search-engine-marketing' },
+              { label: 'Search Engine Optimization', path: '/search-engine-optimization' },
+              { label: 'Social Media Marketing', path: '/social-media-marketing' },
+              { label: 'Web Development', path: '/web-development' },
+              { label: 'Content Marketing', path: '/content-marketing' },
+              { label: 'Affiliate Marketing', path: '/affiliate-marketing' },
             ]}
           />
+
           <FooterSection
             title="Branding"
             items={[
-              'Brochure Designing',
-              'Logo Designing',
-              'Packaging Designing',
+              { label: 'Brochure Designing', path: '/' },
+              { label: 'Logo Designing', path: '/' },
+              { label: 'Packaging Designing', path: '/' },
             ]}
           />
+
           <FooterSection
             title="Others"
             items={[
-              'Analytics & Reporting',
-              'Conversion Rate Optimization',
-              'Programmatic Marketing',
+              { label: 'Analytics & Reporting', path: '/' },
+              { label: 'Conversion Rate Optimization', path: '/' },
+              { label: 'Programmatic Marketing', path: '/' },
             ]}
           />
+
           <FooterSection
             title="Solutions"
             items={[
-              'Brand Strategy',
-              'Lead Generation',
-              'Customer Retention',
-              'Digital Transformation',
-              'Market Research & Insights',
-              'Omnichannel Marketing',
+              { label: 'Brand Strategy', path: '/brand-strategy' },
+              { label: 'Lead Generation', path: '/lead-generation' },
+              { label: 'Customer Retention', path: '/customer-retention' },
+              { label: 'Digital Transformation', path: '/digital-transformation' },
+              { label: 'Market Research & Insights', path: '/market-research-insights' },
+              { label: 'Online Reputation Marketing', path: '/online-reputation-managment' },
             ]}
           />
+
           <FooterSection
             title="Promotions"
             items={[
-              'Email Marketing',
-              'Mobile Marketing',
-              'Influencer Marketing',
-              'SMS Marketing',
+              { label: 'Email Marketing', path: '/' },
+              { label: 'Mobile Marketing', path: '/' },
+              { label: 'Influencer Marketing', path: '/' },
+              { label: 'SMS Marketing', path: '/' },
             ]}
           />
+
         </div>
 
         {/* Bottom Text */}
