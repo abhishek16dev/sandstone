@@ -13,7 +13,7 @@ import Accordion from './Components/Accordian'
 const Lead = () => {
  
   return (
-   <div className='mt-[150px] '>
+   <div className='mt-[150px] max-w-[1440px] w-[100%] mx-auto '>
         
       <div className="lmc2">
         <h2 className='text-[52px] text-center mb-[12px]'> Boost Customer Retention with Tried- <br /> and- <span className='text-[#388E3C]'>True Growth Techniques</span></h2>

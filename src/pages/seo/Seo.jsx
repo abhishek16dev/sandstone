@@ -144,7 +144,11 @@ useEffect(() => {
       href="https://webnestmedia.com/search-engine-optimization"
     />
   </Helmet>
-      <div className="container1 " id='c1'>
+
+  <section className='max-w-[1440px] w-[100%] mx-auto'>
+
+  
+      <div className="container1  " id='c1'>
         
         <h1 id='c1h1'>SEO Agency in Gurgaon</h1>
         {/* <h2 className="text-[40px] font-bold text-black bg-yellow-400 px-4 py-1 inline-block rounded-md typing mt-[250px]">
@@ -443,6 +447,7 @@ useEffect(() => {
         </div>
 
       </div>
+      </section>
     </>
   );
 };

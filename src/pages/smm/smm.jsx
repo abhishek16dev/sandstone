@@ -151,7 +151,7 @@ const Smm = () => {
 
       </Helmet>
 
-      <div className='mt-[150px] max-lg:mt-[30px] w-[100%] mb-[120px] pr-[40px] pl-[40px] max-lg:pr-[20px] max-lg:pl-[20px]'>
+      <div className='mt-[150px] max-lg:mt-[30px] w-[100%] mb-[120px] pr-[40px] pl-[40px] max-lg:pr-[20px] max-lg:pl-[20px] max-w-[1440px]  mx-auto'>
         <div className="h-[200px] ">
           {/* <h1 className='className="text-3xl md:text-5xl sm:text-2xl font-bold text-[#5c945c] mt-[150px] max-lg:mt-[30px] text-center ml-[30px]" ' id='head1' style={{ lineHeight: 1.5 }}>Social Media Marketing Agency <br />  <span className='text-black'>in Gurgaon</span></h1>
           */}

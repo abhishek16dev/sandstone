@@ -11,7 +11,7 @@ const MarketingResearch = () => {
 
 
   return (
-    <div className='mt-[120px] ' >
+    <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto ' >
     
     
           <section className="  max-w-[1440px] w-[100%] mx-auto conatctform flex flex-row items-center justify-center flex-wrap gap-10 max-lg:flex-col mb-10 px-5 py-10">

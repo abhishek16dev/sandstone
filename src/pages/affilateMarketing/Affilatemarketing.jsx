@@ -65,7 +65,7 @@ const Affilatemarketing = () => {
   ];
    
   return (
-    <div className='mt-[120px] max-w-[1440px] w-[100%] mx-auto vcc'>
+    <div className=' max-w-[1440px] w-[100%] mx-auto mt-[120px] max-w-[1440px] w-[100%] mx-auto vcc'>
       <div className="amc1 mb-[5px] h-[300px]">
         <h1 id="amc1h1" className='relative text-center'>
           Affiliate Marketing Agency<span className='text-black'><br />in Gurgaon</span>  

@@ -86,7 +86,7 @@ const cardData = [
 
     </Helmet>
   
-   <div className='mt-[100px]   w-[100%] '>
+   <div className='mt-[100px]   w-[100%] max-w-[1440px] w-[100%] mx-auto '>
 
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white relative overflow-hidden">
       

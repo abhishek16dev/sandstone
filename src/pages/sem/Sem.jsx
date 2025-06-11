@@ -380,7 +380,7 @@ const Sem = () => {
   </Helmet>
 
 
-    <div className='mt-[120px]   w-[100%] ' >
+    <div className='mt-[120px]  max-w-[1440px] w-[100%] mx-auto  w-[100%] ' >
       <div className="container_1">
         <div>
           <img src={SEM1} alt="Search Engine Marketing" className="c1_img" />

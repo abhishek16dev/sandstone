@@ -127,7 +127,12 @@ const ContentMarketing = () => {
 
   return (
     <>
-      <div className="container1">
+
+    <section className='max-w-[1440px] w-[100%] mx-auto'>
+
+
+
+      <div className="container1 ">
         <h1 id="c1h1" className='relative text-center'>Content Marketing <span className='text-black'>Agency <br />in Gurgaon </span></h1>
         <h2 className="heading-styled relative h-[60px] text-[40px]  bg-yellow font-bold text-black px-4 py-1 mt-[320px] ">
   {text}
@@ -424,6 +429,7 @@ const ContentMarketing = () => {
         </div>
 
       </div>
+          </section>
     </>
   );
 };

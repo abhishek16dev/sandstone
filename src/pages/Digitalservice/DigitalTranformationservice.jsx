@@ -22,7 +22,7 @@ const DigitalTranformationservice = () => {
   };
 
   return (
-    <div className=''>
+    <div className='max-w-[1440px] w-[100%] mx-auto'>
       <div className="topsection">
         <img src={topimage} alt="" />
          <h2><span className='text-[#4CAF50]'>Digital Transformation</span> Services</h2>
