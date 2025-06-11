@@ -24,6 +24,8 @@ import Orm from './pages/Orm/Orm';
 import DigitalTranformationservice from './pages/Digitalservice/DigitalTranformationservice';
 import MarketingResearch from './pages/marketing/MarketingResearch';
 
+import About from './pages/aboutus/AboutUS';
+import Conatct from './pages/contactUS/contactuspage';
 const App = () => {
 
 
@@ -54,8 +56,11 @@ const App = () => {
           <Route path="/brand-strategy" element={<Brandmarketing />} />
           <Route path="/lead-generation" element={<Lead />} />
           <Route path="/online-reputation-managment" element={<Orm />} />
-           <Route path="/digital-transformation" element={<DigitalTranformationservice />} />
-           <Route path="/market-research" element={ <MarketingResearch />} />
+          <Route path="/digital-transformation" element={<DigitalTranformationservice />} />
+          <Route path="/market-research" element={<MarketingResearch />} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Conatct />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
 

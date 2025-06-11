@@ -50,10 +50,10 @@ const menuItems = [
   {
     title: "Contact",
     subItems: [
-      { title: "Careers", path: "careers" },
+      { title: "Careers", path: "/careers" },
       { title: "Contact", path: "/contact" },
-      { title: "Insight", path: "insight" },
-      { title: "Blogs", path: "blogs" }
+      { title: "Insight", path: "/insight" },
+      { title: "Blogs", path: "/blogs" }
     ]
   }
 ];
