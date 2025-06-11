@@ -21,6 +21,7 @@
   background-size: contain;
   z-index: 0;
   pointer-events: none;
+ 
 }
 
 .heading-styled::before {
@@ -46,3 +47,4 @@
 .animate-scroll-x {
   animation: scroll-left-to-right 20s linear infinite;
 }
+

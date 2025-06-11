@@ -77,16 +77,15 @@ const cardData = [
     <>
 
     <Helmet>
-<title>Best Web Development Company in Gurgaon | Custom Website Solutions – WebNest Media</title>
-<meta name="description" content="Build powerful, responsive websites with WebNest Media – a top web development company in Gurgaon. We craft custom solutions to fuel your digital growth." />
-<meta name="keywords" content="Web Development Company India, Custom Website Development, WebNest Media, Responsive Web Design, Web Application Development" />
+<title>Best Web Development Company in Gurgaon | WebNest Media</title>
+<meta name="description" content="WebNest Media is your top web development company in Gurgaon. We develop professional and secure websites, from e-commerce to custom applications. Get free quote today!" />
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="WebNest Media"/>
 <link rel="canonical" href="https://webnestmedia.com/web-development" />
-<meta name="robots" content="index, follow" />
-<meta name="author" content="WebNest Media" />
 
     </Helmet>
   
-   <div className='mt-[100px]   w-[100%] max-w-[1440px] w-[100%] mx-auto '>
+   <div className='mt-[100px]   w-[100%] max-w-[1440px]  mx-auto '>
 
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white relative overflow-hidden">
       

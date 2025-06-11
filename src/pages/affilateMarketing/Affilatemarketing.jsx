@@ -8,8 +8,10 @@ import Icons2 from './resources/Icons2.svg'
 import Icons3 from './resources/Icons3.svg'
 import Icons4 from './resources/Icon4.svg'
 import image from './resources/Image.svg'
+import { Helmet } from 'react-helmet'
 
 const Affilatemarketing = () => {
+
  const [text, setText] = useState('');
  const words = ['Conversion', 'Commission', 'Traffic'];
  const delay = 150;
@@ -57,6 +59,7 @@ const Affilatemarketing = () => {
  
    return () => clearTimeout(timeout);
  }, []);
+ 
   const statsData = [
     { number: '100%', label: 'Performance Based' },
     { number: '2200+', label: 'Trusted Affiliates' },
@@ -65,7 +68,21 @@ const Affilatemarketing = () => {
   ];
    
   return (
-    <div className=' max-w-[1440px] w-[100%] mx-auto mt-[120px] max-w-[1440px] w-[100%] mx-auto vcc'>
+
+    <>   
+    
+
+<Helmet>
+
+<title>Top Affiliate Marketing Agency in Gurgaon | WebNest Media</title>
+<meta name="description" content="WebNest Media: Top affiliate marketing agency in Gurgaon. We build and manage programs to ensure maximum ROI for your brand." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="WebNest Media" />
+<link rel="canonical" href="https://webnestmedia.com/affiliate-marketing" />
+
+</Helmet>
+
+    <div className='  mt-[120px] max-w-[1440px] w-[100%] mx-auto vcc'>
       <div className="amc1 mb-[5px] h-[300px]">
         <h1 id="amc1h1" className='relative text-center'>
           Affiliate Marketing Agency<span className='text-black'><br />in Gurgaon</span>  
@@ -367,6 +384,7 @@ const Affilatemarketing = () => {
 
       </div>
     </div>
+    </>
   )
 
 

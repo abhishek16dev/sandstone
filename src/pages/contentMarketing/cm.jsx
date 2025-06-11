@@ -5,6 +5,7 @@ import image from './Resources/image.svg';
 import Conatctfrom from '../../components/contact/contactform'; // Corrected import
 import Accordian from '../home/componnet/Accordian.jsx';
 import { FiPhone } from "react-icons/fi";
+import { Helmet } from 'react-helmet';
 
 const ContentMarketing = () => {
   const [text, setText] = useState('');
@@ -127,6 +128,14 @@ const ContentMarketing = () => {
 
   return (
     <>
+    <Helmet>
+
+      <title>Best Content Marketing Agency in Gurgaon | WebNest Media</title>
+<meta name="description" content="WebNest Media is the top content marketing agency in Gurgaon. We deliver high-quality, SEO-friendly content that attracts traffic and generates leads." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="WebNest Media" />
+<link rel="canonical" href="https://webnestmedia.com/content-marketing" />
+    </Helmet>
 
     <section className='max-w-[1440px] w-[100%] mx-auto'>
 

@@ -14,7 +14,6 @@ import socialgif from "./resources/social.gif";
 
 import cimage from "./resources/cimage.svg";
 
-
 import SmartIcon from "./resources/cimage.svg";
 import AnalyticsIcon from "./resources/cimage.svg";
 
@@ -148,7 +147,11 @@ const Smm = () => {
     <>
       <Helmet>
 
-
+<title>Best Social Media Marketing Agency in Gurgaon | WebNest Media</title>
+<meta name="description" content="WebNest Media is Gurgaon's top social media marketing agency. We offer paid ads, regular posting, influencer marketing, A/B testing & more to boost your brand online." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="WebNest Media" />
+<link rel="canonical" href="https://webnestmedia.com/social-media-marketing" />
       </Helmet>
 
       <div className='mt-[150px] max-lg:mt-[30px] w-[100%] mb-[120px] pr-[40px] pl-[40px] max-lg:pr-[20px] max-lg:pl-[20px] max-w-[1440px]  mx-auto'>
