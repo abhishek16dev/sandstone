@@ -1,194 +1,109 @@
 
 
-import React from 'react';
-import FooterSection from './FooterSection';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
-import logo from '../../assets/logo.png';
-// import WhatsAppIcon from './WhatsappStickyIcon';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
-import {  FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-   <footer className="bg-[#1A1D1C] text-white p-[40px] relative">
-      <div className="max-w-7xl mx-auto space-y-10">
-
-        {/* Top Section */}
-        <div className="flex flex-col items-center max-sm:items-start lg:flex-row justify-between gap-10">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            < Link to={"/"} >
-              <img src={logo} alt="WebNest Media Logo" className="w-[90px] h-[90px]" />
-            </Link>
-
-          </div>
-
-          {/* Social Media */}
-          <div className=" flex flex-col items-center  max-sm:items-start   lg:text-left gap-[10px]">
-            <h4 className="text-lg font-semibold mb-2 hover:text-[#25D366] transition-colors duration-300">
-              Connect on Social Media
-            </h4>
-            <div className="flex justify-center lg:justify-start space-x-4 text-xl">
-              <a
-                href="https://www.facebook.com/profile.php?id=61576616442478"
-                target="_blank"
-                rel="noopener noreferrer"
-              >   <FaFacebookF className="hover:text-blue-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />
-              </a>
-              <a
-                href="https://x.com/webnestmediag?s=21"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter className="hover:text-blue-400 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
-              <a
-                href="https://www.linkedin.com/company/webnest-media-group/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >    <FaLinkedinIn className="hover:text-blue-700 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
-              {/* <a
-                href="https://www.instagram.com/webnestmediagroup/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >    <FaYoutube className="hover:text-red-600 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
-              */}
-             
-              <a
-                href="https://www.instagram.com/webnestmediagroup/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >   <FaInstagram className="hover:text-pink-500 transition-transform transform hover:scale-110 duration-300 cursor-pointer" />   </a>
+    <div className="mt-[120px] max-w-[1440px] max-auto w-[100%] font-raleway ">
+      <footer className="bg-[#131714] text-white  pl-[15rem] pr-[15rem]  pt-[8rem] pb-[8rem]">
+        <div className=" mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8  pb-10 animate-fadeIn">
+          
+          {/* Logo & Description */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="bg-yellow-600 w-6 h-4"></div>
+              <h2 className="text-xl font-bold">COMFY.</h2>
+            </div>
+            <p className="text-[1.4rem] text-[#B1B7C6] leading-relaxed">
+              Eget facilisi ultrices nisi tempus porttitor nunc interdum. Elit a auctor eget auctor.
+            </p>
+            <div className="flex space-x-4 mt-4 text-[#B1B7C6]">
+              {['facebook-f', 'twitter', 'instagram', 'youtube'].map((icon) => (
+                <i
+                  key={icon}
+                  className={`fab fa-${icon} cursor-pointer hover:text-yellow-500 transition-all duration-300 transform hover:scale-110`}
+                ></i>
+              ))}
             </div>
           </div>
 
-          {/* Address & Email */}
-          <div className="flex  flex-col text-center  max-sm:text-start lg:text-right">
-            <div>
-              <h4 className="text-lg font-semibold mb-2">Our Address</h4>
-              <p className="text-sm mb-4">
-                1st Floor Orchid Business Park,<br />
-                Near Subhash Chowk, Sector 48,<br />
-                Gurugram, Haryana 122004
-              </p>
-            </div>
-
+          {/* Quick Links */}
+          <div className="flex flex-col">
+            <h4 className="text-yellow-600 font-semibold text-[1.4rem] mb-4">QUICK LINK</h4>
+            <ul className="space-y-2 text-[1.4rem] text-[#B1B7C6]">
+              {['Contact Us', 'About Us', 'Services', 'Portfolio'].map((item) => (
+                <li
+                  key={item}
+                  className="hover:text-yellow-500 hover:border-b hover:border-yellow-500 w-fit transition-all duration-300 cursor-pointer text-[1.4rem] mb-[0.5rem]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div>
-
-
-
-            <h4 className="text-lg font-semibold mb-2">Email Us</h4>
-            <p> <a
-              className="text-sm text-blue-300 hover:underline"
-              href="mailto:info@webnestmedia.com"
-            >
-              info@webnestmedia.com
-            </a></p>
-
-            < Link to={"/privacy-policy"}  >
-              <p className='text-sm text-[white] hover:underline'>Privacy Policy</p>
-            </Link>
+          {/* Location */}
+          <div className="flex flex-col">
+            <h4 className="text-yellow-600 font-semibold text-[1.4rem] mb-4">LOCATION</h4>
+            <p className="text-[1.4rem] text-[#B1B7C6] mb-2">
+              768 Market Street San Francisco, CA 64015, United States
+            </p>
+            <p className="text-[1.4rem] text-[#B1B7C6] mb-2">customer@aelectron.com</p>
+              <p className="text-[1.4rem] text-[#B1B7C6]">(+021) 345 678 910</p>
           </div>
-        </div>
 
-        <svg width="100%" height="2">
-          <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
-        </svg>
+          {/* Newsletter or Social Media */}
+         <div className="flex flex-col">
+  <h4 className="text-yellow-600 font-semibold text-[1.4rem] mb-4">SOCIAL MEDIA</h4>
+  <p className="text-[1.4rem] text-[#B1B7C6] mb-4">
+    Follow us on our platforms for more updates!
+  </p>
 
+  <div className="flex gap-[1.5rem] mt-2">
+    {/* Facebook */}
+    <a
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-[#3b5998] text-white rounded-full hover:bg-white hover:text-[#3b5998] transition-all duration-300 transform hover:scale-110"
+    >
+      <FaFacebookF size={20} />
+    </a>
 
-        {/* Footer Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          <FooterSection
-            title="Digital Marketing"
-            items={[
-              { label: 'Search Engine Marketing', path: '/search-engine-marketing' },
-              { label: 'Search Engine Optimization', path: '/search-engine-optimization' },
-              { label: 'Social Media Marketing', path: '/social-media-marketing' },
-              { label: 'Web Development', path: '/web-development' },
-              { label: 'Content Marketing', path: '/content-marketing' },
-              { label: 'Affiliate Marketing', path: '/affiliate-marketing' },
-            ]}
-          />
+    {/* LinkedIn */}
+    <a
+      href="https://linkedin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-[#0077b5] text-white rounded-full hover:bg-white hover:text-[#0077b5] transition-all duration-300 transform hover:scale-110"
+    >
+      <FaLinkedinIn size={20} />
+    </a>
 
-          <FooterSection
-            title="Branding"
-            items={[
-              { label: 'Brochure Designing', path: '/' },
-              { label: 'Logo Designing', path: '/' },
-              { label: 'Packaging Designing', path: '/' },
-            ]}
-          />
-
-          <FooterSection
-            title="Others"
-            items={[
-              { label: 'Analytics & Reporting', path: '/' },
-              { label: 'Conversion Rate Optimization', path: '/' },
-              { label: 'Programmatic Marketing', path: '/' },
-            ]}
-          />
-
-          <FooterSection
-            title="Solutions"
-            items={[
-              { label: 'Brand Strategy', path: '/brand-strategy' },
-              { label: 'Lead Generation', path: '/lead-generation' },
-              { label: 'Customer Retention', path: '/customer-retention' },
-              { label: 'Digital Transformation', path: '/digital-transformation' },
-              { label: 'Market Research & Insights', path: '/market-research-insights' },
-              { label: 'Online Reputation Marketing', path: '/online-reputation-managment' },
-            ]}
-          />
-
-          <FooterSection
-            title="Promotions"
-            items={[
-              { label: 'Email Marketing', path: '/' },
-              { label: 'Mobile Marketing', path: '/' },
-              { label: 'Influencer Marketing', path: '/' },
-              { label: 'SMS Marketing', path: '/' },
-            ]}
-          />
+    {/* Instagram */}
+    <a
+      href="https://instagram.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-gradient-to-tr from-pink-500 to-yellow-500 text-white rounded-full hover:bg-white hover:text-pink-500 transition-all duration-300 transform hover:scale-110"
+    >
+      <FaInstagram size={20} />
+    </a>
+  </div>
+</div>
 
         </div>
 
-        {/* Bottom Text */}
-        <svg width="100%" height="2">
-          <line x1="0" y1="1" x2="100%" y2="1" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
-        </svg>
-        <div className="text-center pt-4 text-sm text-gray-400">
-          <p>© 2025 WebNest Media. All rights reserved.</p>
-          <p>Developed by WebNest Media</p>
+        {/* Bottom Footer */}
+      
+      </footer>
+        <div className="text-center bg-[#4F6D56] p-[1.5rem] text-[#FFFFFF] text-[1.1rem] font-medium leading-[1.4rem]  animate-fadeIn">
+          © 2025 Comfy. Powered by WebNest Media
         </div>
-      </div>
+    </div>
+  )
+}
 
-      {/* WhatsApp Sticky Icon */}
-      {/* <div className="fixed bottom-4 right-4 z-50">
-        <WhatsAppIcon fixed={false} size="70px" />
-      </div> */}
-           <div className="fixed bottom-[20px] right-6 flex flex-col items-center gap-4 z-[99999999999999]">
-        {/* WhatsApp */}
-        <a
-          href="https://wa.me/919696964606" // Replace with your number
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300"
-        >
-          <FaWhatsapp size={24} />
-        </a>
-
-        {/* Phone */}
-        <a
-          href="tel:+919696964606" // Replace with your phone number
-          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300 ring-animation"
-        >
-          <FaPhoneAlt size={20} />
-        </a>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+export default Footer

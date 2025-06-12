@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -13,6 +15,20 @@ export default {
         'max-lg': { max: '1023px' },
         'max-xl': { max: '1279px' },
         'max-2xl': { max: '1535px' },
+      },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-in-out',
+        'slide-in-down': 'slideInDown 0.8s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },

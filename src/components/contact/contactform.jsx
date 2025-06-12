@@ -45,7 +45,7 @@ const ContactForm = () => {
 };
 
     return (
-       <div className="conatctform p-[30px] rounded-[20px] shadow-[0_12px_20px_rgba(0,0,0,0.2)]">
+       <div className=" conatctform p-[30px] rounded-[20px] shadow-[0_12px_20px_rgba(0,0,0,0.2)]">
 
 
         <p className=" text-[#409338] font-bold text-[40px] max-sm:text-[28px] leading-[40px]  text-center stroke-custom fill-custom">

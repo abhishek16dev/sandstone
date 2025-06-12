@@ -1,9 +1,14 @@
-.bookdemo {
-  border-radius: 5px;
-
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-.borderradius {
-  
-  border-radius: 5px;
+.fade-in-header {
+  animation: fadeInDown 0.4s ease-out;
 }
