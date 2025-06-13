@@ -1,0 +1,9 @@
+/* styles.css */
+.gridbox {
+  background-image: url('./resources/gridbox.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}

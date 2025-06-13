@@ -16,12 +16,12 @@ const contactuspage = () => {
           <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
             <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
             <p className="text-white text-[1.3rem] font-semibold">›</p>
-            <p className="text-[#facc15] text-[1.3rem] font-semibold">CONTACT</p>
+            <p className="text-[#facc15] text-[1.3rem] font-semibold ">CONTACT</p>
           </div>
         </div>
       </div>
 
-      <div className=" pl-[15rem] gap-[6.4rem] pr-[15rem]  mx-auto w-full flex flex-col md:flex-row  mt-[60px]">
+      <div className=" mb-[10rem] pl-[15rem] gap-[6.4rem] pr-[15rem]  mx-auto w-full flex flex-col md:flex-row  mt-[60px]">
         {/* Left Images */}
         <div className="lg:sticky lg:top-[20rem] self-start flex flex-col gap-8 w-full md:w-1/2">
 

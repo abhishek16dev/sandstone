@@ -61,7 +61,19 @@ const Project = () => {
 
 
     ];
+
+
+    const partnerLogos = [
+ card1,
+card2,
+card3,card4,card5
+];
+
+
     return (
+        <>
+        
+    
         <div className='mt-[103px] max-w-[1440px] w-[100%] max-auto'>
 
             <div className="bg-[#535353] w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]">
@@ -71,7 +83,7 @@ const Project = () => {
                     <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">Our Projects</h1>
                     <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
                         <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
-                        <p className="text-white text-[1.3rem] font-semibold">›</p>
+                        <p className="text-white text-[1.9rem]  font-semibold">›</p>
                         <p className="text-[#facc15] text-[1.3rem] font-semibold">OUR PROJECTS</p>
                     </div>
                 </div>
@@ -179,6 +191,24 @@ const Project = () => {
 
 
         </div>
+{/* 
+            <section className="bg-[#454846] overflow-hidden">
+      <h2 className="text-white text-center  font-extrabold  text-[4.2rem] leading-[6.2rem] mt-[5rem]">Our Partners</h2>
+      <div className="relative overflow-hidden">
+        <div className="whitespace-nowrap animate-marquee-reverse flex gap-16 mt-[5rem] mb-[5rem]">
+          {[...partnerLogos,...partnerLogos,...partnerLogos,...partnerLogos, ...partnerLogos, ...partnerLogos].map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt={`Partner ${index}`}
+              className="h-[4rem] w-[17.5rem] grayscale hover:grayscale-0 transition duration-300"
+            />
+          ))}
+        </div>
+      </div>
+    </section> */}
+
+        </>
     )
 }
 

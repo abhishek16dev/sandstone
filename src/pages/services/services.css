@@ -1,0 +1,8 @@
+.whitegrid{
+
+     background-image: url('./resourse/servicegrid.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}

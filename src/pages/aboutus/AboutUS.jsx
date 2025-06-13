@@ -1,10 +1,272 @@
 import React from 'react'
 
+import "./aboutus.css"
+import { useEffect, useRef, useState } from "react";
+import { Plus } from "lucide-react";
+
+import card1 from "../../../src/pages/projects/resource/card1.jpeg"
+import card2 from "../../../src/pages/projects/resource/card2.jpeg"
+import card3 from "../../../src/pages/projects/resource/card3.jpeg"
+import interior from "./resources/animationvideo.mp4"
+import { Link } from 'react-router-dom';
+
 const AboutUS = () => {
+
+  const stats = [
+    { value: 10, label: ["Year", "experience"] },
+    { value: 231, label: ["Properties", "build"] },
+    { value: 20, label: ["Awards", "gained"] },
+  ];
+
+  const sectionRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [counts, setCounts] = useState(stats.map(() => 0));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateCounters();
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const animateCounters = () => {
+    stats.forEach((stat, i) => {
+      let start = 0;
+      const end = stat.value;
+      const duration = 2000; // 2 seconds
+      const startTime = performance.now();
+
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentValue = Math.floor(progress * end);
+
+        setCounts((prev) => {
+          const updated = [...prev];
+          updated[i] = currentValue;
+          return updated;
+        });
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      };
+
+      requestAnimationFrame(update);
+    });
+  };
+
+   const cards = [
+    {
+      title: "Fast Building",
+      description:
+        "Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero.",
+    },
+    {
+      title: "Smartly Execute",
+      description:
+        "Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero.",
+    },
+    {
+      title: "Carefully Planned",
+      description:
+        "Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero.",
+    },
+  ];
+
   return (
-    <div className='mt-[12rem]'>
-      <p> about us</p>
+    <section className='mt-[12rem] max-w-[1440px] m-auto w-[100%]'>
+      <section className="bg-[#535353] w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
+
+        <div className="  flex items-center justify-between w-[100%] ">
+
+          <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">About US</h1>
+          <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
+            <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
+            <p className="text-white text-[1.9rem] font-semibold">›</p>
+            <p className="text-[#facc15] text-[1.3rem] font-semibold ">Sand & Stones</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="gridbox flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem]"
+
+      >
+        <div className='w-[49.8rem]'>
+
+
+          <p className='text-[#E3D27D] uppercase font-monrope  text-[1.4rem] leading-[100%] tracking-[0.5rem]'>About</p>
+
+          <h5 className='font-manrope text-[#FFFFFF] text-[5.4rem] leading-[6.4rem] font-extrabold mt-[0.8rem]'>We Made New <br /> Creative Concept  </h5>
+          <p className='mt-[3.2rem] text-[#FFFFFF] font-medium text-[1.4rem] leading-[2.2rem]'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id at mauris dis tincidunt ipsum faucibus ipsum. At laoreet vivamus ultrices dolor vel nisl. Leo, ultrices enim vel feugiat lectus nisi, phasellus egestas. Nullam tellus aliquam, sed nulla sed purus vitasse. urna est, viverra sed etiam quisque. Nisl in pulvinar ultrices tempus. Ut dui sodales et, tellus est, in. Ante nunc nunc luctus vitae morbi eget. <br />   <br />  <br />  <br />   Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero. At elit eu lacus, quam neque arcu euismod. </p>
+
+          <div
+            ref={sectionRef}
+            className="mt-[3.2rem] grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-[#F6DF8F]"
+          >
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="flex items-center justify-center gap-1 text-[3rem] font-bold">
+                  {counts[index]}
+                  <Plus size={24} className="text-[#F6DF8F]" />
+                </div>
+                <div className="text-sm font-normal tracking-[1px] leading-[130%] uppercase text-white/90">
+                  {stat.label.map((line, i) => (
+                    <div key={i}>{line}</div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h6 className='text-[#ffffff] text-[2.2rem] leading-[3.2] font-extrabold font-manrope pb-[7.7rem]  tracking-0 '>“Out ingredients for over 10 years of success”</h6>
+
+        </div>
+
+        <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 ">
+
+          <div className="flex flex-col gap-4">
+            <img
+              src={card1}
+              alt="Image 1"
+              className=" w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+            />
+            <img
+              src={card2}
+              alt="Image 2"
+              className="w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+            />
+          </div>
+
+
+          <img
+            src={card3}
+            alt="Image 3"
+            className="w-[32.2rem] h-[60.5rem] object-cover rounded-md"
+          />
+        </div>
+
+
+
+
+
+      </section>
+<section className="px-4 md:px-20 py-16 bg-white">
+<div className=" mx-auto">
+        {/* Text Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          {/* Left Column */}
+          <div>
+            <p className="font-manrope font-bold text-[14px] leading-[100%] tracking-[0.3125rem] uppercase text-[#4F6D56]">Works</p>
+            <h2 className="mt-[0.8rem] font-manrope font-extrabold text-[54px] leading-[64px] tracking-[0] text-[#131714]">
+              We Create Home <br />
+              More Aesthetic
+            </h2>
+            <p className="mt-[3.2rem] text-[#6F7470] font-raleway font-medium text-[14px] leading-[22px] tracking-[0]">
+              Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisi, quis in turpis gravida
+              libero. At elit eu lacus, quam neque arcu euismod. At id in auctor posuere eget. Convallis varius laoreet.
+            </p>
+          </div>
+
+          {/* Right Column */}
+          <div className="mt-[3.2rem] text-[#6F7470] font-raleway font-medium text-[14px] leading-[22px] tracking-[0]">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id at mauris dis tincidunt ipsum faucibus
+              ipsum. At laoreet vivamus ultrices dolor vel nisl...
+            </p>
+            <p>
+              Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisi, quis in turpis gravida
+              libero. At elit eu lacus, quam neque arcu euismod.
+            </p>
+            <br/>
+              <p className="mt-[3.2rem] text-[#6F7470] font-raleway font-medium text-[14px] leading-[22px] tracking-[0]">
+              Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisi, quis in turpis gravida
+              libero. At elit eu lacus, quam neque arcu euismod. At id in auctor posuere eget. Convallis varius laoreet.
+            </p>
+          </div>
+        </div>
+
+        {/* Video Placeholder */}
+      <div className="w-full h-[350px] md:h-[500px] bg-black rounded-md overflow-hidden">
+  <video
+    className="w-full h-full object-cover"
+    controls
+    poster= {card1}
+  >
+    <source src={interior} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+      </div>
+    </section>
+
+<section className=" pt-[10rem] pb-[10rem] pl-[15rem] pr-[15rem] bg-white">
+      {/* Heading */}
+      <div className="text-center mb-12">
+        <p className="font-manrope font-bold text-[14px] leading-[100%] tracking-[0.3125rem] uppercase text-[#4F6D56] ">
+          Why
+        </p>
+        <h2 className=" mt-[0.8rem] font-manrope font-extrabold text-[5.4rem] leading-[6.4rem] tracking-[0] text-[#131714]">
+          Why Choose Us
+        </h2>
+        <p className="mt-[3.2rem] text-[#6F7470] font-raleway font-medium text-[1.4rem] leading-[2.2rem] tracking-[0]">
+          Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus
+          sit nisl, quis in turpis gravida libero. <br  className='max-lg:hidden'/> At elit eu lacus, quam neque
+          arcu euismod.
+        </p>
+      </div>
+
+      {/* Card Grid */}
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-[3rem] mb-16">
+  {cards.map((item, index) => (
+    <div
+      key={index}
+      className="w-[30rem] h-[24.8rem] gap-4 p-8 rounded-md shadow-sm border bg-[#FBF8E9]"
+    >
+      <div className="w-[4.8rem] h-[4.8rem] bg-gray-300   rounded-sm"></div>
+      <h3 className="mt-[1.6rem]  text-[#131714] font-manrope font-extrabold text-[3.2rem] leading-[3.8rem] tracking-[0] mb-2">
+        {item.title}
+      </h3>
+      <p className="mt-[1.6rem] text-[#6F7470] font-raleway font-medium text-[1.4rem] leading-[2.2rem] tracking-[0] ">{item.description}</p>
     </div>
+  ))}
+</div>
+
+
+      {/* CTA Banner */}
+      <div className="bg-[#2C2C2C] text-white px-6 py-10 md:px-16 md:py-14 rounded-md flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center md:text-left mb-4 md:mb-0">
+          <p className="uppercase text-[#E3D27D] tracking-[0.5rem] font-manrope font-semibold text-[1.4rem] ">
+            Contact Us
+          </p>
+          <h3 className="mt-[0.8rem] text-[#FFFFFF] font-manrope leading-[6.4rem] font-extrabold text-[5.4rem] ">
+            Ready To Start New Project?
+          </h3>
+        </div>
+        <Link to={"/contact"}>
+          <button className="bg-[#E3D27D]  text-[1.3rem]  uppercase text-[#131714] px-6 py-3 mt-4 md:mt-0  font-semibold rounded hover:bg-yellow-400 transition">
+          Get In Touch
+        </button>
+        </Link>
+      
+      </div>
+
+    </section>
+
+    </section>
   )
 }
 

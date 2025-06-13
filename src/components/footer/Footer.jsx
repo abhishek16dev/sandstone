@@ -6,7 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="mt-[120px] max-w-[1440px] max-auto w-[100%] font-raleway ">
+    <div className=" max-w-[1440px] max-auto w-[100%] font-raleway ">
       <footer className="bg-[#131714] text-white  pl-[15rem] pr-[15rem]  pt-[8rem] pb-[8rem]">
         <div className=" mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8  pb-10 animate-fadeIn">
           
@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <h4 className="text-yellow-600 font-semibold text-[1.4rem] mb-4">QUICK LINK</h4>
             <ul className="space-y-2 text-[1.4rem] text-[#B1B7C6]">
-              {['Contact Us', 'About Us', 'Services', 'Portfolio'].map((item) => (
+              {['Contact Us', 'About Us', 'Services', 'Project'].map((item) => (
                 <li
                   key={item}
                   className="hover:text-yellow-500 hover:border-b hover:border-yellow-500 w-fit transition-all duration-300 cursor-pointer text-[1.4rem] mb-[0.5rem]"

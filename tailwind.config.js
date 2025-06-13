@@ -19,6 +19,9 @@ export default {
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
         'slide-in-down': 'slideInDown 0.8s ease-out',
+        'marquee': 'marquee 20s linear infinite',
+        'marquee-reverse': 'marqueeReverse 20s linear infinite',
+
       },
       keyframes: {
         fadeIn: {
@@ -29,6 +32,17 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(-20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' }, // move full first-half width
+        },
+        marqueeReverse: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(50%)' }, // left-to-right
+        },
+
+
       },
     },
   },
