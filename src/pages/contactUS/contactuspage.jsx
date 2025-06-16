@@ -1,14 +1,89 @@
-import React from 'react'
+import React, { useState } from "react";
 
 import image1 from "./resource/image1.jpg";
 import image2 from "./resource/image2.jpg";
+import "./contactus.css"
 
 const contactuspage = () => {
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setSubmitting(true);
+    setResponseMsg("");
+
+    try {
+      const response = await fetch("https://webnestmedia.com/webnestmediacontac.php/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        setResponseMsg(result.message || "Form submitted successfully.");
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        const errorText = await response.text();
+        setResponseMsg("Submission failed: " + errorText);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setResponseMsg("Submission failed. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+
   return (
-    <div className=' mt-[90px] w-full max-w-[1440px] max-auto'>
+    <div className=' mt-[9rem] w-full max-w-[1440px] max-auto max-md:mt-[0]'>
       
 
-      <div className="bg-[#535353] w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
+      <div className="cbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
       
         <div className="  flex items-center justify-between w-[100%] ">
           
@@ -40,55 +115,88 @@ const contactuspage = () => {
 
           <h2 className="font-manrope font-bold text-[5.4rem] leading-[6.4rem] tracking-wider5 uppercase text-[#131714] mt-[1rem]">Contact Us</h2>
           <p className="text-[1.4rem] leading-[2.2rem] font-raleway text-[#6F7470] mt-[3.2rem]">
-            Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nibh, quis in turpis gravida libero. Ali et eu lacus, quam neque arcu euismod. At id in auctor posuere eget. Convallis varius laoreet.
+        Located in Bangalore, we transform spaces with creativity and detail, catering to the growing demand for beautiful living and working environments.
           </p>
           <div className="mt-[3.2rem]">
             <span className="uppercase text-[1.3rem] text-[#4F6D56] font-extrabold font-manrope leading-[2.2rem] ">Info Contact</span>
             <div className="mt-[1.6rem] text-sm text-[#131714]">
-              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway'>768 Market Street San Francisco, CA 64015, United States </p>
+              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway'>Bangalore , India </p>
 
 
-              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway mt-[0.8rem]'>   customer@electron.com  </p>
+              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway mt-[0.8rem]'> officesandandstone@gmail.com  </p>
 
-              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway mt-[0.8rem] '>(+021) 345 678 910 </p>
+              <p className='text-[#131714] font-medium text-[1.8rem] leading-[2.8rem] font-raleway mt-[0.8rem] '>+91 90356 62976 </p>
 
 
             </div>
           </div>
-          <form className="flex flex-col gap-4">
+     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+      <p className="font-manrope font-extrabold text-[32px] leading-[38px] tracking-[0] text-[#131714] mt-[3.2rem] mb-[3.2rem]">
+        Get a Quote
+      </p>
 
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
 
-            <p className="font-manrope font-extrabold text-[32px] leading-[38px] tracking-[0] text-[#131714] mt-[3.2rem] mb-[3.2rem]">
-              Get a Quote
-            </p>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email address"
+        value={formData.email}
+        onChange={handleChange}
+        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
 
-            <input
-              type="text"
-              placeholder="Name"
-              className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <input
-              type="email"
-              placeholder="Email address"
-              className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <input
-              type="phone"
-              placeholder="Phone Number"
-              className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <textarea
-              placeholder="Message"
-              rows={4}
-              className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
-            />
-            <button
-              type="submit"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded w-fit mt-2 transition"
-            >
-              SEND MESSAGE
-            </button>
-          </form>
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        value={formData.phone}
+        onChange={handleChange}
+        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        value={formData.subject}
+        onChange={handleChange}
+        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
+
+      <textarea
+        name="message"
+        placeholder="Message"
+        rows={4}
+        value={formData.message}
+        onChange={handleChange}
+        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+      />
+      {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+
+      <button
+        type="submit"
+        disabled={submitting}
+        className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-9 py-4 rounded w-fit mt-2 transition"
+      >
+        {submitting ? "Submitting..." : "SEND MESSAGE"}
+      </button>
+
+      {responseMsg && (
+        <p className="text-green-600 text-sm mt-2">{responseMsg}</p>
+      )}
+    </form>
         </div>
       </div>
     </div>

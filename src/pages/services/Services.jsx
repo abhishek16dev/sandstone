@@ -13,12 +13,13 @@ import card4 from "./resourse/card4.jpeg";
 import card5 from "./resourse/card7.jpeg";
 import card6 from "./resourse/card9.jpeg";
 
+import "./services.css"
 
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.02 },
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hover: { scale: 1.02 },
 };
 
 
@@ -34,12 +35,29 @@ const services = () => {
         // Duplicate for 3 cards
     ];
 
-    const steps = [
-        { number: "01", title: "Design" },
-        { number: "02", title: "Develop" },
-        { number: "03", title: "Revision" },
-        { number: "04", title: "Maintenance" },
-    ];
+   
+const steps = [
+  {
+    number: "01",
+    title: "Design",
+    desc: "We shape your vision into intuitive wireframes and UI/UX layouts, focusing on a seamless user experience.",
+  },
+  {
+    number: "02",
+    title: "Develop",
+    desc: "Our developers bring designs to life with clean, responsive code using modern, scalable technologies.",
+  },
+  {
+    number: "03",
+    title: "Revision",
+    desc: "We refine the product based on your feedback through testing, edits, and quality assurance.",
+  },
+  {
+    number: "04",
+    title: "Maintenance",
+    desc: "Post-launch, we provide updates, fix issues, and ensure long-term performance and reliability.",
+  },
+];
 
 
     const ref = useRef(null);
@@ -68,41 +86,73 @@ const services = () => {
     };
 
 
+ 
+
     const testim = [
-        {
-            name: "Julia William",
-            position: "Manager at Furniti",
-            feedback:
-                "Sed id cursus cras viverra vivamus orci Neque vitae ellus lacus aliquet amet id vitae pharetra posuere fermentum diam.",
-        },
-        {
-            name: "Julia William",
-            position: "Manager at Furniti",
-            feedback:
-                "Sed id cursus cras viverra vivamus orci Neque vitae ellus lacus aliquet amet id vitae pharetra posuere fermentum diam.",
-        },
-        {
-            name: "Julia William",
-            position: "Manager at Furniti",
-            feedback:
-                "Sed id cursus cras viverra vivamus orci Neque vitae ellus lacus aliquet amet id vitae pharetra posuere fermentum diam.",
-        },
-    ];
+    {
+        name: "Dr. Meera Nair",
+        position: "Senior Researcher at Biogenix Labs",
+        feedback:
+            "The platform made it incredibly easy to connect with academic experts. I received insightful feedback on my hypothesis within hours. A game-changer for research collaborations!",
+    },
+    {
+        name: "Arjun Patel",
+        position: "PhD Scholar at IIT Delhi",
+        feedback:
+            "Scheduling time with guides was seamless. The built-in calendar and video call integration made remote discussions efficient and professional.",
+    },
+    {
+        name: "Sophia Thomas",
+        position: "Project Lead at NeuroTech Innovations",
+        feedback:
+            "We used the platform for cross-university research support. The query tracking system and real-time chat really helped us stay aligned and organized.",
+    },
+
+
+
+    // {
+    //     name: "Ravi Kulkarni",
+    //     position: "Research Intern at TIFR",
+    //     feedback:
+    //         "As a new researcher, having a reliable place to ask questions and get clear answers was incredibly helpful. The OTP verification and secure profile setup gave me confidence in the system.",
+    // },
+    // {
+    //     name: "Elena Das",
+    //     position: "Postdoctoral Fellow at Oxford University",
+    //     feedback:
+    //         "From document uploads to personalized expert guidance, everything felt intuitive and user-focused. The notifications were timely and ensured I never missed a session.",
+    // }
+
+
+];
+
+
+    // const projects = [
+    //     { id: 1, image: card1, title: 'Interior' },
+    //     { id: 2, image: card2, title: 'Interior' },
+    //     { id: 3, image: card3, title: 'Interior' },
+    //     { id: 4, image: card4, title: 'Interior' },
+    //     { id: 5, image: card5, title: 'Interior' },
+    //     { id: 6, image: card6, title: 'Interior' },
+    // ]
+
 
     const projects = [
-  { id: 1, image: card1, title: 'Interior' },
-  { id: 2, image: card2, title: 'Interior' },
-  { id: 3, image: card3, title: 'Interior' },
-  { id: 4, image: card4, title: 'Interior' },
-  { id: 5, image: card5, title: 'Interior' },
-  { id: 6, image: card6, title: 'Interior' },
-]
+      { id: 1, image: card1, title: 'Modern',desc:"Clean lines, minimalism, neutral colors, and sleek finishes." },
+      { id: 2, image: card2, title: 'Contemporary',desc:"Current trends with a mix of comfort and sophistication." },
+      { id: 3, image: card3, title: 'Traditional',desc:"Classic furniture, rich colors, and elegant details.." },
+      { id: 4, image: card4, title: 'Industrial ',desc:" Raw materials like metal, brick, and wood with a rugged feel." },
+      { id: 5, image: card5, title: 'Scandinavian' ,desc:"Simple, functional, bright spaces with natural elements.."},
+      { id: 6, image: card6, title: 'Minimalist',desc:"Less is more; focus on simplicity and essential pieces." },
+    ]
+    
+
 
     return (
-        <div className='mt-[10rem]'>
+        <div className='mt-[10rem] max-md:mt-[0]'>
 
 
-            <section className="bg-[#535353] w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
+            <section className="sbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
 
                 <div className="  flex items-center justify-between w-[100%] ">
 
@@ -116,96 +166,97 @@ const services = () => {
             </section>
 
 
-<section className='mb-[5rem]'> 
-    
+            <section className='mb-[5rem]'>
+
                 <div className='pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]'>
-    
-    
+
+
                     <p className=" mt-[10rem] font-manrope font-bold text-[1.4rem] leading-[100%] tracking-[0.5rem] uppercase text-[#4F6D56]">
                         Services
                     </p>
-    
+
                     <div className='flex gap-[3rem]'>
                         <div>
                             <h6 className=' mt-[0.8rem] text-[#131714] text-[5.4rem]  leading-[6.4rem] font-extrabold font-manrope'>We Have The Best Interior Design</h6>
-    
-    
+
+
                         </div>
                         <div>
-                            <Link to={"/contact"}>
-    
-    
-                                <p className='font-medium text-[1.4rem] leading-[2.2rem] text-[#6F7470] font-raleway'>Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero..</p>
+                          
+
+<p className='font-medium text-[1.4rem] leading-[2.2rem] text-[#6F7470] font-raleway'>
+  Explore our full range of interior design services crafted to transform your space with elegance and efficiency. From concept development to final execution, we ensure every detail reflects your style and purpose.
+</p>
+    <Link to={"/contact"}>
                                 <button className="mt-[1.6rem] border border-[#4F6D56] border-1px px-[2rem] py-[1.1rem] font-manrope font-extrabold text-[1.3rem] leading-[2.2rem] tracking-[0.2rem] uppercase text-[#4F6D56]">
                                     Connect us
                                 </button>
                             </Link>
                         </div>
                     </div>
-    
+
                 </div>
-</section>
+            </section>
 
-<section>
+            <section>
 
 
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 max-w-[1200px] mx-auto">
-    {projects.map((project, index) => (
-      <motion.div
-        key={project.id}
-        className="relative flex flex-col shadow-sm border rounded-xl overflow-hidden group"
-        initial="hidden"
-        whileInView="visible"
-        whileHover="hover"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        {/* Image */}
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-[100%] h-[100%] object-cover"
-        />
+                <div className="cursor-pointer  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 max-w-[1200px] mx-auto">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            className="relative flex flex-col shadow-sm border rounded-xl overflow-hidden group"
+                            initial="hidden"
+                            whileInView="visible"
+                            whileHover="hover"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={containerVariants}
+                        >
 
-        {/* Overlay */}
-        <div className="absolute right-0 inset-0 bg-black bg-opacity-40 flex flex-col justify-end text-black transition-opacity duration-300 group-hover:bg-opacity-60">
-          <div className="bg-white text-end absolute p-[2rem] right-0 bottom-[2rem] w-[80%]">
-            <h3 className="leading-[3.2rem] text-[#131714] text-lg mb-2 text-start font-manrope text-[2.2rem] font-extrabold">
-              {project.title}
-            </h3>
-            <div className="text-start">
-              <Link
-                to="/contact"
-                className="text-[1rem] leading-[1.4rem] text-[#4F6D56] uppercase tracking-[0.2rem] font-medium hover:underline flex items-end gap-1"
-              >
-                Learn More <span className="text-xl">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    ))}
-  </div>
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-[100%] h-[100%] object-cover"
+                            />
 
-</section>
+
+                            <div className="absolute right-0 inset-0 bg-black bg-opacity-40 flex flex-col justify-end text-black transition-opacity duration-300 group-hover:bg-opacity-60">
+                                <div className="bg-white text-end absolute p-[2rem] right-0 bottom-[2rem] w-[80%]">
+                                   <h3 className="leading-[3.2rem] text-[#131714] text-xl  text-start font-manrope  font-extrabold">
+                  {project.title}
+                </h3>
+                <p className='text-[1.3rem] mb-[0.5rem] text-start leading-[1.4rem] text-[#4F6D56]  font-medium  '> {project.desc}</p>
+                                    <div className="text-start">
+                                        <Link
+                                            to="/contact"
+                                            className="text-[1rem] leading-[1.4rem] text-[#4F6D56] uppercase tracking-[0.2rem] font-medium hover:underline flex items-end gap-1"
+                                        >
+                                            Learn More <span className="text-xl">→</span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+            </section>
 
 
 
             <section className=''>
 
-                {/* Testimonials Section */}
+
                 <section className="bg-[#4C5C4C] mt-[5rem]  text-center  pr-[15rem] pt-[10rem] pb-[10rem] pl-[15rem]">
                     <p className="text-[1.4rem] text-[#E3D27D] font-raleway tracking-[5px] uppercase mb-4">
                         Testimonials
                     </p>
 
-                    <h2 className="text-[5.4rem] text-[#ffffff] font-extrabold leading-[6.4rem] font-manrope  mt-[0.8rem]">
-                        What Our Clients Say About Us
-                    </h2>
+                   
 
                     <p className=" text-[#FFFFFF] text-[1.4rem] leading-[2.2rem] font-medium font-raleway max-w-[600px] mx-auto mt-[3.2rem]">
-                        Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero.
+                     Hear from our satisfied clients who’ve experienced seamless design, expert execution, and exceptional service across every project.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[3rem] px-4 relative bottom-[-16.5rem]  ">
@@ -214,26 +265,24 @@ const services = () => {
                                 key={index}
                                 className="w-[300px] h-[300px] p-8 gap-4 bg-white  shadow-md rounded-md flex flex-col items-center justify-start"
                             >
-                                {/* Stars */}
+
                                 <div className="flex gap-1 mb-4">
                                     {[...Array(5)].map((_, i) => (
                                         <span key={i} className="text-[#E3D27D] font-medium text-[2rem]">★</span>
                                     ))}
                                 </div>
 
-                                {/* Title */}
+
                                 <h3 className="font-manrope font-extrabold text-[2.2rem] leading-[3.2rem] tracking-[0%] text-[#131714] text-center mb-2">
                                     What others thought of
                                 </h3>
 
-                                {/* Feedback */}
+
                                 <p className="font-raleway font-medium text-[1.4rem] leading-[2.2rem] tracking-[0%] text-center text-[#131714] mb-4">
                                     {item.feedback}
                                 </p>
 
-                                {/* Avatar Placeholder */}
-                               
-                                {/* Name */}
+
                                 <p className="font-manrope  text-[#131714] font-extrabold text-[2.2rem] leading-[3.2rem] tracking-[0%] text-center">{item.name}</p>
                                 <p className="font-raleway font-medium text-[1.4rem] leading-[22px] tracking-[0%] text-center text-[#4F6D56]">{item.position}</p>
                             </div>
@@ -253,7 +302,7 @@ const services = () => {
                             How It Works
                         </h2>
                         <p className=" font-raleway  mt-[3.2rem] text-[1.4rem] leading-[2.2rem] text-[#6F7470] max-w-[600px] mx-auto mb-12">
-                            Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus sit nisl, quis in turpis gravida libero.
+                        Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
                         </p>
 
 
@@ -277,10 +326,10 @@ const services = () => {
                                         </p>
                                         <img src={arrow} alt="arrow" />
                                     </div>
-                                    <h4 className="text-[1.8rem] font-extrabold mb-2">{step.title}</h4>
-                                    <p className="text-[1.4rem] leading-[2.2rem] text-gray-600">
-                                        Ac volutpat et nulla ultricies convallis convallis sed. Sit nec risus.
-                                    </p>
+                                     <h4 className="text-[1.8rem] font-extrabold mb-2">{step.title}</h4>
+                <p className="text-[1.4rem] leading-[2.2rem] text-gray-600">
+                 {step.desc}
+                </p>
                                 </motion.div>
                             ))}
                         </div>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react"; // keeping this if you're still using lucide for menu toggle
+import { useState, useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
 import { MdEmail, MdPhone } from "react-icons/md";
 import logo from "../../../public/sandstone.png";
 import { Link } from "react-router-dom";
@@ -7,45 +7,84 @@ import { Link } from "react-router-dom";
 const menuItems = [
   { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
-  { title: "Services", path: "/services" },
-  { title: "Contact", path: "/contact" }
+  { title: "Services", path: "/service" },
+  { title: "Contact", path: "/contact" },
 ];
 
 export default function MobileHeader() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  const handleLinkClick = () => {
-    setOpen(false);
-  };
+  const handleLinkClick = () => setOpen(false);
+
+  // Close menu if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <header className="w-full sticky top-0 left-0 bg-white z-[999999]">
-
-      <div className="flex justify-between items-center pl-[20px] pr-[20px] py-3">
-        <div className="flex items-center gap-[10px]">
-             <img src={logo} alt="Sabd and stone Logo" className="w-[15.6rem] h-[3.2rem] " />
-              
-        </div>
-        <button onClick={() => setOpen(!open)} className="text-[#9ac496]">
-          {open ? <X size={24} /> : <Menu size={24} />}
+    <header className="lg:hidden w-full sticky top-0 left-0 bg-black shadow-md z-[9999] text-white">
+      {/* Header Bar */}
+      <div className="flex justify-between items-center px-4 py-3">
+        <img
+          src={logo}
+          alt="Sand and Stone Logo"
+          className="w-[13rem] h-[3.5rem] object-contain"
+        />
+        <button
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+          className="text-white focus:outline-none"
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
+      {/* Slide-down Nav */}
       {open && (
-        <div className="mt-2 pl-[20px] pr-[20px] pb-4">
+        <div
+          ref={menuRef}
+          className="flex flex-col gap-4 px-4 pb-6 bg-black border-t border-gray-700 animate-[slideDown_0.3s_ease-out]"
+        >
           {menuItems.map((item) => (
-            <div key={item.title} className="mb-3">
-              <Link
-                to={item.path}
-                onClick={handleLinkClick}
-                className="block text-[#374151] text-[16px] font-normal hover:text-[#43b649] transition-all border-b border-gray-200 pb-2"
-              >
-                {item.title}
-              </Link>
-            </div>
+            <Link
+              key={item.title}
+              to={item.path}
+              onClick={handleLinkClick}
+              className="text-white text-[1.6rem] font-medium border-b border-gray-700 pb-2 hover:text-yellow-400 transition-all duration-300"
+            >
+              {item.title}
+            </Link>
           ))}
-          <div className="mt-4">
-            <button className="px-4 py-2 bg-[#9bc394] text-white rounded-md hover:bg-[#82b280] transition-colors duration-300">
+
+          {/* Contact Section */}
+          <div className="mt-4 text-sm space-y-2 text-white">
+            <div className="flex items-center gap-2">
+              <MdEmail size={16} className="text-yellow-400" />
+              <a
+                href="mailto:officesandandstone@gmail.com"
+                className="hover:underline"
+              >
+                officesandandstone@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdPhone size={16} className="text-yellow-400" />
+              <a href="tel:9035662976" className="hover:underline">
+                9035662976
+              </a>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-4">
+            <button className="w-full py-2 bg-[#4F6D56] text-white rounded-md hover:bg-[#3b5745] transition-colors duration-300">
               Request Consultation
             </button>
           </div>

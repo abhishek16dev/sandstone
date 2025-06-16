@@ -6,3 +6,33 @@
   background-repeat: no-repeat;
 
 }
+
+
+
+
+.sbreadcrum{
+  background-image: url("./resourse/card9.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.sbreadcrum::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Use 0.5 for semi-transparent black */
+  z-index: 1;
+}
+
+/* Optional: add content above overlay */
+.sbreadcrum > * {
+  position: relative;
+  z-index: 2;
+}
