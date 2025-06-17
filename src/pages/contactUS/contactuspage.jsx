@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import image1 from "./resource/image1.jpg";
 import image2 from "./resource/image2.jpg";
 import "./contactus.css"
+import { Link } from "react-router-dom";
+
 
 const contactuspage = () => {
 
@@ -101,7 +103,7 @@ const contactuspage = () => {
         {/* Left Images */}
         <div className="lg:sticky lg:top-[20rem] self-start flex flex-col gap-8 w-full md:w-1/2 max-lg:w-[100%]">
 
-          <div className="bg-gray-300  w-full h-[240px] md:h-[300px] rounded-md flex items-center justify-center text-xl font-bold text-gray-500">
+          <div className="bg-gray-300  w-full h-[240px] md:h-[300px] rounded-md flex items-center justify-center text-2xl font-bold  text-gray-500">
             <img src={image1} className='w-[100%] h-[100%] object-cover' />
           </div>
 
@@ -131,73 +133,75 @@ const contactuspage = () => {
 
             </div>
           </div>
-     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <p className="font-manrope font-extrabold text-[32px] leading-[38px] tracking-[0] text-[#131714] mt-[3.2rem] mb-[3.2rem]">
-        Get a Quote
-      </p>
+ <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+  <p className="font-manrope font-extrabold text-[32px] leading-[38px] text-[#131714] mt-12 mb-12">
+    Get a Quote
+  </p>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    value={formData.name}
+    onChange={handleChange}
+    className="border border-[#4F6D56] text-[#070e08] placeholder-[#070e08]  rounded px-4 py-3 text-2xl  font-normal font-manrope focus:outline-none focus:ring-2 focus:ring-[#4F6D56]"
+  />
+  {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email address"
-        value={formData.email}
-        onChange={handleChange}
-        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+  <input
+    type="email"
+    name="email"
+    placeholder="Email address"
+    value={formData.email}
+    onChange={handleChange}
+    className="border border-[#4F6D56] text-[#070e08] placeholder-[#070e08]  rounded px-4 py-3 text-2xl   font-normal font-manrope focus:outline-none focus:ring-2 focus:ring-[#4F6D56]"
+  />
+  {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        value={formData.phone}
-        onChange={handleChange}
-        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    value={formData.phone}
+    onChange={handleChange}
+    className="border border-[#4F6D56] text-[#070e08] placeholder-[#070e08] rounded px-4 py-3 text-2xl  font-normal font-manrope focus:outline-none focus:ring-2 focus:ring-[#4F6D56]"
+  />
+  {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
 
-      <input
-        type="text"
-        name="subject"
-        placeholder="Subject"
-        value={formData.subject}
-        onChange={handleChange}
-        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
+  <input
+    type="text"
+    name="subject"
+    placeholder="Subject"
+    value={formData.subject}
+    onChange={handleChange}
+    className="border border-[#4F6D56] text-[#070e08] placeholder-[#070e08] rounded px-4 py-3 text-2xl  font-normal font-manrope focus:outline-none focus:ring-2 focus:ring-[#4F6D56]"
+  />
+  {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
 
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows={4}
-        value={formData.message}
-        onChange={handleChange}
-        className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
-      />
-      {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+  <textarea
+    name="message"
+    placeholder="Message"
+    rows={5}
+    value={formData.message}
+    onChange={handleChange}
+    className="border border-[#4F6D56] text-[#070e08] placeholder-[#070e08] rounded px-4 py-3 text-2xl  font-normal font-manrope focus:outline-none focus:ring-2 focus:ring-[#4F6D56] resize-none"
+  />
+  {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
 
-      <button
-        type="submit"
-        disabled={submitting}
-        className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-9 py-4 rounded w-fit mt-2 transition"
-      >
-        {submitting ? "Submitting..." : "SEND MESSAGE"}
-      </button>
+  <button
+    type="submit"
+    disabled={submitting}
+    className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-2xl px-9 py-4 rounded w-fit mt-2 transition"
+  >
+    {submitting ? "Submitting..." : "SEND MESSAGE"}
+  </button>
 
-      {responseMsg && (
-        <p className="text-green-600 text-sm mt-2">{responseMsg}</p>
-      )}
-    </form>
+  {responseMsg && (
+    <p className="text-green-600 text-base mt-2">{responseMsg}</p>
+  )}
+</form>
+
+
         </div>
       </div>
     </div>

@@ -8,7 +8,8 @@ const menuItems = [
   { title: "Home", path: "/" },
   { title: "About Us", path: "/about" },
   { title: "Services", path: "/service" },
-  { title: "Contact", path: "/contact" },
+  { title: "Project", path: "/project" },
+  { title: "Contact Us", path: "/contact" },
 ];
 
 export default function MobileHeader() {

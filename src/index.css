@@ -63,10 +63,8 @@ input,
 textarea,
 button,
 select {
-  font: inherit;
-  /* border: none; */
-  outline: none;
-  background: none;
+ color: black !important;
+ padding: 1.6rem !important;
 }
 
 /* Buttons clickable */

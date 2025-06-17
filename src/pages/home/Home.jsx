@@ -47,12 +47,12 @@ const steps = [
 
 
 const projects = [
-  { id: 1, image: card7, title: 'Modern',desc:"Clean lines, minimalism, neutral colors, and sleek finishes." },
-  { id: 2, image: card8, title: 'Contemporary',desc:"Current trends with a mix of comfort and sophistication." },
-  { id: 3, image: card9, title: 'Traditional',desc:"Classic furniture, rich colors, and elegant details.." },
-  { id: 4, image: card4, title: 'Industrial ',desc:" Raw materials like metal, brick, and wood with a rugged feel." },
-  { id: 5, image: card5, title: 'Scandinavian' ,desc:"Simple, functional, bright spaces with natural elements.."},
-  { id: 6, image: card6, title: 'Minimalist',desc:"Less is more; focus on simplicity and essential pieces." },
+  { id: 1, image: card7, title: 'Modern', desc: "Clean lines, minimalism, neutral colors, and sleek finishes." },
+  { id: 2, image: card8, title: 'Contemporary', desc: "Current trends with a mix of comfort and sophistication." },
+  { id: 3, image: card9, title: 'Traditional', desc: "Classic furniture, rich colors, and elegant details.." },
+  { id: 4, image: card4, title: 'Industrial ', desc: " Raw materials like metal, brick, and wood with a rugged feel." },
+  { id: 5, image: card5, title: 'Scandinavian', desc: "Simple, functional, bright spaces with natural elements.." },
+  { id: 6, image: card6, title: 'Minimalist', desc: "Less is more; focus on simplicity and essential pieces." },
 ]
 
 const Home = () => {
@@ -150,7 +150,7 @@ const Home = () => {
 
 
   return (
-    <div className='mt-[120px] max-md:mt-[0]'>
+    <div className='mt-[120px] max-lg:mt-[0]'>
 
       <section className=''>
         <Bannercomponent />
@@ -158,7 +158,7 @@ const Home = () => {
 
 
       <section
-        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] "
+        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] max-md:gap-[1rem] "
 
       >
         <div className='w-[49.8rem] max-lg:w-[100%]'>
@@ -167,12 +167,12 @@ const Home = () => {
           <p className='text-[#E3D27D] uppercase font-monrope  text-[1.4rem] leading-[100%] tracking-[0.5rem]'>About</p>
 
           <h5 className='font-manrope text-[#FFFFFF] text-[5.4rem] leading-[6.4rem] font-extrabold mt-[0.8rem]'>We Made New <br /> Creative Concept  </h5>
-           <p className='mt-[3.2rem] text-[#FFFFFF] font-medium text-[1.4rem] leading-[2.2rem]'> Crafting Spaces, Creating Stories – Welcome to Sand&Stone Solution
+          <p className='mt-[3.2rem] text-[#FFFFFF] font-medium text-[1.4rem] leading-[2.2rem]'> Crafting Spaces, Creating Stories – Welcome to Sand&Stone Solution
             At Sand&Stone Solution, we believe that every space has a story to tell. Based in the vibrant city of Bangalore, we are a full-service interior design <br /> <br /> company dedicated to transforming houses, offices, and commercial spaces into beautiful, functional environments that reflect our clients' personalities and goals. </p>
 
           <div
             ref={sectionRef}
-            className="mt-[3.2rem] grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-[#F6DF8F]"
+            className="mt-[3.2rem] grid grid-cols-3 md:grid-cols-3 gap-6 text-center text-[#F6DF8F]"
           >
             {stats.map((stat, index) => (
               <div key={index}>
@@ -180,7 +180,7 @@ const Home = () => {
                   {counts[index]}
                   <Plus size={24} className="text-[#F6DF8F]" />
                 </div>
-                <div className="text-sm font-normal tracking-[1px] leading-[130%] uppercase text-white/90">
+                <div className="text-lg xl:text-xl font-normal tracking-[1px] leading-[130%] uppercase text-white/90">
                   {stat.label.map((line, i) => (
                     <div key={i}>{line}</div>
                   ))}
@@ -189,7 +189,7 @@ const Home = () => {
             ))}
           </div>
 
-          <h6 className='text-[#ffffff] text-[2.2rem] leading-[3.2] font-extrabold font-manrope pb-[7.7rem]  tracking-0 '>“Out ingredients for over 10 years of success”</h6>
+          <h6 className='text-[#ffffff] text-[2.2rem] leading-[3.2] font-extrabold font-manrope pb-[7.7rem]  max-lg:pb-[2rem] tracking-0  max-md:text-center'>“Out ingredients for over 10 years of success”</h6>
 
         </div>
 
@@ -217,29 +217,29 @@ const Home = () => {
         </div> */}
 
 
-          <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] max-lg:justify-center max-lg:items-center ">
-        
-                  <div className="flex flex-col gap-4 max-lg:hidden">
-                    <img
-                      src={card1}
-                      alt="Image 1"
-                      className=" w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
-                    />
-                    <img
-                      src={card2}
-                      alt="Image 2"
-                      className="w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
-                    />
-                  </div>
-        
-        
-                  <img
-                    src={card3}
-                    alt="Image 3"
-                    className="  max-md:w-[100%] max-md:h-[100%] w-[32.2rem] max-lg:w-[50%] max-lg:h-[50%] h-[60.5rem] object-cover rounded-md"
-                  />
-        
-                </div>
+        <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] max-lg:justify-center max-lg:items-center ">
+
+          <div className="flex flex-col gap-4 max-lg:hidden">
+            <img
+              src={card1}
+              alt="Image 1"
+              className=" w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+            />
+            <img
+              src={card2}
+              alt="Image 2"
+              className="w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+            />
+          </div>
+
+
+          <img
+            src={card3}
+            alt="Image 3"
+            className=" w-[32.2rem]  h-[60.5rem]   max-lg:w-[100%] max-lg:h-[100%]  object-cover rounded-md"
+          />
+
+        </div>
 
 
 
@@ -302,7 +302,7 @@ const Home = () => {
             {/* Overlay */}
             <div className="absolute right-0 inset-0 bg-black bg-opacity-40 flex flex-col justify-end text-black transition-opacity duration-300 group-hover:bg-opacity-60">
               <div className="bg-white text-end absolute p-[1.2rem] right-0 bottom-[2rem] w-[80%]">
-              
+
                 <h3 className="leading-[3.2rem] text-[#131714] text-xl  text-start font-manrope  font-extrabold">
                   {project.title}
                 </h3>
@@ -331,7 +331,7 @@ const Home = () => {
             How It Works
           </h2>
           <p className=" font-raleway  mt-[3.2rem] text-[1.4rem] leading-[2.2rem] text-[#6F7470] max-w-[600px] mx-auto mb-12">
-          Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
+            Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
           </p>
 
 
@@ -357,7 +357,7 @@ const Home = () => {
                 </div>
                 <h4 className="text-[1.8rem] font-extrabold mb-2">{step.title}</h4>
                 <p className="text-[1.4rem] leading-[2.2rem] text-gray-600">
-                 {step.desc}
+                  {step.desc}
                 </p>
               </motion.div>
             ))}
@@ -399,8 +399,8 @@ const Home = () => {
       <Homeproject />
 
       <div className='mt-[5rem] mb-[20rem]' >
-     
-     <Testomonial />
+
+        <Testomonial />
       </div>
     </div>
   )

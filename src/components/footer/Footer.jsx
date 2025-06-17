@@ -111,7 +111,7 @@ const Footer = () => {
 
       </footer>
       <div className="text-center bg-[#4F6D56] p-[1.5rem] text-[#FFFFFF] text-[1.1rem] font-medium leading-[1.4rem]  animate-fadeIn">
-        © 2025 WebNest. Powered by WebNest Media
+        © 2025 SandandStones Solutions. Powered by <a href="https://webnestmedia.com/" className='text-yellow-600'> WebNest Media</a>
       </div>
     </div>
   )
