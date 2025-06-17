@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import image1 from "./resource/image1.jpg";
 import image2 from "./resource/image2.jpg";
@@ -80,6 +80,17 @@ const contactuspage = () => {
     }
   };
 
+
+
+  useEffect(() => {
+  if (responseMsg) {
+    const timer = setTimeout(() => {
+      setResponseMsg("");
+    }, 4000); // 4000ms = 4 seconds
+
+    return () => clearTimeout(timer); // Cleanup on unmount or re-render
+  }
+}, [responseMsg]);
 
   return (
     <div className=' mt-[9rem] w-full max-w-[1440px] max-auto max-md:mt-[0]'>
@@ -196,9 +207,10 @@ const contactuspage = () => {
     {submitting ? "Submitting..." : "SEND MESSAGE"}
   </button>
 
-  {responseMsg && (
-    <p className="text-green-600 text-base mt-2">{responseMsg}</p>
-  )}
+{responseMsg && (
+  <p className="text-green-600 text-base mt-2">{responseMsg}</p>
+)}
+
 </form>
 
 

@@ -46,14 +46,45 @@ const steps = [
 ];
 
 
+
 const projects = [
-  { id: 1, image: card7, title: 'Modern', desc: "Clean lines, minimalism, neutral colors, and sleek finishes." },
-  { id: 2, image: card8, title: 'Contemporary', desc: "Current trends with a mix of comfort and sophistication." },
-  { id: 3, image: card9, title: 'Traditional', desc: "Classic furniture, rich colors, and elegant details.." },
-  { id: 4, image: card4, title: 'Industrial ', desc: " Raw materials like metal, brick, and wood with a rugged feel." },
-  { id: 5, image: card5, title: 'Scandinavian', desc: "Simple, functional, bright spaces with natural elements.." },
-  { id: 6, image: card6, title: 'Minimalist', desc: "Less is more; focus on simplicity and essential pieces." },
-]
+  {
+    id: 1,
+    image: card1,
+    title: 'Modern',
+    desc: "Clean lines, minimalism, and neutral colors define this style. It emphasizes open spaces and sleek finishes."
+  },
+  {
+    id: 2,
+    image: card2,
+    title: 'Contemporary',
+    desc: "Inspired by current trends, this style blends comfort, elegance, and cutting-edge design elements seamlessly."
+  },
+  {
+    id: 3,
+    image: card3,
+    title: 'Traditional',
+    desc: "Classic furniture, rich tones, and ornate details create a timeless appeal rooted in heritage and warmth."
+  },
+  {
+    id: 4,
+    image: card4,
+    title: 'Industrial',
+    desc: "Exposed metal, brick, and reclaimed wood bring a raw, edgy feel with a touch of urban sophistication."
+  },
+  {
+    id: 5,
+    image: card5,
+    title: 'Scandinavian',
+    desc: "Functional and bright spaces with clean lines, cozy accents, and natural materials like wood and wool."
+  },
+  {
+    id: 6,
+    image: card6,
+    title: 'Minimalist',
+    desc: "Focused on simplicity, clean forms, and uncluttered layouts. Only the essentials are used with intent."
+  },
+];
 
 const Home = () => {
 
@@ -280,47 +311,59 @@ const Home = () => {
 
 
 
+<div className="cursor-pointer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 py-10 max-w-[1200px] mx-auto">
+  {projects.map((project) => (
+    <motion.div
+      key={project.id}
+      className="relative flex flex-col shadow-md border border-gray-200 rounded-2xl overflow-hidden group"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      {/* Image */}
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+      />
 
-      <div className="cursor-pointer  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 max-w-[1200px] mx-auto">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="relative flex flex-col shadow-sm border rounded-xl overflow-hidden group"
-            initial="hidden"
-            whileInView="visible"
-            whileHover="hover"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            {/* Image */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-[100%] h-[100%] object-cover"
-            />
+      {/* Grey overlay sliding in from left */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-50 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></div>
 
-            {/* Overlay */}
-            <div className="absolute right-0 inset-0 bg-black bg-opacity-40 flex flex-col justify-end text-black transition-opacity duration-300 group-hover:bg-opacity-60">
-              <div className="bg-white text-end absolute p-[1.2rem] right-0 bottom-[2rem] w-[80%]">
-
-                <h3 className="leading-[3.2rem] text-[#131714] text-xl  text-start font-manrope  font-extrabold">
-                  {project.title}
-                </h3>
-                <p className='text-[1.3rem] mb-[0.5rem] text-start leading-[1.4rem] text-[#4F6D56]  font-medium  '> {project.desc}</p>
-                <div className="text-start">
-                  <Link
-                    to="/contact"
-                    className="text-[1rem] leading-[1.4rem] text-[#4F6D56] uppercase tracking-[0.2rem] font-medium hover:underline flex items-end gap-1"
-                  >
-                    Learn More <span className="text-xl">→</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+        {/* Vertical project title */}
+        <div className="absolute top-[60%] left-[3rem] transform -translate-y-1/2 rotate-[-90deg] origin-left z-20">
+          <h3 className="text-white text-xl font-normal tracking-[0.5rem] uppercase">
+            {project.title}
+          </h3>
+        </div>
+        
       </div>
 
+      {/* Info panel: now animated from bottom to top initially */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+        className="absolute inset-0 flex items-end z-30"
+      >
+        <div className="bg-black bg-opacity-90 p-6 m-6 rounded-lg w-[90%] shadow-md">
+          <p className="text-white text-[1.1rem] leading-snug font-medium mb-3">
+            {project.desc}
+          </p>
+          <Link
+            to="/contact"
+            className="text-white text-sm uppercase tracking-widest font-semibold hover:underline flex items-center gap-1"
+          >
+            Learn More <span className="text-lg">→</span>
+          </Link>
+        </div>
+      </motion.div>
+    </motion.div>
+  ))}
+</div>
       <section className="whitegrid w-[full]    ">
 
         <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]  '>

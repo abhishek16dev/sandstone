@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const Bannercomponent = () => {
   return (
     <div>
-  <div className="relative h-[70vh] w-full overflow-hidden">
+
+  <div className="relative h-[80vh] w-full overflow-hidden bg-transparent">
     
       <div className="absolute inset-0 z-0">
         <img
