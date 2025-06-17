@@ -331,7 +331,7 @@ const Home = () => {
             How It Works
           </h2>
           <p className=" font-raleway  mt-[3.2rem] text-[1.4rem] leading-[2.2rem] text-[#6F7470] max-w-[600px] mx-auto mb-12">
-        Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
+          Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
           </p>
 
 

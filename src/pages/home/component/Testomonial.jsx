@@ -34,7 +34,7 @@ const testim = [
             <section className=''>
 
                 {/* Testimonials Section */}
-                <section className="bg-[#4C5C4C] mt-[5rem]  text-center  pr-[15rem] pt-[10rem] pb-[10rem] pl-[15rem]">
+                <section className="bg-[#4C5C4C] mt-[5rem]  text-center  pr-[15rem] pt-[10rem] pb-[10rem] pl-[15rem] max-lg:pr-[2rem] max-lg:pl-[2rem]">
                     <p className="text-[1.4rem] text-[#E3D27D] font-raleway tracking-[5px] uppercase mb-4">
                         Testimonials
                     </p>
@@ -49,11 +49,12 @@ const testim = [
                    
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-[3rem] px-4 relative bottom-[-16.5rem]  ">
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-[3rem] px-4 relative bottom-[-16.5rem] place-items-center md:place-items-start">
+
                         {testim.map((item, index) => (
                             <div
                                 key={index}
-                                className="w-[300px] h-[300px] p-8 gap-4 bg-white  shadow-md rounded-md flex flex-col items-center justify-start"
+                                className="w-[300px] h-[300px] p-8 gap-4 bg-white  shadow-md rounded-md flex flex-col items-center justify-start  max-lg:justify-center"
                             >
                                 {/* Stars */}
                                 <div className="flex gap-1 mb-4">

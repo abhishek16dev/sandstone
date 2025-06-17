@@ -16,6 +16,7 @@ import card6 from "./resourse/card9.jpeg";
 import "./services.css"
 
 
+
 const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -166,8 +167,9 @@ const services = () => {
 
                     <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">Our Services</h1>
                   
-                    <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
-                        <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
+                    <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-black">
+                 <Link to={"/"}>
+                        <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p></Link>
                         <p className="text-white text-[1.9rem] font-semibold">›</p>
                         <p className="text-[#facc15] text-[1.3rem] font-semibold ">Services</p>
                     </div>

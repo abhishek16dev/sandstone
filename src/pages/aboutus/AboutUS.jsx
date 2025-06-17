@@ -96,7 +96,8 @@ const AboutUS = () => {
 
           <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">About Us</h1>
           <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-black">
-            <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
+                        <Link to={"/"}>
+                               <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p></Link>
             <p className="text-white text-[1.9rem] font-semibold">›</p>
             <p className="text-[#facc15] text-[1.3rem] font-semibold ">Sand & Stones</p>
           </div>

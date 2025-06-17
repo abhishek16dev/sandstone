@@ -25,10 +25,10 @@ const Bannercomponent = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1 className="text-white text-[8.2rem]  font-extrabold leading-[96%] mb-4">
+        <h1 className="text-white text-[8.2rem] max-lg:text-[6rem]  font-extrabold leading-[96%] mb-4">
           Modern Interior <br /> Design Studio
         </h1>
-        <p className="text-white lg:text-lg md:text-md xl:text-xl   max-w-[500px] mb-6 font-normal leading-[120%]">
+        <p className="text-white text-[1.6rem]   max-w-[500px] mb-6 font-normal leading-[120%]">
         Redefining interiors in Bangalore with creativity and detail for functional living and working spaces.
         </p>
         <Link to={"/contact"} >

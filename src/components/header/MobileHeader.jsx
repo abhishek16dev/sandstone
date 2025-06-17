@@ -57,7 +57,7 @@ export default function MobileHeader() {
               key={item.title}
               to={item.path}
               onClick={handleLinkClick}
-              className="text-white text-[1.6rem] font-medium border-b border-gray-700 pb-2 hover:text-yellow-400 transition-all duration-300"
+              className="text-white text-[1.6rem] font-medium border-b border-gray-700 pb-2 pt-2 hover:text-yellow-400 transition-all duration-300"
             >
               {item.title}
             </Link>
@@ -69,14 +69,14 @@ export default function MobileHeader() {
               <MdEmail size={16} className="text-yellow-400" />
               <a
                 href="mailto:officesandandstone@gmail.com"
-                className="hover:underline"
+                className="hover:underline text-[1.6rem]"
               >
                 officesandandstone@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2">
               <MdPhone size={16} className="text-yellow-400" />
-              <a href="tel:9035662976" className="hover:underline">
+              <a href="tel:9035662976" className="hover:underline text-[1.6rem]">
                 9035662976
               </a>
             </div>
