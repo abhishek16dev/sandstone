@@ -48,7 +48,7 @@ export default function DesktopHeader() {
   }, []);
 
   return (
-    <header className="font-raleway animate-fade-in fixed top-0 left-0 z-[9999] w-full">
+    <header className="font-raleway fixed top-0 left-0 z-[9999] w-full overflow-hidden">
       <div className=" max-lg:hidden bg-[black] pl-[15rem] pr-[15rem] border-b-[1px] border-[white] h-[8rem] text-[#FFFFFF] text-sm flex justify-between items-center">
         <a
           href="mailto:officesandandstone@gmail.com"

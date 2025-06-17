@@ -181,15 +181,15 @@ const Home = () => {
 
 
   return (
-    <div className='mt-[120px] max-lg:mt-[0]'>
+    <div className='mt-[120px] max-lg:mt-[0] overflow-hidden '>
 
-      <section className=' bg-transparent'>
+      <section className='h-[80vh] overflow-hidden'>
         <Bannercomponent />
       </section>
 
 
       <section
-        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] max-md:gap-[1rem] "
+        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] max-md:gap-[1rem] overflow-hidden  "
 
       >
         <div className='w-[49.8rem] max-lg:w-[100%]'>
@@ -278,7 +278,7 @@ const Home = () => {
 
       </section>
 
-      <section className='mb-[5rem]'>
+      <section className='mb-[5rem] overflow-hidden '>
 
         <div className='pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem] '>
 
@@ -311,7 +311,7 @@ const Home = () => {
 
 
 
-<div className="cursor-pointer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 py-10 max-w-[1200px] mx-auto">
+<div className=" overflow-hidden cursor-pointer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 py-10 max-w-[1200px] mx-auto">
   {projects.map((project) => (
     <motion.div
       key={project.id}
@@ -370,7 +370,7 @@ const Home = () => {
 
 
 
-      <section className="whitegrid w-[full]    ">
+      <section className=" overflow-hidden  whitegrid w-[full]    ">
 
         <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]  '>
           <p className="text-[1.4rem] font-manrope font-bold tracking-[5px] uppercase text-[#4F6D56] ">
@@ -417,7 +417,7 @@ const Home = () => {
       </section>
 
 
-      <div className='pl-[15rem] pr-[15rem] mb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem] '>
+      <div className=' overflow-hidden  pl-[15rem] pr-[15rem] mb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem] '>
 
 
         <p className=" mt-[10rem] font-manrope font-bold text-[1.4rem] leading-[100%] tracking-[0.5rem] uppercase text-[#4F6D56]">
@@ -447,7 +447,7 @@ const Home = () => {
 
       <Homeproject />
 
-      <div className='mt-[5rem] mb-[20rem]' >
+      <div className='mt-[5rem] mb-[20rem] ' >
 
         <Testomonial />
       </div>

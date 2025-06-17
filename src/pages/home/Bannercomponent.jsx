@@ -7,7 +7,7 @@ const Bannercomponent = () => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative h-[80vh] w-full overflow-hidden bg-transparent">
+    <div className="relative h-[80vh] w-full overflow-hidden ">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
