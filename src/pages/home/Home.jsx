@@ -183,7 +183,7 @@ const Home = () => {
   return (
     <div className='mt-[120px] max-lg:mt-[0]'>
 
-      <section className=''>
+      <section className=' bg-transparent'>
         <Bannercomponent />
       </section>
 
@@ -330,15 +330,15 @@ const Home = () => {
 
       {/* Grey overlay sliding in from left */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-50 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-80 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></div>
 
-        {/* Vertical project title */}
-        <div className="absolute top-[60%] left-[3rem] transform -translate-y-1/2 rotate-[-90deg] origin-left z-20">
-          <h3 className="text-white text-xl font-normal tracking-[0.5rem] uppercase">
-            {project.title}
-          </h3>
-        </div>
-        
+     <div className="absolute top-[55%] left-[3rem] transform -translate-y-1/2 rotate-[-90deg] origin-left z-20 hidden group-hover:block transition-opacity duration-300">
+  <h3 className="text-white text-xl font-normal tracking-[0.5rem] uppercase">
+    {project.title}
+  </h3>
+</div>
+
+
       </div>
 
       {/* Info panel: now animated from bottom to top initially */}
@@ -350,6 +350,9 @@ const Home = () => {
         className="absolute inset-0 flex items-end z-30"
       >
         <div className="bg-black bg-opacity-90 p-6 m-6 rounded-lg w-[90%] shadow-md">
+          <h3 className="text-white text-xl  font-bold ">
+    {project.title}
+  </h3>
           <p className="text-white text-[1.1rem] leading-snug font-medium mb-3">
             {project.desc}
           </p>
@@ -364,6 +367,9 @@ const Home = () => {
     </motion.div>
   ))}
 </div>
+
+
+
       <section className="whitegrid w-[full]    ">
 
         <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]  '>
