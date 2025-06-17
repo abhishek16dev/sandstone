@@ -89,7 +89,7 @@ const AboutUS = () => {
   ];
 
   return (
-    <section className='mt-[12rem] max-w-[1440px] m-auto w-[100%] max-md:mt-[0]'>
+    <section className='mt-[12rem] max-w-[1440px] m-auto w-[100%] max-lg:mt-[0]'>
       <section className="breadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]">
 
         <div className="  flex items-center justify-between w-[100%] max-lg:flex-col max-md:justify-start ">
@@ -104,10 +104,10 @@ const AboutUS = () => {
       </section>
 
       <section
-        className="gridbox flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem]"
+        className="gridbox flex max-lg:flex-col justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] max-lg:pl-[2rem]  max-lg:pr-[2rem] "
 
       >
-        <div className='w-[49.8rem]'>
+        <div className='w-[49.8rem] max-lg:w-[100%]'>
 
 
           <p className='text-[#E3D27D] uppercase font-monrope  text-[1.4rem] leading-[100%] tracking-[0.5rem]'>About</p>
@@ -135,13 +135,13 @@ const AboutUS = () => {
             ))}
           </div>
 
-          <h6 className='text-[#ffffff] text-[2.2rem] leading-[3.2] font-extrabold font-manrope pb-[7.7rem]  tracking-0 '>“Out ingredients for over 10 years of success”</h6>
+          <h6 className='text-[#ffffff] max-lg:text-center text-[2.2rem] leading-[3.2] font-extrabold font-manrope pb-[7.7rem]  tracking-0 '>“Out ingredients for over 10 years of success”</h6>
 
         </div>
 
-        <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 ">
+        <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] max-lg:justify-center max-lg:items-center ">
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 max-lg:hidden">
             <img
               src={card1}
               alt="Image 1"
@@ -158,8 +158,9 @@ const AboutUS = () => {
           <img
             src={card3}
             alt="Image 3"
-            className="w-[32.2rem] h-[60.5rem] object-cover rounded-md"
+            className="  max-md:w-[100%] max-md:h-[100%] w-[32.2rem] max-lg:w-[50%] max-lg:h-[50%] h-[60.5rem] object-cover rounded-md"
           />
+
         </div>
 
 
@@ -219,7 +220,7 @@ const AboutUS = () => {
         </div>
       </section>
 
-      <section className=" pt-[10rem] pb-[10rem] pl-[15rem] pr-[15rem] bg-white">
+      <section className=" pt-[10rem] pb-[10rem] pl-[15rem] pr-[15rem] bg-white max-lg:pl-[2rem]  max-lg:pr-[2rem]" >
         {/* Heading */}
         <div className="text-center mb-12">
           <p className="font-manrope font-bold text-[14px] leading-[100%] tracking-[0.3125rem] uppercase text-[#4F6D56] ">

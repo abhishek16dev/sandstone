@@ -32,7 +32,7 @@ body {
 
   font-family: 'Raleway', 'Manrope', sans-serif;
 
-  background-color: #f9fafb;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,8 +115,8 @@ button {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   html {
-    font-size: 50%; /* 1rem = 8px */
+    font-size:46%; /* 1rem = 8px */
   }
 }

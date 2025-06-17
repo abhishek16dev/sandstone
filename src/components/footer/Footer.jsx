@@ -7,7 +7,7 @@ import logo from "../../../public/sandstone.png"
 const Footer = () => {
   return (
     <div className=" max-w-[1440px] max-auto w-[100%] font-raleway ">
-      <footer className="bg-[#131714] text-white  pl-[15rem] pr-[15rem]  pt-[8rem] pb-[8rem]">
+      <footer className="bg-[#131714] text-white  pl-[15rem] pr-[15rem]  pt-[8rem] pb-[8rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]">
         <div className=" mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8  pb-10 animate-fadeIn">
 
           {/* Logo & Description */}

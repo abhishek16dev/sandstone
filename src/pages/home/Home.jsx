@@ -158,7 +158,7 @@ const Home = () => {
 
 
       <section
-        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem]"
+        className="gridbox max-lg:flex-col max-lg:p-[2rem] flex justify-between gap-[7.1rem] pt-[8.1rem] pl-[6.3rem] "
 
       >
         <div className='w-[49.8rem] max-lg:w-[100%]'>
@@ -193,7 +193,7 @@ const Home = () => {
 
         </div>
 
-        <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] ">
+        {/* <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] ">
 
           <div className="flex flex-col gap-4">
             <img
@@ -214,7 +214,32 @@ const Home = () => {
             alt="Image 3"
             className="w-[32.2rem] h-[60.5rem] object-cover rounded-md"
           />
-        </div>
+        </div> */}
+
+
+          <div className="flex w-[100% - 50rem] flex-col md:flex-row gap-6 max-lg:w-[100%] max-lg:justify-center max-lg:items-center ">
+        
+                  <div className="flex flex-col gap-4 max-lg:hidden">
+                    <img
+                      src={card1}
+                      alt="Image 1"
+                      className=" w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+                    />
+                    <img
+                      src={card2}
+                      alt="Image 2"
+                      className="w-[32.2rem]  h-[33.7rem] object-cover rounded-md"
+                    />
+                  </div>
+        
+        
+                  <img
+                    src={card3}
+                    alt="Image 3"
+                    className="  max-md:w-[100%] max-md:h-[100%] w-[32.2rem] max-lg:w-[50%] max-lg:h-[50%] h-[60.5rem] object-cover rounded-md"
+                  />
+        
+                </div>
 
 
 
@@ -224,14 +249,14 @@ const Home = () => {
 
       <section className='mb-[5rem]'>
 
-        <div className='pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]'>
+        <div className='pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem] '>
 
 
           <p className=" mt-[10rem] font-manrope font-bold text-[1.4rem] leading-[100%] tracking-[0.5rem] uppercase text-[#4F6D56]">
             Services
           </p>
 
-          <div className='flex gap-[3rem] items-center'>
+          <div className='flex gap-[3rem] items-center max-lg:flex-col'>
             <div>
               <h6 className=' mt-[0.8rem] text-[#131714] text-[5.4rem]  leading-[6.4rem] font-extrabold font-manrope'>We Have The Best Interior Design</h6>
 
@@ -298,7 +323,7 @@ const Home = () => {
 
       <section className="whitegrid w-[full]    ">
 
-        <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem]'>
+        <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]  '>
           <p className="text-[1.4rem] font-manrope font-bold tracking-[5px] uppercase text-[#4F6D56] ">
             Works
           </p>
@@ -343,14 +368,14 @@ const Home = () => {
       </section>
 
 
-      <div className='pl-[15rem] pr-[15rem] mb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]'>
+      <div className='pl-[15rem] pr-[15rem] mb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem] '>
 
 
         <p className=" mt-[10rem] font-manrope font-bold text-[1.4rem] leading-[100%] tracking-[0.5rem] uppercase text-[#4F6D56]">
           Portfolio
         </p>
 
-        <div className='flex gap-[3rem] items-center'>
+        <div className='flex gap-[3rem] items-center max-lg:flex-col'>
           <div>
             <h6 className=' mt-[0.8rem] text-[#131714] text-[5.4rem]  leading-[6.4rem] font-extrabold font-manrope'>100+ Projects All Over The World</h6>
 

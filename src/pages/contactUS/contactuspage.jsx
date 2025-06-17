@@ -54,7 +54,7 @@ const contactuspage = () => {
     setResponseMsg("");
 
     try {
-      const response = await fetch("https://webnestmedia.com/webnestmediacontac.php/contact", {
+      const response = await fetch("https://sandandstones.in/sandcontactForm.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,9 +83,9 @@ const contactuspage = () => {
     <div className=' mt-[9rem] w-full max-w-[1440px] max-auto max-md:mt-[0]'>
       
 
-      <div className="cbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
+      <div className="cbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]">
       
-        <div className="  flex items-center justify-between w-[100%] ">
+        <div className="flex items-center justify-between w-[100%] max-lg:flex-col max-md:justify-start ">
           
           <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">Contact</h1>
           <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
@@ -96,9 +96,9 @@ const contactuspage = () => {
         </div>
       </div>
 
-      <div className=" mb-[10rem] pl-[15rem] gap-[6.4rem] pr-[15rem]  mx-auto w-full flex flex-col md:flex-row  mt-[60px]">
+      <div className=" mb-[10rem] pl-[15rem] gap-[6.4rem] pr-[15rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]  mx-auto w-full flex flex-col md:flex-row  mt-[60px]">
         {/* Left Images */}
-        <div className="lg:sticky lg:top-[20rem] self-start flex flex-col gap-8 w-full md:w-1/2">
+        <div className="lg:sticky lg:top-[20rem] self-start flex flex-col gap-8 w-full md:w-1/2 max-lg:w-[100%]">
 
           <div className="bg-gray-300  w-full h-[240px] md:h-[300px] rounded-md flex items-center justify-center text-xl font-bold text-gray-500">
             <img src={image1} className='w-[100%] h-[100%] object-cover' />
@@ -110,7 +110,7 @@ const contactuspage = () => {
         </div>
 
 
-        <div className=" w-full md:w-1/2 flex flex-col justify-center mt-[0.8rem]">
+        <div className=" w-full md:w-1/2 flex flex-col justify-center mt-[0.8rem] max-lg:w-[100%]">
           <span className="font-manrope font-bold text-[1.4rempx] leading-tight100 tracking-wider5 uppercase text-[#4F6D56]">Contact</span>
 
           <h2 className="font-manrope font-bold text-[5.4rem] leading-[6.4rem] tracking-wider5 uppercase text-[#131714] mt-[1rem]">Contact Us</h2>

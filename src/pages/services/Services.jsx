@@ -35,29 +35,29 @@ const services = () => {
         // Duplicate for 3 cards
     ];
 
-   
-const steps = [
-  {
-    number: "01",
-    title: "Design",
-    desc: "We shape your vision into intuitive wireframes and UI/UX layouts, focusing on a seamless user experience.",
-  },
-  {
-    number: "02",
-    title: "Develop",
-    desc: "Our developers bring designs to life with clean, responsive code using modern, scalable technologies.",
-  },
-  {
-    number: "03",
-    title: "Revision",
-    desc: "We refine the product based on your feedback through testing, edits, and quality assurance.",
-  },
-  {
-    number: "04",
-    title: "Maintenance",
-    desc: "Post-launch, we provide updates, fix issues, and ensure long-term performance and reliability.",
-  },
-];
+
+    const steps = [
+        {
+            number: "01",
+            title: "Design",
+            desc: "We shape your vision into intuitive wireframes and UI/UX layouts, focusing on a seamless user experience.",
+        },
+        {
+            number: "02",
+            title: "Develop",
+            desc: "Our developers bring designs to life with clean, responsive code using modern, scalable technologies.",
+        },
+        {
+            number: "03",
+            title: "Revision",
+            desc: "We refine the product based on your feedback through testing, edits, and quality assurance.",
+        },
+        {
+            number: "04",
+            title: "Maintenance",
+            desc: "Post-launch, we provide updates, fix issues, and ensure long-term performance and reliability.",
+        },
+    ];
 
 
     const ref = useRef(null);
@@ -86,45 +86,45 @@ const steps = [
     };
 
 
- 
+
 
     const testim = [
-    {
-        name: "Dr. Meera Nair",
-        position: "Senior Researcher at Biogenix Labs",
-        feedback:
-            "The platform made it incredibly easy to connect with academic experts. I received insightful feedback on my hypothesis within hours. A game-changer for research collaborations!",
-    },
-    {
-        name: "Arjun Patel",
-        position: "PhD Scholar at IIT Delhi",
-        feedback:
-            "Scheduling time with guides was seamless. The built-in calendar and video call integration made remote discussions efficient and professional.",
-    },
-    {
-        name: "Sophia Thomas",
-        position: "Project Lead at NeuroTech Innovations",
-        feedback:
-            "We used the platform for cross-university research support. The query tracking system and real-time chat really helped us stay aligned and organized.",
-    },
+        {
+            name: "Dr. Meera Nair",
+            position: "Senior Researcher at Biogenix Labs",
+            feedback:
+                "The platform made it incredibly easy to connect with academic experts. I received insightful feedback on my hypothesis within hours. A game-changer for research collaborations!",
+        },
+        {
+            name: "Arjun Patel",
+            position: "PhD Scholar at IIT Delhi",
+            feedback:
+                "Scheduling time with guides was seamless. The built-in calendar and video call integration made remote discussions efficient and professional.",
+        },
+        {
+            name: "Sophia Thomas",
+            position: "Project Lead at NeuroTech Innovations",
+            feedback:
+                "We used the platform for cross-university research support. The query tracking system and real-time chat really helped us stay aligned and organized.",
+        },
 
 
 
-    // {
-    //     name: "Ravi Kulkarni",
-    //     position: "Research Intern at TIFR",
-    //     feedback:
-    //         "As a new researcher, having a reliable place to ask questions and get clear answers was incredibly helpful. The OTP verification and secure profile setup gave me confidence in the system.",
-    // },
-    // {
-    //     name: "Elena Das",
-    //     position: "Postdoctoral Fellow at Oxford University",
-    //     feedback:
-    //         "From document uploads to personalized expert guidance, everything felt intuitive and user-focused. The notifications were timely and ensured I never missed a session.",
-    // }
+        // {
+        //     name: "Ravi Kulkarni",
+        //     position: "Research Intern at TIFR",
+        //     feedback:
+        //         "As a new researcher, having a reliable place to ask questions and get clear answers was incredibly helpful. The OTP verification and secure profile setup gave me confidence in the system.",
+        // },
+        // {
+        //     name: "Elena Das",
+        //     position: "Postdoctoral Fellow at Oxford University",
+        //     feedback:
+        //         "From document uploads to personalized expert guidance, everything felt intuitive and user-focused. The notifications were timely and ensured I never missed a session.",
+        // }
 
 
-];
+    ];
 
 
     // const projects = [
@@ -138,25 +138,34 @@ const steps = [
 
 
     const projects = [
-      { id: 1, image: card1, title: 'Modern',desc:"Clean lines, minimalism, neutral colors, and sleek finishes." },
-      { id: 2, image: card2, title: 'Contemporary',desc:"Current trends with a mix of comfort and sophistication." },
-      { id: 3, image: card3, title: 'Traditional',desc:"Classic furniture, rich colors, and elegant details.." },
-      { id: 4, image: card4, title: 'Industrial ',desc:" Raw materials like metal, brick, and wood with a rugged feel." },
-      { id: 5, image: card5, title: 'Scandinavian' ,desc:"Simple, functional, bright spaces with natural elements.."},
-      { id: 6, image: card6, title: 'Minimalist',desc:"Less is more; focus on simplicity and essential pieces." },
+        { id: 1, image: card1, title: 'Modern', desc: "Clean lines, minimalism, neutral colors, and sleek finishes." },
+        { id: 2, image: card2, title: 'Contemporary', desc: "Current trends with a mix of comfort and sophistication." },
+        { id: 3, image: card3, title: 'Traditional', desc: "Classic furniture, rich colors, and elegant details.." },
+        { id: 4, image: card4, title: 'Industrial ', desc: " Raw materials like metal, brick, and wood with a rugged feel." },
+        { id: 5, image: card5, title: 'Scandinavian', desc: "Simple, functional, bright spaces with natural elements.." },
+        { id: 6, image: card6, title: 'Minimalist', desc: "Less is more; focus on simplicity and essential pieces." },
     ]
-    
+
 
 
     return (
-        <div className='mt-[10rem] max-md:mt-[0]'>
+        <div className='mt-[10rem] max-md:mt-[0] max-lg:mt-0'>
 
 
-            <section className="sbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
+            {/* <section className="sbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem]">
 
                 <div className="  flex items-center justify-between w-[100%] ">
+ */}
+
+
+
+            <section className="sbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]">
+
+                <div className="flex items-center justify-between w-[100%] max-lg:flex-col max-md:justify-start ">
+
 
                     <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">Our Services</h1>
+                  
                     <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
                         <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
                         <p className="text-white text-[1.9rem] font-semibold">›</p>
@@ -175,19 +184,19 @@ const steps = [
                         Services
                     </p>
 
-                    <div className='flex gap-[3rem]'>
+                    <div className='flex gap-[3rem] max-lg:flex-col '>
                         <div>
                             <h6 className=' mt-[0.8rem] text-[#131714] text-[5.4rem]  leading-[6.4rem] font-extrabold font-manrope'>We Have The Best Interior Design</h6>
 
 
                         </div>
                         <div>
-                          
 
-<p className='font-medium text-[1.4rem] leading-[2.2rem] text-[#6F7470] font-raleway'>
-  Explore our full range of interior design services crafted to transform your space with elegance and efficiency. From concept development to final execution, we ensure every detail reflects your style and purpose.
-</p>
-    <Link to={"/contact"}>
+
+                            <p className='font-medium text-[1.4rem] leading-[2.2rem] text-[#6F7470] font-raleway'>
+                                Explore our full range of interior design services crafted to transform your space with elegance and efficiency. From concept development to final execution, we ensure every detail reflects your style and purpose.
+                            </p>
+                            <Link to={"/contact"}>
                                 <button className="mt-[1.6rem] border border-[#4F6D56] border-1px px-[2rem] py-[1.1rem] font-manrope font-extrabold text-[1.3rem] leading-[2.2rem] tracking-[0.2rem] uppercase text-[#4F6D56]">
                                     Connect us
                                 </button>
@@ -223,10 +232,10 @@ const steps = [
 
                             <div className="absolute right-0 inset-0 bg-black bg-opacity-40 flex flex-col justify-end text-black transition-opacity duration-300 group-hover:bg-opacity-60">
                                 <div className="bg-white text-end absolute p-[2rem] right-0 bottom-[2rem] w-[80%]">
-                                   <h3 className="leading-[3.2rem] text-[#131714] text-xl  text-start font-manrope  font-extrabold">
-                  {project.title}
-                </h3>
-                <p className='text-[1.3rem] mb-[0.5rem] text-start leading-[1.4rem] text-[#4F6D56]  font-medium  '> {project.desc}</p>
+                                    <h3 className="leading-[3.2rem] text-[#131714] text-xl  text-start font-manrope  font-extrabold">
+                                        {project.title}
+                                    </h3>
+                                    <p className='text-[1.3rem] mb-[0.5rem] text-start leading-[1.4rem] text-[#4F6D56]  font-medium  '> {project.desc}</p>
                                     <div className="text-start">
                                         <Link
                                             to="/contact"
@@ -248,22 +257,25 @@ const steps = [
             <section className=''>
 
 
-                <section className="bg-[#4C5C4C] mt-[5rem]  text-center  pr-[15rem] pt-[10rem] pb-[10rem] pl-[15rem]">
+                <section className="bg-[#4C5C4C] mt-[5rem]  text-center  pr-[15rem] pt-[10rem] pb-[10rem] pl-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]">
                     <p className="text-[1.4rem] text-[#E3D27D] font-raleway tracking-[5px] uppercase mb-4">
                         Testimonials
                     </p>
 
-                   
 
-                    <p className=" text-[#FFFFFF] text-[1.4rem] leading-[2.2rem] font-medium font-raleway max-w-[600px] mx-auto mt-[3.2rem]">
-                     Hear from our satisfied clients who’ve experienced seamless design, expert execution, and exceptional service across every project.
+
+                    <p className=" text-[#FFFFFF] text-[1.4rem] leading-[2.2rem] font-medium font-raleway max-w-[600px] mx-auto mt-[3.2rem] mb-[1.2rem]">
+                        Hear from our satisfied clients who’ve experienced seamless design, expert execution, and exceptional service across every project.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-[3rem] px-4 relative bottom-[-16.5rem]  ">
+               <div className="flex justify-center relative bottom-[-16.5rem] max-lg:bottom-0">
+  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[3rem] px-4 justify-items-center">
+   
+                       
                         {testim.map((item, index) => (
                             <div
                                 key={index}
-                                className="w-[300px] h-[300px] p-8 gap-4 bg-white  shadow-md rounded-md flex flex-col items-center justify-start"
+                                className="w-[300px]  p-8 gap-4 bg-white  shadow-md rounded-md flex flex-col items-center justify-start"
                             >
 
                                 <div className="flex gap-1 mb-4">
@@ -287,6 +299,7 @@ const steps = [
                                 <p className="font-raleway font-medium text-[1.4rem] leading-[22px] tracking-[0%] text-center text-[#4F6D56]">{item.position}</p>
                             </div>
                         ))}
+                        </div>
                     </div>
 
                 </section>
@@ -294,7 +307,7 @@ const steps = [
                 {/* How It Works Section */}
                 <section className="whitegrid w-[full]    ">
 
-                    <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem]'>
+                    <div className='pl-[15rem]   text-center pr-[15rem] pt-[16rem] pb-[10rem] max-lg:pl-[2rem] max-lg:pr-[2rem]'>
                         <p className="text-[1.4rem] font-manrope font-bold tracking-[5px] uppercase text-[#4F6D56] ">
                             Works
                         </p>
@@ -302,7 +315,7 @@ const steps = [
                             How It Works
                         </h2>
                         <p className=" font-raleway  mt-[3.2rem] text-[1.4rem] leading-[2.2rem] text-[#6F7470] max-w-[600px] mx-auto mb-12">
-                        Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
+                            Our simple 4-step process makes transforming your space easy and stress-free. From the initial consultation to the final handover, we handle every detail with care and professionalism.
                         </p>
 
 
@@ -326,10 +339,10 @@ const steps = [
                                         </p>
                                         <img src={arrow} alt="arrow" />
                                     </div>
-                                     <h4 className="text-[1.8rem] font-extrabold mb-2">{step.title}</h4>
-                <p className="text-[1.4rem] leading-[2.2rem] text-gray-600">
-                 {step.desc}
-                </p>
+                                    <h4 className="text-[1.8rem] font-extrabold mb-2">{step.title}</h4>
+                                    <p className="text-[1.4rem] leading-[2.2rem] text-gray-600">
+                                        {step.desc}
+                                    </p>
                                 </motion.div>
                             ))}
                         </div>

@@ -82,12 +82,6 @@ export default function MobileHeader() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-4">
-            <button className="w-full py-2 bg-[#4F6D56] text-white rounded-md hover:bg-[#3b5745] transition-colors duration-300">
-              Request Consultation
-            </button>
-          </div>
         </div>
       )}
     </header>

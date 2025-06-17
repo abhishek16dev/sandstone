@@ -153,12 +153,18 @@ const Project = () => {
         <>
 
 
-            <div className='mt-[103px] max-w-[1440px] w-[100%] max-auto max-md:mt-[0]'>
+            <div className='mt-[103px] max-w-[1440px] w-[100%] max-auto max-lg:mt-[0]'>
 
-                <div className="pbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]">
+                {/* <div className="pbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem] max-lg:pr-[2rem]">
 
-                    <div className="  flex items-center justify-between w-[100%] ">
+                    <div className="  flex items-center justify-between w-[100%] "> */}
 
+
+
+      <div className="pbreadcrum w-full h-[28.6rem]   flex items-center justify-center pl-[15rem] pr-[15rem] max-lg:pl-[2rem]  max-lg:pr-[2rem]">
+      
+        <div className="flex items-center justify-between w-[100%] max-lg:flex-col max-md:justify-start ">
+          
                         <h1 className="text-white text-[8.2rem] leading-[96%]  font-bold mb-4">Our Projects</h1>
                         <div className="flex items-center px-[2rem] py-[1rem] gap-[1.6rem] bg-[#FFFFFF33]">
                             <p className="  text-white px-3 py-1 text-[1.3rem] font-semibold rounded">HOME</p>
@@ -177,7 +183,7 @@ const Project = () => {
                         Portfolio
                     </p>
 
-                    <div className='flex gap-[3rem] items-center'>
+                    <div className='flex gap-[3rem] items-center max-lg:flex-col'>
                         <div>
                             <h6 className=' mt-[0.8rem] text-[#131714] text-[5.4rem]  leading-[6.4rem] font-extrabold font-manrope'>100+ Projects All Over The World</h6>
 
@@ -198,7 +204,7 @@ const Project = () => {
 
                 </div>
 
-                <div className='mt-[5rem]  '>
+                {/* <div className='mt-[5rem]  '>
 
 
 
@@ -266,7 +272,68 @@ const Project = () => {
 
 
 
-                </div>
+                </div> */}
+
+
+                <div className="mt-[5rem]">
+  <div className="w-full">
+    {projects.map((item, index) => (
+      <motion.div
+        key={item.id}
+        className={`flex flex-col md:flex-row w-full gap-[2rem] mb-[6rem] ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+        custom={index}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div
+          className="flex flex-col sm:flex-row gap-[2rem] w-full md:w-1/2"
+          variants={imageVariants}
+        >
+          <div className="bg-gray-300 w-full sm:w-1/2 h-[200px] sm:h-[300px] rounded-md overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover rounded-md"
+            />
+          </div>
+          <div className="bg-gray-300 w-full sm:w-1/2 h-[200px] sm:h-[300px] rounded-md overflow-hidden">
+            <img
+              src={item.image2}
+              alt={item.title}
+              className="w-full h-full object-cover rounded-md"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={imageVariants}
+          className="flex flex-col justify-center w-full md:w-1/2 px-[1.5rem] md:px-[4rem]"
+        >
+          <h3 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] text-[#4F6D56] leading-tight font-manrope font-extrabold uppercase mb-2">
+            {String(item.id).padStart(2, "0")}
+          </h3>
+          <h2 className="text-[2.2rem] sm:text-[3rem] md:text-[4rem] font-manrope font-extrabold text-[#131714] mt-[0.8rem] leading-snug">
+            {item.title}
+          </h2>
+          <p className="text-[1.3rem] sm:text-[1.4rem] text-[#6F7470] leading-[2rem] sm:leading-[2.2rem] mb-6 font-raleway">
+            {item.description}
+          </p>
+
+          <a
+            href={item.link}
+            download
+            className="bg-[#E3D27D] w-full sm:max-w-[60%] md:max-w-[40%] text-[1.2rem] sm:text-[1.3rem] text-[#131714] cursor-pointer font-semibold h-[4rem] sm:h-[4.6rem] rounded uppercase tracking-widest flex items-center justify-center font-manrope"
+          >
+            Download
+          </a>
+        </motion.div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
 
 
 
